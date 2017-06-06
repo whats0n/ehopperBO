@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "iconfont";
+  src: url('../../fonts/iconfont.eot');
+  src: url('../static/../fonts/iconfont.eot?#iefix') format('eot'),
+    url('../static/../fonts/iconfont.woff2') format('woff2'),
+    url('../static/../fonts/iconfont.woff') format('woff'),
+    url('../static/../fonts/iconfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$icon-backspace: "\EA01";
+$icon-facebook: "\EA02";
+
+
+%icon {
+  font-family: "iconfont";
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: auto;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon {
+  @extend %icon;
+  display: inline-block;
+}
+
+.icon-backspace:before { content: $icon-backspace; }
+.icon-facebook:before { content: $icon-facebook; }

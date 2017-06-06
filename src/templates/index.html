@@ -1,0 +1,21 @@
+---
+title: Index page
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+	
+	{% set pages = [
+		'login',
+		'reset-password',
+		'pin-login',
+		'main'
+	] %}
+
+	<ul style="padding: 20px; list-style-type: none;">
+		{% for page in pages %}
+			<li><a href="{{page}}.html" target="_blank" style="display: inline-block; color: blue;">{% if loop.index < 10 %}0{% endif %}{{loop.index}} {{page}}</a></li>
+		{% endfor %}
+	</ul>
+
+{% endblock %}
