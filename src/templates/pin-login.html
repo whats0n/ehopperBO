@@ -1,33 +1,36 @@
 ---
 title: Pin Login
-noHeader: true
+header: {
+	box: { logo: true },
+	classList: 'main-header_md'
+}
+mainClassList: 'main_md'
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<div class="vertical-center">
-	<div class="vertical-center__container">
-		<div class="logo">
-			<img src="static/img/logo.svg" alt="eHopper">
-		</div>
-		<div class="form form_sm">
-			<h2 class="title-xl form__title">Back Office</h2>
-			<div class="form__display">
-				<div class="display">
-					<ul class="display__list">
-						<li class="display__item is-active"></li>
-						<li class="display__item is-active"></li>
-						<li class="display__item is-active"></li>
-						<li class="display__item"></li>
-						<li class="display__item"></li>
-						<li class="display__item"></li>
-					</ul>
-				</div>
-			</div>
-			<div class="form__section">
-				{{keyboard.call()}}
-			</div>
+<div class="form form_sm">
+	<div class="form__help">
+		<p>Please enter your personal PIN code to login to this POS terminal:</p>
+	</div>
+	<div class="form__display">
+		<div class="display">
+			<ul class="display__list">
+				<li class="display__item is-active"></li>
+				<li class="display__item is-active"></li>
+				<li class="display__item is-active"></li>
+				<li class="display__item"></li>
+				<li class="display__item"></li>
+				<li class="display__item"></li>
+			</ul>
 		</div>
 	</div>
+	<div class="form__keyboard">
+		{{keyboard.simple()}}
+	</div>
+	<div class="form__text is-muted">
+		<p><strong>Attention: after multiple incorrect attempts terminal will be locked</strong></p>
+	</div>
+	<h2 class="title-xl form__title">Back Office</h2>
 </div>
 {% endblock %}

@@ -1,15 +1,16 @@
 ---
 title: Login
-noHeader: true
+header: {
+	logo: true,
+	classList: 'main-header_lg'
+}
+mainClassList: 'main_lg'
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 <div class="vertical-center">
 	<div class="vertical-center__container">
-		<div class="logo">
-			<img src="static/img/logo.svg" alt="eHopper">
-		</div>
 		<div class="form form_sm">
 			<h2 class="title-xl form__title">Back Office</h2>
 			<div class="form__section">
@@ -29,7 +30,7 @@ noHeader: true
 				})}}
 			</div>
 			<div class="form__section text-center">
-				<button class="btn btn_blue btn_lg form__btn">Login</button>
+				<button class="btn btn_blue btn_lg form__btn" data-animation="ripple">Login</button>
 			</div>
 			{% set loginList = [
 				'Did not setup your password? Click <a href="#">here</a>',

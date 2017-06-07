@@ -5,5 +5,12 @@
 			<img src="img/logo-white.svg" alt="eHopper">
 		</div>
 	{% endif %}
+	{% if header.box %}
+		<div class="main-header__box">
+			{% if header.box.logo %}
+				<img src="img/logo-white.svg" alt="eHopper">
+			{% endif %}
+		</div>
+	{% endif %}
 </header>
 <!-- end header -->

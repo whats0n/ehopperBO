@@ -1,5 +1,6 @@
 .form
 	margin: 0 auto
+	font-size: 14px
 
 	//mods
 	&_sm
@@ -10,8 +11,11 @@
 	//components
 	&__section
 		margin-bottom: 25px
-	&__display
-		padding: 0 0 5px
+	&__keyboard,
+	&__text
+		margin-bottom: 15px
+	&__text
+		text-align: center
 	&__link
 		display: inline-block
 		vertical-align: top
@@ -29,5 +33,15 @@
 		margin: -7px 0
 		li
 			padding: 7px 0
+		a
+			+hover
+				text-decoration: none
+			+active
+				color: $blueActive
 	&__btn
 		min-width: 140px
+	&__help
+		padding: 20px
+		border-left: 1px solid $lightGray
+		border-right: 1px solid $lightGray
+		background: rgba($white, 0.8)

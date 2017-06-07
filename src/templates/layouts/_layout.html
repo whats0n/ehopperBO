@@ -20,7 +20,7 @@
       {% if noHeader != true %}
         {% include '../partials/components/_header.html' %}
       {% endif %}
-      <div class="main">
+      <div class="main {{mainClassList}}">
         {% block content %}{% endblock %}
       </div>
     </div>

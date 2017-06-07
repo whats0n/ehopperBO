@@ -13,47 +13,64 @@
   <body>
     <!-- BEGIN content -->
     <div class="out">
-      <div class="main">
-        <div class="vertical-center">
-          <div class="vertical-center__container">
-            <div class="logo"> <img src="static/img/logo.svg" alt="eHopper"> </div>
-            <div class="form form_sm">
-              <h2 class="title-xl form__title">Back Office</h2>
-              <div class="form__display">
-                <div class="display">
-                  <ul class="display__list">
-                    <li class="display__item is-active"></li>
-                    <li class="display__item is-active"></li>
-                    <li class="display__item is-active"></li>
-                    <li class="display__item"></li>
-                    <li class="display__item"></li>
-                    <li class="display__item"></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="form__section">
-                <!-- begin keyboard -->
-                <div class="keyboard ">
-                  <div class="keyboard__main">
-                    <div class="keyboard__item"> <button class="keyboard__btn">1</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">2</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">3</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">4</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">5</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">6</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">7</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">8</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn">9</button> </div>
-                  </div>
-                  <div class="keyboard__footer">
-                    <div class="keyboard__item"> <button class="keyboard__btn">0</button> </div>
-                    <div class="keyboard__item"> <button class="keyboard__btn"><i class="icon icon-backspace"></i></button> </div>
-                  </div>
-                </div>
-                <!-- end keyboard -->
-              </div>
+      <!-- begin header -->
+      <header class="main-header main-header_md">
+        <div class="main-header__box"> <img src="img/logo-white.svg" alt="eHopper"> </div>
+      </header>
+      <!-- end header -->
+      <div class="main main_md">
+        <div class="form form_sm">
+          <div class="form__help">
+            <p>Please enter your personal PIN code to login to this POS terminal:</p>
+          </div>
+          <div class="form__display">
+            <div class="display">
+              <ul class="display__list">
+                <li class="display__item is-active"></li>
+                <li class="display__item is-active"></li>
+                <li class="display__item is-active"></li>
+                <li class="display__item"></li>
+                <li class="display__item"></li>
+                <li class="display__item"></li>
+              </ul>
             </div>
           </div>
+          <div class="form__keyboard">
+            <!-- begin simple-keyboard -->
+            <div class="simple-keyboard numpad">
+              <div class="simple-keyboard__container">
+                <div class="simple-keyboard__body">
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">1</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">2</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">3</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">4</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">5</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">6</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">7</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">8</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">9</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple" data-numpad="numpad-clear"><i class="fa fa-times-circle-o"></i></button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple">0</button></div>
+                  <div class="simple-keyboard__item"><button type="button" class="simple-keyboard__button" data-animation="ripple" data-numpad="numpad-backspace"><i class="icon icon-text icon-backspace"></i></button></div>
+                </div>
+                <div class="simple-keyboard__actions">
+                  <!-- <div class="simple-keyboard__item">
+				<button type="button" class="simple-keyboard__button simple-keyboard__action" data-animation="ripple" data-numpad="numpad-clockin">Clock In</button>
+			</div>
+			<div class="simple-keyboard__item">
+				<button type="button" class="simple-keyboard__button simple-keyboard__action" data-animation="ripple" data-numpad="numpad-clockout">Clock Out</button>
+			</div> -->
+                  <div class="simple-keyboard__item simple-keyboard__item_lg"> <button type="submit" class="simple-keyboard__button simple-keyboard__submit" data-animation="ripple" value="numpad-submit">Login<i class="icon icon-next"></i></button> </div>
+                  <!-- Add the class 'simple-keyboard__item_lg' to 'simple-keyboard__item', this will make the width 100% -->
+                </div>
+              </div>
+            </div>
+            <!-- end simple-keyboard -->
+          </div>
+          <div class="form__text is-muted">
+            <p><strong>Attention: after multiple incorrect attempts terminal will be locked</strong></p>
+          </div>
+          <h2 class="title-xl form__title">Back Office</h2>
         </div>
       </div>
     </div>

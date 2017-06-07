@@ -7,7 +7,17 @@ body,
 
 .out
 	position: relative
-	padding-top: 50px
+
+.main
+	position: relative
+	&_inner
+		padding-top: 50px
+	&_lg
+		padding-top: 150px
+		+media('height', 'sm')
+			padding-top: 100px
+	&_md
+		padding-top: 90px
 
 .vertical-center
 	+vertical

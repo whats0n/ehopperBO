@@ -3129,10 +3129,6 @@ strong, b {
   font-size: 14px;
 }
 
-p {
-  margin: 10px 0;
-}
-
 a {
   color: #2e99db;
 }
@@ -3205,7 +3201,22 @@ body,
 
 .out {
   position: relative;
+}
+
+.main {
+  position: relative;
+}
+
+.main_inner {
   padding-top: 50px;
+}
+
+.main_lg {
+  padding-top: 150px;
+}
+
+.main_md {
+  padding-top: 90px;
 }
 
 .vertical-center {
@@ -3227,6 +3238,35 @@ body,
   width: 100%;
   font-size: 16px;
   text-align: left;
+}
+
+[data-animation*="ripple"] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-animation*="ripple"] .ripple-circle {
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  width: 112px;
+  height: 112px;
+  background: rgba(0, 0, 0, 0.1);
+  animation: ripple 1s linear forwards;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
 }
 
 .btn {
@@ -3376,6 +3416,11 @@ body,
 .no-touch .btn_transparent:active {
   color: #2e99db;
   background: transparent;
+}
+
+button,
+.btn {
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:disabled, button.is-disabled,
@@ -3538,6 +3583,7 @@ button:disabled, button.is-disabled,
 
 .form {
   margin: 0 auto;
+  font-size: 14px;
 }
 
 .form_sm {
@@ -3552,8 +3598,12 @@ button:disabled, button.is-disabled,
   margin-bottom: 25px;
 }
 
-.form__display {
-  padding: 0 0 5px;
+.form__keyboard, .form__text {
+  margin-bottom: 15px;
+}
+
+.form__text {
+  text-align: center;
 }
 
 .form__link {
@@ -3583,8 +3633,86 @@ button:disabled, button.is-disabled,
   padding: 7px 0;
 }
 
+.no-touch .form__list a:hover {
+  text-decoration: none;
+}
+
+.form__list a:active {
+  color: #2183bf;
+}
+
+.no-touch .form__list a:active {
+  color: #2183bf;
+}
+
 .form__btn {
   min-width: 140px;
+}
+
+.form__help {
+  padding: 20px;
+  border-left: 1px solid #eee;
+  border-right: 1px solid #eee;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.main-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: #3949AB;
+}
+
+.main-header_lg {
+  height: 150px;
+}
+
+.main-header_md {
+  height: 90px;
+}
+
+.main-header__logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  font-size: 0;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.main-header__logo img {
+  width: 100%;
+}
+
+.main-header__box {
+  position: relative;
+  padding-top: 30px;
+  margin: 0 auto;
+  max-width: 460px;
+  height: 100%;
+  font-size: 0;
+  line-height: 60px;
+  text-align: center;
+}
+
+.main-header__box:before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 2px 2px 0 0;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.main-header__box img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 200px;
+  max-height: 40px;
 }
 
 .keyboard {
@@ -3627,7 +3755,118 @@ button:disabled, button.is-disabled,
 }
 
 .keyboard__btn i {
+  vertical-align: middle;
   font-size: 30px;
+}
+
+.simple-keyboard {
+  border: 1px solid #eee;
+  border-top: none;
+  width: 100%;
+  background: #eee;
+  font-size: 60px;
+}
+
+.simple-keyboard__container {
+  margin: 0 -1px 0 0;
+}
+
+.simple-keyboard__actions, .simple-keyboard__body {
+  *zoom: 1;
+}
+
+.simple-keyboard__actions:after, .simple-keyboard__body:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.simple-keyboard__item {
+  float: left;
+  padding: 1px 1px 0 0;
+  width: 33.33333%;
+  height: 1em;
+}
+
+.simple-keyboard__item_lg {
+  width: 100%;
+}
+
+.simple-keyboard__item_md {
+  width: 50%;
+}
+
+.simple-keyboard__button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #000;
+  background: #fff;
+  font-family: 'Roboto Light', Arial, sans-serif;
+  font-size: 19px;
+  line-height: normal;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  transition: background 0.175s ease;
+}
+
+.simple-keyboard__button:active {
+  background: #ebebeb;
+}
+
+.no-touch .simple-keyboard__button:active {
+  background: #ebebeb;
+}
+
+.simple-keyboard__button.is-pressed {
+  background: #ebebeb;
+}
+
+.simple-keyboard__button i {
+  font-size: 28px;
+  vertical-align: middle;
+}
+
+.simple-keyboard__submit {
+  color: #fff;
+  background: #22B745;
+}
+
+.simple-keyboard__submit:active {
+  color: #fff;
+  background: #4cac51;
+}
+
+.no-touch .simple-keyboard__submit:active {
+  color: #fff;
+  background: #4cac51;
+}
+
+.simple-keyboard__submit .icon {
+  width: 24px;
+}
+
+.simple-keyboard__action {
+  color: #2e99db;
+  background: #ecf7fd;
+}
+
+.simple-keyboard__action:active {
+  background: #c7e7f9;
+}
+
+.no-touch .simple-keyboard__action:active {
+  background: #c7e7f9;
+}
+
+.display {
+  position: relative;
+  border: 1px solid #eee;
+  border-bottom: none;
+  min-height: 60px;
+  background: #fff;
 }
 
 .display__list {
@@ -3658,6 +3897,15 @@ button:disabled, button.is-disabled,
 .block {
   display: -ms-flexbox;
   display: flex;
+}
+
+@media only screen and (max-height: 650px){
+  .main_lg{
+    padding-top: 100px;
+  }
+  .main-header_lg{
+    height: 100px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
