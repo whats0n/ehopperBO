@@ -1,5 +1,17 @@
 {% set navList = [
-	{  }
+	{ icon: '', text: 'Dashboard' },
+	{ icon: '', text: 'Orders' },
+	{ icon: '', text: 'Inventory',
+		list: [ 'Department', 'Category', 'Global Modifiers', 'Products', 'Menu Builder', 'Store Transfer', 'PO Receiving', 'Inventory Adjustment' ]
+	},
+	{ icon: '', text: 'Customers' },
+	{ icon: '', text: 'Vendors' },
+	{ icon: '', text: 'Employees' },
+	{ icon: '', text: 'Reporting' },
+	{ icon: '', text: 'Apps' },
+	{ icon: '', text: 'Settings' },
+	{ icon: '', text: 'Community' },
+	{ icon: '', text: 'Logout' }
 ] %}
 
 <!-- begin menu -->
@@ -19,7 +31,7 @@
 			    	{% if item.list %}
 						<ul class="nav__submenu">
 							{% for item in item.list %}
-								<li class="nav__item"><a href="{{item.href}}" class="nav__link"><i class="nav__icon icon icon-{{item.icon}}"></i>{{item.text}}</a></li>
+								<li class="nav__item"><a href="#" class="nav__link">{{item}}</a></li>
 							{% endfor %}
 						</ul>
 			    	{% endif %}
