@@ -1,0 +1,37 @@
+{% import "partials/form/_build.html" as form %}
+
+{% macro call(props) %}
+<!-- begin filters -->
+<div class="filters {{props.classList}}">
+	<div class="filters__container">
+		<div class="filters__row">
+			{% for col in props.cols %}
+				<div class="filters__col {{col.classList}}">
+					{% for field in col.fields %}
+						<div class="filters__field {{field.classList}}">
+							{% if field.label %}
+								<div class="filters__label">{{field.label}}</div>
+							{% endif %}
+							
+							{% if field.search %}
+								{{form.search.call(field.search)}}
+							{% elif field.select %}
+								{{form.selectBox.call(field.select)}}
+							{% endif %}
+						</div>
+					{% endfor %}
+				</div>
+			{% endfor %}
+		</div>
+		<div class="filters__btns">
+			<div class="filters__field">
+				<button class="btn btn_lg" data-animation="ripple"><i class="fa fa-excel-o"></i>Export</button>
+			</div>
+			<div class="filters__field">
+				<button class="btn btn_lg" data-animation="ripple"><i class="fa fa-excel-o"></i>Export</button>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end filters -->
+{% endmacro %}

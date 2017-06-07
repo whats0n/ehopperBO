@@ -1,0 +1,90 @@
+---
+title: Orders
+mainClassList: 'main_inner'
+header: { title: 'Orders' }
+nav: true
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+{{filters.call({
+	cols: [
+		{
+			classList: 'filters__col_md',
+			fields: [
+				{
+					classList: 'filters__field_md',
+					search: {
+						placeholder: 'Search Order'
+					}
+				},
+				{ 
+					label: 'Stores:',
+					classList: 'filters__field_md',
+					select: {
+						placeholder: 'Select Store(s)',
+						options: [
+							'Lorem ipsum. 1',
+							'Lorem ipsum. 2',
+							'Lorem ipsum. 3',
+							'Lorem ipsum. 4'
+						]
+					}
+				}
+			]
+		},
+		{
+			classList: 'filters__col_md',
+			fields: [
+				{ 
+					label: 'Order Type:',
+					classList: 'filters__field_sm',
+					select: {
+						options: [
+							'All',
+							'Quick Sale',
+							'Dine In',
+							'Take Out',
+							'Drive Thru',
+							'Delivery',
+							'Manual Sale'
+						]
+					}
+				},
+				{ 
+					label: 'Order Status:',
+					classList: 'filters__field_sm',
+					select: {
+						options: [
+							'All',
+							'Not Paid',
+							'Pending Payment',
+							'Partially Paid',
+							'Paid',
+							'Partially Refunded',
+							'Refunded',
+							'Voided'
+						]
+					}
+				},
+				{ 
+					label: 'Fulfillment:',
+					classList: 'filters__field_sm',
+					select: {
+						options: [
+							'All',
+							'New',
+							'In Preparation',
+							'Prepared',
+							'In Fulfillment',
+							'Fulfilled'
+						]
+					}
+				}
+			]
+		}
+	]
+})}}
+<div class="container">
+</div>
+{% endblock %}

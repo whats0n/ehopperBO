@@ -1,0 +1,34 @@
+.filters
+	display: table
+	table-layout: fixed
+	padding: 12px
+	&__container
+		display: table-row
+	&__row,
+	&__btns
+		display: table-cell
+		vertical-align: bottom
+		font-size: 0
+	&__btns
+		white-space: nowrap
+	&__col,
+	&__field
+		display: inline-block
+		vertical-align: bottom
+	&__col
+		&_md
+			width: 50%
+	&__field
+		padding: 8px
+		white-space: normal
+		&_md
+			width: 50%
+		&_sm
+			// +media('width', 'lg')
+			width: 33.33%
+	&__label
+		padding-bottom: 8px
+		color: $darkGray
+		opacity: 0.5
+		+rreg
+		font-size: 14px

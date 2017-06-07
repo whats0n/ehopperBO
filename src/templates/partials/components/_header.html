@@ -12,5 +12,13 @@
 			{% endif %}
 		</div>
 	{% endif %}
+	{% if header.title %}
+		<h2 class="title-xl main-header__title">{{header.title}}</h2>
+	{% endif %}
+	{% if nav %}
+		<button class="main-header__nav-btn" title="Menu" data-menu-open="menu">
+			<i></i>
+		</button>
+	{% endif %}
 </header>
 <!-- end header -->

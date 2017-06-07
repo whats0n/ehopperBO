@@ -1,6 +1,7 @@
 {% import "partials/_mixins.html" as mixins %}
 {% import "partials/form/_build.html" as form %}
 {% import "partials/mixins/_keyboard.html" as keyboard %}
+{% import "partials/mixins/_filters.html" as filters %}
 <!doctype html>
 <html>
   <head>
@@ -19,6 +20,9 @@
     <div class="out">
       {% if noHeader != true %}
         {% include '../partials/components/_header.html' %}
+      {% endif %}
+      {% if noHeader != true %}
+        {% include '../partials/components/_nav.html' %}
       {% endif %}
       <div class="main {{mainClassList}}">
         {% block content %}{% endblock %}

@@ -1,0 +1,34 @@
+{% set navList = [
+	{  }
+] %}
+
+<!-- begin menu -->
+<nav class="menu" data-menu-container="menu">
+	<header class="menu__header" data-menu-close="menu" data-animation="ripple">
+		<i class="icon icon-back menu__icon"></i>
+		<div class="title-xlg menu__title">FastFood Enterprise</div>
+	</header>
+	<div class="menu__container">
+		<ul class="nav">
+			{% for item in navList %}
+			    <li class="nav__item" {% if item.list %}data-nav-submenu="nav-settings"{% endif %}>
+			    	<a href="#" class="nav__link {% if loop.index0 === nav.active %}is-active{%- endif -%}" {{item.attrs | safe}}>
+			    		<i class="nav__icon icon icon-{{item.icon}}"></i>{{item.text | safe}}
+			    		{%- if item.list -%}<i class="nav__arrow icon icon-caret"></i>{%- endif -%}
+			    	</a>
+			    	{% if item.list %}
+						<ul class="nav__submenu">
+							{% for item in item.list %}
+								<li class="nav__item"><a href="{{item.href}}" class="nav__link"><i class="nav__icon icon icon-{{item.icon}}"></i>{{item.text}}</a></li>
+							{% endfor %}
+						</ul>
+			    	{% endif %}
+			    </li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
+<!-- end menu -->
+{{mixins.overlay({
+	attrs: 'data-menu-overlay="menu"'
+})}}
