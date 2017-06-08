@@ -9,7 +9,12 @@
 		display: table-cell
 		vertical-align: bottom
 		font-size: 0
+		+media('width', 'lg')
+			vertical-align: top
+	&__row
+		width: 90%
 	&__btns
+		width: 10%
 		white-space: nowrap
 	&__col,
 	&__field
@@ -18,6 +23,8 @@
 	&__col
 		&_md
 			width: 50%
+			+media('width', 'lg')
+				width: 100%
 	&__field
 		padding: 8px
 		white-space: normal

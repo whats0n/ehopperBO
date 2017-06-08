@@ -1,0 +1,98 @@
+.menu
+	position: fixed
+	z-index: 200
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+	padding-top: 50px
+	width: 300px
+
+	background: #434c55
+	box-shadow: 0 0 4px 1px rgba($black, 0.2)
+	transform: translate3d(-110%,0,0)
+	transition: transform 0.3s ease-in-out
+	&.is-open
+		+gpu
+	&__header
+		position: absolute
+		z-index: 10
+		top: 0
+		left: 0
+		right: 0
+		height: 50px
+		color: $white
+		background: $indigo
+		cursor: pointer
+		+nosel
+	&__icon
+		position: absolute
+		top: 50%
+		left: 15px
+		margin-top: -10px
+		font-size: 20px
+	&__title
+		padding: 12px 20px 12px 50px
+		font-size: 20px
+	&__container
+		position: relative
+		z-index: 5
+		overflow: auto
+		padding-top: 20px
+		height: 100%
+
+.nav
+	&__item
+		border-bottom: 1px solid #4C5560 
+		color: #7D838B
+		+nosel
+		&.is-open
+			>
+				.nav__link
+					color: $white
+					background: darken(#4C5560, 20%)
+					+hover
+						background: darken(#4C5560, 20%)
+					.nav__arrow
+						transform: rotate(180deg)
+	&__link
+		position: relative
+		display: block
+		padding: 5px 20px 5px 50px
+		color: inherit
+		font-size: 16px
+		line-height: 40px
+		text-decoration: none
+		cursor: pointer
+		transition: color 0.125s ease-in-out, background 0.125s ease-in-out
+		+hover
+			background: #4C5560
+		&.is-active
+			color: $white
+			background: #4C5560
+		&[data-nav-submenu-open]
+			padding-right: 40px
+	&__icon
+		position: absolute
+		top: 5px
+		left: 5px
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 15px
+		margin-top: -10px
+		font-size: 20px
+		transition: transform 0.17s ease-in-out
+	&__submenu
+		display: none
+		border-bottom: 1px solid darken(#4C5560, 10%)
+		background: darken(#4C5560, 10%)
+		.nav__item.is-open &
+			display: block
+		.nav__link
+			+hover 
+				color: $white
+		.nav__item
+			&:last-child
+				border: none

@@ -1,0 +1,30 @@
+{% macro call(props) %}
+<!-- begin table -->
+<div class="table-wrapper {{props.classList}}" data-table="{{props.name}}">
+	<div class="table-wrapper__header" data-table-fake="{{props.name}}">
+		<div class="table-header {{props.headerClassList}}">
+			<ul class="table-header__tr">
+				{% for th in props.header %}
+					<li class="table-header__th" data-column="{{props.columns[loop.index0]}}">{{th | safe}}</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	<div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="{{props.name}}">
+		<div class="table-body {{props.bodyClassList}} table-wrapper__table" data-table-main="{{props.name}}">
+			{% for item in range(0, props.range or 1) %}
+				{% for tr in props.body %}
+					<div class="table-body__tr">
+						{% for td in tr %}
+							<div class="table-body__td {{props.bodyTDClassList}}" data-column="{{props.columns[loop.index0]}}">
+								{{td.content | safe}}
+							</div>
+						{% endfor %}
+					</div>
+				{% endfor %}
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end table -->
+{% endmacro %}

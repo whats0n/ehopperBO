@@ -1,0 +1,58 @@
+{% set navList = [
+	{ icon: '', text: 'Dashboard' },
+	{ icon: '', text: 'Orders' },
+	{ icon: '', text: 'Inventory', attrs: 'data-nav-submenu-open="inventory"', submenu: 'inventory',
+		list: [ 'Department', 'Category', 'Global Modifiers', 'Products', 'Menu Builder', 'Store Transfer', 'PO Receiving', 'Inventory Adjustment' ]
+	},
+	{ icon: '', text: 'Customers', attrs: 'data-nav-submenu-open="customers"', submenu: 'customers',
+		list: [ 'Import Customers' ]
+	},
+	{ icon: '', text: 'Vendors', attrs: 'data-nav-submenu-open="vendors"', submenu: 'vendors',
+		list: [ 'Vendor List' ]
+	},
+	{ icon: '', text: 'Employees', attrs: 'data-nav-submenu-open="employees"', submenu: 'employees',
+		list: [ 'Employee List', 'Time Clock' ]
+	},
+	{ icon: '', text: 'Reporting', attrs: 'data-nav-submenu-open="reporting"', submenu: 'reporting',
+		list: [ 'Tips Report', 'Z Report', 'Product Mix Report', 'Tax Report', 'Transactions Report', 'Inventory Aging', 'Serial Item Tracking Report', 'Store Transfers Report', 'PO Receiving Report', 'Adjustment Report' ]
+	},
+	{ icon: '', text: 'Apps', attrs: 'data-nav-submenu-open="apps"', submenu: 'apps',
+		list: [ 'App Directory', 'QuickBooks Online' ]
+	},
+	{ icon: '', text: 'Settings', attrs: 'data-nav-submenu-open="settings"', submenu: 'settings',
+		list: [ 'Company Settings', 'Store Settings', 'Register Settings', 'Tax Manager', 'Tax Agencies', 'eHopper Support Access' ]
+	},
+	{ icon: '', text: 'Community' },
+	{ icon: '', text: 'Logout' }
+] %}
+
+<!-- begin menu -->
+<nav class="menu" data-menu-container="menu">
+	<header class="menu__header" data-menu-close="menu" data-animation="ripple">
+		<i class="fa fa-arrow-left menu__icon"></i>
+		<h2 class="title-xl menu__title">FastFood Enterprise</h2>
+	</header>
+	<div class="menu__container" data-scrollbar="default">
+		<ul class="nav">
+			{% for item in navList %}
+			    <li class="nav__item" {% if item.list %}data-nav-submenu="{{item.submenu}}"{% endif %}>
+			    	<a href="#" class="nav__link {% if loop.index0 === menu.active %}is-active{%- endif -%}" {{item.attrs | safe}}>
+			    		<i class="nav__icon icon icon-{{item.icon}}"></i>{{item.text | safe}}
+			    		{%- if item.list -%}<i class="nav__arrow fa fa-angle-down"></i>{%- endif -%}
+			    	</a>
+			    	{% if item.list %}
+						<ul class="nav__submenu">
+							{% for item in item.list %}
+								<li class="nav__item"><a href="#" class="nav__link">{{item}}</a></li>
+							{% endfor %}
+						</ul>
+			    	{% endif %}
+			    </li>
+			{% endfor %}
+		</ul>
+	</div>
+</nav>
+<!-- end menu -->
+{{mixins.overlay({
+	attrs: 'data-menu-overlay="menu"'
+})}}

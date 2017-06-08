@@ -23,14 +23,19 @@
 				</div>
 			{% endfor %}
 		</div>
-		<div class="filters__btns">
-			<div class="filters__field">
-				<button class="btn btn_lg" data-animation="ripple"><i class="fa fa-excel-o"></i>Export</button>
+		{% if props.btns %}
+			<div class="filters__btns">
+				{% for item in props.btns %}
+					<div class="filters__field">
+						{% if item.date %}
+							{{form.date.call(item.date)}}
+						{% else %}
+							{{item.content | safe}}
+						{% endif %}
+					</div>
+				{% endfor %}
 			</div>
-			<div class="filters__field">
-				<button class="btn btn_lg" data-animation="ripple"><i class="fa fa-excel-o"></i>Export</button>
-			</div>
-		</div>
+		{% endif %}
 	</div>
 </div>
 <!-- end filters -->

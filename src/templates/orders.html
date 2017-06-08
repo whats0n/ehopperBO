@@ -2,7 +2,7 @@
 title: Orders
 mainClassList: 'main_inner'
 header: { title: 'Orders' }
-nav: true
+menu: { active: 1 }
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -19,7 +19,6 @@ nav: true
 					}
 				},
 				{ 
-					label: 'Stores:',
 					classList: 'filters__field_md',
 					select: {
 						placeholder: 'Select Store(s)',
@@ -83,8 +82,97 @@ nav: true
 				}
 			]
 		}
+	],
+	btns: [
+		{ content: '<button class="btn btn_lg btn_white btn_border" data-animation="ripple"><i class="fa fa-file-excel-o"></i>Export</button>' },
+		{ content: '<button class="btn btn_lg btn_white btn_border" data-animation="ripple">Today</button>' }
 	]
 })}}
-<div class="container">
+<div class="orders">
+	{{table.call({
+		classList: 'text-center',
+		bodyClassList: 'table-body_zebra',
+		bodyTDClassList: 'text-overflow',
+		range: 5,
+		columns: [ 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column' ],
+		header: [ 'Order ID', 'Order Name', 'Type', 'Fulfillment', 'Status', 'Total', 'Date', 'Store', 'Employee', 'Customer' ],
+		body: [
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-thumbs-up color-gray"></i>' },
+				{ content: '<i class="fa fa-arrow-left color-red"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			],
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-plus-square-o color-gray"></i>' },
+				{ content: '<i class="fa fa-check-circle color-gray"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			],
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-spinner color-gray"></i>' },
+				{ content: '<i class="fa fa-check color-green"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			],
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-bell-o color-gray"></i>' },
+				{ content: '<i class="fa fa-check-circle-o color-green"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			],
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-truck color-gray"></i>' },
+				{ content: '<i class="fa fa-arrow-circle-o-left color-red"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			],
+			[ 
+				{ content: '141595807108' },
+				{ content: '&nbsp;' },
+				{ content: 'Quick Sale' },
+				{ content: '<i class="fa fa-thumbs-up color-gray"></i>' },
+				{ content: '<i class="fa fa-ban color-lightgray"></i>' },
+				{ content: '$1,281.50' },
+				{ content: '06/08/2017 12:56:03 PM' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Admin Admin' },
+				{ content: 'Walk-In' }
+			]
+		]
+	})}}
 </div>
+{{pagination.call({
+	range: 5
+})}}
 {% endblock %}

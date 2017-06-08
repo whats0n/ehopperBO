@@ -1,0 +1,19 @@
+{% macro call(props) %}
+{% set active = props.active or 1 %}
+{% set max = props.range or 3 %}
+<!-- begin pagination -->
+<div class="pagination">
+	<div class="pagination__container">
+		<a href="" class="pagination__btn pagination__prev {% if active <= 1 %}is-disabled{% endif %}"><i class="fa fa-angle-left"></i>Previous</a>
+		<a href="" class="pagination__btn pagination__next {% if active >= max %}is-disabled{% endif %}">Next<i class="fa fa-angle-right"></i></a>
+		<ul class="pagination__list">
+			{% for item in range(0, max) %}
+				<li class="pagination__item">
+					<a href="#" class="pagination__link {% if loop.index === active %}is-active{% endif %}">{{loop.index}}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end pagination -->
+{% endmacro %}

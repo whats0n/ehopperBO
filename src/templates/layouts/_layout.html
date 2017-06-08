@@ -2,37 +2,39 @@
 {% import "partials/form/_build.html" as form %}
 {% import "partials/mixins/_keyboard.html" as keyboard %}
 {% import "partials/mixins/_filters.html" as filters %}
+{% import "partials/mixins/_table.html" as table %}
+{% import "partials/mixins/_pagination.html" as pagination %}
 <!doctype html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="theme-color" content="#fff">
-    <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="static/css/app.css">
-    {# {% include "../partials/_media-tags.html" %} #}
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="theme-color" content="#fff">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" media="all" href="static/css/app.css">
+		{# {% include "../partials/_media-tags.html" %} #}
+	</head>
+	<body>
 
-    <!-- BEGIN content -->
-    <div class="out">
-      {% if noHeader != true %}
-        {% include '../partials/components/_header.html' %}
-      {% endif %}
-      {% if noHeader != true %}
-        {# {% include '../partials/components/_nav.html' %} #}
-      {% endif %}
-      <div class="main {{mainClassList}}">
-        {% block content %}{% endblock %}
-      </div>
-    </div>
-    <!-- END content -->
+		<!-- BEGIN content -->
+		<div class="out">
+			{% if noHeader != true %}
+				{% include '../partials/components/_header.html' %}
+			{% endif %}
+			{% if menu %}
+				{% include '../partials/components/_menu.html' %}
+			{% endif %}
+			<div class="main {{mainClassList}}">
+				{% block content %}{% endblock %}
+			</div>
+		</div>
+		<!-- END content -->
 
-    <!-- BEGIN scripts -->
-    <script type="text/javascript" src="static/js/app.js"></script>
-    <!-- END scripts -->
+		<!-- BEGIN scripts -->
+		<script type="text/javascript" src="static/js/app.js"></script>
+		<!-- END scripts -->
 
-  </body>
+	</body>
 </html>

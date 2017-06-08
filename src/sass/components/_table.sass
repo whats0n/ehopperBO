@@ -1,0 +1,91 @@
+.table-wrapper
+	position: relative
+	overflow: hidden
+	padding-top: 37px
+	height: 100%
+	&_header-lg
+		padding-top: 50px
+		.table-wrapper
+			&__header 
+				height: 50px
+	&__header
+		position: absolute
+		z-index: 2
+		top: 0
+		left: 0
+		right: 0
+		height: 37px
+		&:before
+			content: ''
+			position: absolute
+			top: 0
+			left: 100%
+			bottom: 0
+			border-bottom: 1px solid #aaa
+			width: 30px
+			background: #eee
+			margin-left: -10px
+	&__body
+		overflow: auto
+		max-height: 100%
+
+.table-header,
+.table-body
+	display: table
+	table-layout: fixed
+	width: 100%
+	font-size: 14px
+	+media('width', 'lg')
+		font-size: 12px
+	&__tr
+		display: table-row
+		&.is-disabled
+			opacity: 0.3
+			pointer-events: none
+	&__th,
+	&__td
+		display: table-cell
+		vertical-align: middle
+		padding: 10px
+		+media('width', 'lg')
+			padding: 10px 4px
+		&:first-child
+			padding-left: 20px
+	&__th
+		+rmed
+		line-height: 1.2
+
+.table-header
+	border-bottom: 1px solid $silverGray
+	height: 37px
+	background: $lightGray
+
+.table-body
+	// &_zebra
+	// 	.table-body
+	// 		&__tr
+	// 			&:nth-child(even)
+	// 				background: $white
+	// 				transition: background 0.1s ease-in-out
+	// 			+hover
+	// 				background: $azure
+	// 				cursor: pointer
+	// 			+active
+	// 				background: $azureActive
+	// 		&__td
+	// 			padding-top: 5px 
+	// 			padding-bottom: 5px
+	&_zebra
+		.table-body
+			&__tr
+				// background: $white
+				&:nth-child(even)
+					background: $white
+	&__tr
+		transition: background 0.1s ease-in-out
+		&:not(:first-child)
+			.table-body
+				&__td
+					border-top: 1px solid $lightGray
+		.fa
+			font-size: 20px
