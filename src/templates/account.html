@@ -1,0 +1,32 @@
+---
+title: Select Account
+header: {
+	logo: true,
+	classList: 'main-header_lg'
+}
+mainClassList: 'main_lg'
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="section">
+	<div class="form form_sm">
+		<h2 class="title-xxl color-main form__title">Back Office</h2>
+		<div class="form__section">
+			{{form.inputBox.call({
+				placeholder: 'Enter Account ID',
+				inputAttrs: 'required',
+				classList: 'is-error',
+				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.'
+			})}}
+		</div>
+		<div class="form__section text-center">
+			<button class="btn btn_main btn_lg btn_block form__btn" data-animation="ripple">Continue</button>
+		</div>
+		<ul class="form__list">
+			<li>Not registered? Click {{mixins.externalLink({ text: 'signup' })}} to create an Account.</li>
+			<li>Forgot Account Id? Check your welcome email or contact our <a href="#">support</a></li>
+		</ul>
+	</div>
+</div>
+{% endblock %}

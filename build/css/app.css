@@ -159,8 +159,8 @@ html {
 
 @font-face {
   font-family: "iconfont";
-  src: url("../../fonts/iconfont.eot");
-  src: url("../static/../fonts/iconfont.eot?#iefix") format("eot"), url("../static/../fonts/iconfont.woff2") format("woff2"), url("../static/../fonts/iconfont.woff") format("woff"), url("../static/../fonts/iconfont.ttf") format("truetype");
+  src: url("fonts/iconfont.eot");
+  src: url("fonts/iconfont.eot?#iefix") format("eot"), url("fonts/iconfont.woff2") format("woff2"), url("fonts/iconfont.woff") format("woff"), url("fonts/iconfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -3137,6 +3137,11 @@ a {
   color: #2e99db;
 }
 
+.external-link i {
+  font-size: 80%;
+  margin-left: 0.3em;
+}
+
 .is-muted {
   opacity: 0.5;
 }
@@ -3159,6 +3164,10 @@ a {
 
 .color-blue {
   color: #d3d3d3;
+}
+
+.color-main {
+  color: #3949AB;
 }
 
 .pull-right {
@@ -3925,7 +3934,6 @@ button:disabled, button.is-disabled,
 
 .form__title {
   margin-bottom: 10px;
-  color: #3949AB;
   text-align: center;
 }
 
@@ -4925,6 +4933,93 @@ button:disabled, button.is-disabled,
 
 .modal-terms__copyright {
   margin-top: 40px;
+}
+
+.modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 0;
+  transition: opacity 0.175s ease-in-out, visibility 0.175s ease-in-out;
+}
+
+.modal:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal_xs .modal__container {
+  max-width: 300px;
+}
+
+.modal__overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.modal__container {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-size: 14px;
+}
+
+.modal-content {
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
+}
+
+.modal-content__header {
+  padding: 30px 20px;
+  border-radius: 5px 5px 0 0;
+  color: #fff;
+  background: #3949AB;
+}
+
+.modal-content__body {
+  padding: 20px;
+}
+
+.modal-content__footer {
+  padding: 20px;
+  border-top: 1px solid #3949AB;
+  *zoom: 1;
+}
+
+.modal-content__footer:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.modal-content__success {
+  float: right;
+  min-width: 100px;
 }
 
 .orders {

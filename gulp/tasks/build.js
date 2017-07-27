@@ -5,6 +5,7 @@ var config      = require('../config');
 function build(cb) {
     runSequence(
         'clean',
+        'iconfont',
         'svgo',
         'sass',
         'nunjucks',

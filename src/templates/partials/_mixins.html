@@ -7,3 +7,7 @@
 <button type="button" class="overlay {{props.classList}}" data-overlay="overlay" {{props.attrs | safe}}></button>
 <!-- end overlay -->
 {% endmacro %}
+
+{% macro externalLink(props) %}
+<a href="{{props.href or '#'}}" class="external-link" target="_blank">{{props.text}}<i class="fa fa-external-link"></i></a>
+{% endmacro %}

@@ -1,0 +1,17 @@
+{% macro call(props) %}
+<!-- begin modal -->
+<div class="modal {{props.classList}}" data-modal="{{props.name}}">
+	<!-- begin modal__container -->
+	<div class="modal__container" data-modal-container="{{props.name}}">
+		{% if props.close %}
+			<button class="modal__close" data-modal-close="{{props.name}}"></button>
+		{% endif %}
+		{% include 'partials/modals/' + props.file + '.html' %}
+	</div>
+	<!-- end modal__container -->
+	{#<!-- begin modal__overlay -->
+	<button class="modal__overlay" data-modal-close="{{props.name}}"></button>
+	<!-- end modal__overlay -->#}
+</div>
+<!-- end modal -->
+{% endmacro %}
