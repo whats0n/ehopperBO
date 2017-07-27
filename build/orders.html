@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="static/css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
   <body>
     <!-- BEGIN content -->
@@ -117,135 +117,160 @@
                   <!-- end search -->
                 </div>
                 <div class="filters__field filters__field_md">
-                  <div class="select-box "> <select>
-		
-			<option value="Select Store(s)" disabled selected>Select Store(s)</option>
-		
-		
-			
-				<option value="Lorem ipsum. 1">Lorem ipsum. 1</option>
-			
-		
-			
-				<option value="Lorem ipsum. 2">Lorem ipsum. 2</option>
-			
-		
-			
-				<option value="Lorem ipsum. 3">Lorem ipsum. 3</option>
-			
-		
-			
-				<option value="Lorem ipsum. 4">Lorem ipsum. 4</option>
-			
-		
-	</select> </div>
+                  <div class="select-box ">
+                    <div class="multiple-select" data-select="true">
+                      <div class="multiple-select__header" data-select-open="true">
+                        <div class="multiple-select__value">Select Store(s)</div>
+                      </div>
+                      <div class="multiple-select__dropdown" data-scrollbar="default">
+                        <ul class="multiple-select__list">
+                          <li> <label class="checkbox multiple-select__checkbox">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 1</span>
+	
+</label> </li>
+                          <li> <label class="checkbox multiple-select__checkbox">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 2</span>
+	
+</label> </li>
+                          <li> <label class="checkbox multiple-select__checkbox">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 3</span>
+	
+</label> </li>
+                          <li> <label class="checkbox multiple-select__checkbox">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 4</span>
+	
+</label> </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="filters__col filters__col_md">
                 <div class="filters__field filters__field_sm">
                   <div class="filters__label">Order Type:</div>
                   <div class="select-box "> <select>
-		
-		
 			
-				<option value="All">All</option>
 			
-		
+				
+					<option value="All">All</option>
+				
 			
-				<option value="Quick Sale">Quick Sale</option>
+				
+					<option value="Quick Sale">Quick Sale</option>
+				
 			
-		
+				
+					<option value="Dine In">Dine In</option>
+				
 			
-				<option value="Dine In">Dine In</option>
+				
+					<option value="Take Out">Take Out</option>
+				
 			
-		
+				
+					<option value="Drive Thru">Drive Thru</option>
+				
 			
-				<option value="Take Out">Take Out</option>
+				
+					<option value="Delivery">Delivery</option>
+				
 			
-		
+				
+					<option value="Manual Sale">Manual Sale</option>
+				
 			
-				<option value="Drive Thru">Drive Thru</option>
-			
-		
-			
-				<option value="Delivery">Delivery</option>
-			
-		
-			
-				<option value="Manual Sale">Manual Sale</option>
-			
-		
-	</select> </div>
+		</select> </div>
                 </div>
                 <div class="filters__field filters__field_sm">
                   <div class="filters__label">Order Status:</div>
                   <div class="select-box "> <select>
-		
-		
 			
-				<option value="All">All</option>
 			
-		
+				
+					<option value="All">All</option>
+				
 			
-				<option value="Not Paid">Not Paid</option>
+				
+					<option value="Not Paid">Not Paid</option>
+				
 			
-		
+				
+					<option value="Pending Payment">Pending Payment</option>
+				
 			
-				<option value="Pending Payment">Pending Payment</option>
+				
+					<option value="Partially Paid">Partially Paid</option>
+				
 			
-		
+				
+					<option value="Paid">Paid</option>
+				
 			
-				<option value="Partially Paid">Partially Paid</option>
+				
+					<option value="Partially Refunded">Partially Refunded</option>
+				
 			
-		
+				
+					<option value="Refunded">Refunded</option>
+				
 			
-				<option value="Paid">Paid</option>
+				
+					<option value="Voided">Voided</option>
+				
 			
-		
-			
-				<option value="Partially Refunded">Partially Refunded</option>
-			
-		
-			
-				<option value="Refunded">Refunded</option>
-			
-		
-			
-				<option value="Voided">Voided</option>
-			
-		
-	</select> </div>
+		</select> </div>
                 </div>
                 <div class="filters__field filters__field_sm">
                   <div class="filters__label">Fulfillment:</div>
                   <div class="select-box "> <select>
-		
-		
 			
-				<option value="All">All</option>
 			
-		
+				
+					<option value="All">All</option>
+				
 			
-				<option value="New">New</option>
+				
+					<option value="New">New</option>
+				
 			
-		
+				
+					<option value="In Preparation">In Preparation</option>
+				
 			
-				<option value="In Preparation">In Preparation</option>
+				
+					<option value="Prepared">Prepared</option>
+				
 			
-		
+				
+					<option value="In Fulfillment">In Fulfillment</option>
+				
 			
-				<option value="Prepared">Prepared</option>
+				
+					<option value="Fulfilled">Fulfilled</option>
+				
 			
-		
-			
-				<option value="In Fulfillment">In Fulfillment</option>
-			
-		
-			
-				<option value="Fulfilled">Fulfilled</option>
-			
-		
-	</select> </div>
+		</select> </div>
                 </div>
               </div>
             </div>
@@ -659,7 +684,7 @@
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 

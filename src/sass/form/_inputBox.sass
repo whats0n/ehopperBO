@@ -3,6 +3,9 @@
 	&.is-error
 		input
 			border-color: $red
+	&.is-active
+		.input-box__placeholder
+			transform: translate3d(0,10px,0) scale(0.73)
 	+hover
 		.input-box__clear
 			opacity: 1
@@ -31,11 +34,27 @@
 			background: $lightGrayActive
 		i
 			font-size: 18px
+	&__field
+		position: relative
+		display: block
+		cursor: text
 	&__input
+		padding-top: 15px
 		padding-right: 60px
 	&__error-message
 		position: absolute
 		top: 100%
 		left: 0
 		right: 0
-
+	&__placeholder
+		position: absolute
+		top: 0
+		left: 15px
+		right: 15px
+		color: rgba($darkGray, 0.7)
+		+rreg
+		font-size: 18px
+		line-height: 20px
+		transform: translate3d(0,20px,0)
+		transform-origin: top left
+		transition: transform 0.15s ease-in-out

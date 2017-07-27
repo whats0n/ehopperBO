@@ -1,10 +1,8 @@
-var webpack = require('webpack');
-var path = require('path');
-var util = require('gulp-util');
-var config = require('./gulp/config');
+var webpack    = require('webpack');
+var path       = require('path');
+var util       = require('gulp-util');
+var config     = require('./gulp/config');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-// uncomment in case of emergency code formatter need
-// var PrettierPlugin = require('prettier-webpack-plugin');
 
 function createConfig(env) {
     var isProduction, webpackConfig;
@@ -26,57 +24,46 @@ function createConfig(env) {
             filename: '[name].js',
             publicPath: 'js/'
         },
-        devtool: isProduction ?
-            '#source-map' :
-            '#cheap-module-eval-source-map',
+        devtool: isProduction
+            ? '#source-map'
+            : '#cheap-module-eval-source-map',
         plugins: [
             // new webpack.optimize.CommonsChunkPlugin({
             //     name: 'vendor',
             //     filename: '[name].js',
             //     minChunks: Infinity
             // }),
-            // uncomment in case of emergency code formatter need
-            // new PrettierPlugin({
-            //     printWidth: 80,
-            //     tabWidth: 4
-            // }),
             new webpack.ProvidePlugin({
                 $: "jquery",
                 jQuery: "jquery",
                 'window.jQuery': "jquery"
             }),
-            new webpack.NoEmitOnErrorsPlugin(),
+            new webpack.NoErrorsPlugin(),
 
-            new BundleAnalyzerPlugin({
+            new BundleAnalyzerPlugin( {
                 analyzerMode: 'static',
                 analyzerPort: 4000,
                 openAnalyzer: false
-            })
+                }
+            )
         ],
         resolve: {
-            extensions: ['.js']
+            extensions: ['', '.js']
         },
         module: {
-            rules: [{
-                test: /\.js$/,
-                loader: 'babel-loader',
-                query: {
-                    presets: [
-                        'es2015'
-                    ]
-                },
-                exclude: [
-                    path.resolve(__dirname, "node_modules")
-                ]
-            }]
+            loaders: [
+                {
+                    test: /\.js$/,
+                    exclude: /node_modules/,
+                    loader: 'babel'
+                }
+            ]
         }
     };
 
     if (isProduction) {
         webpackConfig.plugins.push(
-            new webpack.LoaderOptionsPlugin({
-                minimize: true
-            }),
+            new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin({
                 compress: {
                     warnings: false

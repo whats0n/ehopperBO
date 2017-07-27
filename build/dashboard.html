@@ -8,19 +8,247 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="static/css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
-      <header class="main-header "> </header>
+      <header class="main-header ">
+        <h2 class="title-xl main-header__title">Dashboard</h2> <button class="main-header__nav-btn" title="Menu" data-menu-open="menu">
+			<i></i>
+		</button> </header>
       <!-- end header -->
-      <div class="main "> </div>
+      <!-- begin menu -->
+      <nav class="menu" data-menu-container="menu">
+        <header class="menu__header" data-menu-close="menu" data-animation="ripple"> <i class="fa fa-arrow-left menu__icon"></i>
+          <h2 class="title-xl menu__title">FastFood Enterprise</h2>
+        </header>
+        <div class="menu__container" data-scrollbar="default">
+          <ul class="nav">
+            <li class="nav__item"> <a href="#" class="nav__link is-active">
+			    		<i class="nav__icon icon icon-"></i>Dashboard</a> </li>
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon icon icon-"></i>Orders</a> </li>
+            <li class="nav__item" data-nav-submenu="inventory"> <a href="#" class="nav__link " data-nav-submenu-open="inventory">
+			    		<i class="nav__icon icon icon-"></i>Inventory<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Department</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Category</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Global Modifiers</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Menu Builder</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Transfer</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">PO Receiving</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Inventory Adjustment</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="customers"> <a href="#" class="nav__link " data-nav-submenu-open="customers">
+			    		<i class="nav__icon icon icon-"></i>Customers<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Import Customers</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="vendors"> <a href="#" class="nav__link " data-nav-submenu-open="vendors">
+			    		<i class="nav__icon icon icon-"></i>Vendors<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Vendor List</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="employees"> <a href="#" class="nav__link " data-nav-submenu-open="employees">
+			    		<i class="nav__icon icon icon-"></i>Employees<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Employee List</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Time Clock</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="reporting"> <a href="#" class="nav__link " data-nav-submenu-open="reporting">
+			    		<i class="nav__icon icon icon-"></i>Reporting<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Tips Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Z Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Product Mix Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Transactions Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Inventory Aging</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Serial Item Tracking Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Transfers Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">PO Receiving Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Adjustment Report</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="apps"> <a href="#" class="nav__link " data-nav-submenu-open="apps">
+			    		<i class="nav__icon icon icon-"></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">App Directory</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">QuickBooks Online</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="settings"> <a href="#" class="nav__link " data-nav-submenu-open="settings">
+			    		<i class="nav__icon icon icon-"></i>Settings<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Company Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Register Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Manager</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Agencies</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">eHopper Support Access</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon icon icon-"></i>Community</a> </li>
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon icon icon-"></i>Logout</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end menu -->
+      <!-- begin overlay --><button type="button" class="overlay " data-overlay="overlay" data-menu-overlay="menu"></button>
+      <!-- end overlay -->
+      <div class="main main_inner">
+        <div class="container">
+          <div class="row">
+            <div class="col col_lg-50">
+              <div class="alert">
+                <h3 class="title-md">Ehopper training</h3>
+                <p>Need help with eHopper? <a href="http://ehopper.com/webinar" target="_blank">Attend our weekly training</a></p>
+              </div>
+            </div>
+            <div class="col col_lg-50">
+              <div class="alert">
+                <h3 class="title-md">Feedback</h3>
+                <p><a href="mailto:sales@ehopper.com">Email us</a> to provide feedback about eHopper.</p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col_lg-20">
+              <div class="stat">
+                <div class="stat__icon stat__icon_blue"> </div>
+                <div class="stat__content">
+                  <div class="stat__title">Total Transactions</div>
+                  <div class="stat__text">11</div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_lg-20">
+              <div class="stat">
+                <div class="stat__icon stat__icon_orange"> </div>
+                <div class="stat__content">
+                  <div class="stat__title">Repeat Customers</div>
+                  <div class="stat__text">1</div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_lg-20">
+              <div class="stat">
+                <div class="stat__icon stat__icon_purple"> </div>
+                <div class="stat__content">
+                  <div class="stat__title">Gross Sales</div>
+                  <div class="stat__text">$4,190.53</div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_lg-20">
+              <div class="stat">
+                <div class="stat__icon stat__icon_red"> </div>
+                <div class="stat__content">
+                  <div class="stat__title">Refunds</div>
+                  <div class="stat__text">$0.00</div>
+                </div>
+              </div>
+            </div>
+            <div class="col col_lg-20">
+              <div class="stat">
+                <div class="stat__icon stat__icon_green"> </div>
+                <div class="stat__content">
+                  <div class="stat__title">New Customers</div>
+                  <div class="stat__text">0</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col col_lg-50">
+              <div class="support">
+                <div class="support__header">Support</div>
+                <div class="support__body">
+                  <p><strong>Account ID:</strong> <span>0</span></p>
+                  <p><strong>Web POS URL:</strong> <a href="https://pos.ehopper.com/" target="_blank">https://pos.ehopper.com/</a></p>
+                  <p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
+                  <p><strong>Community:</strong> <a href="Zendesk/Login" target="_blank">Community</a></p>
+                </div>
+                <div class="support__footer">
+                  <p><span class="color-green">Note:</span> Use the chat below to learn how to upgrade to the Freedom Package with eHopper.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col col_lg-50">
+              <div class="tasks">
+                <div class="tasks__header"> <button class="btn-toggle tasks__toggle">
+						<span class="btn-toggle__show"><i class="fa fa-eye"></i>Show</span>
+						<span class="btn-toggle__hide"><i class="fa fa-eye-slash"></i>Hide</span>
+					</button>
+                  <div class="tasks__title">Getting Started</div>
+                </div>
+                <div class="tasks__body">
+                  <ul class="tasks__list">
+                    <li class="task tasks__item"> <label class="checkbox task__status">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> <i class="fa fa-angle-right"></i>
+                      <div class="task__title">Task 1</div>
+                    </li>
+                    <li class="task tasks__item"> <label class="checkbox task__status">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> <i class="fa fa-angle-right"></i>
+                      <div class="task__title">Task 2</div>
+                    </li>
+                    <li class="task tasks__item"> <label class="checkbox task__status">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> <i class="fa fa-angle-right"></i>
+                      <div class="task__title">Task 3</div>
+                    </li>
+                    <li class="task tasks__item"> <label class="checkbox task__status">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> <i class="fa fa-angle-right"></i>
+                      <div class="task__title">Task 4</div>
+                    </li>
+                    <li class="task tasks__item"> <label class="checkbox task__status">
+	<input type="checkbox">
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> <i class="fa fa-angle-right"></i>
+                      <div class="task__title">Task 5</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 

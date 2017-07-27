@@ -2,6 +2,7 @@
 title: 'Terms and Conditions'
 styles: 
 	- 'pos'
+noHeader: true
 ---
 {% extends "layouts/_layout.html" %}
 
@@ -11,8 +12,8 @@ styles:
 	<div class="modal-terms">
 		<div class="modal-terms__container">
 			<div class="modal-terms__header">
-				<button class="modal-terms__close"><i class="icon icon-close"></i></button>
-				<h2 class="title-xlg modal-terms__title">Terms and Conditions</h2>
+				<button class="modal-terms__close"><i class="fa fa-close"></i></button>
+				<h2 class="title-xl modal-terms__title">Terms and Conditions</h2>
 			</div>
 			<div class="modal-terms__body" data-scrollbar="rounded">
 				<div class="modal-terms__subtitle">EHOPPER POINT OF SALE <br>MERCHANT USER SOFTWARE LICENSE <br>AND SERVICES AGREEMENT</div>
@@ -109,15 +110,15 @@ styles:
 					<span>(j)</span> <em>Survival.</em> In addition to as expressly set forth herein, Paragraphs 2, 3, 5, 6, 7, 9, 10, 12, 13 and 14 shall survive termination of this Agreement.'
 				] %}
 				{% for p in content %}
-				    <p>{{p | safe}}</p>
+					<p>{{p | safe}}</p>
 				{% endfor %}
 				<div class="modal-terms__copyright">Copyright © 2016 EHopper LLC, All rights reserved.</div>
 			</div>
 			<div class="modal-terms__footer">
-				<button class="btn btn_primary btn_lg modal-terms__submit text-uppercase" data-animation="ripple">Submit</button>
+				<button class="btn btn_blue btn_lg modal-terms__submit text-uppercase" data-animation="ripple">Submit</button>
 				<div class="modal-terms__agreement">
-					{{mixins.checkbox({
-						classList: 'checkbox_green checkbox_bordered checkbox_lg',
+					{{form.checkbox.call({
+						classList: 'checkbox_green',
 						content: 'I agree with Terms and Conditions'
 					})}}
 				</div>

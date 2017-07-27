@@ -13,7 +13,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<meta name="theme-color" content="#fff">
 		<meta name="format-detection" content="telephone=no">
-		<link rel="stylesheet" media="all" href="static/css/app.css">
+		<link rel="stylesheet" media="all" href="css/app.css">
 		{# {% include "../partials/_media-tags.html" %} #}
 	</head>
 	<body>
@@ -21,7 +21,7 @@
 		<!-- BEGIN content -->
 		<div class="out">
 			{% if noHeader != true %}
-				{% include '../partials/components/_header.html' %}
+				{% include '../partials/_header.html' %}
 			{% endif %}
 			{% if menu %}
 				{% include '../partials/components/_menu.html' %}
@@ -33,7 +33,7 @@
 		<!-- END content -->
 
 		<!-- BEGIN scripts -->
-		<script type="text/javascript" src="static/js/app.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
 		<!-- END scripts -->
 
 	</body>

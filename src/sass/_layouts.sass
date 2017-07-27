@@ -31,3 +31,19 @@ body,
 
 .container
 	padding: 20px
+
+.row
+	margin: 0 -10px
+	+clr
+	+ .row
+		padding-top: 20px
+
+.col
+	float: left
+	padding: 0 10px
+	width: 100%
+	&_lg
+		&-20
+			width: 20%
+		&-50
+			width: 50%

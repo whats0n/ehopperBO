@@ -1,8 +1,86 @@
 ---
 title: Dashboard
+mainClassList: 'main_inner'
+header: { title: 'Dashboard' }
+menu: { active: 0 }
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-
+<div class="container">
+	<div class="row">
+		<div class="col col_lg-50">
+			<div class="alert">
+				<h3 class="title-md">Ehopper training</h3>
+				<p>Need help with eHopper? <a href="http://ehopper.com/webinar" target="_blank">Attend our weekly training</a></p>
+			</div>
+		</div>
+		<div class="col col_lg-50">
+			<div class="alert">
+				<h3 class="title-md">Feedback</h3>
+				<p><a href="mailto:sales@ehopper.com">Email us</a> to provide feedback about eHopper.</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		{% set stats = [
+			{ color: 'blue', title: 'Total Transactions', text: '11' },
+			{ color: 'orange', title: 'Repeat Customers', text: '1' },
+			{ color: 'purple', title: 'Gross Sales', text: '$4,190.53' },
+			{ color: 'red', title: 'Refunds', text: '$0.00' },
+			{ color: 'green', title: 'New Customers', text: '0' }
+		] %}
+		{% for item in stats %}
+			<div class="col col_lg-20">
+				<div class="stat">
+					<div class="stat__icon stat__icon_{{item.color}}">
+						{{item.icon | safe}}
+					</div>
+					<div class="stat__content">
+						<div class="stat__title">{{item.title | safe}}</div>
+						<div class="stat__text">{{item.text | safe}}</div>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="row">
+		<div class="col col_lg-50">
+			<div class="support">
+				<div class="support__header">Support</div>
+				<div class="support__body">
+					<p><strong>Account ID:</strong> <span>0</span></p>
+					<p><strong>Web POS URL:</strong> <a href="https://pos.ehopper.com/" target="_blank">https://pos.ehopper.com/</a></p>
+					<p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
+					<p><strong>Community:</strong> <a href="Zendesk/Login" target="_blank">Community</a></p>
+				</div>
+				<div class="support__footer">
+					<p><span class="color-green">Note:</span> Use the chat below to learn how to upgrade to the Freedom Package with eHopper.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col col_lg-50">
+			<div class="tasks">
+				<div class="tasks__header">
+					<button class="btn-toggle tasks__toggle">
+						<span class="btn-toggle__show"><i class="fa fa-eye"></i>Show</span>
+						<span class="btn-toggle__hide"><i class="fa fa-eye-slash"></i>Hide</span>
+					</button>
+					<div class="tasks__title">Getting Started</div>
+				</div>
+				<div class="tasks__body">
+					<ul class="tasks__list">
+						{% for item in range(0, 5) %}
+						    <li class="task tasks__item">
+						    	{{form.checkbox.call({ classList: 'task__status' })}}
+						    	<i class="fa fa-angle-right"></i>
+						    	<div class="task__title">Task {{loop.index}}</div>
+						    </li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock %}

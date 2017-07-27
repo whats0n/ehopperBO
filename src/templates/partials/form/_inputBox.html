@@ -1,8 +1,11 @@
 {% macro call(props) %}
-<div class="input-box {{props.classList}}">
-	<input type="{{props.type or 'text'}}" 
-		class="simple-input input-box__input {{props.inputClassList}}" 
-		placeholder="{{props.placeholder}}" {{props.inputAttrs | safe}}>
+<div class="input-box {{props.classList}} js-field">
+	<label class="input-box__field">
+		{% if props.placeholder %}
+			<span class="input-box__placeholder">{{props.placeholder}}</span>
+		{% endif %}
+		<input type="{{props.type or 'text'}}" class="simple-input input-box__input {{props.inputClassList}} js-field-input" {{props.inputAttrs | safe}}>
+	</label>
 	<button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button>

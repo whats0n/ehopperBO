@@ -8,47 +8,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="static/css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css"> </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
       <header class="main-header main-header_lg">
-        <div class="main-header__logo"> <img src="static/img/logo-white.svg" alt="eHopper"> </div>
+        <div class="main-header__logo"> <img src="img/logo-white.svg" alt="eHopper"> </div>
       </header>
       <!-- end header -->
       <div class="main main_lg">
-        <div class="vertical-center">
-          <div class="vertical-center__container">
-            <div class="form form_sm">
-              <h2 class="title-xxl form__title">Back Office</h2>
-              <div class="form__section">
-                <div class="input-box is-error"> <input type="email" class="simple-input input-box__input " placeholder="Email *" required> <button class="input-box__clear">
+        <div class="section">
+          <div class="form form_sm">
+            <h2 class="title-xxl form__title">Back Office</h2>
+            <div class="form__section">
+              <div class="input-box is-error js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Email *</span>
+		
+		<input type="email" class="simple-input input-box__input  js-field-input" required>
+	</label> <button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button>
-                  <div class="error-message input-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                </div>
+                <div class="error-message input-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
               </div>
-              <div class="form__section">
-                <div class="input-box "> <input type="password" class="simple-input input-box__input " placeholder="Password *" required> <button class="input-box__clear">
+            </div>
+            <div class="form__section">
+              <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Password *</span>
+		
+		<input type="password" class="simple-input input-box__input  js-field-input" required>
+	</label> <button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button> </div>
-              </div>
-              <div class="form__section text-center"> <button class="btn btn_blue btn_lg form__btn" data-animation="ripple">Login</button> </div>
-              <ul class="form__list">
-                <li>Did not setup your password? Click <a href="#">here</a></li>
-                <li>Forgot password? Click <a href="#">here</a></li>
-                <li>Not registered? Click <a href="#">signup</a> to create an Account for free.</li>
-              </ul>
             </div>
+            <div class="form__section text-center"> <button class="btn btn_main btn_lg form__btn" data-animation="ripple">Login</button> </div>
+            <ul class="form__list">
+              <li>Did not setup your password? Click <a href="#">here</a></li>
+              <li>Forgot password? Click <a href="#">here</a></li>
+              <li>Not registered? Click <a href="#">signup</a> to create an Account for free.</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->
-    <script type="text/javascript" src="static/js/app.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
     <!-- END scripts -->
   </body>
 

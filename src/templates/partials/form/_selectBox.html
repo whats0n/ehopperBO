@@ -1,17 +1,35 @@
+{% import 'partials/form/_checkbox.html' as checkbox %}
 {% macro call(props) %}
 <div class="select-box {{props.classList}}">
-	<select {{props.selectAttrs}}>
-		{% if props.placeholder  %}
-			<option value="{{props.placeholder}}" disabled selected>{{props.placeholder}}</option>
-		{% endif %}
-		{% for option in props.options %}
-			{% if props.selected == loop.index0 and not props.placeholder %}
-				<option value="{{option}}" selected>{{option}}</option>
-			{% else %}
-				<option value="{{option}}">{{option}}</option>
+	{% if props.multiple %}
+		<div class="multiple-select" data-select="true">
+			<div class="multiple-select__header" data-select-open="true">
+				<div class="multiple-select__value">{{props.placeholder or options[0]}}</div>
+			</div>
+			<div class="multiple-select__dropdown" data-scrollbar="default">
+				<ul class="multiple-select__list">
+					{% for option in props.options %}
+						<li>
+							{{checkbox.call({ classList: 'multiple-select__checkbox', content: option })}}
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	{% else %}
+		<select {{props.selectAttrs}}>
+			{% if props.placeholder %}
+				<option value="{{props.placeholder}}" disabled selected>{{props.placeholder}}</option>
 			{% endif %}
-		{% endfor %}
-	</select>
+			{% for option in props.options %}
+				{% if props.selected == loop.index0 and not props.placeholder %}
+					<option value="{{option}}" selected>{{option}}</option>
+				{% else %}
+					<option value="{{option}}">{{option}}</option>
+				{% endif %}
+			{% endfor %}
+		</select>
+	{% endif %}
 	{% if props.errorMessage %}
 		<div class="error-message select-box__error-message">{{props.errorMessage}}</div>
 	{% endif %}

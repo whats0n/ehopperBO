@@ -28,28 +28,12 @@ gulp.task('copy:img', function() {
         .pipe(gulp.dest(config.dest.img));
 });
 
-gulp.task('copy:jsVendor', function() {
-    return gulp
-        .src(config.src.js + '/vendor/**/*.js')
-        .pipe(gulp.dest(config.dest.js + '/vendor'));
-});
-
-gulp.task('copy:jsStatic', function() {
-    return gulp
-        .src(config.src.js + '/static/**/*.js')
-        .pipe(gulp.dest(config.dest.js));
-});
-
 gulp.task('copy', [
     'copy:img',
     // 'copy:rootfiles',
     // 'copy:lib',
-    'copy:jsVendor',
-    'copy:jsStatic',
     'copy:fonts'
 ]);
 gulp.task('copy:watch', function() {
     gulp.watch(config.src.img+'/*', ['copy']);
-    gulp.watch(config.src.js + '/static/**/*.js', ['copy']);
-    gulp.watch(config.src.js + '/vendor/**/*.js', ['copy']);
 });
