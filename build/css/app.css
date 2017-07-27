@@ -4392,17 +4392,17 @@ button:disabled, button.is-disabled,
 
 .simple-keyboard__submit {
   color: #fff;
-  background: #22B745;
+  background: #3949AB;
 }
 
 .simple-keyboard__submit:active {
   color: #fff;
-  background: #4cac51;
+  background: #3949AB;
 }
 
 .no-touch .simple-keyboard__submit:active {
   color: #fff;
-  background: #4cac51;
+  background: #3949AB;
 }
 
 .simple-keyboard__submit .icon {
