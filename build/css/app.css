@@ -3721,6 +3721,11 @@ button:disabled, button.is-disabled,
   -ms-transform-origin: top left;
   transform-origin: top left;
   transition: transform 0.15s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 .multiple-select {
