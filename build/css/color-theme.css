@@ -185,4 +185,12 @@ html {
   color: #3949AB;
 }
 
+.color-circle-main {
+  border-color: #3949AB;
+}
+
+.color-circle-main.is-active {
+  background: #3949AB;
+}
+
 /*# sourceMappingURL=color-theme.css.map */
