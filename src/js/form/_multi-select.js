@@ -117,7 +117,7 @@ export default function() {
 			const valueArray = [];
 
 			if (!select._value) select._value = {};
-			
+
 			if ($inputs.length === $checkedInputs.length) {
 				$inputs.each((i, input) => {
 					const $input = $(input);
@@ -169,7 +169,7 @@ export default function() {
 
 		setTextValue(props) {
 			const {select, inputs, checkedInputs, value, textValue} = props;
-			console.log(props);
+
 			const text = inputs.length === checkedInputs.length 
 				? select.data('all-checked')
 				: textValue;
