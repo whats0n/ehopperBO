@@ -13,6 +13,7 @@ export default function() {
 			this.selectItem = this.selectItem.bind(this);
 			this.selectAll = this.selectAll.bind(this);
 			this.getSelect = this.getSelect.bind(this);
+			this.setTextValue = this.setTextValue.bind(this);
 
 			this.setInitialValues();
 			this.addHandlers();
@@ -173,6 +174,10 @@ export default function() {
 			const text = inputs.length === checkedInputs.length 
 				? select.data('all-checked')
 				: textValue;
+
+			if (inputs.length !== checkedInputs.length) select.find(`${this.props.selectAll} input`).prop('checked', false);
+			if (inputs.length === checkedInputs.length) select.find(`${this.props.selectAll} input`).prop('checked', true);
+			
 
 			value.text(text);
 
