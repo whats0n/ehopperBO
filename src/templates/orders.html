@@ -14,15 +14,16 @@ menu: { active: 1 }
 			fields: [
 				{
 					classList: 'filters__field_md',
-					search: {
+					mixin: 'search',
+					options: {
 						placeholder: 'Search Order'
 					}
 				},
 				{ 
 					classList: 'filters__field_md',
-					select: {
+					mixin: 'multiSelect',
+					options: {
 						placeholder: 'Select Store(s)',
-						multiple: true,
 						options: [
 							'Lorem ipsum. 1',
 							'Lorem ipsum. 2',
@@ -37,9 +38,10 @@ menu: { active: 1 }
 			classList: 'filters__col_md',
 			fields: [
 				{ 
-					label: 'Order Type:',
 					classList: 'filters__field_sm',
-					select: {
+					mixin: 'select',
+					options: {
+						placeholder: 'Order Type',
 						options: [
 							'All',
 							'Quick Sale',
@@ -52,9 +54,10 @@ menu: { active: 1 }
 					}
 				},
 				{ 
-					label: 'Order Status:',
 					classList: 'filters__field_sm',
-					select: {
+					mixin: 'select',
+					options: {
+						placeholder: 'Order Status',
 						options: [
 							'All',
 							'Not Paid',
@@ -68,9 +71,10 @@ menu: { active: 1 }
 					}
 				},
 				{ 
-					label: 'Fulfillment:',
 					classList: 'filters__field_sm',
-					select: {
+					mixin: 'select',
+					options: {
+						placeholder: 'Fulfillment',
 						options: [
 							'All',
 							'New',

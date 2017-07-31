@@ -11,10 +11,9 @@ mainClassList: 'main_lg'
 {% block content %}
 <div class="section">
 	<div class="form form_sm">
-		<h2 class="title-xxl color-main form__title">Back Office</h2>
 		<div class="form__section">
 			{{form.inputBox.call({
-				placeholder: 'Email *',
+				placeholder: 'Email',
 				type: 'email',
 				classList: 'is-error',
 				inputAttrs: 'required',
@@ -23,23 +22,18 @@ mainClassList: 'main_lg'
 		</div>
 		<div class="form__section">
 			{{form.inputBox.call({
-				placeholder: 'Password *',
+				placeholder: 'Password',
 				type: 'password',
 				inputAttrs: 'required'
 			})}}
 		</div>
-		<div class="form__section text-center">
-			<button class="btn btn_main btn_lg btn_block form__btn" data-animation="ripple">Login</button>
+		<div class="form__section">
+			<button class="btn btn_lg btn_block color-btn-main" data-animation="ripple">Login</button>
 		</div>
-		{% set loginList = [
-			'Did not setup your password? Click <a href="#">here</a>',
-			'Forgot password? Click <a href="#">here</a>',
-			'Not registered? Click <a href="#">signup</a> to create an Account for free.'
-		] %}
 		<ul class="form__list">
-			{% for item in loginList %}
-				<li>{{item | safe}}</li>
-			{% endfor %}
+			<li>Did not setup your password? Click <a href="#">here</a></li>
+			<li>Forgot password? Click <a href="#">here</a></li>
+			<li>Not registered? Click {{mixins.externalLink({ text: 'signup' })}} to create an Account for free.</li>
 		</ul>
 	</div>
 </div>

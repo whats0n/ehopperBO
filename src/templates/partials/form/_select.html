@@ -1,0 +1,20 @@
+{% macro call(props) %}
+<!-- begin select -->
+<div class="select js-select">
+	<div class="select__field js-select-field">
+		{% if props.placeholder %}
+			<div class="select__placeholder">{{props.placeholder}}</div>
+		{% endif %}
+		<div class="select__value js-select-value">{{props.value}}</div>
+		<i class="fa fa-angle-down select__arrow"></i>
+	</div>
+	<div class="select__body">
+		<ul class="select__list">
+			{% for option in props.options %}
+				<li class="select__item js-select-item">{{option}}</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
+<!-- end select -->
+{% endmacro %}

@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="theme-color" content="#fff">
     <meta name="format-detection" content="telephone=no">
-    <link rel="stylesheet" media="all" href="css/app.css"> </head>
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="css/color-theme.css"> </head>
 
   <body>
     <!-- BEGIN content -->
     <div class="out">
       <!-- begin header -->
-      <header class="main-header ">
+      <header class="main-header color-header ">
         <h2 class="title-xl main-header__title">Orders</h2> <button class="main-header__nav-btn" title="Menu" data-menu-open="menu">
 			<i></i>
 		</button> </header>
@@ -117,14 +118,14 @@
                   <!-- end search -->
                 </div>
                 <div class="filters__field filters__field_md">
-                  <div class="select-box ">
-                    <div class="multiple-select" data-select="true">
-                      <div class="multiple-select__header" data-select-open="true">
-                        <div class="multiple-select__value">Select Store(s)</div>
-                      </div>
-                      <div class="multiple-select__dropdown" data-scrollbar="default">
-                        <ul class="multiple-select__list">
-                          <li> <label class="checkbox multiple-select__checkbox">
+                  <!-- begin multi-select -->
+                  <div class="select js-multi-select">
+                    <div class="select__field js-multi-select-field">
+                      <div class="select__placeholder">Select Store(s)</div>
+                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__item"> <label class="checkbox js-multi-select-item">
 	<input type="checkbox">
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
@@ -133,7 +134,7 @@
 		<span class="checkbox__content">Lorem ipsum. 1</span>
 	
 </label> </li>
-                          <li> <label class="checkbox multiple-select__checkbox">
+                        <li class="select__item"> <label class="checkbox js-multi-select-item">
 	<input type="checkbox">
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
@@ -142,7 +143,7 @@
 		<span class="checkbox__content">Lorem ipsum. 2</span>
 	
 </label> </li>
-                          <li> <label class="checkbox multiple-select__checkbox">
+                        <li class="select__item"> <label class="checkbox js-multi-select-item">
 	<input type="checkbox">
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
@@ -151,7 +152,7 @@
 		<span class="checkbox__content">Lorem ipsum. 3</span>
 	
 </label> </li>
-                          <li> <label class="checkbox multiple-select__checkbox">
+                        <li class="select__item"> <label class="checkbox js-multi-select-item">
 	<input type="checkbox">
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
@@ -160,117 +161,72 @@
 		<span class="checkbox__content">Lorem ipsum. 4</span>
 	
 </label> </li>
-                        </ul>
-                      </div>
+                      </ul>
                     </div>
                   </div>
+                  <!-- end multi-select -->
                 </div>
               </div>
               <div class="filters__col filters__col_md">
                 <div class="filters__field filters__field_sm">
-                  <div class="filters__label">Order Type:</div>
-                  <div class="select-box "> <select>
-			
-			
-				
-					<option value="All">All</option>
-				
-			
-				
-					<option value="Quick Sale">Quick Sale</option>
-				
-			
-				
-					<option value="Dine In">Dine In</option>
-				
-			
-				
-					<option value="Take Out">Take Out</option>
-				
-			
-				
-					<option value="Drive Thru">Drive Thru</option>
-				
-			
-				
-					<option value="Delivery">Delivery</option>
-				
-			
-				
-					<option value="Manual Sale">Manual Sale</option>
-				
-			
-		</select> </div>
+                  <!-- begin select -->
+                  <div class="select js-select">
+                    <div class="select__field js-select-field">
+                      <div class="select__placeholder">Order Type</div>
+                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__item js-select-item">All</li>
+                        <li class="select__item js-select-item">Quick Sale</li>
+                        <li class="select__item js-select-item">Dine In</li>
+                        <li class="select__item js-select-item">Take Out</li>
+                        <li class="select__item js-select-item">Drive Thru</li>
+                        <li class="select__item js-select-item">Delivery</li>
+                        <li class="select__item js-select-item">Manual Sale</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end select -->
                 </div>
                 <div class="filters__field filters__field_sm">
-                  <div class="filters__label">Order Status:</div>
-                  <div class="select-box "> <select>
-			
-			
-				
-					<option value="All">All</option>
-				
-			
-				
-					<option value="Not Paid">Not Paid</option>
-				
-			
-				
-					<option value="Pending Payment">Pending Payment</option>
-				
-			
-				
-					<option value="Partially Paid">Partially Paid</option>
-				
-			
-				
-					<option value="Paid">Paid</option>
-				
-			
-				
-					<option value="Partially Refunded">Partially Refunded</option>
-				
-			
-				
-					<option value="Refunded">Refunded</option>
-				
-			
-				
-					<option value="Voided">Voided</option>
-				
-			
-		</select> </div>
+                  <!-- begin select -->
+                  <div class="select js-select">
+                    <div class="select__field js-select-field">
+                      <div class="select__placeholder">Order Status</div>
+                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__item js-select-item">All</li>
+                        <li class="select__item js-select-item">Not Paid</li>
+                        <li class="select__item js-select-item">Pending Payment</li>
+                        <li class="select__item js-select-item">Partially Paid</li>
+                        <li class="select__item js-select-item">Paid</li>
+                        <li class="select__item js-select-item">Partially Refunded</li>
+                        <li class="select__item js-select-item">Refunded</li>
+                        <li class="select__item js-select-item">Voided</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end select -->
                 </div>
                 <div class="filters__field filters__field_sm">
-                  <div class="filters__label">Fulfillment:</div>
-                  <div class="select-box "> <select>
-			
-			
-				
-					<option value="All">All</option>
-				
-			
-				
-					<option value="New">New</option>
-				
-			
-				
-					<option value="In Preparation">In Preparation</option>
-				
-			
-				
-					<option value="Prepared">Prepared</option>
-				
-			
-				
-					<option value="In Fulfillment">In Fulfillment</option>
-				
-			
-				
-					<option value="Fulfilled">Fulfilled</option>
-				
-			
-		</select> </div>
+                  <!-- begin select -->
+                  <div class="select js-select">
+                    <div class="select__field js-select-field">
+                      <div class="select__placeholder">Fulfillment</div>
+                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__item js-select-item">All</li>
+                        <li class="select__item js-select-item">New</li>
+                        <li class="select__item js-select-item">In Preparation</li>
+                        <li class="select__item js-select-item">Prepared</li>
+                        <li class="select__item js-select-item">In Fulfillment</li>
+                        <li class="select__item js-select-item">Fulfilled</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end select -->
                 </div>
               </div>
             </div>

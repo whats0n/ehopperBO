@@ -13,11 +13,15 @@
 								<div class="filters__label">{{field.label}}</div>
 							{% endif %}
 							
-							{% if field.search %}
+							{% if field.mixin %}
+								{{form[field.mixin].call(field.options)}}
+							{% endif %}
+
+							{# {% if field.search %}
 								{{form.search.call(field.search)}}
 							{% elif field.select %}
 								{{form.selectBox.call(field.select)}}
-							{% endif %}
+							{% endif %} #}
 						</div>
 					{% endfor %}
 				</div>

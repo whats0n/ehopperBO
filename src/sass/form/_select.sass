@@ -1,0 +1,85 @@
+.select
+	position: relative
+	color: $darkGray
+	+rreg
+	font-size: 18px
+	line-height: normal
+	&.is-focus
+		.select
+			&__body
+				opacity: 1
+				visibility: visible
+				+gpu
+			&__arrow
+				transform: translate3d(0,-50%,0) rotate(-180deg)
+	&.is-active
+		.select
+			&__placeholder
+				transform: translate3d(0,9px,0) scale(0.73)
+	&__arrow
+		position: absolute
+		top: 50%
+		right: 15px
+		color: $darkGray
+		font-size: 18px
+		transform: translate3d(0,-50%,0)
+		transition: transform 0.15s ease-in-out
+	&__field
+		position: relative
+		padding: 0 30px 0 15px
+		border: 1px solid $lightGray
+		width: 100%
+		height: 60px
+		background: $white
+		transition: border-color 0.17s ease-in-out
+		cursor: pointer
+	&__placeholder
+		position: absolute
+		top: 0
+		left: 15px
+		right: 30px
+		color: rgba($darkGray, 0.7)
+		+rreg
+		font-size: 18px
+		line-height: 20px
+		+text-overflow
+		transform: translate3d(0,19px,0)
+		transform-origin: top left
+		transition: transform 0.15s ease-in-out
+		+nosel
+		pointer-events: none
+	&__value
+		padding-top: 15px
+		line-height: 43px
+		+text-overflow
+	&__body
+		position: absolute
+		z-index: 100
+		top: 100%
+		left: 0
+		padding: 10px 0
+		margin-top: 10px
+		border: 1px solid $lightGray
+		min-width: 100%
+		background: $white
+		white-space: nowrap
+		opacity: 0
+		visibility: hidden
+		transform: translate3d(0,-10px,0)
+		transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out
+	&__item
+		padding: 5px 15px
+		+nosel
+		cursor: pointer
+		+hover
+			background: $lightGray
+		+active
+			color: $white
+			background: $blue
+		.checkbox
+			display: block
+			padding: 5px 15px
+			margin: -5px -15px
+			&__icon
+				top: 5px
+				left: 15px

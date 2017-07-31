@@ -1,15 +1,17 @@
 <!-- begin header -->
-<header class="main-header {{header.classList}}">
+<header class="main-header color-header {{header.classList}}">
 	{% if header.logo %}
 		<div class="main-header__logo">
 			<img src="img/logo-white.svg" alt="eHopper">
 		</div>
+		<h2 class="title-xxl color-white main-header__description">Back Office</h2>
 	{% endif %}
 	{% if header.box %}
 		<div class="main-header__box">
 			{% if header.box.logo %}
 				<img src="img/logo-white.svg" alt="eHopper">
 			{% endif %}
+			<h2 class="title-xxl color-white main-header__description">Back Office</h2>
 		</div>
 	{% endif %}
 	{% if header.title %}
