@@ -5142,7 +5142,7 @@ button:disabled, button.is-disabled,
 }
 
 .modal-content__header {
-  padding: 30px 20px;
+  padding: 10px 20px;
   border-radius: 5px 5px 0 0;
   color: #fff;
   background: #3949AB;
