@@ -11,6 +11,7 @@ export default function() {
 			this.toggleOnFieldClick = this.toggleOnFieldClick.bind(this);
 			this.closeOnBodyClick = this.closeOnBodyClick.bind(this);
 			this.selectItem = this.selectItem.bind(this);
+			this.selectAll = this.selectAll.bind(this);
 			this.getSelect = this.getSelect.bind(this);
 
 			this.setInitialValues();
@@ -30,6 +31,7 @@ export default function() {
 			smartClick(this.props.field, this.toggleOnFieldClick);
 			smartClick('body', this.closeOnBodyClick);
 			$DOCUMENT.on('change', `${this.props.item} input`, this.selectItem);
+			$DOCUMENT.on('change', `${this.props.selectAll} input`, this.selectAll);
 
 			// smartClick('body', function(e) {
 			// 	that.closeOnBodyClick.call(this, e, that.props);
@@ -72,8 +74,8 @@ export default function() {
 			const $item = $target.closest(this.props.item);
 			const $select = $target.closest(this.props.select);
 			const $value = $select.find(this.props.value);
-			const $inputs = $select.find('input');
-			const $checkedInputs = $select.find('input:checked');
+			const $inputs = $select.find(`${this.props.item} input`);
+			const $checkedInputs = $select.find(`${this.props.item} input:checked`);
 			const select = $select.get(0);
 
 			const value = $target.data('value');
@@ -101,12 +103,43 @@ export default function() {
 			});
 
 		}
+		selectAll(e) {
+			const $target = $(e.currentTarget);
+			const $item = $target.closest(this.props.item);
+			const $select = $target.closest(this.props.select);
+			const $value = $select.find(this.props.value);
+			const $inputs = $select.find(`${this.props.item} input`);
+			const $checkedInputs = $select.find(`${this.props.item} input:checked`);
+			const select = $select.get(0);
+
+			const value = $target.data('value');
+			const index = $item.index();
+			const valueArray = [];
+
+			if (!select._value) select._value = {};
+			
+			if ($inputs.length === $checkedInputs.length) {
+				$inputs.each((i, input) => {
+					const $input = $(input);
+					if (!$input.prop('checked')) return;
+					$input.prop('checked', false);
+					$input.trigger('change');
+				});
+			} else {
+				$inputs.each((i, input) => {
+					const $input = $(input);
+					if ($input.prop('checked')) return;
+					$input.prop('checked', true);
+					$input.trigger('change');
+				});
+			}
+		}
 
 		setInitialValues() {
 			const $select = this.props.selectNode;
 			const $value = $select.find(this.props.value);
 			const $inputs = $select.find(`${this.props.item} input`);
-			const $checkedInputs = $select.find('input:checked');
+			const $checkedInputs = $select.find(`${this.props.item} input:checked`);
 			const select = $select.get(0);
 			
 			if (!select._value) select._value = {};
@@ -136,7 +169,7 @@ export default function() {
 
 		setTextValue(props) {
 			const {select, inputs, checkedInputs, value, textValue} = props;
-
+			console.log(props);
 			const text = inputs.length === checkedInputs.length 
 				? select.data('all-checked')
 				: textValue;
@@ -154,7 +187,8 @@ export default function() {
 			select: '.js-multi-select',
 			field: '.js-multi-select-field',
 			item: '.js-multi-select-item',
-			value: '.js-multi-select-value'
+			value: '.js-multi-select-value',
+			selectAll: '.js-multi-select-all'
 		});
 	});
 

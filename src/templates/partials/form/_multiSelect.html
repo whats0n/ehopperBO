@@ -11,23 +11,21 @@
 	</div>
 	<div class="select__body">
 		<ul class="select__list">
+			{% if props.selectAll %}
+				<li class="select__item js-multi-select-all">
+					{{checkbox.call({
+						content: props.selectAll,
+						value: props.selectAll
+					})}}
+				</li>
+			{% endif %}
 			{% for option in props.options %}
-				{% if loop.index0 % 2 == 0 %}
-					<li class="select__item js-multi-select-item">
-						{{checkbox.call({
-							content: option,
-							attrs: 'checked',
-							value: option
-						})}}
-					</li>
-				{% else %}
-					<li class="select__item js-multi-select-item">
-						{{checkbox.call({
-							content: option,
-							value: option
-						})}}
-					</li>
-				{% endif %}
+				<li class="select__item js-multi-select-item">
+					{{checkbox.call({
+						content: option,
+						value: option
+					})}}
+				</li>
 			{% endfor %}
 		</ul>
 	</div>
