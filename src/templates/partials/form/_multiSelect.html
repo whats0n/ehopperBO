@@ -1,21 +1,21 @@
 {% import 'partials/form/_checkbox.html' as checkbox %}
 {% macro call(props) %}
 <!-- begin multi-select -->
-<div class="select js-multi-select">
+<div class="select js-multi-select" data-all-checked="{{props.allChecked or 'All'}}">
 	<div class="select__field js-multi-select-field">
 		{% if props.placeholder %}
 			<div class="select__placeholder">{{props.placeholder}}</div>
 		{% endif %}
-		<div class="select__value js-select-value">{{props.value}}</div>
+		<div class="select__value js-multi-select-value">{{props.value}}</div>
 		<i class="fa fa-angle-down select__arrow"></i>
 	</div>
 	<div class="select__body">
 		<ul class="select__list">
 			{% for option in props.options %}
-				<li class="select__item">
+				<li class="select__item js-multi-select-item">
 					{{checkbox.call({
-						classList: 'js-multi-select-item',
-						content: option
+						content: option,
+						value: option
 					})}}
 				</li>
 			{% endfor %}
