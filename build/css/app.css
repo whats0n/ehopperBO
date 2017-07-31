@@ -4385,22 +4385,22 @@ button:disabled, button.is-disabled,
 
 [data-scrollbar="rounded"]::-webkit-scrollbar-thumb,
 [data-scrollbar="default"]::-webkit-scrollbar-thumb {
-  background: #2e99db;
+  background: #3949AB;
 }
 
 .no-touch [data-scrollbar="rounded"]::-webkit-scrollbar-thumb:hover, .no-touch
 [data-scrollbar="default"]::-webkit-scrollbar-thumb:hover {
-  background: #2183bf;
+  background: #3949AB;
 }
 
 [data-scrollbar="rounded"]::-webkit-scrollbar:vertical {
   width: 12px;
-  background: linear-gradient(to right, transparent 5px, #b9dff6 5px, #b9dff6 6px, transparent 6px);
+  background: linear-gradient(to right, transparent 5px, #3949AB 5px, #3949AB 6px, transparent 6px);
 }
 
 [data-scrollbar="rounded"]::-webkit-scrollbar:horizontal {
   height: 12px;
-  background: linear-gradient(to bottom, transparent 5px, #b9dff6 5px, #b9dff6 6px, transparent 6px);
+  background: linear-gradient(to bottom, transparent 5px, #3949AB 5px, #3949AB 6px, transparent 6px);
 }
 
 [data-scrollbar="rounded"]::-webkit-scrollbar-thumb {
@@ -4409,12 +4409,12 @@ button:disabled, button.is-disabled,
 
 [data-scrollbar="default"]::-webkit-scrollbar:vertical {
   width: 7px;
-  background: linear-gradient(to right, transparent 3px, #b9dff6 3px, #b9dff6 4px, transparent 4px);
+  background: linear-gradient(to right, transparent 3px, #3949AB 3px, #3949AB 4px, transparent 4px);
 }
 
 [data-scrollbar="default"]::-webkit-scrollbar:horizontal {
   height: 7px;
-  background: linear-gradient(to bottom, transparent 3px, #b9dff6 3px, #b9dff6 4px, transparent 4px);
+  background: linear-gradient(to bottom, transparent 3px, #3949AB 3px, #3949AB 4px, transparent 4px);
 }
 
 .keyboard {
@@ -5104,6 +5104,10 @@ button:disabled, button.is-disabled,
   visibility: visible;
 }
 
+.modal.is-open .modal__container {
+  transform: translate3d(0, 0, 0);
+}
+
 .modal_xs .modal__container {
   max-width: 300px;
 }
@@ -5127,6 +5131,8 @@ button:disabled, button.is-disabled,
   vertical-align: middle;
   width: 100%;
   font-size: 14px;
+  transform: translate3d(0, -300px, 0);
+  transition: transform 0.27s ease-in-out;
 }
 
 .modal-content {

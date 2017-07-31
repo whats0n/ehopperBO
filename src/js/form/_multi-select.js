@@ -1,83 +1,157 @@
 import {ACTIVE, FOCUS, smartClick, $DOCUMENT} from '../_constants';
 
 export default function() {
+
+	let called = false;
+
 	class MultiSelect {
 		constructor(props) {
 			this.props = props;
+			//default values storage
 			this._value = {};
+		
+			this.toggleOnFieldClick = this.toggleOnFieldClick.bind(this);
+			this.closeOnBodyClick = this.closeOnBodyClick.bind(this);
+			this.selectItem = this.selectItem.bind(this);
+			this.getSelect = this.getSelect.bind(this);
+
+			this.setInitialValues();
 			this.addHandlers();
 		}
 		addHandlers() {
+			//check if it's not first call - do not add handlers
+			if (called) return;
+			called = !called;
+
 			const that = this;
-			smartClick(this.props.field, function(e) {
-				that.toggleOnFieldClick.call(this, e, that.props);
-			});
-			smartClick('body', function(e) {
-				that.closeOnBodyClick.call(this, e, that.props);
-			});
-			$DOCUMENT.on('change', `${this.props.item} input`, function(e) {
-				that.selectItem.call(this, e, that);
-			})
+
+			// smartClick(this.props.field, function(e) {
+			// 	that.toggleOnFieldClick.call(this, e, that.props);
+			// });
+
+			smartClick(this.props.field, this.toggleOnFieldClick);
+			smartClick('body', this.closeOnBodyClick);
+			$DOCUMENT.on('change', `${this.props.item} input`, this.selectItem);
+
+			// smartClick('body', function(e) {
+			// 	that.closeOnBodyClick.call(this, e, that.props);
+			// });
+
 		}
-		toggleOnFieldClick(e, props) {
+		getSelect($el) {
+			return {
+				current: $el.closest(this.props.select),
+				all: $(this.props.select)
+			}
+		}
+		toggleOnFieldClick(e) {
+
 			e.preventDefault();
-				
-			const $this = $(this);
-			const $select = $this.closest(props.select);
-			const $selects = $(props.select);
 			
-			if ($select.hasClass(FOCUS)) {
-				$selects.removeClass(FOCUS);
+			const $target = $(e.currentTarget);
+			const {current, all} = this.getSelect($target);
+
+			if (current.hasClass(FOCUS)) {
+				all.removeClass(FOCUS);
 			} else {
-				$selects.removeClass(FOCUS);
-				$select.addClass(FOCUS);
+				all.removeClass(FOCUS);
+				current.addClass(FOCUS);
 			}
+
 		}
-		closeOnBodyClick(e, props) {
+		closeOnBodyClick(e) {
+
 			const $target = $(e.target);
-			const $select = $target.closest(props.select);
-			const $selects = $(props.select);
-			if ($select.length || !$selects.hasClass(FOCUS)) return;
-			$selects.removeClass(FOCUS);
+			const {current, all} = this.getSelect($target);
+
+			if (current.length || !all.hasClass(FOCUS)) return;
+			all.removeClass(FOCUS);
+
 		}
-		selectItem(e, selectObject) {
-			const $this = $(this);
-			const $select = $this.closest(selectObject.props.select);
-			const $value = $select.find(selectObject.props.value);
-			const $parent = $this.closest(selectObject.props.item);
-			const $allInputs = $select.find('input');
-			const $allCheckedInputs = $select.find('input:checked');
-			const value = $this.data('value');
-			const index = $parent.index();
-			const selectValue = selectObject._value;
-			const selectValueArray = [];
-			const allSelectedText = $select.data('all-checked');
-			
-			if ($this.prop('checked')) {
-				selectValue[`key_${index}`] = value;
+		selectItem(e) {
+
+			const $target = $(e.currentTarget);
+			const $item = $target.closest(this.props.item);
+			const $select = $target.closest(this.props.select);
+			const $value = $select.find(this.props.value);
+			const $inputs = $select.find('input');
+			const $checkedInputs = $select.find('input:checked');
+
+			const value = $target.data('value');
+			const index = $item.index();
+			const valueArray = [];
+
+			if ($target.prop('checked')) {
+				$select._value[`key_${index}`] = value;
 			} else {
-				delete selectValue[`key_${index}`];
+				delete $select._value[`key_${index}`];
 			}
 			
-			for (let key in selectValue) {
-				selectValueArray.push(selectValue[key]);
+			for (let key in $select._value) {
+				valueArray.push($select._value[key]);
 			}
 
-			const text = $allInputs.length === $allCheckedInputs.length 
-				? allSelectedText
-				: selectValueArray.join(', ');
+			this.setTextValue({
+				select: $select,
+				inputs: $inputs,
+				checkedInputs: $checkedInputs,
+				value: $value,
+				textValue: valueArray.join(', ')
+			});
+			
+		}
 
-			$value.text(text);
+		setInitialValues() {
+			const $select = this.props.selectNode;
+			const $value = $select.find(this.props.value);
+			const $inputs = $select.find(`${this.props.item} input`);
+			const $checkedInputs = $select.find('input:checked');
 
-			text.length && !$select.hasClass(ACTIVE) && $select.addClass(ACTIVE);
-			!text.length && $select.removeClass(ACTIVE);
+			const selectValue = $select._value;
+			const selectValueArray = [];
+
+			$inputs.each((index, input) => {
+
+				const $input = $(input);
+				if (!$input.prop('checked')) return;
+
+				const value = $input.data('value');
+				selectValue[`key_${index}`] = value;
+				selectValueArray.push(value);
+
+			});
+
+			this.setTextValue({
+				select: $select,
+				inputs: $inputs,
+				checkedInputs: $checkedInputs,
+				value: $value,
+				textValue: selectValueArray.join(', ')
+			});
+		}
+
+		setTextValue(props) {
+			const {select, inputs, checkedInputs, value, textValue} = props;
+
+			const text = inputs.length === checkedInputs.length 
+				? select.data('all-checked')
+				: textValue;
+
+			value.text(text);
+
+			text.length && !select.hasClass(ACTIVE) && select.addClass(ACTIVE);
+			!text.length && select.removeClass(ACTIVE);
 		}
 	}
 
-	new MultiSelect({
-		select: '.js-multi-select',
-		field: '.js-multi-select-field',
-		item: '.js-multi-select-item',
-		value: '.js-multi-select-value'
+	$('.js-multi-select').each(function(i, select) {
+		new MultiSelect({
+			selectNode: $(select),
+			select: '.js-multi-select',
+			field: '.js-multi-select-field',
+			item: '.js-multi-select-item',
+			value: '.js-multi-select-value'
+		});
 	});
+
 };

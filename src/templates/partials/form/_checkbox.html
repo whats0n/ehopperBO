@@ -1,6 +1,6 @@
 {% macro call(props) %}
 <label class="checkbox {{props.classList}}">
-	<input type="checkbox" {% if props.value %}data-value="{{props.value}}"{% endif %}>
+	<input type="checkbox" {% if props.value %}data-value="{{props.value}}"{% endif %} {{props.attrs | safe}}>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>

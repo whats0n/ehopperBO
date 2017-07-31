@@ -3,18 +3,18 @@
 	&::-webkit-scrollbar
 		display: initial !important
 	&::-webkit-scrollbar-thumb
-		background: $blue
+		background: $mainColor
 		+hover
-			background: $blueActive
+			background: $mainColorActive
 
 [data-scrollbar="rounded"]
 	&::-webkit-scrollbar
 		&:vertical
 			width: 12px
-			background: linear-gradient(to right, transparent 5px, #b9dff6 5px, #b9dff6 6px, transparent 6px)
+			background: linear-gradient(to right, transparent 5px, $mainColor 5px, $mainColor 6px, transparent 6px)
 		&:horizontal
 			height: 12px
-			background: linear-gradient(to bottom, transparent 5px, #b9dff6 5px, #b9dff6 6px, transparent 6px)
+			background: linear-gradient(to bottom, transparent 5px, $mainColor 5px, $mainColor 6px, transparent 6px)
 	&::-webkit-scrollbar-thumb
 		border-radius: 6px
 
@@ -22,7 +22,7 @@
 	&::-webkit-scrollbar
 		&:vertical
 			width: 7px
-			background: linear-gradient(to right, transparent 3px, #b9dff6 3px, #b9dff6 4px, transparent 4px)
+			background: linear-gradient(to right, transparent 3px, $mainColor 3px, $mainColor 4px, transparent 4px)
 		&:horizontal
 			height: 7px
-			background: linear-gradient(to bottom, transparent 3px, #b9dff6 3px, #b9dff6 4px, transparent 4px)
+			background: linear-gradient(to bottom, transparent 3px, $mainColor 3px, $mainColor 4px, transparent 4px)
