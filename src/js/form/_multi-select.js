@@ -7,9 +7,7 @@ export default function() {
 	class MultiSelect {
 		constructor(props) {
 			this.props = props;
-			//default values storage
-			this._value = {};
-		
+
 			this.toggleOnFieldClick = this.toggleOnFieldClick.bind(this);
 			this.closeOnBodyClick = this.closeOnBodyClick.bind(this);
 			this.selectItem = this.selectItem.bind(this);
@@ -76,19 +74,22 @@ export default function() {
 			const $value = $select.find(this.props.value);
 			const $inputs = $select.find('input');
 			const $checkedInputs = $select.find('input:checked');
+			const select = $select.get(0);
 
 			const value = $target.data('value');
 			const index = $item.index();
 			const valueArray = [];
 
+			if (!select._value) select._value = {};
+
 			if ($target.prop('checked')) {
-				$select._value[`key_${index}`] = value;
+				select._value[`key_${index}`] = value;
 			} else {
-				delete $select._value[`key_${index}`];
+				delete select._value[`key_${index}`];
 			}
 			
-			for (let key in $select._value) {
-				valueArray.push($select._value[key]);
+			for (let key in select._value) {
+				valueArray.push(select._value[key]);
 			}
 
 			this.setTextValue({
@@ -98,7 +99,7 @@ export default function() {
 				value: $value,
 				textValue: valueArray.join(', ')
 			});
-			
+
 		}
 
 		setInitialValues() {
@@ -106,8 +107,11 @@ export default function() {
 			const $value = $select.find(this.props.value);
 			const $inputs = $select.find(`${this.props.item} input`);
 			const $checkedInputs = $select.find('input:checked');
+			const select = $select.get(0);
+			
+			if (!select._value) select._value = {};
 
-			const selectValue = $select._value;
+			const selectValue = select._value;
 			const selectValueArray = [];
 
 			$inputs.each((index, input) => {
