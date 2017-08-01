@@ -3331,7 +3331,7 @@ body,
   width: 112px;
   height: 112px;
   background: rgba(0, 0, 0, 0.1);
-  animation: ripple 1s linear forwards;
+  animation: ripple 0.4s linear forwards;
   pointer-events: none;
 }
 
@@ -4118,12 +4118,12 @@ button:disabled, button.is-disabled,
 
 .main-header__logo {
   position: absolute;
-  top: 50%;
+  top: 40px;
   left: 50%;
   width: 200px;
   height: 48px;
   font-size: 0;
-  transform: translate3d(-50%, -80%, 0);
+  transform: translate3d(-50%, 0, 0);
 }
 
 .main-header__logo img {
