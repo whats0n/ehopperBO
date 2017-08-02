@@ -51,6 +51,12 @@
 			padding: 10px 4px
 		&:first-child
 			padding-left: 20px
+		&[data-column*="orders-status"]
+			width: 80px
+		&[data-column*="action"]
+			width: 40px
+		&[data-column*="orders-total"]
+			word-wrap: break-word
 	&__th
 		+rmed
 		line-height: 1.2
@@ -61,24 +67,15 @@
 	background: $lightGray
 
 .table-body
-	// &_zebra
-	// 	.table-body
-	// 		&__tr
-	// 			&:nth-child(even)
-	// 				background: $white
-	// 				transition: background 0.1s ease-in-out
-	// 			+hover
-	// 				background: $azure
-	// 				cursor: pointer
-	// 			+active
-	// 				background: $azureActive
-	// 		&__td
-	// 			padding-top: 5px 
-	// 			padding-bottom: 5px
+	&_clickable
+		.table-body
+			&__tr
+				cursor: pointer
+				+hover
+					background: $azure
 	&_zebra
 		.table-body
 			&__tr
-				// background: $white
 				&:nth-child(even)
 					background: $white
 	&__tr

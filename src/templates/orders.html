@@ -1,7 +1,10 @@
 ---
 title: Orders
 mainClassList: 'main_inner'
-header: { title: 'Orders' }
+header: { 
+	title: 'Orders',
+	search: 'Search Order'
+}
 menu: { active: 1 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -10,15 +13,8 @@ menu: { active: 1 }
 {{filters.call({
 	cols: [
 		{
-			classList: 'filters__col_md',
+			classList: 'filters__col_sm',
 			fields: [
-				{
-					classList: 'filters__field_md',
-					mixin: 'search',
-					options: {
-						placeholder: 'Search Order'
-					}
-				},
 				{ 
 					classList: 'filters__field_md',
 					mixin: 'multiSelect',
@@ -32,11 +28,25 @@ menu: { active: 1 }
 							'Lorem ipsum. 4'
 						]
 					}
+				},
+				{ 
+					classList: 'filters__field_md',
+					mixin: 'select',
+					options: {
+						placeholder: 'Register',
+						options: [
+							'All',
+							'Register 1',
+							'Register 2',
+							'Register 3',
+							'Register 4'
+						]
+					}
 				}
 			]
 		},
 		{
-			classList: 'filters__col_md',
+			classList: 'filters__col_lg',
 			fields: [
 				{ 
 					classList: 'filters__field_sm',
@@ -91,94 +101,109 @@ menu: { active: 1 }
 	],
 	btns: [
 		{ content: '<button class="btn btn_lg btn_white btn_border" data-animation="ripple"><i class="fa fa-file-excel-o"></i>Export</button>' },
-		{ content: '<button class="btn btn_lg btn_white btn_border" data-animation="ripple">Today</button>' }
+		{ content: '<button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button>' }
 	]
 })}}
 <div class="orders">
 	{{table.call({
 		classList: 'text-center',
-		bodyClassList: 'table-body_zebra',
+		bodyClassList: 'table-body_zebra table-body_clickable',
 		bodyTDClassList: 'text-overflow',
 		range: 5,
-		columns: [ 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column', 'orders-column' ],
-		header: [ 'Order ID', 'Order Name', 'Type', 'Fulfillment', 'Status', 'Total', 'Date', 'Store', 'Employee', 'Customer' ],
+		columns: [ 'orders-status', 'orders-id', 'orders-name', 'orders-store', 'orders-register', 'orders-type', 'orders-fulfillment', 'orders-total', 'orders-date', 'orders-employee', 'orders-customer', 'action' ],
+		header: [ 'Status', 'Order ID', 'Order Name', 'Store', 'Register', 'Type', 'Fulfillment', 'Total', 'Date', 'Employee', 'Customer', '&nbsp;' ],
 		body: [
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-arrow-left color-red"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 1' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-thumbs-up color-gray"></i>' },
-				{ content: '<i class="fa fa-arrow-left color-red"></i>' },
-				{ content: '$1,281.50' },
+				{ content: '$123456789012345.12' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			],
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-check-circle color-gray"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 2' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-plus-square-o color-gray"></i>' },
-				{ content: '<i class="fa fa-check-circle color-gray"></i>' },
 				{ content: '$1,281.50' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			],
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-check color-green"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 3' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-spinner color-gray"></i>' },
-				{ content: '<i class="fa fa-check color-green"></i>' },
 				{ content: '$1,281.50' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			],
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-check-circle-o color-green"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 4' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-bell-o color-gray"></i>' },
-				{ content: '<i class="fa fa-check-circle-o color-green"></i>' },
 				{ content: '$1,281.50' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			],
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-arrow-circle-o-left color-red"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 1' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-truck color-gray"></i>' },
-				{ content: '<i class="fa fa-arrow-circle-o-left color-red"></i>' },
 				{ content: '$1,281.50' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			],
 			[ 
-				{ content: '141595807108' },
+				{ content: '<i class="fa fa-ban color-lightgray"></i>' },
+				{ content: '141595807108', classList: 'text-overflow' },
 				{ content: '&nbsp;' },
+				{ content: 'WestGuestCafe' },
+				{ content: 'Register 2' },
 				{ content: 'Quick Sale' },
 				{ content: '<i class="fa fa-thumbs-up color-gray"></i>' },
-				{ content: '<i class="fa fa-ban color-lightgray"></i>' },
 				{ content: '$1,281.50' },
 				{ content: '06/08/2017 12:56:03 PM' },
-				{ content: 'WestGuestCafe' },
 				{ content: 'Admin Admin' },
-				{ content: 'Walk-In' }
+				{ content: 'Walk-In' },
+				{ content: '<i class="fa fa-angle-right"></i>' }
 			]
 		]
 	})}}
+	<div class="orders__footer">
+		<button class="btn btn_more" data-animation="ripple">
+			<i class="fa fa-angle-down"></i>
+			Show more
+		</button>
+	</div>
 </div>
-{{pagination.call({
-	range: 5
-})}}
 {% endblock %}

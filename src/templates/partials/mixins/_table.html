@@ -16,7 +16,7 @@
 				{% for tr in props.body %}
 					<div class="table-body__tr">
 						{% for td in tr %}
-							<div class="table-body__td {{props.bodyTDClassList}}" data-column="{{props.columns[loop.index0]}}">
+							<div class="table-body__td {{td.classList}}" data-column="{{props.columns[loop.index0]}}">
 								{{td.content | safe}}
 							</div>
 						{% endfor %}

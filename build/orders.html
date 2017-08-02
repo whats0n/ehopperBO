@@ -18,7 +18,11 @@
       <header class="main-header color-header ">
         <h2 class="title-xl main-header__title">Orders</h2> <button class="main-header__nav-btn" title="Menu" data-menu-open="menu">
 			<i></i>
-		</button> </header>
+		</button>
+        <!-- begin main-search -->
+        <div class="main-search"> <i class="fa fa-search main-search__icon"></i> <input type="text" class="main-search__input" placeholder=""> <span class="main-search__line"></span> </div>
+        <!-- end main-search -->
+      </header>
       <!-- end header -->
       <!-- begin menu -->
       <nav class="menu" data-menu-container="menu">
@@ -111,12 +115,7 @@
         <div class="filters ">
           <div class="filters__container">
             <div class="filters__row">
-              <div class="filters__col filters__col_md">
-                <div class="filters__field filters__field_md">
-                  <!-- begin search -->
-                  <div class="search"> <i class="fa fa-search"></i> <input type="text" class="simple-input search__input" placeholder="Search Order"> </div>
-                  <!-- end search -->
-                </div>
+              <div class="filters__col filters__col_sm">
                 <div class="filters__field filters__field_md">
                   <!-- begin multi-select -->
                   <div class="select js-multi-select" data-all-checked="All">
@@ -175,8 +174,26 @@
                   </div>
                   <!-- end multi-select -->
                 </div>
+                <div class="filters__field filters__field_md">
+                  <!-- begin select -->
+                  <div class="select js-select">
+                    <div class="select__field js-select-field">
+                      <div class="select__placeholder">Register</div>
+                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                    <div class="select__body">
+                      <ul class="select__list">
+                        <li class="select__item js-select-item">All</li>
+                        <li class="select__item js-select-item">Register 1</li>
+                        <li class="select__item js-select-item">Register 2</li>
+                        <li class="select__item js-select-item">Register 3</li>
+                        <li class="select__item js-select-item">Register 4</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- end select -->
+                </div>
               </div>
-              <div class="filters__col filters__col_md">
+              <div class="filters__col filters__col_lg">
                 <div class="filters__field filters__field_sm">
                   <!-- begin select -->
                   <div class="select js-select">
@@ -241,7 +258,7 @@
             </div>
             <div class="filters__btns">
               <div class="filters__field"> <button class="btn btn_lg btn_white btn_border" data-animation="ripple"><i class="fa fa-file-excel-o"></i>Export</button> </div>
-              <div class="filters__field"> <button class="btn btn_lg btn_white btn_border" data-animation="ripple">Today</button> </div>
+              <div class="filters__field"> <button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button> </div>
             </div>
           </div>
         </div>
@@ -252,399 +269,452 @@
             <div class="table-wrapper__header" data-table-fake="">
               <div class="table-header ">
                 <ul class="table-header__tr">
-                  <li class="table-header__th" data-column="orders-column">Order ID</li>
-                  <li class="table-header__th" data-column="orders-column">Order Name</li>
-                  <li class="table-header__th" data-column="orders-column">Type</li>
-                  <li class="table-header__th" data-column="orders-column">Fulfillment</li>
-                  <li class="table-header__th" data-column="orders-column">Status</li>
-                  <li class="table-header__th" data-column="orders-column">Total</li>
-                  <li class="table-header__th" data-column="orders-column">Date</li>
-                  <li class="table-header__th" data-column="orders-column">Store</li>
-                  <li class="table-header__th" data-column="orders-column">Employee</li>
-                  <li class="table-header__th" data-column="orders-column">Customer</li>
+                  <li class="table-header__th" data-column="orders-status">Status</li>
+                  <li class="table-header__th" data-column="orders-id">Order ID</li>
+                  <li class="table-header__th" data-column="orders-name">Order Name</li>
+                  <li class="table-header__th" data-column="orders-store">Store</li>
+                  <li class="table-header__th" data-column="orders-register">Register</li>
+                  <li class="table-header__th" data-column="orders-type">Type</li>
+                  <li class="table-header__th" data-column="orders-fulfillment">Fulfillment</li>
+                  <li class="table-header__th" data-column="orders-total">Total</li>
+                  <li class="table-header__th" data-column="orders-date">Date</li>
+                  <li class="table-header__th" data-column="orders-employee">Employee</li>
+                  <li class="table-header__th" data-column="orders-customer">Customer</li>
+                  <li class="table-header__th" data-column="action">&nbsp;</li>
                 </ul>
               </div>
             </div>
             <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="">
-              <div class="table-body table-body_zebra table-wrapper__table" data-table-main="">
+              <div class="table-body table-body_zebra table-body_clickable table-wrapper__table" data-table-main="">
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $123456789012345.12 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-plus-square-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle color-gray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-plus-square-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-spinner color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 3 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-spinner color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-bell-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle-o color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle-o color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 4 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-bell-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-truck color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-truck color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-ban color-lightgray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-ban color-lightgray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $123456789012345.12 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-plus-square-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle color-gray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-plus-square-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-spinner color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 3 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-spinner color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-bell-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle-o color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle-o color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 4 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-bell-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-truck color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-truck color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-ban color-lightgray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-ban color-lightgray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $123456789012345.12 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-plus-square-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle color-gray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-plus-square-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-spinner color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 3 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-spinner color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-bell-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle-o color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle-o color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 4 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-bell-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-truck color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-truck color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-ban color-lightgray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-ban color-lightgray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $123456789012345.12 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-plus-square-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle color-gray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-plus-square-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-spinner color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 3 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-spinner color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-bell-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle-o color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle-o color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 4 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-bell-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-truck color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-truck color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-ban color-lightgray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-ban color-lightgray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $123456789012345.12 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-plus-square-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle color-gray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-plus-square-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-spinner color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 3 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-spinner color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-bell-o color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-check-circle-o color-green"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-check-circle-o color-green"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 4 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-bell-o color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-truck color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-arrow-circle-o-left color-red"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 1 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-truck color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
                 <div class="table-body__tr">
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 141595807108 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> &nbsp; </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Quick Sale </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-thumbs-up color-gray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> <i class="fa fa-ban color-lightgray"></i> </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> $1,281.50 </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> 06/08/2017 12:56:03 PM </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> WestGuestCafe </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Admin Admin </div>
-                  <div class="table-body__td text-overflow" data-column="orders-column"> Walk-In </div>
+                  <div class="table-body__td " data-column="orders-status"> <i class="fa fa-ban color-lightgray"></i> </div>
+                  <div class="table-body__td text-overflow" data-column="orders-id"> 141595807108 </div>
+                  <div class="table-body__td " data-column="orders-name"> &nbsp; </div>
+                  <div class="table-body__td " data-column="orders-store"> WestGuestCafe </div>
+                  <div class="table-body__td " data-column="orders-register"> Register 2 </div>
+                  <div class="table-body__td " data-column="orders-type"> Quick Sale </div>
+                  <div class="table-body__td " data-column="orders-fulfillment"> <i class="fa fa-thumbs-up color-gray"></i> </div>
+                  <div class="table-body__td " data-column="orders-total"> $1,281.50 </div>
+                  <div class="table-body__td " data-column="orders-date"> 06/08/2017 12:56:03 PM </div>
+                  <div class="table-body__td " data-column="orders-employee"> Admin Admin </div>
+                  <div class="table-body__td " data-column="orders-customer"> Walk-In </div>
+                  <div class="table-body__td " data-column="action"> <i class="fa fa-angle-right"></i> </div>
                 </div>
               </div>
             </div>
           </div>
           <!-- end table -->
+          <div class="orders__footer"> <button class="btn btn_more" data-animation="ripple">
+			<i class="fa fa-angle-down"></i>
+			Show more
+		</button> </div>
         </div>
-        <!-- begin pagination -->
-        <div class="pagination">
-          <div class="pagination__container"> <a href="" class="pagination__btn pagination__prev is-disabled"><i class="fa fa-angle-left"></i>Previous</a> <a href="" class="pagination__btn pagination__next ">Next<i class="fa fa-angle-right"></i></a>
-            <ul class="pagination__list">
-              <li class="pagination__item"> <a href="#" class="pagination__link is-active">1</a> </li>
-              <li class="pagination__item"> <a href="#" class="pagination__link ">2</a> </li>
-              <li class="pagination__item"> <a href="#" class="pagination__link ">3</a> </li>
-              <li class="pagination__item"> <a href="#" class="pagination__link ">4</a> </li>
-              <li class="pagination__item"> <a href="#" class="pagination__link ">5</a> </li>
-            </ul>
-          </div>
-        </div>
-        <!-- end pagination -->
       </div>
     </div>
     <!-- END content -->

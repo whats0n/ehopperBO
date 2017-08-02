@@ -25,6 +25,14 @@
 			width: 50%
 			+media('width', 'lg')
 				width: 100%
+		&_sm
+			width: 40%
+		&_lg
+			width: 60%
+		&_sm,
+		&_lg
+			+media('width', 'lg')
+				width: 100%
 	&__field
 		padding: 8px
 		white-space: normal
@@ -39,3 +47,6 @@
 		opacity: 0.5
 		+rreg
 		font-size: 14px
+	&__calendar
+		.fa-angle-down
+			margin: 0 0 0 10px

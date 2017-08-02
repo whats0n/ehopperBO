@@ -22,5 +22,14 @@
 			<i></i>
 		</button>
 	{% endif %}
+	{% if header.search %}
+		<!-- begin main-search -->
+		<div class="main-search">
+			<i class="fa fa-search main-search__icon"></i>
+			<input type="text" class="main-search__input" placeholder="{{props.placeholder}}">
+			<span class="main-search__line"></span>
+		</div>
+		<!-- end main-search -->
+	{% endif %}
 </header>
 <!-- end header -->
