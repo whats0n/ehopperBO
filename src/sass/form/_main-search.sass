@@ -1,7 +1,7 @@
 .main-search
 	position: absolute
 	top: 0
-	right: 70px
+	right: 50px
 	bottom: 0
 	width: 280px
 	&__icon
@@ -42,6 +42,9 @@
 		+rreg
 		font-size: 16px
 		line-height: normal
+		&::placeholder
+			color: $white
+			opacity: 0.7
 		&:focus + .main-search__line
 			&:before
 				transform: scaleX(1)

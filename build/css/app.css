@@ -4036,7 +4036,7 @@ button:disabled, button.is-disabled,
 .main-search {
   position: absolute;
   top: 0;
-  right: 70px;
+  right: 50px;
   bottom: 0;
   width: 280px;
 }
@@ -4088,6 +4088,21 @@ button:disabled, button.is-disabled,
   font-family: 'Roboto Regular', Arial, sans-serif;
   font-size: 16px;
   line-height: normal;
+}
+
+.main-search__input::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.main-search__input:-ms-input-placeholder {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.main-search__input::placeholder {
+  color: #fff;
+  opacity: 0.7;
 }
 
 .main-search__input:focus + .main-search__line:before {
@@ -4801,6 +4816,7 @@ button:disabled, button.is-disabled,
   display: table-cell;
   vertical-align: middle;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 .table-header__th:first-child, .table-header__td:first-child,
