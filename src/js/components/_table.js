@@ -1,6 +1,6 @@
 import {$WIN} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	const x = { start: 0, end: 0 };
 
@@ -51,4 +51,4 @@ export default (function() {
 	checkTableOnScroll();
 	
 
-})();
+};

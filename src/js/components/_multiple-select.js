@@ -1,6 +1,6 @@
 import { $DOCUMENT, OPEN } from '../_constants';
 
-export default (function() {
+export default function() {
 
 	$DOCUMENT.on('click', '[data-select-open]', function() {
 		const $parent = $(this).closest('[data-select]');
@@ -12,4 +12,4 @@ export default (function() {
 		$('[data-select]').removeClass(OPEN);
 	});
 
-})();
+};

@@ -50,10 +50,10 @@ menu: { active: 0 }
 	<div class="row">
 		<div class="col col_lg-50">
 			<div class="box support">
-				<div class="box__header color-header support__header">
+				<div class="box__header color-header">
 					<div class="box__title">Support</div>
 				</div>
-				<div class="box__body support__body">
+				<div class="support__body">
 					<p><strong>Account ID:</strong> <span>0</span></p>
 					<p><strong>Web POS URL:</strong> <a href="https://pos.ehopper.com/" target="_blank">https://pos.ehopper.com/</a></p>
 					<p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
@@ -66,11 +66,226 @@ menu: { active: 0 }
 		</div>
 		<div class="col col_lg-50">
 			<div class="box news">
-				<div class="box__header color-header news__header">
+				<div class="box__header color-header">
 					<div class="box__title">eHopper news and updates</div>
 				</div>
 				<div class="news__body">
 					<iframe src="parts/news.html" frameborder="0" class="news__iframe"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col col_lg-100">
+			<div class="box graph">
+				<div class="box__header color-header">
+					<div class="box__title">Sales by Category</div>
+				</div>
+				<div class="graph__body">
+					<div class="graph__frame">
+						<canvas id="category-chart"></canvas>
+					</div>
+					<div class="graph__info">
+						{% set category = {
+							headings: [ '&nbsp;', 'Sales', 'Quantity', 'Total,$', 'Total,%' ],
+							columns: [ 'category-color', 'category-sales', 'category-qty', 'category-price', 'category-percent' ],
+							items: [
+								{
+									color: 'rgb(192, 156, 220)',
+									title: 'Sandwich',
+									qty: '2,454,566',
+									price: '222,543,4.15',
+									percent: '20'
+								},
+								{
+									color: 'rgb(240, 93, 109)',
+									title: 'Soft Drinks',
+									qty: '24,456',
+									price: '222,543,4.12',
+									percent: '20'
+								},
+								{
+									color: 'rgb(64, 189, 173)',
+									title: 'Specials',
+									qty: '18,230',
+									price: '333,815,1.22',
+									percent: '30'
+								},
+								{
+									color: 'rgb(237, 213, 116)',
+									title: 'Soup',
+									qty: '32,989',
+									price: '2,543,4.10',
+									percent: '10'
+								},
+								{
+									color: 'rgb(232, 171, 171)',
+									title: 'Dessert',
+									qty: '31,456',
+									price: '271,7.08',
+									percent: '5'
+								},
+								{
+									color: 'rgb(237, 213, 116)',
+									title: 'Pizza',
+									qty: '31,456',
+									price: '271,7.08',
+									percent: '5'
+								},
+								{
+									color: 'rgb(254, 150, 99)',
+									title: 'Coffee',
+									qty: '31,456',
+									price: '256,7.12',
+									percent: '5'
+								},
+								{
+									color: 'rgb(76, 171, 112)',
+									title: 'Salad',
+									qty: '31,456',
+									price: '254,7.08',
+									percent: '5'
+								}
+							]
+						} %}
+						<div class="graph__table">
+							<div class="graph__table-head">
+								<div class="graph__tr">
+									{% for item in category.headings %}
+										{% if loop.index0 > 1 %}
+											<div class="graph__th text-right" data-column="{{category.columns[loop.index0]}}">{{item | safe}}</div>
+										{% else %}
+											<div class="graph__th" data-column="{{category.columns[loop.index0]}}">{{item | safe}}</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+							<div class="graph__table-body" data-scrollbar="default">
+								<div class="graph__table-body-in">
+									{% for item in category.items %}
+										<div class="graph__tr">
+											<div class="graph__td" data-column="{{category.columns[0]}}">
+												<i class="graph__color" style="background-color: {{item.color}}"></i>
+											</div>
+											<div class="graph__td" data-column="{{category.columns[1]}}">{{item.title}}</div>
+											<div class="graph__td text-right" data-column="{{category.columns[2]}}">{{item.qty}}</div>
+											<div class="graph__td text-right" data-column="{{category.columns[3]}}">{{item.price}}</div>
+											<div class="graph__td text-right" data-column="{{category.columns[4]}}">{{item.percent}}</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="box graph">
+				<div class="box__header color-header">
+					<div class="box__title">Sales by Product</div>
+				</div>
+				<div class="graph__body">
+					<div class="graph__frame">
+						<canvas id="product-chart"></canvas>
+					</div>
+					<div class="graph__info">
+						{% set product = {
+							headings: [ 'Sales', 'Quantity', 'Total,$', 'Total,%' ],
+							columns: [ 'product-sales', 'product-qty', 'product-price', 'product-percent' ],
+							items: [
+								{
+									title: 'Cheeseburger',
+									qty: '123,566',
+									price: '231,4.15',
+									percent: '10'
+								},
+								{
+									title: 'Ciabatta with chicken',
+									qty: '112,435',
+									price: '221,3.12',
+									percent: '9'
+								},
+								{
+									title: 'Ciabatta with tuna',
+									qty: '111,217',
+									price: '216,1.01',
+									percent: '9'
+								},
+								{
+									title: 'Ciabatta with spinach',
+									qty: '91,213',
+									price: '198,3.36',
+									percent: '7'
+								},
+								{
+									title: 'Sandwich with salmon',
+									qty: '91,193',
+									price: '197,4.17',
+									percent: '7'
+								},
+								{
+									title: 'Sandwich with ham',
+									qty: '87,456',
+									price: '189,7.21',
+									percent: '7'
+								},
+								{
+									title: 'Sandwich with broccoli',
+									qty: '85,151',
+									price: '171,7.65',
+									percent: '6'
+								},
+								{
+									title: 'Club sandwich',
+									qty: '227,456',
+									price: '241,7.21',
+									percent: '12'
+								},
+								{
+									title: 'Hamburger',
+									qty: '231,523',
+									price: '261,5.62',
+									percent: '13'
+								},
+								{
+									title: 'Sprite',
+									qty: '261,321',
+									price: '411,7.62',
+									percent: '15'
+								},
+								{
+									title: 'Pepsi',
+									qty: '14,861',
+									price: '12,4.62',
+									percent: '5'
+								}
+							]
+						} %}
+						<div class="graph__table">
+							<div class="graph__table-head">
+								<div class="graph__tr">
+									{% for item in product.headings %}
+										{% if loop.index0 > 0 %}
+											<div class="graph__th text-right" data-column="{{product.columns[loop.index0]}}">{{item | safe}}</div>
+										{% else %}
+											<div class="graph__th" data-column="{{product.columns[loop.index0]}}">{{item | safe}}</div>
+										{% endif %}
+									{% endfor %}
+								</div>
+							</div>
+							<div class="graph__table-body" data-scrollbar="default">
+								<div class="graph__table-body-in">
+									{% for item in product.items %}
+										<div class="graph__tr">
+											<div class="graph__td" data-column="{{product.columns[1]}}">{{item.title}}</div>
+											<div class="graph__td text-right" data-column="{{product.columns[2]}}">{{item.qty}}</div>
+											<div class="graph__td text-right" data-column="{{product.columns[3]}}">{{item.price}}</div>
+											<div class="graph__td text-right" data-column="{{product.columns[4]}}">{{item.percent}}</div>
+										</div>
+									{% endfor %}
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

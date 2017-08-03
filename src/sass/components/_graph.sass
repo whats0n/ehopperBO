@@ -1,0 +1,66 @@
+.graph
+	+ .graph
+		margin-top: 20px
+	&__body
+		+clr
+	&__frame
+		position: relative
+		float: left
+		padding: 20px
+		width: 380px
+		height: 380px
+		canvas
+			max-width: 100%
+			max-height: 100%
+	&__info
+		position: relative
+		overflow: hidden
+		border-left: 1px solid $lightGray
+		height: 380px
+	&__table
+		position: relative
+		padding-top: 41px
+		height: 100%
+		&-head
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			border-bottom: 1px solid $lightGray
+			background: #fcfcfc
+		&-head,
+		&-body-in
+			display: table
+			table-layout: fixed
+			width: 100%
+		&-body
+			overflow: auto
+			height: 100%
+	&__tr
+		display: table-row
+	&__th
+		+rmed
+		font-size: 16px
+	&__td
+		border-bottom: 1px solid $lightGray
+		font-size: 14px
+	&__td,
+	&__th
+		display: table-cell
+		vertical-align: middle 
+		padding: 10px
+		line-height: 20px
+		&[data-column*="category-color"]
+			width: 60px
+		&[data-column*="category-qty"],
+		&[data-column*="category-price"],
+		&[data-column*="category-percent"]
+			text-align: right
+		&:first-child
+			padding-left: 30px
+		&:last-child
+			padding-right: 30px
+	&__color
+		display: block 
+		width: 20px
+		height: 20px		

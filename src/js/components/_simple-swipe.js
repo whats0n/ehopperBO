@@ -1,6 +1,6 @@
 import {$DOCUMENT, isTouch} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	const swipe = {
 		start(e) {
@@ -26,4 +26,4 @@ export default (function() {
 	$DOCUMENT.on('touchmove', '[data-swipe]', swipe.move);
 	$DOCUMENT.on('touchend', '[data-swipe]', swipe.end);
 
-})();
+};

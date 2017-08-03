@@ -5051,6 +5051,10 @@ button:disabled, button.is-disabled,
   font-size: 22px;
 }
 
+.support__body {
+  padding: 20px 20px 25px;
+}
+
 .support__body p {
   padding: 5px 0;
   font-size: 16px;
@@ -5080,14 +5084,113 @@ button:disabled, button.is-disabled,
   line-height: 40px;
 }
 
-.box__body {
-  padding: 20px 20px 25px;
-}
-
 .news__iframe {
   display: block;
   width: 100%;
   height: 315px;
+}
+
+.graph + .graph {
+  margin-top: 20px;
+}
+
+.graph__body {
+  *zoom: 1;
+}
+
+.graph__body:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.graph__frame {
+  position: relative;
+  float: left;
+  padding: 20px;
+  width: 380px;
+  height: 380px;
+}
+
+.graph__frame canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.graph__info {
+  position: relative;
+  overflow: hidden;
+  border-left: 1px solid #eee;
+  height: 380px;
+}
+
+.graph__table {
+  position: relative;
+  padding-top: 41px;
+  height: 100%;
+}
+
+.graph__table-head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #eee;
+  background: #fcfcfc;
+}
+
+.graph__table-head, .graph__table-body-in {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.graph__table-body {
+  overflow: auto;
+  height: 100%;
+}
+
+.graph__tr {
+  display: table-row;
+}
+
+.graph__th {
+  font-family: 'Roboto Medium', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.graph__td {
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.graph__td, .graph__th {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  line-height: 20px;
+}
+
+.graph__td[data-column*="category-color"], .graph__th[data-column*="category-color"] {
+  width: 60px;
+}
+
+.graph__td[data-column*="category-qty"], .graph__td[data-column*="category-price"], .graph__td[data-column*="category-percent"], .graph__th[data-column*="category-qty"], .graph__th[data-column*="category-price"], .graph__th[data-column*="category-percent"] {
+  text-align: right;
+}
+
+.graph__td:first-child, .graph__th:first-child {
+  padding-left: 30px;
+}
+
+.graph__td:last-child, .graph__th:last-child {
+  padding-right: 30px;
+}
+
+.graph__color {
+  display: block;
+  width: 20px;
+  height: 20px;
 }
 
 .modal-terms {

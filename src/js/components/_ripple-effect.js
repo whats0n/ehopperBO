@@ -1,6 +1,6 @@
 import {$DOCUMENT, isTouch} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	const eventName = isTouch() ? 'touchstart' : 'mousedown';
 
@@ -30,4 +30,4 @@ export default (function() {
 		animation(e, $(this));
 	});
 
-})();
+};

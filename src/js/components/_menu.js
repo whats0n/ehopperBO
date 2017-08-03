@@ -1,6 +1,6 @@
 import {$DOCUMENT, OPEN} from '../_constants'
 
-export default (function() {
+export default function() {
 
 	const addClass = 'addClass';
 	const removeClass = 'removeClass';
@@ -26,13 +26,4 @@ export default (function() {
 		toggleMenu(removeClass);
 	});
 
-	window.menu = {
-		close() {
-			toggleMenu(removeClass);
-		},
-		open() {
-			toggleMenu(addClass);
-		}
-	};
-
-})();
+};

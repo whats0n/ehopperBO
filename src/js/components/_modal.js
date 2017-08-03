@@ -1,6 +1,6 @@
 import {OPEN, $DOCUMENT, smartClick} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	smartClick('[data-modal-open]', e => {
 		e.preventDefault();
@@ -34,4 +34,4 @@ export default (function() {
 		$modal.removeClass(OPEN);
 	});
 
-})();
+};

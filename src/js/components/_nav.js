@@ -1,6 +1,6 @@
 import {$DOCUMENT, OPEN} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	$DOCUMENT.on('click', '[data-nav-submenu-open]', function(e) {
 		e.preventDefault();
@@ -10,4 +10,4 @@ export default (function() {
 		if ($container.length) $container.toggleClass(OPEN);
 	});
 
-})();
+};

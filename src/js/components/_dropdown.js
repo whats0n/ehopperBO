@@ -1,6 +1,6 @@
 import {$DOCUMENT, $BODY, OPEN, ACTIVE} from '../_constants';
 
-export default (function() {
+export default function() {
 	const addClass = 'addClass';
 	const removeClass = 'removeClass';
 	const UP = 'is-dropdown-upper';
@@ -68,4 +68,4 @@ export default (function() {
 
 		toggleDropdown($components, removeClass);
 	});
-})();
+};

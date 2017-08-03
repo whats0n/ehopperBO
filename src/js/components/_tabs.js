@@ -1,6 +1,6 @@
 import {$DOCUMENT, $BODY, OPEN, ACTIVE, smartClick} from '../_constants';
 
-export default (function() {
+export default function() {
 
 	smartClick('[data-tab-open]', function(e) {
 		e.preventDefault();
@@ -20,4 +20,4 @@ export default (function() {
 		$activeSection.addClass(OPEN);
 	});
 
-})();
+};
