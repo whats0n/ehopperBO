@@ -13,7 +13,7 @@ menu: { active: 1 }
 {{filters.call({
 	cols: [
 		{
-			classList: 'filters__col_sm',
+			classList: 'filters__col_sm', 
 			fields: [
 				{ 
 					classList: 'filters__field_md',
@@ -105,12 +105,13 @@ menu: { active: 1 }
 	]
 })}}
 <div class="orders">
+	{# classList: 'table-wrapper_adaptive', #}
 	{{table.call({
 		bodyClassList: 'table-body_zebra table-body_clickable',
 		bodyTDClassList: 'text-overflow',
 		range: 5,
 		columns: [ 'orders-status', 'orders-id', 'orders-name', 'orders-store', 'orders-register', 'orders-type', 'orders-fulfillment', 'orders-total', 'orders-date', 'orders-employee', 'orders-customer', 'action' ],
-		header: [ 'Status', 'Order ID', 'Order Name', 'Store', 'Register', 'Type', 'Fulfillment', 'Total', 'Date', 'Employee', 'Customer', '&nbsp;' ],
+		header: [ 'Status', 'Order ID', 'Order Name', 'Store', 'Register', 'Type', 'Fulfillment', 'Total', 'Date', 'Employee', 'Customer', '' ],
 		body: [
 			[ 
 				{ content: '<i class="fa fa-arrow-left color-red"></i>' },

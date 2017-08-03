@@ -50,6 +50,7 @@
 		pointer-events: none
 	&__value
 		padding-top: 15px
+		font-size: 18px
 		line-height: 43px
 		+text-overflow
 		+nosel
@@ -58,14 +59,16 @@
 		z-index: 100
 		top: 100%
 		left: 0
+		overflow: auto
 		padding: 10px 0
 		margin-top: 10px
 		border: 1px solid $lightGray
 		min-width: 100%
-		background: $white
-		white-space: nowrap
+		max-height: 322px	
 		opacity: 0
 		visibility: hidden
+		background: $white
+		white-space: nowrap
 		transform: translate3d(0,-10px,0)
 		transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out
 	&__item
@@ -84,3 +87,5 @@
 			&__icon
 				top: 5px
 				left: 15px
+			&__content
+				font-size: 18px

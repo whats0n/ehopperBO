@@ -7,19 +7,22 @@ menu: { active: 0 }
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<div class="container">
-	<div class="row">
-		<div class="col col_lg-50">
-			<div class="alert">
-				<h3 class="title-md">Ehopper training</h3>
-				<p>Need help with eHopper? <a href="http://ehopper.com/webinar" target="_blank">Attend our weekly training</a></p>
-			</div>
+<div class="container dashboard">
+	<div class="dashboard__filters">
+		<div class="dashboard__filters-calendar">
+			<button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button>
 		</div>
-		<div class="col col_lg-50">
-			<div class="alert">
-				<h3 class="title-md">Feedback</h3>
-				<p><a href="mailto:sales@ehopper.com">Email us</a> to provide feedback about eHopper.</p>
-			</div>
+		<div class="dashboard__filters-select">
+			{{form.multiSelect.call({
+				placeholder: 'Select Store(s)',
+				selectAll: 'Select All',
+				options: [
+					'Lorem ipsum. 1',
+					'Lorem ipsum. 2',
+					'Lorem ipsum. 3',
+					'Lorem ipsum. 4'
+				]
+			})}}
 		</div>
 	</div>
 	<div class="row">
@@ -46,9 +49,11 @@ menu: { active: 0 }
 	</div>
 	<div class="row">
 		<div class="col col_lg-50">
-			<div class="support">
-				<div class="support__header">Support</div>
-				<div class="support__body">
+			<div class="box support">
+				<div class="box__header color-header support__header">
+					<div class="box__title">Support</div>
+				</div>
+				<div class="box__body support__body">
 					<p><strong>Account ID:</strong> <span>0</span></p>
 					<p><strong>Web POS URL:</strong> <a href="https://pos.ehopper.com/" target="_blank">https://pos.ehopper.com/</a></p>
 					<p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
@@ -60,24 +65,12 @@ menu: { active: 0 }
 			</div>
 		</div>
 		<div class="col col_lg-50">
-			<div class="tasks">
-				<div class="tasks__header">
-					<button class="btn-toggle tasks__toggle">
-						<span class="btn-toggle__show"><i class="fa fa-eye"></i>Show</span>
-						<span class="btn-toggle__hide"><i class="fa fa-eye-slash"></i>Hide</span>
-					</button>
-					<div class="tasks__title">Getting Started</div>
+			<div class="box news">
+				<div class="box__header color-header news__header">
+					<div class="box__title">eHopper news and updates</div>
 				</div>
-				<div class="tasks__body">
-					<ul class="tasks__list">
-						{% for item in range(0, 5) %}
-						    <li class="task tasks__item">
-						    	{{form.checkbox.call({ classList: 'task__status' })}}
-						    	<i class="fa fa-angle-right"></i>
-						    	<div class="task__title">Task {{loop.index}}</div>
-						    </li>
-						{% endfor %}
-					</ul>
+				<div class="news__body">
+					<iframe src="parts/news.html" frameborder="0" class="news__iframe"></iframe>
 				</div>
 			</div>
 		</div>

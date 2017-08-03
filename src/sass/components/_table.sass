@@ -8,6 +8,69 @@
 		.table-wrapper
 			&__header 
 				height: 50px
+	&_adaptive
+		+media('width', 'md')
+			padding-top: 0
+		.table-wrapper
+			&__header
+				+media('width', 'md')
+					display: none
+			&__body
+				+media('width', 'md')
+					border-top: 1px solid $lightGray
+					border-bottom: 1px solid $lightGray
+		.table-header,
+		.table-body
+			&__th,
+			&__td
+				&[data-column*="action"]
+					+media('width', 'md')
+						display: none
+		.table-header
+			+media('width', 'md')
+				display: none
+		.table-body
+			+media('width', 'md')
+				display: block
+				+clr
+			&__tr,
+			&__td
+				+media('width', 'md')
+					display: block
+			&__td
+				+media('width', 'md')
+					position: relative
+					padding: 4px 0 4px 50%
+					border: none
+				&:before
+					+media('width', 'md')
+						content: attr(data-title)
+						position: absolute
+						top: 0
+						left: 0
+						padding: 4px 20px
+						width: 50%
+			&__tr
+				+media('width', 'md')
+					float: left
+					padding: 8px 0
+					width: 50%
+				+media('width', 'sm')
+					float: none
+					width: 100%
+				&:nth-child(even)
+					+media('width', 'md')
+						border-left: 1px solid $lightGray
+						background: none
+					+media('width', 'sm')
+						border-left: none
+						background: $white
+			&__tr:not(:first-child) 
+				+media('width', 'md')
+					border-top: 1px solid $lightGray
+				.table-body__td
+					+media('width', 'md')
+						border: none
 	&__header
 		position: absolute
 		z-index: 2
@@ -27,6 +90,7 @@
 			margin-left: -10px
 	&__body
 		overflow: auto
+		border-bottom: 1px solid $lightGray
 		max-height: 100%
 
 .table-header,

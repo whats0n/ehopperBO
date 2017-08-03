@@ -3955,6 +3955,7 @@ button:disabled, button.is-disabled,
 
 .select__value {
   padding-top: 15px;
+  font-size: 18px;
   line-height: 43px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -3970,14 +3971,16 @@ button:disabled, button.is-disabled,
   z-index: 100;
   top: 100%;
   left: 0;
+  overflow: auto;
   padding: 10px 0;
   margin-top: 10px;
   border: 1px solid #eee;
   min-width: 100%;
-  background: #fff;
-  white-space: nowrap;
+  max-height: 322px;
   opacity: 0;
   visibility: hidden;
+  background: #fff;
+  white-space: nowrap;
   transform: translate3d(0, -10px, 0);
   transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
@@ -4014,6 +4017,10 @@ button:disabled, button.is-disabled,
 .select__item .checkbox__icon {
   top: 5px;
   left: 15px;
+}
+
+.select__item .checkbox__content {
+  font-size: 18px;
 }
 
 .search {
@@ -4788,6 +4795,7 @@ button:disabled, button.is-disabled,
 
 .table-wrapper__body {
   overflow: auto;
+  border-bottom: 1px solid #eee;
   max-height: 100%;
 }
 
@@ -4975,7 +4983,6 @@ button:disabled, button.is-disabled,
   overflow: hidden;
   padding-left: 60px;
   border: 1px solid #e0e0e0;
-  border-radius: 4px;
   min-width: 150px;
   height: 100px;
   background: #fff;
@@ -5044,23 +5051,6 @@ button:disabled, button.is-disabled,
   font-size: 22px;
 }
 
-.support {
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
-  color: #4b5262;
-  background: #fff;
-}
-
-.support__header {
-  padding: 0 20px;
-  font-size: 18px;
-  line-height: 60px;
-}
-
-.support__body {
-  padding: 0 20px 25px;
-}
-
 .support__body p {
   padding: 5px 0;
   font-size: 16px;
@@ -5076,6 +5066,28 @@ button:disabled, button.is-disabled,
 .support__footer p {
   font-size: 16px;
   line-height: 26px;
+}
+
+.box {
+  border: 1px solid #e0e0e0;
+  color: #4b5262;
+  background: #fff;
+}
+
+.box__header {
+  padding: 0 20px;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.box__body {
+  padding: 20px 20px 25px;
+}
+
+.news__iframe {
+  display: block;
+  width: 100%;
+  height: 315px;
 }
 
 .modal-terms {
@@ -5295,6 +5307,27 @@ button:disabled, button.is-disabled,
   min-width: 100px;
 }
 
+.dashboard__filters {
+  margin: 0 -10px;
+  *zoom: 1;
+}
+
+.dashboard__filters:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.dashboard__filters-select, .dashboard__filters-calendar {
+  float: right;
+  padding: 0 10px 20px;
+}
+
+.dashboard__filters-select {
+  width: 100%;
+  max-width: 300px;
+}
+
 .orders {
   position: relative;
   padding-bottom: 80px;
@@ -5335,6 +5368,78 @@ button:disabled, button.is-disabled,
   }
   .orders{
     height: calc(100% - 176px);
+  }
+}
+
+@media only screen and (max-width: 980px){
+  .table-wrapper_adaptive{
+    padding-top: 0;
+  }
+  .table-wrapper_adaptive .table-wrapper__header{
+    display: none;
+  }
+  .table-wrapper_adaptive .table-wrapper__body{
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+  }
+  .table-wrapper_adaptive .table-header__th[data-column*="action"], .table-wrapper_adaptive .table-header__td[data-column*="action"],
+  .table-wrapper_adaptive .table-body__th[data-column*="action"],
+  .table-wrapper_adaptive .table-body__td[data-column*="action"]{
+    display: none;
+  }
+  .table-wrapper_adaptive .table-header{
+    display: none;
+  }
+  .table-wrapper_adaptive .table-body{
+    display: block;
+    zoom: 1;
+  }
+  .table-wrapper_adaptive .table-body:after{
+    content: " ";
+    display: table;
+    clear: both;
+  }
+  .table-wrapper_adaptive .table-body__tr, .table-wrapper_adaptive .table-body__td{
+    display: block;
+  }
+  .table-wrapper_adaptive .table-body__td{
+    position: relative;
+    padding: 4px 0 4px 50%;
+    border: none;
+  }
+  .table-wrapper_adaptive .table-body__td:before{
+    content: attr(data-title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px 20px;
+    width: 50%;
+  }
+  .table-wrapper_adaptive .table-body__tr{
+    float: left;
+    padding: 8px 0;
+    width: 50%;
+  }
+  .table-wrapper_adaptive .table-body__tr:nth-child(even){
+    border-left: 1px solid #eee;
+    background: none;
+  }
+  .table-wrapper_adaptive .table-body__tr:not(:first-child){
+    border-top: 1px solid #eee;
+  }
+  .table-wrapper_adaptive .table-body__tr:not(:first-child) .table-body__td{
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .table-wrapper_adaptive .table-body__tr{
+    float: none;
+    width: 100%;
+  }
+  .table-wrapper_adaptive .table-body__tr:nth-child(even){
+    border-left: none;
+    background: #fff;
   }
 }
 

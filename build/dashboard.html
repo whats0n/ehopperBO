@@ -28,11 +28,11 @@
         <div class="menu__container" data-scrollbar="default">
           <ul class="nav">
             <li class="nav__item"> <a href="#" class="nav__link is-active">
-			    		<i class="nav__icon icon icon-"></i>Dashboard</a> </li>
+			    		<i class="nav__icon fa fa-tachometer"></i>Dashboard</a> </li>
             <li class="nav__item"> <a href="#" class="nav__link ">
-			    		<i class="nav__icon icon icon-"></i>Orders</a> </li>
+			    		<i class="nav__icon icon icon-orders"></i>Orders</a> </li>
             <li class="nav__item" data-nav-submenu="inventory"> <a href="#" class="nav__link " data-nav-submenu-open="inventory">
-			    		<i class="nav__icon icon icon-"></i>Inventory<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-archive"></i>Inventory<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Department</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Category</a></li>
@@ -45,26 +45,26 @@
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="customers"> <a href="#" class="nav__link " data-nav-submenu-open="customers">
-			    		<i class="nav__icon icon icon-"></i>Customers<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-users"></i>Customers<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Import Customers</a></li>
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="vendors"> <a href="#" class="nav__link " data-nav-submenu-open="vendors">
-			    		<i class="nav__icon icon icon-"></i>Vendors<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-truck"></i>Vendors<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Vendor List</a></li>
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="employees"> <a href="#" class="nav__link " data-nav-submenu-open="employees">
-			    		<i class="nav__icon icon icon-"></i>Employees<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-address-card-o"></i>Employees<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Employee List</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Time Clock</a></li>
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="reporting"> <a href="#" class="nav__link " data-nav-submenu-open="reporting">
-			    		<i class="nav__icon icon icon-"></i>Reporting<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-pie-chart"></i>Reporting<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Tips Report</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Z Report</a></li>
@@ -79,14 +79,14 @@
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="apps"> <a href="#" class="nav__link " data-nav-submenu-open="apps">
-			    		<i class="nav__icon icon icon-"></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon "></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">App Directory</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">QuickBooks Online</a></li>
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="settings"> <a href="#" class="nav__link " data-nav-submenu-open="settings">
-			    		<i class="nav__icon icon icon-"></i>Settings<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon fa fa-cog"></i>Settings<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Company Settings</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Store Settings</a></li>
@@ -97,9 +97,9 @@
               </ul>
             </li>
             <li class="nav__item"> <a href="#" class="nav__link ">
-			    		<i class="nav__icon icon icon-"></i>Community</a> </li>
+			    		<i class="nav__icon fa fa-commenting-o"></i>Community</a> </li>
             <li class="nav__item"> <a href="#" class="nav__link ">
-			    		<i class="nav__icon icon icon-"></i>Logout</a> </li>
+			    		<i class="nav__icon icon icon-exit"></i>Logout</a> </li>
           </ul>
         </div>
       </nav>
@@ -107,19 +107,66 @@
       <!-- begin overlay --><button type="button" class="overlay " data-overlay="overlay" data-menu-overlay="menu"></button>
       <!-- end overlay -->
       <div class="main main_inner">
-        <div class="container">
-          <div class="row">
-            <div class="col col_lg-50">
-              <div class="alert">
-                <h3 class="title-md">Ehopper training</h3>
-                <p>Need help with eHopper? <a href="http://ehopper.com/webinar" target="_blank">Attend our weekly training</a></p>
+        <div class="container dashboard">
+          <div class="dashboard__filters">
+            <div class="dashboard__filters-calendar"> <button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button> </div>
+            <div class="dashboard__filters-select">
+              <!-- begin multi-select -->
+              <div class="select js-multi-select" data-all-checked="All">
+                <div class="select__field js-multi-select-field">
+                  <div class="select__placeholder">Select Store(s)</div>
+                  <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                <div class="select__body" data-scrollbar="default">
+                  <ul class="select__list">
+                    <li class="select__item js-multi-select-all"> <label class="checkbox ">
+	<input type="checkbox" data-value="Select All" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Select All</span>
+	
+</label> </li>
+                    <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Lorem ipsum. 1" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 1</span>
+	
+</label> </li>
+                    <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Lorem ipsum. 2" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 2</span>
+	
+</label> </li>
+                    <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Lorem ipsum. 3" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 3</span>
+	
+</label> </li>
+                    <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Lorem ipsum. 4" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Lorem ipsum. 4</span>
+	
+</label> </li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="col col_lg-50">
-              <div class="alert">
-                <h3 class="title-md">Feedback</h3>
-                <p><a href="mailto:sales@ehopper.com">Email us</a> to provide feedback about eHopper.</p>
-              </div>
+              <!-- end multi-select -->
             </div>
           </div>
           <div class="row">
@@ -171,9 +218,11 @@
           </div>
           <div class="row">
             <div class="col col_lg-50">
-              <div class="support">
-                <div class="support__header">Support</div>
-                <div class="support__body">
+              <div class="box support">
+                <div class="box__header color-header support__header">
+                  <div class="box__title">Support</div>
+                </div>
+                <div class="box__body support__body">
                   <p><strong>Account ID:</strong> <span>0</span></p>
                   <p><strong>Web POS URL:</strong> <a href="https://pos.ehopper.com/" target="_blank">https://pos.ehopper.com/</a></p>
                   <p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
@@ -185,62 +234,11 @@
               </div>
             </div>
             <div class="col col_lg-50">
-              <div class="tasks">
-                <div class="tasks__header"> <button class="btn-toggle tasks__toggle">
-						<span class="btn-toggle__show"><i class="fa fa-eye"></i>Show</span>
-						<span class="btn-toggle__hide"><i class="fa fa-eye-slash"></i>Hide</span>
-					</button>
-                  <div class="tasks__title">Getting Started</div>
+              <div class="box news">
+                <div class="box__header color-header news__header">
+                  <div class="box__title">eHopper news and updates</div>
                 </div>
-                <div class="tasks__body">
-                  <ul class="tasks__list">
-                    <li class="task tasks__item"> <label class="checkbox task__status">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> <i class="fa fa-angle-right"></i>
-                      <div class="task__title">Task 1</div>
-                    </li>
-                    <li class="task tasks__item"> <label class="checkbox task__status">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> <i class="fa fa-angle-right"></i>
-                      <div class="task__title">Task 2</div>
-                    </li>
-                    <li class="task tasks__item"> <label class="checkbox task__status">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> <i class="fa fa-angle-right"></i>
-                      <div class="task__title">Task 3</div>
-                    </li>
-                    <li class="task tasks__item"> <label class="checkbox task__status">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> <i class="fa fa-angle-right"></i>
-                      <div class="task__title">Task 4</div>
-                    </li>
-                    <li class="task tasks__item"> <label class="checkbox task__status">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> <i class="fa fa-angle-right"></i>
-                      <div class="task__title">Task 5</div>
-                    </li>
-                  </ul>
-                </div>
+                <div class="news__body"> <iframe src="parts/news.html" frameborder="0" class="news__iframe"></iframe> </div>
               </div>
             </div>
           </div>

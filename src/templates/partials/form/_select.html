@@ -8,7 +8,7 @@
 		<div class="select__value js-select-value">{{props.value}}</div>
 		<i class="fa fa-angle-down select__arrow"></i>
 	</div>
-	<div class="select__body">
+	<div class="select__body" data-scrollbar="default">
 		<ul class="select__list">
 			{% for option in props.options %}
 				<li class="select__item js-select-item">{{option}}</li>
