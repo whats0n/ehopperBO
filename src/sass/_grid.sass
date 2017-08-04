@@ -1,0 +1,22 @@
+.container
+	position: relative
+	padding: 20px
+	&_fullscreen
+		overflow: auto
+		height: 100%
+
+.row
+	position: relative
+	margin: 0 -10px
+	+clr
+	+ .row
+		padding-top: 20px
+
+.col
+	float: left
+	padding: 0 10px
+	width: 100%
+	&_lg
+		@for $i from 1 through 100
+			&-#{$i}
+				width: $i + %

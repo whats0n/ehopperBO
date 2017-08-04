@@ -3419,7 +3419,6 @@ body,
 }
 
 .main_inner {
-  overflow: auto;
   padding-top: 50px;
 }
 
@@ -3457,12 +3456,17 @@ body,
 }
 
 .container {
-  overflow: auto;
+  position: relative;
   padding: 20px;
+}
+
+.container_fullscreen {
+  overflow: auto;
   height: 100%;
 }
 
 .row {
+  position: relative;
   margin: 0 -10px;
   *zoom: 1;
 }
@@ -3483,12 +3487,404 @@ body,
   width: 100%;
 }
 
+.col_lg-1 {
+  width: 1%;
+}
+
+.col_lg-2 {
+  width: 2%;
+}
+
+.col_lg-3 {
+  width: 3%;
+}
+
+.col_lg-4 {
+  width: 4%;
+}
+
+.col_lg-5 {
+  width: 5%;
+}
+
+.col_lg-6 {
+  width: 6%;
+}
+
+.col_lg-7 {
+  width: 7%;
+}
+
+.col_lg-8 {
+  width: 8%;
+}
+
+.col_lg-9 {
+  width: 9%;
+}
+
+.col_lg-10 {
+  width: 10%;
+}
+
+.col_lg-11 {
+  width: 11%;
+}
+
+.col_lg-12 {
+  width: 12%;
+}
+
+.col_lg-13 {
+  width: 13%;
+}
+
+.col_lg-14 {
+  width: 14%;
+}
+
+.col_lg-15 {
+  width: 15%;
+}
+
+.col_lg-16 {
+  width: 16%;
+}
+
+.col_lg-17 {
+  width: 17%;
+}
+
+.col_lg-18 {
+  width: 18%;
+}
+
+.col_lg-19 {
+  width: 19%;
+}
+
 .col_lg-20 {
   width: 20%;
 }
 
+.col_lg-21 {
+  width: 21%;
+}
+
+.col_lg-22 {
+  width: 22%;
+}
+
+.col_lg-23 {
+  width: 23%;
+}
+
+.col_lg-24 {
+  width: 24%;
+}
+
+.col_lg-25 {
+  width: 25%;
+}
+
+.col_lg-26 {
+  width: 26%;
+}
+
+.col_lg-27 {
+  width: 27%;
+}
+
+.col_lg-28 {
+  width: 28%;
+}
+
+.col_lg-29 {
+  width: 29%;
+}
+
+.col_lg-30 {
+  width: 30%;
+}
+
+.col_lg-31 {
+  width: 31%;
+}
+
+.col_lg-32 {
+  width: 32%;
+}
+
+.col_lg-33 {
+  width: 33%;
+}
+
+.col_lg-34 {
+  width: 34%;
+}
+
+.col_lg-35 {
+  width: 35%;
+}
+
+.col_lg-36 {
+  width: 36%;
+}
+
+.col_lg-37 {
+  width: 37%;
+}
+
+.col_lg-38 {
+  width: 38%;
+}
+
+.col_lg-39 {
+  width: 39%;
+}
+
+.col_lg-40 {
+  width: 40%;
+}
+
+.col_lg-41 {
+  width: 41%;
+}
+
+.col_lg-42 {
+  width: 42%;
+}
+
+.col_lg-43 {
+  width: 43%;
+}
+
+.col_lg-44 {
+  width: 44%;
+}
+
+.col_lg-45 {
+  width: 45%;
+}
+
+.col_lg-46 {
+  width: 46%;
+}
+
+.col_lg-47 {
+  width: 47%;
+}
+
+.col_lg-48 {
+  width: 48%;
+}
+
+.col_lg-49 {
+  width: 49%;
+}
+
 .col_lg-50 {
   width: 50%;
+}
+
+.col_lg-51 {
+  width: 51%;
+}
+
+.col_lg-52 {
+  width: 52%;
+}
+
+.col_lg-53 {
+  width: 53%;
+}
+
+.col_lg-54 {
+  width: 54%;
+}
+
+.col_lg-55 {
+  width: 55%;
+}
+
+.col_lg-56 {
+  width: 56%;
+}
+
+.col_lg-57 {
+  width: 57%;
+}
+
+.col_lg-58 {
+  width: 58%;
+}
+
+.col_lg-59 {
+  width: 59%;
+}
+
+.col_lg-60 {
+  width: 60%;
+}
+
+.col_lg-61 {
+  width: 61%;
+}
+
+.col_lg-62 {
+  width: 62%;
+}
+
+.col_lg-63 {
+  width: 63%;
+}
+
+.col_lg-64 {
+  width: 64%;
+}
+
+.col_lg-65 {
+  width: 65%;
+}
+
+.col_lg-66 {
+  width: 66%;
+}
+
+.col_lg-67 {
+  width: 67%;
+}
+
+.col_lg-68 {
+  width: 68%;
+}
+
+.col_lg-69 {
+  width: 69%;
+}
+
+.col_lg-70 {
+  width: 70%;
+}
+
+.col_lg-71 {
+  width: 71%;
+}
+
+.col_lg-72 {
+  width: 72%;
+}
+
+.col_lg-73 {
+  width: 73%;
+}
+
+.col_lg-74 {
+  width: 74%;
+}
+
+.col_lg-75 {
+  width: 75%;
+}
+
+.col_lg-76 {
+  width: 76%;
+}
+
+.col_lg-77 {
+  width: 77%;
+}
+
+.col_lg-78 {
+  width: 78%;
+}
+
+.col_lg-79 {
+  width: 79%;
+}
+
+.col_lg-80 {
+  width: 80%;
+}
+
+.col_lg-81 {
+  width: 81%;
+}
+
+.col_lg-82 {
+  width: 82%;
+}
+
+.col_lg-83 {
+  width: 83%;
+}
+
+.col_lg-84 {
+  width: 84%;
+}
+
+.col_lg-85 {
+  width: 85%;
+}
+
+.col_lg-86 {
+  width: 86%;
+}
+
+.col_lg-87 {
+  width: 87%;
+}
+
+.col_lg-88 {
+  width: 88%;
+}
+
+.col_lg-89 {
+  width: 89%;
+}
+
+.col_lg-90 {
+  width: 90%;
+}
+
+.col_lg-91 {
+  width: 91%;
+}
+
+.col_lg-92 {
+  width: 92%;
+}
+
+.col_lg-93 {
+  width: 93%;
+}
+
+.col_lg-94 {
+  width: 94%;
+}
+
+.col_lg-95 {
+  width: 95%;
+}
+
+.col_lg-96 {
+  width: 96%;
+}
+
+.col_lg-97 {
+  width: 97%;
+}
+
+.col_lg-98 {
+  width: 98%;
+}
+
+.col_lg-99 {
+  width: 99%;
+}
+
+.col_lg-100 {
+  width: 100%;
 }
 
 [data-animation*="ripple"] {
@@ -5283,8 +5679,8 @@ button:disabled, button.is-disabled,
 .graph__frame {
   position: relative;
   float: left;
-  padding: 20px;
-  width: 380px;
+  padding: 20px 40px;
+  width: 420px;
   height: 380px;
 }
 
@@ -5347,7 +5743,7 @@ button:disabled, button.is-disabled,
   line-height: 20px;
 }
 
-.graph__td[data-column*="category-color"], .graph__th[data-column*="category-color"] {
+.graph__td[data-column*="color"], .graph__th[data-column*="color"] {
   width: 60px;
 }
 

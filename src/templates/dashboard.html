@@ -7,7 +7,7 @@ menu: { active: 0 }
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<div class="container dashboard" data-scrollbar="default">
+<div class="container container_fullscreen dashboard" data-scrollbar="default">
 	<div class="dashboard__filters">
 		<div class="dashboard__filters-calendar">
 			<button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button>
@@ -88,7 +88,7 @@ menu: { active: 0 }
 					<div class="graph__info">
 						{% set category = {
 							headings: [ '&nbsp;', 'Sales', 'Quantity', 'Total,$', 'Total,%' ],
-							columns: [ 'category-color', 'category-sales', 'category-qty', 'category-price', 'category-percent' ],
+							columns: [ 'color', 'category-sales', 'category-qty', 'category-price', 'category-percent' ],
 							items: [
 								{
 									color: 'rgb(192, 156, 220)',
@@ -189,70 +189,81 @@ menu: { active: 0 }
 					</div>
 					<div class="graph__info">
 						{% set product = {
-							headings: [ 'Sales', 'Quantity', 'Total,$', 'Total,%' ],
-							columns: [ 'product-sales', 'product-qty', 'product-price', 'product-percent' ],
+							headings: [ '&nbsp;', 'Sales', 'Quantity', 'Total,$', 'Total,%' ],
+							columns: [ 'color', 'product-sales', 'product-qty', 'product-price', 'product-percent' ],
 							items: [
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Cheeseburger',
 									qty: '123,566',
 									price: '231,4.15',
 									percent: '10'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Ciabatta with chicken',
 									qty: '112,435',
 									price: '221,3.12',
 									percent: '9'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Ciabatta with tuna',
 									qty: '111,217',
 									price: '216,1.01',
 									percent: '9'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Ciabatta with spinach',
 									qty: '91,213',
 									price: '198,3.36',
 									percent: '7'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Sandwich with salmon',
 									qty: '91,193',
 									price: '197,4.17',
 									percent: '7'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Sandwich with ham',
 									qty: '87,456',
 									price: '189,7.21',
 									percent: '7'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Sandwich with broccoli',
 									qty: '85,151',
 									price: '171,7.65',
 									percent: '6'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Club sandwich',
 									qty: '227,456',
 									price: '241,7.21',
 									percent: '12'
 								},
 								{
+									color: 'rgb(192, 156, 220)',
 									title: 'Hamburger',
 									qty: '231,523',
 									price: '261,5.62',
 									percent: '13'
 								},
 								{
+									color: 'rgb(240, 93, 109)',
 									title: 'Sprite',
 									qty: '261,321',
 									price: '411,7.62',
 									percent: '15'
 								},
 								{
+									color: 'rgb(240, 93, 109)',
 									title: 'Pepsi',
 									qty: '14,861',
 									price: '12,4.62',
@@ -264,7 +275,7 @@ menu: { active: 0 }
 							<div class="graph__table-head">
 								<div class="graph__tr">
 									{% for item in product.headings %}
-										{% if loop.index0 > 0 %}
+										{% if loop.index0 > 1 %}
 											<div class="graph__th text-right" data-column="{{product.columns[loop.index0]}}">{{item | safe}}</div>
 										{% else %}
 											<div class="graph__th" data-column="{{product.columns[loop.index0]}}">{{item | safe}}</div>
@@ -276,6 +287,9 @@ menu: { active: 0 }
 								<div class="graph__table-body-in">
 									{% for item in product.items %}
 										<div class="graph__tr">
+											<div class="graph__td" data-column="{{category.columns[0]}}">
+												<i class="graph__color" style="background-color: {{item.color}}"></i>
+											</div>
 											<div class="graph__td" data-column="{{product.columns[1]}}">{{item.title}}</div>
 											<div class="graph__td text-right" data-column="{{product.columns[2]}}">{{item.qty}}</div>
 											<div class="graph__td text-right" data-column="{{product.columns[3]}}">{{item.price}}</div>
