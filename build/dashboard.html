@@ -107,7 +107,7 @@
       <!-- begin overlay --><button type="button" class="overlay " data-overlay="overlay" data-menu-overlay="menu"></button>
       <!-- end overlay -->
       <div class="main main_inner">
-        <div class="container dashboard">
+        <div class="container dashboard" data-scrollbar="default">
           <div class="dashboard__filters">
             <div class="dashboard__filters-calendar"> <button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button> </div>
             <div class="dashboard__filters-select">
@@ -169,9 +169,9 @@
               <!-- end multi-select -->
             </div>
           </div>
-          <div class="row">
+          <div class="row js-sortable-x">
             <div class="col col_lg-20">
-              <div class="stat">
+              <div class="stat js-sortable-handle">
                 <div class="stat__icon stat__icon_blue"> </div>
                 <div class="stat__content">
                   <div class="stat__title">Total Transactions</div>
@@ -180,7 +180,7 @@
               </div>
             </div>
             <div class="col col_lg-20">
-              <div class="stat">
+              <div class="stat js-sortable-handle">
                 <div class="stat__icon stat__icon_orange"> </div>
                 <div class="stat__content">
                   <div class="stat__title">Repeat Customers</div>
@@ -189,7 +189,7 @@
               </div>
             </div>
             <div class="col col_lg-20">
-              <div class="stat">
+              <div class="stat js-sortable-handle">
                 <div class="stat__icon stat__icon_purple"> </div>
                 <div class="stat__content">
                   <div class="stat__title">Gross Sales</div>
@@ -198,7 +198,7 @@
               </div>
             </div>
             <div class="col col_lg-20">
-              <div class="stat">
+              <div class="stat js-sortable-handle">
                 <div class="stat__icon stat__icon_red"> </div>
                 <div class="stat__content">
                   <div class="stat__title">Refunds</div>
@@ -207,7 +207,7 @@
               </div>
             </div>
             <div class="col col_lg-20">
-              <div class="stat">
+              <div class="stat js-sortable-handle">
                 <div class="stat__icon stat__icon_green"> </div>
                 <div class="stat__content">
                   <div class="stat__title">New Customers</div>
@@ -216,10 +216,10 @@
               </div>
             </div>
           </div>
-          <div class="row">
+          <div class="row js-sortable-x">
             <div class="col col_lg-50">
               <div class="box support">
-                <div class="box__header color-header">
+                <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">Support</div>
                 </div>
                 <div class="support__body">
@@ -235,7 +235,7 @@
             </div>
             <div class="col col_lg-50">
               <div class="box news">
-                <div class="box__header color-header">
+                <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">eHopper news and updates</div>
                 </div>
                 <div class="news__body"> <iframe src="parts/news.html" frameborder="0" class="news__iframe"></iframe> </div>
@@ -243,9 +243,9 @@
             </div>
           </div>
           <div class="row">
-            <div class="col col_lg-100">
+            <div class="col col_lg-100 js-sortable-y">
               <div class="box graph">
-                <div class="box__header color-header">
+                <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">Sales by Category</div>
                 </div>
                 <div class="graph__body">
@@ -326,7 +326,7 @@
                 </div>
               </div>
               <div class="box graph">
-                <div class="box__header color-header">
+                <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">Sales by Product</div>
                 </div>
                 <div class="graph__body">

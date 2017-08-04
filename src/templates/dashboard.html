@@ -7,7 +7,7 @@ menu: { active: 0 }
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
-<div class="container dashboard">
+<div class="container dashboard" data-scrollbar="default">
 	<div class="dashboard__filters">
 		<div class="dashboard__filters-calendar">
 			<button class="btn btn_lg btn_white btn_border filters__calendar" data-animation="ripple"><i class="fa fa-calendar"></i>Today<i class="fa fa-angle-down"></i></button>
@@ -25,7 +25,7 @@ menu: { active: 0 }
 			})}}
 		</div>
 	</div>
-	<div class="row">
+	<div class="row js-sortable-x">
 		{% set stats = [
 			{ color: 'blue', title: 'Total Transactions', text: '11' },
 			{ color: 'orange', title: 'Repeat Customers', text: '1' },
@@ -35,7 +35,7 @@ menu: { active: 0 }
 		] %}
 		{% for item in stats %}
 			<div class="col col_lg-20">
-				<div class="stat">
+				<div class="stat js-sortable-handle">
 					<div class="stat__icon stat__icon_{{item.color}}">
 						{{item.icon | safe}}
 					</div>
@@ -47,10 +47,10 @@ menu: { active: 0 }
 			</div>
 		{% endfor %}
 	</div>
-	<div class="row">
+	<div class="row js-sortable-x">
 		<div class="col col_lg-50">
 			<div class="box support">
-				<div class="box__header color-header">
+				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">Support</div>
 				</div>
 				<div class="support__body">
@@ -66,7 +66,7 @@ menu: { active: 0 }
 		</div>
 		<div class="col col_lg-50">
 			<div class="box news">
-				<div class="box__header color-header">
+				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">eHopper news and updates</div>
 				</div>
 				<div class="news__body">
@@ -76,9 +76,9 @@ menu: { active: 0 }
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col_lg-100">
+		<div class="col col_lg-100 js-sortable-y">
 			<div class="box graph">
-				<div class="box__header color-header">
+				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">Sales by Category</div>
 				</div>
 				<div class="graph__body">
@@ -180,7 +180,7 @@ menu: { active: 0 }
 				</div>
 			</div>
 			<div class="box graph">
-				<div class="box__header color-header">
+				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">Sales by Product</div>
 				</div>
 				<div class="graph__body">

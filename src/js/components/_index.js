@@ -7,6 +7,7 @@ import nav from './_nav';
 import simpleSwipe from './_simple-swipe';
 import table from './_table';
 import chart from './_chart';
+import sortable from './_sortable';
 
 export default (function() {
 	
@@ -19,5 +20,6 @@ export default (function() {
 	simpleSwipe();
 	table();
 	chart();
+	sortable();
 
 })();
