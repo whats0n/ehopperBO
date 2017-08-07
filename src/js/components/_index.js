@@ -8,6 +8,7 @@ import simpleSwipe from './_simple-swipe';
 import table from './_table';
 import chart from './_chart';
 import sortable from './_sortable';
+import resizableLayout from './_resizable-layout';
 
 export default (function() {
 	
@@ -21,5 +22,6 @@ export default (function() {
 	table();
 	chart();
 	sortable();
+	resizableLayout();
 
 })();

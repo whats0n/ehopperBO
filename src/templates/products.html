@@ -12,8 +12,8 @@ menu: { active: 1 }
 {% block content %}
 
 <div class="l-container">
-	<div class="l-row">
-		<div class="l-col l-col_sidebar" data-scrollbar="default">
+	<div class="l-row js-resizable-width">
+		<div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default">
 			<div class="container">
 				<div class="row">
 					<div class="col col_lg-25">
@@ -42,8 +42,11 @@ menu: { active: 1 }
 				</div>
 			</div>
 		</div>
-		<div class="l-col l-col_main" data-scrollbar="default">
-			right side
+		<div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">
+			<div class="l-col__inner">
+				<div class="splitter-left js-resizable-width-splitter"></div>
+				right side
+			</div>
 		</div>
 	</div>
 </div>

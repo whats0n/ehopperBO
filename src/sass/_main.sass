@@ -1,6 +1,19 @@
 .js-sortable-handle
 	cursor: move
 
+.splitter-right,
+.splitter-left
+	border-left: 5px solid $lightGray
+	position: absolute
+	top: 0
+	bottom: 0
+	+nosel
+.splitter-right
+	right: 0
+.splitter-left
+	left: 0
+
+
 hr
 	clear: both
 	margin: 0
