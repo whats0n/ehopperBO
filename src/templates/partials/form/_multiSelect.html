@@ -1,7 +1,7 @@
 {% import 'partials/form/_checkbox.html' as checkbox %}
 {% macro call(props) %}
 <!-- begin multi-select -->
-<div class="select js-multi-select" data-all-checked="{{props.allChecked or 'All'}}">
+<div class="select js-multi-select {{props.classList}}" data-all-checked="{{props.allChecked or 'All'}}">
 	<div class="select__field js-multi-select-field">
 		{% if props.placeholder %}
 			<div class="select__placeholder">{{props.placeholder}}</div>

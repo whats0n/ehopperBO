@@ -14,6 +14,61 @@ menu: { active: 1 }
 <div class="l-container">
 	<div class="l-row js-resizable-width">
 		<div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default">
+			<div class="sm-filters" data-modal="products-filters">
+				<div class="container sm-filters__container" data-modal-container="products-filters">
+					<button class="sm-filters__close" data-modal-close="products-filters">
+						<i class="fa fa-close"></i>
+					</button>
+					<div class="row">
+						<div class="col col_lg-100">
+							<h2 class="title-xxl color-title-main text-center">Login</h2>
+						</div>
+						<div class="col col_lg-50">
+							{{form.select.call({
+								classList: 'select_full',
+								placeholder: 'Department',
+								options: [
+									'All',
+									'Department 1',
+									'Department 2',
+									'Department 3',
+									'Department 4'
+								]
+							})}}
+						</div>
+						<div class="col col_lg-50">
+							{{form.select.call({
+								classList: 'select_full',
+								placeholder: 'Category',
+								options: [
+									'All',
+									'Category 1',
+									'Category 2',
+									'Category 3',
+									'Category 4'
+								]
+							})}}
+						</div>
+						<div class="col col_lg-100">
+							{{form.multiSelect.call({
+								classList: 'select_full',
+								placeholder: 'inventory type',
+								selectAll: 'Select All',
+								options: [
+									'Inventory type 1',
+									'Inventory type 2',
+									'Inventory type 3',
+									'Inventory type 4'
+								]
+							})}}
+						</div>
+						<div class="col col_lg-100 text-center sm-filters__btns">
+							<button class="btn btn_lg color-btn-main sm-filters__btn">Done</button>
+							<button class="btn btn_lg sm-filters__btn">Cancel</button>
+						</div>
+					</div>
+				</div>
+			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col col_lg-25">
@@ -30,7 +85,7 @@ menu: { active: 1 }
 					</div>
 					<div class="col col_lg-100">
 						<div class="filter-group">
-							<button class="btn btn_lg color-btn-main filter-group__btn">
+							<button class="btn btn_lg color-btn-main filter-group__btn" data-modal-open="products-filters">
 								<i class="fa fa-filter"></i>
 							</button>
 							{{form.search.call({
@@ -41,6 +96,64 @@ menu: { active: 1 }
 					</div>
 				</div>
 			</div>
+			{{table.call({
+				name: 'products',
+				classList: 'table-wrapper_header-lg table-wrapper_auto-height',
+				bodyClassList: 'table-body_zebra',
+				bodyTDClassList: 'text-overflow',
+				range: 0,
+				columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'action-btns' ],
+				header: [ 
+					{ checkbox: true }, 
+					{ content: 'Product' }, 
+					{ content: 'Cost' }, 
+					{ content: 'Price' }, 
+					{ content: 'Quantity' }, 
+					{ content: 'Edit', classList: 'text-center' } 
+				],
+				body: [
+					[ 
+						{ checkbox: true },
+						{ content: '<div class="table-wrapper__meta">5088</div><div class="table-wrapper__value">Burger NEW</div>' },
+						{ content: '$20' },
+						{ content: '$20.00' },
+						{ content: '1' },
+						{ content: '<a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: '<div class="table-wrapper__meta">5013</div><div class="table-wrapper__value">Cheeseburger</div>' },
+						{ content: '$6.50' },
+						{ content: '$6.50' },
+						{ content: '2' },
+						{ content: '<a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: '<div class="table-wrapper__meta">4992</div><div class="table-wrapper__value">Sprite</div>' },
+						{ content: '$8.00' },
+						{ content: '$8.00' },
+						{ content: '1' },
+						{ content: '<a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: '<div class="table-wrapper__meta">4994</div><div class="table-wrapper__value">Pepsi</div>' },
+						{ content: '$7.00' },
+						{ content: '$7.00' },
+						{ content: '2' },
+						{ content: '<a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: '<div class="table-wrapper__meta">5001</div><div class="table-wrapper__value">Hamburger</div>' },
+						{ content: '$12.00' },
+						{ content: '$12.00' },
+						{ content: '1' },
+						{ content: '<a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a>' }
+					]
+				]
+			})}}
 		</div>
 		<div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">
 			<div class="l-col__inner">

@@ -1,6 +1,6 @@
 {% macro call(props) %}
 <!-- begin select -->
-<div class="select js-select">
+<div class="select js-select {{props.classList}}">
 	<div class="select__field js-select-field">
 		{% if props.placeholder %}
 			<div class="select__placeholder">{{props.placeholder}}</div>

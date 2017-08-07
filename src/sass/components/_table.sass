@@ -4,10 +4,12 @@
 	padding-top: 37px
 	height: 100%
 	&_header-lg
-		padding-top: 50px
+		padding-top: 51px
 		.table-wrapper
 			&__header 
-				height: 50px
+				height: 51px
+	&_auto-height
+		height: auto
 	&_adaptive
 		+media('width', 'md')
 			padding-top: 0
@@ -116,7 +118,6 @@
 		display: table-cell
 		vertical-align: middle
 		padding: 10px
-		word-wrap: break-word
 		+media('width', 'lg')
 			padding: 10px 4px
 		&:first-child
@@ -139,9 +140,19 @@
 			width: 18%
 		&[data-column*="order-total"]
 			width: 18%
+		//products
+		&[data-column*="action-btns"]
+			padding: 0
+			width: 60px
+		&[data-column*="first-checkbox"]
+			width: 60px
+			+media('width', 'lg')
+				width: 54px
 	&__th
 		+rmed
 		line-height: 1.2
+	&__td
+		word-wrap: break-word
 
 .table-header
 	border-bottom: 1px solid $silverGray

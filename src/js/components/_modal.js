@@ -25,10 +25,10 @@ export default function() {
 	smartClick('html', function(e) {
 
 		const $target = $(e.target);
-		const $modal = $target.closest('[data-modal]');
+		const $modal = $(`[data-modal]`);
 
 		if ($target.closest('[data-modal-container]').length || 
-			$target.closest('[data-modal-target]').length ||
+			$target.closest('[data-modal-open]').length ||
 			!$modal.hasClass(OPEN)) return;
 
 		$modal.removeClass(OPEN);

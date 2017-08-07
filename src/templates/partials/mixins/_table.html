@@ -1,3 +1,5 @@
+{% import "partials/form/_build.html" as form %}
+
 {% macro call(props) %}
 <!-- begin table -->
 <div class="table-wrapper {{props.classList}}" data-table="{{props.name}}">
@@ -5,7 +7,13 @@
 		<div class="table-header {{props.headerClassList}}">
 			<ul class="table-header__tr">
 				{% for th in props.header %}
-					<li class="table-header__th" data-column="{{props.columns[loop.index0]}}">{{th | safe}}</li>
+					{% if th.checkbox %}
+						<li class="table-header__th {{th.classList}}" data-column="{{props.columns[loop.index0]}}">
+							{{form.checkbox.call(th.options)}}
+						</li>
+					{% else %}
+						<li class="table-header__th {{th.classList}}" data-column="{{props.columns[loop.index0]}}">{{th.content | safe}}</li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
@@ -16,8 +24,12 @@
 				{% for tr in props.body %}
 					<div class="table-body__tr">
 						{% for td in tr %}
-							<div class="table-body__td {{td.classList}}" data-column="{{props.columns[loop.index0]}}" data-title="{{props.header[loop.index0]}}">
+							<div class="table-body__td {{td.classList}}" data-column="{{props.columns[loop.index0]}}" data-title="{{props.header[loop.index0].content}}">
 								{{td.content | safe}}
+
+								{% if td.checkbox %}
+									{{form.checkbox.call(td.options)}}
+								{% endif %}
 							</div>
 						{% endfor %}
 					</div>

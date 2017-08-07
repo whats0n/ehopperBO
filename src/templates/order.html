@@ -126,11 +126,18 @@ header: {
 	<div class="order__container">
 		<div class="order__body">
 			{{table.call({
+				name: 'order',
 				bodyClassList: 'table-body_zebra',
 				bodyTDClassList: 'text-overflow',
 				range: 5,
 				columns: [ 'order-description', 'order-qty', 'order-price', 'order-discount', 'order-total' ],
-				header: [ 'Description', 'Quantity', 'Item Price', 'Discount', 'Total' ],
+				header: [ 
+					{ content: 'Description' },
+					{ content: 'Quantity' },
+					{ content: 'Item Price' },
+					{ content: 'Discount' },
+					{ content: 'Total' } 
+				],
 				body: [
 					[ 
 						{ content: '<div class="table-wrapper__value">Hot-Dog</div>' },

@@ -20,8 +20,16 @@ export default function() {
 					const rowWidth = $this.innerWidth();
 					const siblingColumnWidth = `${rowWidth - newWidth}px`;
 					$leftColumn.width(siblingColumnWidth);
+				},
+				onDragEnd(event, $column, options) {
+					const rowWidth = $this.innerWidth();
+					const rightColumnWidth = `${$rightColumn.outerWidth() / rowWidth * 100}%`;
+					const leftColumnWidth = `${$leftColumn.outerWidth() / rowWidth * 100}%`;
+					$rightColumn.width(rightColumnWidth);
+					$leftColumn.width(leftColumnWidth);
 				}
 			});
+			
 		});
 
 	}
