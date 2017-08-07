@@ -6501,6 +6501,7 @@ button:disabled, button.is-disabled,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: e-resize;
 }
 
 .splitter-right {
