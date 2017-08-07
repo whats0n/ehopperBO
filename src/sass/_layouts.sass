@@ -2,7 +2,8 @@ html,
 body,
 .out,
 .main,
-.vertical-center
+.vertical-center,
+.fullscreen
 	height: 100%
 
 .out
@@ -30,3 +31,18 @@ body,
 		
 .section
 	padding: 20px
+
+
+.l-container,
+.l-row,
+.l-col
+	height: 100%
+.l-row
+	+clr
+.l-col
+	float: left
+	&_sidebar
+		width: 40%
+	&_main
+		border-left: 2px solid $lightGray
+		width: 60%

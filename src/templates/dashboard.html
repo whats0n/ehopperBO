@@ -1,7 +1,10 @@
 ---
 title: Dashboard
 mainClassList: 'main_inner'
-header: { title: 'Dashboard' }
+header: { 
+	title: 'Dashboard',
+	menu: true
+}
 menu: { active: 0 }
 ---
 {% extends "layouts/_layout.html" %}
@@ -25,19 +28,46 @@ menu: { active: 0 }
 			})}}
 		</div>
 	</div>
-	<div class="row js-sortable-x">
+	<div class="row stats js-sortable-x">
 		{% set stats = [
-			{ color: 'blue', title: 'Total Transactions', text: '11' },
-			{ color: 'orange', title: 'Repeat Customers', text: '1' },
-			{ color: 'purple', title: 'Gross Sales', text: '$4,190.53' },
-			{ color: 'red', title: 'Refunds', text: '$0.00' },
-			{ color: 'green', title: 'New Customers', text: '0' }
+			{ 
+				color: 'blue', 
+				icon: '<i class="fa fa-exchange stat__icon-main"></i>', 
+				title: 'Total Transactions', 
+				text: '11'
+			},
+			{ 
+				color: 'orange', 
+				icon: '<i class="fa fa-user-o stat__icon-main"></i><i class="fa fa-repeat stat__icon-sup"></i>', 
+				title: 'Repeat Customers', 
+				text: '1'
+			},
+			{ 
+				color: 'purple', 
+				icon: '<i class="fa fa-bar-chart stat__icon-main"></i>', 
+				title: 'Gross Sales', 
+				text: '$4,190.53' 
+			},
+			{ 
+				color: 'red', 
+				icon: '<i class="fa fa-rotate-left stat__icon-main"></i>', 
+				title: 'Refunds', 
+				text: '$0.00' 
+			},
+			{ 
+				color: 'green', 
+				icon: '<i class="fa fa-user-o stat__icon-main"></i><i class="fa fa-plus stat__icon-sup"></i>', 
+				title: 'New Customers', 
+				text: '0' 
+			}
 		] %}
 		{% for item in stats %}
 			<div class="col col_lg-20">
 				<div class="stat js-sortable-handle">
 					<div class="stat__icon stat__icon_{{item.color}}">
-						{{item.icon | safe}}
+						<div class="stat__icon-in">
+							{{item.icon | safe}}
+						</div>
 					</div>
 					<div class="stat__content">
 						<div class="stat__title">{{item.title | safe}}</div>
@@ -47,7 +77,7 @@ menu: { active: 0 }
 			</div>
 		{% endfor %}
 	</div>
-	<div class="row js-sortable-x">
+	<div class="row boxes js-sortable">
 		<div class="col col_lg-50">
 			<div class="box support">
 				<div class="box__header color-header js-sortable-handle">
@@ -59,9 +89,9 @@ menu: { active: 0 }
 					<p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
 					<p><strong>Community:</strong> <a href="Zendesk/Login" target="_blank">Community</a></p>
 				</div>
-				<div class="support__footer">
+				{#<div class="support__footer">
 					<p><span class="color-green">Note:</span> Use the chat below to learn how to upgrade to the Freedom Package with eHopper.</p>
-				</div>
+				</div>#}
 			</div>
 		</div>
 		<div class="col col_lg-50">
@@ -74,9 +104,7 @@ menu: { active: 0 }
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<div class="col col_lg-100 js-sortable-y">
+		<div class="col col_lg-50">
 			<div class="box graph">
 				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">Sales by Category</div>
@@ -179,6 +207,8 @@ menu: { active: 0 }
 					</div>
 				</div>
 			</div>
+		</div>
+		<div class="col col_lg-50">
 			<div class="box graph">
 				<div class="box__header color-header js-sortable-handle">
 					<div class="box__title">Sales by Product</div>

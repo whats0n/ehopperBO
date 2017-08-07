@@ -6,21 +6,27 @@ export default function() {
 	const sortableY = $('.js-sortable-y');
 	const sortable = $('.js-sortable');
 
-	sortableX.length && sortableX.sortable({
-		handle: '.js-sortable-handle',
-		axis: 'x',
-		containment: 'parent'
-	});
+	if (sortableX.length) {
+		sortableX.sortable({
+			handle: '.js-sortable-handle',
+			axis: 'x',
+			placeholder: 'sortable-placeholder'
+		});
+	}
 
-	sortableY.length && sortableY.sortable({
-		handle: '.js-sortable-handle',
-		axis: 'y',
-		containment: 'parent'
-	});
+	if (sortableY.length) {
+		sortableY.sortable({
+			handle: '.js-sortable-handle',
+			axis: 'y',
+			placeholder: 'sortable-placeholder'
+		});
+	}
 
-	sortable.length && sortable.sortable({
-		handle: '.js-sortable-handle',
-		containment: 'parent'
-	});
+	if (sortable.length) {
+		sortable.sortable({
+			handle: '.js-sortable-handle',
+			placeholder: 'sortable-placeholder'
+		});
+	}
 
 };

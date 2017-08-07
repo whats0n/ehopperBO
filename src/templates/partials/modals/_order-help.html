@@ -1,0 +1,39 @@
+<!-- begin modal-content -->
+<div class="modal-content modal-content_fullscreen text-left">
+	<div class="modal-content__header">
+		<div class="title-xl modal-content__title">Help</div>
+		<button class="modal-content__close" data-modal-close="order-help">
+			<i class="fa fa-close"></i>
+		</button>
+	</div>
+	<div class="modal-content__body" data-scrollbar="default">
+		{% set helplist = [
+			{ title: 'Order ID', description: 'The ID number of the placed order.' },
+			{ title: 'Order Name', description: 'Name of the placed order.' },
+			{ title: 'Customer', description: 'Type of customer the order was placed by.' },
+			{ title: 'Customer Phone', description: 'The customers phone number.' },
+			{ title: 'Employee', description: 'Name of employee that entered the order into eHopper.' },
+			{ title: 'Store', description: 'Name of the store where the order was placed.' },
+			{ title: 'Order Date', description: 'Date of the order.' },
+			{ title: 'Order Type', description: 'The type of order that was placed.' },
+			{ title: 'Status', description: 'The current order status.' },
+			{ title: 'Tender Type', description: 'Type of tender used to process the transaction.' },
+			{ title: 'Fulfillment', description: 'Notes if the order has or has not been fulfilled.' },
+			{ title: 'RefNum', description: 'The referral number of the order, if one is set.' },
+			{ title: 'Subtotal', description: 'Subtotal of the order.' },
+			{ title: 'Discount', description: 'Amount of applied discounts.' },
+			{ title: 'Tax', description: 'Amount of paid tax.' },
+			{ title: 'Tips', description: 'Amount received in tips.' },
+			{ title: 'Total', description: 'Total price of the transaction.' }
+		] %}
+		<div class="definition-list">
+			<dl class="definition-list__item">
+				{% for item in helplist %}
+					<dt class="definition-list__title">{{item.title}}</dt>
+					<dd class="definition-list__description">{{item.description}}</dd>
+				{% endfor %}
+			</dl>
+		</div>
+	</div>
+</div>
+<!-- end modal-content -->

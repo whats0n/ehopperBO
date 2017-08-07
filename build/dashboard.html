@@ -36,7 +36,7 @@
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">Department</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Category</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">Global Modifiers</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Modifiers</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Menu Builder</a></li>
                 <li class="nav__item"><a href="#" class="nav__link">Store Transfer</a></li>
@@ -79,10 +79,9 @@
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="apps"> <a href="#" class="nav__link " data-nav-submenu-open="apps">
-			    		<i class="nav__icon "></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
+			    		<i class="nav__icon icon icon-cloud-plus"></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
               <ul class="nav__submenu">
                 <li class="nav__item"><a href="#" class="nav__link">App Directory</a></li>
-                <li class="nav__item"><a href="#" class="nav__link">QuickBooks Online</a></li>
               </ul>
             </li>
             <li class="nav__item" data-nav-submenu="settings"> <a href="#" class="nav__link " data-nav-submenu-open="settings">
@@ -169,10 +168,12 @@
               <!-- end multi-select -->
             </div>
           </div>
-          <div class="row js-sortable-x">
+          <div class="row stats js-sortable-x">
             <div class="col col_lg-20">
               <div class="stat js-sortable-handle">
-                <div class="stat__icon stat__icon_blue"> </div>
+                <div class="stat__icon stat__icon_blue">
+                  <div class="stat__icon-in"> <i class="fa fa-exchange stat__icon-main"></i> </div>
+                </div>
                 <div class="stat__content">
                   <div class="stat__title">Total Transactions</div>
                   <div class="stat__text">11</div>
@@ -181,7 +182,9 @@
             </div>
             <div class="col col_lg-20">
               <div class="stat js-sortable-handle">
-                <div class="stat__icon stat__icon_orange"> </div>
+                <div class="stat__icon stat__icon_orange">
+                  <div class="stat__icon-in"> <i class="fa fa-user-o stat__icon-main"></i><i class="fa fa-repeat stat__icon-sup"></i> </div>
+                </div>
                 <div class="stat__content">
                   <div class="stat__title">Repeat Customers</div>
                   <div class="stat__text">1</div>
@@ -190,7 +193,9 @@
             </div>
             <div class="col col_lg-20">
               <div class="stat js-sortable-handle">
-                <div class="stat__icon stat__icon_purple"> </div>
+                <div class="stat__icon stat__icon_purple">
+                  <div class="stat__icon-in"> <i class="fa fa-bar-chart stat__icon-main"></i> </div>
+                </div>
                 <div class="stat__content">
                   <div class="stat__title">Gross Sales</div>
                   <div class="stat__text">$4,190.53</div>
@@ -199,7 +204,9 @@
             </div>
             <div class="col col_lg-20">
               <div class="stat js-sortable-handle">
-                <div class="stat__icon stat__icon_red"> </div>
+                <div class="stat__icon stat__icon_red">
+                  <div class="stat__icon-in"> <i class="fa fa-rotate-left stat__icon-main"></i> </div>
+                </div>
                 <div class="stat__content">
                   <div class="stat__title">Refunds</div>
                   <div class="stat__text">$0.00</div>
@@ -208,7 +215,9 @@
             </div>
             <div class="col col_lg-20">
               <div class="stat js-sortable-handle">
-                <div class="stat__icon stat__icon_green"> </div>
+                <div class="stat__icon stat__icon_green">
+                  <div class="stat__icon-in"> <i class="fa fa-user-o stat__icon-main"></i><i class="fa fa-plus stat__icon-sup"></i> </div>
+                </div>
                 <div class="stat__content">
                   <div class="stat__title">New Customers</div>
                   <div class="stat__text">0</div>
@@ -216,7 +225,7 @@
               </div>
             </div>
           </div>
-          <div class="row js-sortable-x">
+          <div class="row boxes js-sortable">
             <div class="col col_lg-50">
               <div class="box support">
                 <div class="box__header color-header js-sortable-handle">
@@ -228,9 +237,6 @@
                   <p><strong>Online Help:</strong> <a href="Zendesk/Login?goto=1" target="_blank">Knowledge Base</a></p>
                   <p><strong>Community:</strong> <a href="Zendesk/Login" target="_blank">Community</a></p>
                 </div>
-                <div class="support__footer">
-                  <p><span class="color-green">Note:</span> Use the chat below to learn how to upgrade to the Freedom Package with eHopper.</p>
-                </div>
               </div>
             </div>
             <div class="col col_lg-50">
@@ -241,9 +247,7 @@
                 <div class="news__body"> <iframe src="parts/news.html" frameborder="0" class="news__iframe"></iframe> </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col col_lg-100 js-sortable-y">
+            <div class="col col_lg-50">
               <div class="box graph">
                 <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">Sales by Category</div>
@@ -325,6 +329,8 @@
                   </div>
                 </div>
               </div>
+            </div>
+            <div class="col col_lg-50">
               <div class="box graph">
                 <div class="box__header color-header js-sortable-handle">
                   <div class="box__title">Sales by Product</div>

@@ -10,7 +10,11 @@
 }
 
 $icon-backspace: "\EA01";
-$icon-facebook: "\EA02";
+$icon-cloud-plus: "\EA02";
+$icon-exit: "\EA03";
+$icon-facebook: "\EA04";
+$icon-notes: "\EA05";
+$icon-orders: "\EA06";
 
 
 %icon {
@@ -30,4 +34,8 @@ $icon-facebook: "\EA02";
 }
 
 .icon-backspace:before { content: $icon-backspace; }
+.icon-cloud-plus:before { content: $icon-cloud-plus; }
+.icon-exit:before { content: $icon-exit; }
 .icon-facebook:before { content: $icon-facebook; }
+.icon-notes:before { content: $icon-notes; }
+.icon-orders:before { content: $icon-orders; }

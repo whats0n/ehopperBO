@@ -95,6 +95,55 @@
 				top: -7px
 			&:after
 				bottom: -7px
+	&__back
+		position: absolute
+		z-index: 10
+		top: 0
+		left: 0
+		bottom: 0
+		min-width: 120px
+		color: inherit
+		background: none
+		+rlight
+		font-size: 0
+		text-align: left
+		white-space: nowrap
+		transition: background 0.175s ease, box-shadow 0.175s ease
+		cursor: pointer
+		+active
+			color: inherit
+			background: rgba(0, 0, 0, 0.1)
+			box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 0.2)
+		i, span
+			display: inline-block
+			vertical-align: middle
+		i 
+			width: 50px
+			height: 50px
+			font-size: 20px
+			line-height: 50px
+			text-align: center
+		span
+			font-size: 16px
+			line-height: 20px
+	&__help
+		position: absolute
+		top: 5px
+		right: 5px
+		border-radius: 50%
+		width: 40px
+		height: 40px
+		color: inherit
+		background: none
+		+vertical
+		transition: background 0.175s ease
+		+active
+			color: inherit
+			background: rgba($black, 0.1)
+		i
+			display: inline-block
+			vertical-align: middle
+			font-size: 24px
 	&__title
 		padding-top: 13px
 		padding-bottom: 13px

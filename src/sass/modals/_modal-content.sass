@@ -1,15 +1,28 @@
 .modal-content
+	position: relative
 	border-radius: 5px
 	background: $white
 	box-shadow: 0 0 5px 1px rgba($black, 0.4)
+	&_fullscreen
+		padding-top: 48px
+		height: 100%
+		.modal-content
+			&__header
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
 	&__header
-		// padding: 30px 20px
+		position: relative
 		padding: 10px 20px
 		border-radius: 5px 5px 0 0 
 		color: $white
 		background: $mainColor
 	&__body
 		padding: 20px
+		&[data-scrollbar]
+			overflow: auto
+			height: 100%
 	&__footer
 		padding: 20px
 		border-top: 1px solid $mainColor
@@ -17,3 +30,17 @@
 	&__success
 		float: right
 		min-width: 100px
+	&__title
+		+text-overflow
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 50px
+		color: inherit
+		background: none
+		font-size: 30px
+		+active
+			color: inherit
+			

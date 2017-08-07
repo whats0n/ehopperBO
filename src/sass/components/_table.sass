@@ -92,6 +92,11 @@
 		overflow: auto
 		border-bottom: 1px solid $lightGray
 		max-height: 100%
+	&__value,
+	&__meta
+		word-wrap: break-word
+	&__meta
+		opacity: 0.5
 
 .table-header,
 .table-body
@@ -116,12 +121,24 @@
 			padding: 10px 4px
 		&:first-child
 			padding-left: 20px
-		&[data-column*="orders-status"]
-			width: 80px
 		&[data-column*="action"]
 			width: 40px
+		//orders
+		&[data-column*="orders-status"]
+			width: 80px
 		&[data-column*="orders-total"]
 			word-wrap: break-word
+		//order
+		&[data-column*="order-description"]
+			width: 30%
+		&[data-column*="order-qty"]
+			width: 16%
+		&[data-column*="order-price"]
+			width: 18%
+		&[data-column*="order-discount"]
+			width: 18%
+		&[data-column*="order-total"]
+			width: 18%
 	&__th
 		+rmed
 		line-height: 1.2

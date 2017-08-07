@@ -1,0 +1,51 @@
+---
+title: Products
+mainClassList: 'main_inner'
+header: { 
+	title: 'Products',
+	menu: true
+}
+menu: { active: 1 }
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="l-container">
+	<div class="l-row">
+		<div class="l-col l-col_sidebar" data-scrollbar="default">
+			<div class="container">
+				<div class="row">
+					<div class="col col_lg-25">
+						<button class="btn btn_block color-btn-main" data-animation="ripple">New</button>
+					</div>
+					<div class="col col_lg-25">
+						<button class="btn btn_block color-btn-main" data-animation="ripple">Export</button>
+					</div>
+					<div class="col col_lg-25">
+						<button class="btn btn_block color-btn-main" data-animation="ripple">Import</button>
+					</div>
+					<div class="col col_lg-25">
+						<button class="btn btn_block btn_red" data-animation="ripple">Delete</button>
+					</div>
+					<div class="col col_lg-100">
+						<div class="filter-group">
+							<button class="btn btn_lg color-btn-main filter-group__btn">
+								<i class="fa fa-filter"></i>
+							</button>
+							{{form.search.call({
+								placeholder: 'Search',
+								classList: 'filter-group__field'
+							})}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="l-col l-col_main" data-scrollbar="default">
+			right side
+		</div>
+	</div>
+</div>
+
+{% endblock %}

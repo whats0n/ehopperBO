@@ -17,9 +17,20 @@
 	{% if header.title %}
 		<h2 class="title-xl main-header__title">{{header.title}}</h2>
 	{% endif %}
-	{% if menu %}
+	{% if header.menu %}
 		<button class="main-header__nav-btn" title="Menu" data-menu-open="menu">
 			<i></i>
+		</button>
+	{% endif %}
+	{% if header.back %}
+		<button class="main-header__back">
+			<i class="fa fa-arrow-left"></i>
+			<span>Back</span>
+		</button>
+	{% endif %}
+	{% if header.help %}
+		<button class="main-header__help" {{header.helpAttr | safe}}>
+			<i class="fa fa-question-circle-o"></i>
 		</button>
 	{% endif %}
 	{% if header.search %}

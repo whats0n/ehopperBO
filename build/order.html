@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Order Details</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="css/color-theme.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="main-header color-header ">
+        <h2 class="title-xl main-header__title">Order #0123</h2> <button class="main-header__back">
+			<i class="fa fa-arrow-left"></i>
+			<span>Back</span>
+		</button> <button class="main-header__help" data-modal-open="order-help">
+			<i class="fa fa-question-circle-o"></i>
+		</button> </header>
+      <!-- end header -->
+      <div class="main main_inner">
+        <div class="order fullscreen">
+          <aside class="order__sidebar">
+            <div class="order__info" data-scrollbar="default">
+              <div class="infoblock">
+                <div class="infoblock__row">
+                  <div class="infoblock__col"> <small class="infoblock__label">Store:</small> <em class="infoblock__value">WestGuestCafe</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Order ID:</small> <em class="infoblock__value">0000123</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Order Name:</small> <em class="infoblock__value"></em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Customer:</small> <em class="infoblock__value">Walk-In</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Customer Phone:</small> <em class="infoblock__value"></em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Employee:</small> <em class="infoblock__value">Mr. Seller Name</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Order Date:</small> <em class="infoblock__value">12/21/2016 14:19:28</em> </div>
+                </div>
+              </div>
+              <hr>
+              <div class="infoblock">
+                <div class="infoblock__row">
+                  <div class="infoblock__col"> <small class="infoblock__label">Type:</small> <em class="infoblock__value">Quick Sale</em> </div>
+                  <div class="infoblock__col"> <i class="icon icon-check infoblock__icon"></i> <small class="infoblock__label">Status:</small> <em class="infoblock__value">Paid / Successfull</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Tender Type:</small> <em class="infoblock__value">Credit Card</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Fulfillment:</small> <em class="infoblock__value">Fulfilled</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Refnum:</small> <em class="infoblock__value">V469GH9</em> </div>
+                </div>
+              </div>
+              <hr>
+              <div class="infoblock infoblock_inline">
+                <div class="infoblock__row">
+                  <div class="infoblock__col"> <small class="infoblock__label">Sub:</small> <em class="infoblock__value">$50.00</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Discount:</small> <em class="infoblock__value">$0.00</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Tax:</small> <em class="infoblock__value">$0.00</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Tips:</small> <em class="infoblock__value">$0.00</em> </div>
+                  <div class="infoblock__col"> <small class="infoblock__label">Total:</small> <em class="infoblock__value">$50.00</em> </div>
+                </div>
+              </div>
+              <hr>
+              <div class="infoblock infoblock_inline">
+                <div class="infoblock__row">
+                  <div class="infoblock__col">
+                    <div class="order-notes"> <i class="icon icon-notes order-notes__icon"></i>
+                      <div class="order-notes__content">Order Note text goes here (if present)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+          <div class="order__container">
+            <div class="order__body">
+              <!-- begin table -->
+              <div class="table-wrapper " data-table="">
+                <div class="table-wrapper__header" data-table-fake="">
+                  <div class="table-header ">
+                    <ul class="table-header__tr">
+                      <li class="table-header__th" data-column="order-description">Description</li>
+                      <li class="table-header__th" data-column="order-qty">Quantity</li>
+                      <li class="table-header__th" data-column="order-price">Item Price</li>
+                      <li class="table-header__th" data-column="order-discount">Discount</li>
+                      <li class="table-header__th" data-column="order-total">Total</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="">
+                  <div class="table-body table-body_zebra table-wrapper__table" data-table-main="">
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $5.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> &nbsp; </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $10.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog XL</div>
+                        <div class="table-wrapper__meta">+Additional Ketchup</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Whiskey</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 200 <span class="is-muted">ml</span> </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Very Good Wine</div>
+                        <div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 11 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $1,048.90 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $48.90 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $11,480.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $5.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> &nbsp; </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $10.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog XL</div>
+                        <div class="table-wrapper__meta">+Additional Ketchup</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Whiskey</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 200 <span class="is-muted">ml</span> </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Very Good Wine</div>
+                        <div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 11 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $1,048.90 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $48.90 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $11,480.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $5.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> &nbsp; </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $10.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog XL</div>
+                        <div class="table-wrapper__meta">+Additional Ketchup</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Whiskey</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 200 <span class="is-muted">ml</span> </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Very Good Wine</div>
+                        <div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 11 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $1,048.90 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $48.90 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $11,480.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $5.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> &nbsp; </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $10.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog XL</div>
+                        <div class="table-wrapper__meta">+Additional Ketchup</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Whiskey</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 200 <span class="is-muted">ml</span> </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Very Good Wine</div>
+                        <div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 11 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $1,048.90 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $48.90 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $11,480.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $5.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> &nbsp; </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $10.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Hot-Dog XL</div>
+                        <div class="table-wrapper__meta">+Additional Ketchup</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Whiskey</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 200 <span class="is-muted">ml</span> </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $8.00 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $1.00 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $7.00 </div>
+                    </div>
+                    <div class="table-body__tr">
+                      <div class="table-body__td " data-column="order-description" data-title="Description">
+                        <div class="table-wrapper__value">Very Good Wine</div>
+                        <div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>
+                      </div>
+                      <div class="table-body__td " data-column="order-qty" data-title="Quantity"> 11 </div>
+                      <div class="table-body__td " data-column="order-price" data-title="Item Price"> $1,048.90 </div>
+                      <div class="table-body__td " data-column="order-discount" data-title="Discount"> $48.90 </div>
+                      <div class="table-body__td " data-column="order-total" data-title="Total"> $11,480.00 </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end table -->
+            </div>
+          </div>
+        </div>
+        <!-- begin modal -->
+        <div class="modal modal_lg modal_fullscreen" data-modal="order-help">
+          <!-- begin modal__container -->
+          <div class="modal__container" data-modal-container="order-help">
+            <!-- begin modal-content -->
+            <div class="modal-content modal-content_fullscreen text-left">
+              <div class="modal-content__header">
+                <div class="title-xl modal-content__title">Help</div> <button class="modal-content__close" data-modal-close="order-help">
+			<i class="fa fa-close"></i>
+		</button> </div>
+              <div class="modal-content__body" data-scrollbar="default">
+                <div class="definition-list">
+                  <dl class="definition-list__item"> <dt class="definition-list__title">Order ID</dt>
+                    <dd class="definition-list__description">The ID number of the placed order.</dd> <dt class="definition-list__title">Order Name</dt>
+                    <dd class="definition-list__description">Name of the placed order.</dd> <dt class="definition-list__title">Customer</dt>
+                    <dd class="definition-list__description">Type of customer the order was placed by.</dd> <dt class="definition-list__title">Customer Phone</dt>
+                    <dd class="definition-list__description">The customers phone number.</dd> <dt class="definition-list__title">Employee</dt>
+                    <dd class="definition-list__description">Name of employee that entered the order into eHopper.</dd> <dt class="definition-list__title">Store</dt>
+                    <dd class="definition-list__description">Name of the store where the order was placed.</dd> <dt class="definition-list__title">Order Date</dt>
+                    <dd class="definition-list__description">Date of the order.</dd> <dt class="definition-list__title">Order Type</dt>
+                    <dd class="definition-list__description">The type of order that was placed.</dd> <dt class="definition-list__title">Status</dt>
+                    <dd class="definition-list__description">The current order status.</dd> <dt class="definition-list__title">Tender Type</dt>
+                    <dd class="definition-list__description">Type of tender used to process the transaction.</dd> <dt class="definition-list__title">Fulfillment</dt>
+                    <dd class="definition-list__description">Notes if the order has or has not been fulfilled.</dd> <dt class="definition-list__title">RefNum</dt>
+                    <dd class="definition-list__description">The referral number of the order, if one is set.</dd> <dt class="definition-list__title">Subtotal</dt>
+                    <dd class="definition-list__description">Subtotal of the order.</dd> <dt class="definition-list__title">Discount</dt>
+                    <dd class="definition-list__description">Amount of applied discounts.</dd> <dt class="definition-list__title">Tax</dt>
+                    <dd class="definition-list__description">Amount of paid tax.</dd> <dt class="definition-list__title">Tips</dt>
+                    <dd class="definition-list__description">Amount received in tips.</dd> <dt class="definition-list__title">Total</dt>
+                    <dd class="definition-list__description">Total price of the transaction.</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+            <!-- end modal-content -->
+          </div>
+          <!-- end modal__container -->
+        </div>
+        <!-- end modal -->
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>

@@ -1,0 +1,65 @@
+.infoblock
+	position: relative
+	&_inline
+		.infoblock
+			&__col
+				&:not(:first-child)
+					&:before
+						content: ''
+						position: absolute
+						top: 0
+						left: 15px
+						right: 15px
+						border-top: 1px solid $lightGray
+			&__label
+				padding: 2px 0
+				text-align: left
+			&__value
+				text-align: right
+			&__label,
+			&__value
+				float: left
+				width: 50%
+	
+	//components
+	&__open
+		position: absolute
+		z-index: 2
+		bottom: -25px
+		right: 15px
+		display: none
+		+poynt
+			display: block
+	&__row
+		padding: 20px 0
+		+clr
+	&__col
+		position: relative
+		float: left
+		padding: 5px 20px
+		width: 100%
+		&_md
+			width: 50%
+	&__box
+		position: relative
+		padding: 5px 0
+	&__label,
+	&__value
+		display: block
+		font-style: normal
+	&__label
+		font-size: 12px
+		color: $silverGray
+	&__value
+		font-size: 16px
+	&__icon
+		position: absolute
+		top: 5px
+		right: 20px
+		~ .infoblock__label,
+		~ .infoblock__value,
+			padding-right: 50px
+	&__dropdown
+		margin: 0 -20px
+		.dropdown__value
+			color: $blue

@@ -1,0 +1,173 @@
+---
+title: Order Details
+mainClassList: 'main_inner'
+header: { 
+	title: 'Order #0123',
+	back: true,
+	help: true,
+	helpAttr: 'data-modal-open="order-help"'
+}
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+<div class="order fullscreen">
+	<aside class="order__sidebar">
+		<div class="order__info" data-scrollbar="default">
+			<div class="infoblock">
+				<div class="infoblock__row">
+					<div class="infoblock__col">
+						<small class="infoblock__label">Store:</small>
+						<em class="infoblock__value">WestGuestCafe</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Order ID:</small>
+						<em class="infoblock__value">0000123</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Order Name:</small>
+						<em class="infoblock__value"></em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Customer:</small>
+						<em class="infoblock__value">Walk-In</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Customer Phone:</small>
+						<em class="infoblock__value"></em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Employee:</small>
+						<em class="infoblock__value">Mr. Seller Name</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Order Date:</small>
+						<em class="infoblock__value">12/21/2016 14:19:28</em>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="infoblock">
+				<div class="infoblock__row">
+					<div class="infoblock__col">
+						<small class="infoblock__label">Type:</small>
+						<em class="infoblock__value">Quick Sale</em>
+					</div>
+					<div class="infoblock__col">
+						<i class="icon icon-check infoblock__icon"></i>
+						<small class="infoblock__label">Status:</small>
+						<em class="infoblock__value">Paid / Successfull</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Tender Type:</small>
+						<em class="infoblock__value">Credit Card</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Fulfillment:</small>
+						<em class="infoblock__value">Fulfilled</em>
+					</div>
+					{#<div class="infoblock__col">
+						{{dropdown.simple({
+							label: 'Fulfillment:',
+							openAttrs: 'data-dropdown-parent-name="sidebar"',
+							value: 'New',
+							list: [ { text: 'New', value: 'New' }, { text: 'In Preparation', value: 'In Preparation' }, { text: 'Prepared', value: 'Prepared' }, { text: 'In Fulfillment', value: 'In Fulfillment' }, { text: 'Fulfilled', value: 'Fulfilled' } ],
+							listOnly: true,
+							activeItem: 0,
+							name: 'order-fulfillment',
+							dropdownClassList: 'infoblock__dropdown dropdown_md dropdown_time',
+							customIcon: '<i class="icon icon-time dropdown__icon"></i>'
+						})}}
+					</div>#}
+					<div class="infoblock__col">
+						<small class="infoblock__label">Refnum:</small>
+						<em class="infoblock__value">V469GH9</em>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="infoblock infoblock_inline">
+				<div class="infoblock__row">
+					<div class="infoblock__col">
+						<small class="infoblock__label">Sub:</small>
+						<em class="infoblock__value">$50.00</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Discount:</small>
+						<em class="infoblock__value">$0.00</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Tax:</small>
+						<em class="infoblock__value">$0.00</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Tips:</small>
+						<em class="infoblock__value">$0.00</em>
+					</div>
+					<div class="infoblock__col">
+						<small class="infoblock__label">Total:</small>
+						<em class="infoblock__value">$50.00</em>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="infoblock infoblock_inline">
+				<div class="infoblock__row">
+					<div class="infoblock__col">
+						<div class="order-notes">
+							<i class="icon icon-notes order-notes__icon"></i>
+							<div class="order-notes__content">Order Note text goes here (if present)</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+	<div class="order__container">
+		<div class="order__body">
+			{{table.call({
+				bodyClassList: 'table-body_zebra',
+				bodyTDClassList: 'text-overflow',
+				range: 5,
+				columns: [ 'order-description', 'order-qty', 'order-price', 'order-discount', 'order-total' ],
+				header: [ 'Description', 'Quantity', 'Item Price', 'Discount', 'Total' ],
+				body: [
+					[ 
+						{ content: '<div class="table-wrapper__value">Hot-Dog</div>' },
+						{ content: '2' },
+						{ content: '$5.00' },
+						{ content: '&nbsp;' },
+						{ content: '$10.00' }
+					],
+					[ 
+						{ content: '<div class="table-wrapper__value">Hot-Dog XL</div><div class="table-wrapper__meta">+Additional Ketchup</div>' },
+						{ content: '1' },
+						{ content: '$8.00' },
+						{ content: '$1.00' },
+						{ content: '$7.00' }
+					],
+					[ 
+						{ content: '<div class="table-wrapper__value">Whiskey</div>' },
+						{ content: '200 <span class="is-muted">ml</span>' },
+						{ content: '$8.00' },
+						{ content: '$1.00' },
+						{ content: '$7.00' }
+					],
+					[ 
+						{ content: '<div class="table-wrapper__value">Very Good Wine</div><div class="table-wrapper__meta">France, Glass Bottle, 700 ml</div>' },
+						{ content: '11' },
+						{ content: '$1,048.90' },
+						{ content: '$48.90' },
+						{ content: '$11,480.00' }
+					]
+				]
+			})}}
+		</div>
+	</div>
+</div>
+{{modal.call({
+	name: 'order-help',
+	classList: 'modal_lg modal_fullscreen',
+	file: '_order-help'
+})}}
+{% endblock %}
