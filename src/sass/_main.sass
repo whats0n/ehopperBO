@@ -1,18 +1,32 @@
 .js-sortable-handle
 	cursor: move
 
-.splitter-right,
-.splitter-left
-	border-left: 5px solid $lightGray
+.splitter
 	position: absolute
-	top: 0
-	bottom: 0
 	+nosel
-	cursor: e-resize
-.splitter-right
-	right: 0
-.splitter-left
-	left: 0
+	&_right,
+	&_left
+		position: absolute
+		top: 0
+		bottom: 0
+		width: 15px
+		background: $lightGray
+		cursor: e-resize
+		.splitter
+			&__lines
+				border-left: 1px solid rgba($black, 0.4)
+				border-right: 1px solid rgba($black, 0.4)
+				width: 4px
+				height: 10px
+	&_right
+		right: 0
+	&_left
+		left: 0
+	&__lines
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate3d(-50%,-50%,0)
 
 
 hr
