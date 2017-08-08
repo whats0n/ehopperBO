@@ -1,0 +1,46 @@
+.sm-table
+	&__header,
+	&__body
+		width: 100%
+		display: table
+		table-layout: fixed
+	&__body
+		border: 1px solid $lightGray
+		background: $white
+		.sm-table__tr:not(:first-child)
+			.sm-table__td	
+				border-top: 1px solid $lightGray
+	&__tr
+		display: table-row
+	&__th,
+	&__td
+		display: table-cell
+		vertical-align: middle
+		padding: 10px
+		font-size: 14px
+		+media('width', 'lg')
+			padding: 10px 4px
+			font-size: 12px
+		//products
+		&[data-column*="action-btns"]
+			padding: 0
+			width: 60px
+		&[data-column*="first-checkbox"]
+			width: 50px
+			+media('width', 'lg')
+				padding-left: 10px
+				width: 44px
+		&[data-column*="active"]
+			padding: 0
+			width: 60px
+			+media('width', 'lg')
+				width: 50px
+	&__th
+		+rmed
+		height: 40px
+	&__td
+		+rlight
+		word-wrap: break-word
+	&__icon-active
+		opacity: 0.5
+		font-size: 20px

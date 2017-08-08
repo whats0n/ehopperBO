@@ -3326,6 +3326,14 @@ a {
   margin-left: 0.3em;
 }
 
+.meta-info {
+  font-size: 13px;
+}
+
+.meta-info p + p {
+  margin-top: 3px;
+}
+
 .is-muted {
   opacity: 0.5;
 }
@@ -3352,10 +3360,6 @@ a {
 
 .color-blue {
   color: #d3d3d3;
-}
-
-.color-main {
-  color: #3949AB;
 }
 
 .pull-right {
@@ -3493,6 +3497,7 @@ body,
   position: absolute;
   top: 0;
   bottom: 0;
+  overflow: auto;
   background: #f8f8f8;
 }
 
@@ -5653,6 +5658,13 @@ button:disabled, button.is-disabled,
   width: 60px;
 }
 
+.table-header__th[data-column*="active"], .table-header__td[data-column*="active"],
+.table-body__th[data-column*="active"],
+.table-body__td[data-column*="active"] {
+  padding: 0;
+  width: 60px;
+}
+
 .table-header__th,
 .table-body__th {
   font-family: 'Roboto Medium', Arial, sans-serif;
@@ -6180,6 +6192,10 @@ button:disabled, button.is-disabled,
   position: absolute;
   top: 0;
   right: 0;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background: none;
 }
 
 .filter-group .filter-group__btn i {
@@ -6228,17 +6244,8 @@ button:disabled, button.is-disabled,
   right: 0;
   width: 50px;
   height: 50px;
-  color: #3949AB;
   background: none;
   font-size: 30px;
-}
-
-.sm-filters__close:active {
-  color: #3949AB;
-}
-
-.no-touch .sm-filters__close:active {
-  color: #3949AB;
 }
 
 .sm-filters__btns {
@@ -6248,6 +6255,61 @@ button:disabled, button.is-disabled,
 .sm-filters__btn {
   margin: 0 10px;
   min-width: 140px;
+}
+
+.sm-table__header, .sm-table__body {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+}
+
+.sm-table__body {
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.sm-table__body .sm-table__tr:not(:first-child) .sm-table__td {
+  border-top: 1px solid #eee;
+}
+
+.sm-table__tr {
+  display: table-row;
+}
+
+.sm-table__th, .sm-table__td {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.sm-table__th[data-column*="action-btns"], .sm-table__td[data-column*="action-btns"] {
+  padding: 0;
+  width: 60px;
+}
+
+.sm-table__th[data-column*="first-checkbox"], .sm-table__td[data-column*="first-checkbox"] {
+  width: 50px;
+}
+
+.sm-table__th[data-column*="active"], .sm-table__td[data-column*="active"] {
+  padding: 0;
+  width: 60px;
+}
+
+.sm-table__th {
+  font-family: 'Roboto Medium', Arial, sans-serif;
+  height: 40px;
+}
+
+.sm-table__td {
+  font-family: 'Roboto Light', Arial, sans-serif;
+  word-wrap: break-word;
+}
+
+.sm-table__icon-active {
+  opacity: 0.5;
+  font-size: 20px;
 }
 
 .modal-terms {
@@ -6677,6 +6739,17 @@ hr {
   .table-body__th[data-column*="first-checkbox"],
   .table-body__td[data-column*="first-checkbox"]{
     width: 54px;
+  }
+  .sm-table__th, .sm-table__td{
+    padding: 10px 4px;
+    font-size: 12px;
+  }
+  .sm-table__th[data-column*="first-checkbox"], .sm-table__td[data-column*="first-checkbox"]{
+    padding-left: 10px;
+    width: 44px;
+  }
+  .sm-table__th[data-column*="active"], .sm-table__td[data-column*="active"]{
+    width: 50px;
   }
   .orders{
     height: calc(100% - 176px);

@@ -110,12 +110,12 @@
           <div class="l-row js-resizable-width">
             <div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default">
               <div class="sm-filters" data-modal="products-filters">
-                <div class="container sm-filters__container" data-modal-container="products-filters"> <button class="sm-filters__close" data-modal-close="products-filters">
+                <div class="container sm-filters__container" data-modal-container="products-filters"> <button class="sm-filters__close color-main" data-modal-close="products-filters">
 						<i class="fa fa-close"></i>
 					</button>
                   <div class="row">
                     <div class="col col_lg-100">
-                      <h2 class="title-xxl color-title-main text-center">Login</h2>
+                      <h2 class="title-xxl color-title-main text-center">Filter your products</h2>
                     </div>
                     <div class="col col_lg-50">
                       <!-- begin select -->
@@ -157,7 +157,7 @@
                       <!-- begin multi-select -->
                       <div class="select js-multi-select select_full" data-all-checked="All">
                         <div class="select__field js-multi-select-field">
-                          <div class="select__placeholder">inventory type</div>
+                          <div class="select__placeholder">Inventory type</div>
                           <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
                         <div class="select__body" data-scrollbar="default">
                           <ul class="select__list">
@@ -222,13 +222,17 @@
                   <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">Import</button> </div>
                   <div class="col col_lg-25"> <button class="btn btn_block btn_red" data-animation="ripple">Delete</button> </div>
                   <div class="col col_lg-100">
-                    <div class="filter-group"> <button class="btn btn_lg color-btn-main filter-group__btn" data-modal-open="products-filters" data-animation="ripple">
+                    <div class="filter-group"> <button class="color-main filter-group__btn" data-modal-open="products-filters">
 								<i class="fa fa-filter"></i>
 							</button>
                       <!-- begin search -->
                       <div class="search"> <i class="fa fa-search"></i> <input type="text" class="simple-input search__input" placeholder="Search"> </div>
                       <!-- end search -->
                     </div>
+                  </div>
+                  <div class="col col_lg-100 meta-info">
+                    <p>Filters:</p>
+                    <p>Department: All; Category: All; Inventory Type: All;</p>
                   </div>
                 </div>
               </div>
@@ -248,6 +252,7 @@
                       <li class="table-header__th " data-column="product-cost">Cost</li>
                       <li class="table-header__th " data-column="product-price">Price</li>
                       <li class="table-header__th " data-column="product-qty">Quantity</li>
+                      <li class="table-header__th text-center" data-column="active">Active</li>
                       <li class="table-header__th text-center" data-column="action-btns">Edit</li>
                     </ul>
                   </div>
@@ -269,6 +274,7 @@
                       <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
                       <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
                       <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
                       <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
                     </div>
                     <div class="table-body__tr">
@@ -286,6 +292,7 @@
                       <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
                       <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
                       <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
                       <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
                     </div>
                     <div class="table-body__tr">
@@ -303,6 +310,7 @@
                       <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
                       <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
                       <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red"></i> </div>
                       <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
                     </div>
                     <div class="table-body__tr">
@@ -320,6 +328,7 @@
                       <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
                       <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
                       <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 2 </div>
+                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red"></i> </div>
                       <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
                     </div>
                     <div class="table-body__tr">
@@ -337,12 +346,130 @@
                       <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
                       <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
                       <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
+                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
                       <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
                     </div>
                   </div>
                 </div>
               </div>
               <!-- end table -->
+              <div class="container">
+                <div class="row">
+                  <div class="col col_lg-100">
+                    <div class="sm-table">
+                      <div class="sm-table__header">
+                        <div class="sm-table__tr">
+                          <div class="sm-table__th " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__th " data-column="product-title"> Product </div>
+                          <div class="sm-table__th " data-column="product-cost"> Cost </div>
+                          <div class="sm-table__th " data-column="product-price"> Price </div>
+                          <div class="sm-table__th " data-column="product-qty"> Quantity </div>
+                          <div class="sm-table__th text-center" data-column="active"> Active </div>
+                          <div class="sm-table__th text-center" data-column="action-btns"> Edit </div>
+                        </div>
+                      </div>
+                      <div class="sm-table__body">
+                        <div class="sm-table__tr">
+                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__td " data-column="product-title">
+                            <div class="is-muted">5088</div>
+                            <div>Burger NEW</div>
+                          </div>
+                          <div class="sm-table__td " data-column="product-cost"> $20 </div>
+                          <div class="sm-table__td " data-column="product-price"> $20.00 </div>
+                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
+                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
+                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="sm-table__tr">
+                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__td " data-column="product-title">
+                            <div class="is-muted">5013</div>
+                            <div>Cheeseburger</div>
+                          </div>
+                          <div class="sm-table__td " data-column="product-cost"> $6.50 </div>
+                          <div class="sm-table__td " data-column="product-price"> $6.50 </div>
+                          <div class="sm-table__td " data-column="product-qty"> 2 </div>
+                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
+                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="sm-table__tr">
+                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__td " data-column="product-title">
+                            <div class="is-muted">4992</div>
+                            <div>Sprite</div>
+                          </div>
+                          <div class="sm-table__td " data-column="product-cost"> $8.00 </div>
+                          <div class="sm-table__td " data-column="product-price"> $8.00 </div>
+                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
+                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-times color-red sm-table__icon-active"></i> </div>
+                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="sm-table__tr">
+                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__td " data-column="product-title">
+                            <div class="is-muted">4994</div>
+                            <div>Pepsi</div>
+                          </div>
+                          <div class="sm-table__td " data-column="product-cost"> $7.00 </div>
+                          <div class="sm-table__td " data-column="product-price"> $7.00 </div>
+                          <div class="sm-table__td " data-column="product-qty"> 2 </div>
+                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-times color-red sm-table__icon-active"></i> </div>
+                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="sm-table__tr">
+                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="sm-table__td " data-column="product-title">
+                            <div class="is-muted">5001</div>
+                            <div>Hamburger</div>
+                          </div>
+                          <div class="sm-table__td " data-column="product-cost"> $12.00 </div>
+                          <div class="sm-table__td " data-column="product-price"> $12.00 </div>
+                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
+                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
+                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">
               <div class="l-col__inner">

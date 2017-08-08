@@ -156,6 +156,18 @@ html {
   box-sizing: inherit;
 }
 
+.color-main {
+  color: #3949AB;
+}
+
+.color-main:active {
+  color: #3949AB;
+}
+
+.no-touch .color-main:active {
+  color: #3949AB;
+}
+
 .color-btn-main {
   color: #fff;
   background: #3949AB;
