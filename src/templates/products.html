@@ -13,10 +13,10 @@ menu: { active: 1 }
 
 <div class="l-container">
 	<div class="l-row js-resizable-width">
-		<div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default">
-			<div class="sm-filters" data-modal="products-filters">
-				<div class="container sm-filters__container" data-modal-container="products-filters">
-					<button class="sm-filters__close color-main" data-modal-close="products-filters">
+		<div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default" data-popup-wrapper="products-filters">
+			<div class="sm-filters" data-popup="products-filters">
+				<div class="container sm-filters__container" data-popup-container="products-filters">
+					<button class="sm-filters__close color-main" data-popup-close="products-filters">
 						<i class="fa fa-close"></i>
 					</button>
 					<div class="row">
@@ -64,7 +64,7 @@ menu: { active: 1 }
 						</div>
 						<div class="col col_lg-100 text-center sm-filters__btns">
 							<button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple">Done</button>
-							<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-modal-close="products-filters">Cancel</button>
+							<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>
 						</div>
 					</div>
 				</div>
@@ -85,7 +85,7 @@ menu: { active: 1 }
 					</div>
 					<div class="col col_lg-100">
 						<div class="filter-group">
-							<button class="color-main filter-group__btn" data-modal-open="products-filters">
+							<button class="btn btn_lg color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
 								<i class="fa fa-filter"></i>
 							</button>
 							{{form.search.call({

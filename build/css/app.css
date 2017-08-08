@@ -6193,9 +6193,6 @@ button:disabled, button.is-disabled,
   top: 0;
   right: 0;
   width: 60px;
-  height: 60px;
-  border: none;
-  background: none;
 }
 
 .filter-group .filter-group__btn i {
@@ -6665,6 +6662,10 @@ button:disabled, button.is-disabled,
 
 .js-sortable-handle {
   cursor: move;
+}
+
+[data-popup-wrapper="products-filters"].is-open {
+  overflow: hidden;
 }
 
 .splitter {

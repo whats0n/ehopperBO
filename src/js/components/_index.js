@@ -9,6 +9,7 @@ import table from './_table';
 import chart from './_chart';
 import sortable from './_sortable';
 import resizableLayout from './_resizable-layout';
+import popup from './_popup';
 
 export default (function() {
 	
@@ -23,5 +24,6 @@ export default (function() {
 	chart();
 	sortable();
 	resizableLayout();
+	popup();
 
 })();
