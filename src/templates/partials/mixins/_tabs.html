@@ -1,6 +1,6 @@
 {% macro call(props) %}
 <!-- begin tabs -->
-<div class="tabs {{props.classList}}">
+<div class="tabs {{props.classList}} {% if props.footer %}tabs_footer{% endif %}">
 	<div class="tabs__inner">
 		<div class="tabs__panel">
 			<ul class="tabs__list">
@@ -16,12 +16,18 @@
 		<div class="tabs__body">
 			{% for tab in props.items %}
 				<div class="tabs__container {% if loop.index == props.active %}is-open{% endif %}" 
+					data-scrollbar="default"
 					data-tab-container="{{tab.name}}" 
 					data-tab-collection="{{props.collection}}">
 					{% include 'partials/tabs/' + tab.file + '.html' %}
 				</div>
 			{% endfor %}
 		</div>
+		{% if props.footer %}
+			<div class="tabs__footer">
+				{% include 'partials/tabs/' + props.footer + '.html' %}
+			</div>
+		{% endif %}
 	</div>
 </div>
 <!-- end tabs -->

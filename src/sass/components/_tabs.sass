@@ -2,6 +2,19 @@
 	padding: 20px
 	&_fullscreen
 		height: 100%
+		.tabs
+			&__container
+				overflow: auto
+			&__body,
+			&__inner,
+			&__container
+				height: 100%
+	&_footer
+		.tabs 
+			&__inner
+				padding-bottom: 100px
+			&__body
+				border-bottom: none
 	&__inner
 		position: relative
 		padding-top: 60px
@@ -50,5 +63,12 @@
 		display: none
 		&.is-open
 			display: block
+	&__footer
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		border: 1px solid $lightGray
+		background: #fcfcfc
 
 			
