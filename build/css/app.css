@@ -4661,6 +4661,7 @@ button:disabled, button.is-disabled,
 
 .select__color-list {
   padding: 0 12px;
+  font-size: 0;
   white-space: normal;
 }
 
