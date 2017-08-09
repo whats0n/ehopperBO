@@ -4,20 +4,22 @@ export default function() {
 
 	smartClick('[data-tab-open]', function(e) {
 		e.preventDefault();
-		const $this = $(this);
-		if ($this.hasClass(ACTIVE)) return;
+		const $currentButton = $(this);
+		if ($currentButton.hasClass(ACTIVE)) return;
 
-		const target = $this.data('tab-open');
-		const $parent = $this.closest('[data-tab]');
-		const $buttons = $parent.find('[data-tab-open]');
-		const $sections = $parent.find(`[data-tab-container]`);
-		const $activeSection = $sections.filter(`[data-tab-container="${target}"]`);
+		const targetName = $currentButton.data('tab-open');
+		const collectionName = $currentButton.data('tab-collection');
 
-		$buttons.removeClass(ACTIVE);
-		$this.addClass(ACTIVE);
+		const $collectionItems = $(`[data-tab-collection="${collectionName}"]`);
+		const $collectionButtons = $collectionItems.filter('[data-tab-open]');
+		const $collectionContainers = $collectionItems.filter(`[data-tab-container]`);
+		const $currentContainer = $collectionContainers.filter(`[data-tab-container="${targetName}"]`);
 
-		$sections.removeClass(OPEN);
-		$activeSection.addClass(OPEN);
+		$collectionButtons.removeClass(ACTIVE);
+		$collectionContainers.removeClass(OPEN);
+
+		$currentButton.addClass(ACTIVE);
+		$currentContainer.addClass(OPEN);
 	});
 
 };

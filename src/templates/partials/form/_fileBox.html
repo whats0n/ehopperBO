@@ -1,0 +1,19 @@
+{% macro call(props) %}
+<!-- begin file-box -->
+<div class="file-box {% if props.img %}is-active{% endif %}">
+	<label class="file-box__field">
+		<input type="file" class="file-box__input">
+		<span class="file-box__img" {% if props.img %}style="background-image: url({{props.img}});"{% endif %}></span>
+		<span class="file-box__title">{{props.title or 'Browse images'}}</span>
+	</label>
+	<div class="file-box__btns">
+		<button class="file-box__btn">
+			<i class="fa fa-trash-o"></i>
+		</button>
+		<button class="file-box__btn">
+			<i class="fa fa-pencil"></i>
+		</button>
+	</div>
+</div>
+<!-- end file-box -->
+{% endmacro %}

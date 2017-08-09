@@ -1,34 +1,39 @@
 {% import 'partials/form/_checkbox.html' as checkbox %}
 {% macro call(props) %}
 <!-- begin multi-select -->
-<div class="select js-multi-select {{props.classList}}" data-all-checked="{{props.allChecked or 'All'}}">
-	<div class="select__field js-multi-select-field">
-		{% if props.placeholder %}
-			<div class="select__placeholder">{{props.placeholder}}</div>
-		{% endif %}
-		<div class="select__value js-multi-select-value">{{props.value}}</div>
-		<i class="fa fa-angle-down select__arrow"></i>
-	</div>
-	<div class="select__body" data-scrollbar="default">
-		<ul class="select__list">
-			{% if props.selectAll %}
-				<li class="select__item js-multi-select-all">
-					{{checkbox.call({
-						content: props.selectAll,
-						value: props.selectAll
-					})}}
-				</li>
+<div class="select-box {{props.errorClass}}">
+	<div class="select js-multi-select {{props.classList}}" data-all-checked="{{props.allChecked or 'All'}}">
+		<div class="select__field js-multi-select-field">
+			{% if props.placeholder %}
+				<div class="select__placeholder">{{props.placeholder}}</div>
 			{% endif %}
-			{% for option in props.options %}
-				<li class="select__item js-multi-select-item">
-					{{checkbox.call({
-						content: option,
-						value: option
-					})}}
-				</li>
-			{% endfor %}
-		</ul>
+			<div class="select__value js-multi-select-value">{{props.value}}</div>
+			<i class="fa fa-angle-down select__arrow"></i>
+		</div>
+		<div class="select__body" data-scrollbar="default">
+			<ul class="select__list">
+				{% if props.selectAll %}
+					<li class="select__item js-multi-select-all">
+						{{checkbox.call({
+							content: props.selectAll,
+							value: props.selectAll
+						})}}
+					</li>
+				{% endif %}
+				{% for option in props.options %}
+					<li class="select__item js-multi-select-item">
+						{{checkbox.call({
+							content: option,
+							value: option
+						})}}
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
+	{% if props.errorMessage %}
+		<div class="error-message select-box__error-message">{{props.errorMessage}}</div>
+	{% endif %}
 </div>
 <!-- end multi-select -->
 {% endmacro %}

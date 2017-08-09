@@ -1,20 +1,25 @@
 {% macro call(props) %}
 <!-- begin select -->
-<div class="select js-select {{props.classList}}">
-	<div class="select__field js-select-field">
-		{% if props.placeholder %}
-			<div class="select__placeholder">{{props.placeholder}}</div>
-		{% endif %}
-		<div class="select__value js-select-value">{{props.value}}</div>
-		<i class="fa fa-angle-down select__arrow"></i>
+<div class="select-box {{props.errorClass}}">
+	<div class="select js-select {{props.classList}}">
+		<div class="select__field js-select-field">
+			{% if props.placeholder %}
+				<div class="select__placeholder">{{props.placeholder}}</div>
+			{% endif %}
+			<div class="select__value js-select-value">{{props.value}}</div>
+			<i class="fa fa-angle-down select__arrow"></i>
+		</div>
+		<div class="select__body" data-scrollbar="default">
+			<ul class="select__list">
+				{% for option in props.options %}
+					<li class="select__item js-select-item">{{option}}</li>
+				{% endfor %}
+			</ul>
+		</div>
 	</div>
-	<div class="select__body" data-scrollbar="default">
-		<ul class="select__list">
-			{% for option in props.options %}
-				<li class="select__item js-select-item">{{option}}</li>
-			{% endfor %}
-		</ul>
-	</div>
+	{% if props.errorMessage %}
+		<div class="error-message select-box__error-message">{{props.errorMessage}}</div>
+	{% endif %}
 </div>
 <!-- end select -->
 {% endmacro %}

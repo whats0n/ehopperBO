@@ -1,16 +1,16 @@
-.input-box
+.textarea-box
 	position: relative
 	&.is-error
-		input
+		textarea
 			border-color: $red
 	&.is-active
-		.input-box__placeholder
+		.textarea-box__placeholder
 			transform: translate3d(0,10px,0) scale(0.73)
 	+hover
-		.input-box__clear
+		.textarea-box__clear
 			opacity: 1
 			visibility: visible
-	input:focus + .input-box__clear
+	textarea:focus + .textarea-box__clear
 		opacity: 1
 		visibility: visible
 	&__clear
@@ -38,8 +38,8 @@
 		position: relative
 		display: block
 		cursor: text
-	&__input
-		padding-top: 15px
+	&__textarea
+		padding-top: 26px
 		padding-right: 60px
 	&__error-message
 		position: absolute

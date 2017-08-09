@@ -1,0 +1,28 @@
+{% macro call(props) %}
+<!-- begin tabs -->
+<div class="tabs {{props.classList}}">
+	<div class="tabs__inner">
+		<div class="tabs__panel">
+			<ul class="tabs__list">
+				{% for tab in props.items %}
+					<li class="tabs__item">
+						<button class="tabs__btn {% if loop.index == props.active %}is-active{% endif %}" 
+							data-tab-open="{{tab.name}}" 
+							data-tab-collection="{{props.collection}}">{{tab.btn | safe}}</button>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="tabs__body">
+			{% for tab in props.items %}
+				<div class="tabs__container {% if loop.index == props.active %}is-open{% endif %}" 
+					data-tab-container="{{tab.name}}" 
+					data-tab-collection="{{props.collection}}">
+					{% include 'partials/tabs/' + tab.file + '.html' %}
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+<!-- end tabs -->
+{% endmacro %}

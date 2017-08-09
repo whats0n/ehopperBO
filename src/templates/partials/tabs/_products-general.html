@@ -1,0 +1,108 @@
+{% import "partials/form/_build.html" as form %}
+
+<div class="container">
+	<div class="row">
+		<div class="col col_field col_lg-100">
+			<div class="langs">
+				<div class="langs__inner">
+					<a href="#" class="langs__item is-active">English</a>
+					<a href="#" class="langs__item">Русский</a>
+				</div>
+			</div>
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.select.call({
+				classList: 'select_full',
+				errorClass: 'is-error',
+				placeholder: 'Inventory type',
+				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				options: [
+					'Inventory',
+					'Non-inventory',
+					'Serialized'
+				]
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.inputBox.call({
+				placeholder: 'Product Name',
+				classList: 'is-error',
+				attrs: 'required',
+				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.'
+			})}}
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.inputBox.call({
+				placeholder: 'Product Short Name'
+			})}}
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.selectColor.call({
+				placeholder: 'Product Display Color'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.textareaBox.call({
+				placeholder: 'Product Description',
+				classList: 'is-error',
+				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.'
+			})}}
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.select.call({
+				classList: 'select_full',
+				placeholder: 'Department',
+				options: [
+					'All',
+					'Department 1',
+					'Department 2',
+					'Department 3',
+					'Department 4'
+				]
+			})}}
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.inputBox.call({
+				placeholder: 'UPC'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.checkbox.call({
+				attrs: 'checked',
+				content: 'Is Active'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.fileBox.call({
+				img: 'https://placecage.com/152/102'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.fileBox.call()}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.select.call({
+				classList: 'select_full select_top',
+				placeholder: 'Unit',
+				options: [
+					'Item (item)',
+					'Inch (in)',
+					'Foot (ft)',
+					'Yard (yd)',
+					'Mile (mi)',
+					'Ounce (fl oz)',
+					'Pint (pt)',
+					'Cup (cp)',
+					'Gallon (gal)',
+					'Liter (l)',
+					'Ounce (oz)',
+					'Pound (lb)',
+					'Gram (g)',
+					'Kilogram (kg)',
+					'Hour (hrs)',
+					'Minute (min)'
+				]
+			})}}
+		</div>
+	</div>
+</div>

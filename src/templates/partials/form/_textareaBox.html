@@ -1,0 +1,13 @@
+{% macro call(props) %}
+<div class="textarea-box {{props.classList}} js-field">
+	<label class="textarea-box__field">
+		{% if props.placeholder %}
+			<span class="textarea-box__placeholder">{{props.placeholder}}</span>
+		{% endif %}
+		<textarea type="{{props.type or 'text'}}" class="simple-textarea textarea-box__textarea {{props.inputClassList}} js-field-input" {{props.inputAttrs | safe}}></textarea>
+	</label>
+	{% if props.errorMessage %}
+		<div class="error-message textarea-box__error-message">{{props.errorMessage}}</div>
+	{% endif %}
+</div>
+{% endmacro %}

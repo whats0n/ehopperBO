@@ -1,0 +1,77 @@
+{% macro call(props) %}
+{% set colors = [
+	'rgb(109, 46, 40)',
+	'rgb(144, 54, 67)',
+	'rgb(185, 104, 70)',
+	'rgb(185, 123, 65)',
+	'rgb(130, 129, 52)',
+	'rgb(56, 115, 85)',
+	'rgb(167, 59, 60)',
+	'rgb(188, 69, 89)',
+	'rgb(218, 100, 79)',
+	'rgb(218, 150, 77)',
+	'rgb(155, 161, 56)',
+	'rgb(76, 171, 112)',
+	'rgb(213, 83, 86)',
+	'rgb(223, 83, 108)',
+	'rgb(241, 120, 94)',
+	'rgb(245, 177, 95)',
+	'rgb(191, 186, 66)',
+	'rgb(129, 191, 125)',
+	'rgb(240, 93, 109)',
+	'rgb(254, 150, 99)',
+	'rgb(223, 139, 139)',
+	'rgb(246, 204, 36)',
+	'rgb(201, 209, 94)',
+	'rgb(156, 203, 126)',
+	'rgb(73, 73, 73)',
+	'rgb(174, 105, 226)',
+	'rgb(108, 118, 225)',
+	'rgb(105, 143, 205)',
+	'rgb(55, 173, 190)',
+	'rgb(127, 181, 178)',
+	'rgb(183, 183, 183)',
+	'rgb(64, 108, 183)',
+	'rgb(81, 90, 151)',
+	'rgb(86, 117, 175)',
+	'rgb(98, 146, 180)',
+	'rgb(64, 189, 173)',
+	'rgb(224, 224, 224)',
+	'rgb(83, 126, 150)',
+	'rgb(55, 48, 121)',
+	'rgb(46, 72, 126)',
+	'rgb(46, 142, 131)',
+	'rgb(96, 114, 163)',
+	'rgb(255, 255, 255)',
+	'rgb(67, 79, 117)',
+	'rgb(75, 81, 109)',
+	'rgb(55, 87, 141)',
+	'rgb(38, 89, 114)',
+	'rgb(117, 151, 143)'
+] %}
+<!-- begin select -->
+<div class="select-box {{props.errorClass}}">
+	<div class="select js-select-color {{props.classList}}">
+		<div class="select__field js-select-color-field">
+			{% if props.placeholder %}
+				<div class="select__placeholder">{{props.placeholder}}</div>
+			{% endif %}
+			<div class="select__color-value js-select-color-value">{{props.value}}</div>
+			<i class="fa fa-angle-down select__arrow"></i>
+		</div>
+		<div class="select__body" data-scrollbar="default">
+			<ul class="select__color-list">
+				{% for option in props.options or colors %}
+					<li class="select__color-item">
+						<i class="select__color-icon js-select-color-item" style="background-color: {{option}};" data-value="{{option}}"></i>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+	{% if props.errorMessage %}
+		<div class="error-message select-box__error-message">{{props.errorMessage}}</div>
+	{% endif %}
+</div>
+<!-- end select -->
+{% endmacro %}
