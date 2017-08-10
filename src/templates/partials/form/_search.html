@@ -1,8 +1,8 @@
 {% macro call(props) %}
 <!-- begin search -->
-<div class="search">
+<div class="search {{props.classList}}">
 	<i class="fa fa-search"></i>
-	<input type="text" class="simple-input search__input" placeholder="{{props.placeholder}}">
+	<input type="text" class="simple-input {{props.inputClassList}} search__input" placeholder="{{props.placeholder}}">
 </div>
 <!-- end search -->
 {% endmacro %}

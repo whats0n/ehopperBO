@@ -220,260 +220,501 @@
                   </div>
                 </div>
               </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">New</button> </div>
-                  <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">Export</button> </div>
-                  <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">Import</button> </div>
-                  <div class="col col_lg-25"> <button class="btn btn_block btn_red" data-animation="ripple">Delete</button> </div>
-                  <div class="col col_lg-100">
-                    <div class="filter-group"> <button class="btn btn_lg color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
-								<i class="fa fa-filter"></i>
-							</button>
-                      <!-- begin search -->
-                      <div class="search"> <i class="fa fa-search"></i> <input type="text" class="simple-input search__input" placeholder="Search"> </div>
-                      <!-- end search -->
+              <div class="products-sidebar">
+                <div class="container products-sidebar__header">
+                  <div class="row">
+                    <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">New</button> </div>
+                    <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">Export</button> </div>
+                    <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">Import</button> </div>
+                    <div class="col col_lg-25"> <button class="btn btn_block btn_red" data-animation="ripple">Delete</button> </div>
+                    <div class="col col_lg-100">
+                      <div class="filter-group"> <button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+									<i class="fa fa-filter"></i>
+								</button>
+                        <!-- begin search -->
+                        <div class="search filter-group__field"> <i class="fa fa-search"></i> <input type="text" class="simple-input simple-input_sm search__input" placeholder="Search"> </div>
+                        <!-- end search -->
+                      </div>
                     </div>
                   </div>
-                  <div class="col col_lg-100 meta-info">
-                    <p>Filters:</p>
-                    <p>Department: All; Category: All; Inventory Type: All;</p>
-                  </div>
                 </div>
-              </div>
-              <!-- begin table -->
-              <div class="table-wrapper table-wrapper_header-lg table-wrapper_auto-height" data-table="products">
-                <div class="table-wrapper__header" data-table-fake="products">
-                  <div class="table-header ">
-                    <ul class="table-header__tr">
-                      <li class="table-header__th " data-column="first-checkbox"> <label class="checkbox ">
+                <!-- begin table -->
+                <div class="table-wrapper table-wrapper_header-lg" data-table="products">
+                  <div class="table-wrapper__header" data-table-fake="products">
+                    <div class="table-header ">
+                      <ul class="table-header__tr">
+                        <li class="table-header__th " data-column="first-checkbox"> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </li>
-                      <li class="table-header__th " data-column="product-title">Product</li>
-                      <li class="table-header__th " data-column="product-cost">Cost</li>
-                      <li class="table-header__th " data-column="product-price">Price</li>
-                      <li class="table-header__th " data-column="product-qty">Quantity</li>
-                      <li class="table-header__th text-center" data-column="active">Active</li>
-                      <li class="table-header__th text-center" data-column="action-btns">Edit</li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="products">
-                  <div class="table-body table-body_zebra table-wrapper__table" data-table-main="products">
-                    <div class="table-body__tr">
-                      <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> </div>
-                      <div class="table-body__td " data-column="product-title" data-title="Product">
-                        <div class="table-wrapper__meta">id: 5088</div>
-                        <div class="table-wrapper__value">Burger NEW</div>
-                      </div>
-                      <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
-                      <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
-                      <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
-                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
-                      <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
-                    </div>
-                    <div class="table-body__tr">
-                      <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> </div>
-                      <div class="table-body__td " data-column="product-title" data-title="Product">
-                        <div class="table-wrapper__meta">id: 5013</div>
-                        <div class="table-wrapper__value">Cheeseburger</div>
-                      </div>
-                      <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
-                      <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
-                      <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 2 </div>
-                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
-                      <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
-                    </div>
-                    <div class="table-body__tr">
-                      <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> </div>
-                      <div class="table-body__td " data-column="product-title" data-title="Product">
-                        <div class="table-wrapper__meta">id: 4992</div>
-                        <div class="table-wrapper__value">Sprite</div>
-                      </div>
-                      <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
-                      <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
-                      <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
-                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red"></i> </div>
-                      <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
-                    </div>
-                    <div class="table-body__tr">
-                      <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> </div>
-                      <div class="table-body__td " data-column="product-title" data-title="Product">
-                        <div class="table-wrapper__meta">id: 4994</div>
-                        <div class="table-wrapper__value">Pepsi</div>
-                      </div>
-                      <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
-                      <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
-                      <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 2 </div>
-                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red"></i> </div>
-                      <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
-                    </div>
-                    <div class="table-body__tr">
-                      <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
-	<input type="checkbox"  >
-	<span class="checkbox__icon">
-		<i class="fa fa-check"></i>
-	</span>
-	
-</label> </div>
-                      <div class="table-body__td " data-column="product-title" data-title="Product">
-                        <div class="table-wrapper__meta">id: 5001</div>
-                        <div class="table-wrapper__value">Hamburger</div>
-                      </div>
-                      <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
-                      <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
-                      <div class="table-body__td " data-column="product-qty" data-title="Quantity"> 1 </div>
-                      <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green"></i> </div>
-                      <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <li class="table-header__th " data-column="product-title">Product</li>
+                        <li class="table-header__th " data-column="product-cost">Cost</li>
+                        <li class="table-header__th " data-column="product-price">Price</li>
+                        <li class="table-header__th " data-column="product-qty">Qty</li>
+                        <li class="table-header__th text-center" data-column="active">Active</li>
+                        <li class="table-header__th text-center" data-column="action-btns">Edit</li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-              </div>
-              <!-- end table -->
-              <div class="container">
-                <div class="row">
-                  <div class="col col_lg-100">
-                    <div class="sm-table">
-                      <div class="sm-table__header">
-                        <div class="sm-table__tr">
-                          <div class="sm-table__th " data-column="first-checkbox"> <label class="checkbox ">
+                  <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="products">
+                    <div class="table-body table-body_zebra table-wrapper__table" data-table-main="products">
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__th " data-column="product-title"> Product </div>
-                          <div class="sm-table__th " data-column="product-cost"> Cost </div>
-                          <div class="sm-table__th " data-column="product-price"> Price </div>
-                          <div class="sm-table__th " data-column="product-qty"> Quantity </div>
-                          <div class="sm-table__th text-center" data-column="active"> Active </div>
-                          <div class="sm-table__th text-center" data-column="action-btns"> Edit </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5088</div>
+                          <div class="table-wrapper__value">Burger NEW</div>
                         </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
                       </div>
-                      <div class="sm-table__body">
-                        <div class="sm-table__tr">
-                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__td " data-column="product-title">
-                            <div class="is-muted">id: 5088</div>
-                            <div>Burger NEW</div>
-                          </div>
-                          <div class="sm-table__td " data-column="product-cost"> $20 </div>
-                          <div class="sm-table__td " data-column="product-price"> $20.00 </div>
-                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
-                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
-                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5013</div>
+                          <div class="table-wrapper__value">Cheeseburger</div>
                         </div>
-                        <div class="sm-table__tr">
-                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__td " data-column="product-title">
-                            <div class="is-muted">id: 5013</div>
-                            <div>Cheeseburger</div>
-                          </div>
-                          <div class="sm-table__td " data-column="product-cost"> $6.50 </div>
-                          <div class="sm-table__td " data-column="product-price"> $6.50 </div>
-                          <div class="sm-table__td " data-column="product-qty"> 2 </div>
-                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
-                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4992</div>
+                          <div class="table-wrapper__value">Sprite</div>
                         </div>
-                        <div class="sm-table__tr">
-                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__td " data-column="product-title">
-                            <div class="is-muted">id: 4992</div>
-                            <div>Sprite</div>
-                          </div>
-                          <div class="sm-table__td " data-column="product-cost"> $8.00 </div>
-                          <div class="sm-table__td " data-column="product-price"> $8.00 </div>
-                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
-                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-times color-red sm-table__icon-active"></i> </div>
-                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4994</div>
+                          <div class="table-wrapper__value">Pepsi</div>
                         </div>
-                        <div class="sm-table__tr">
-                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__td " data-column="product-title">
-                            <div class="is-muted">id: 4994</div>
-                            <div>Pepsi</div>
-                          </div>
-                          <div class="sm-table__td " data-column="product-cost"> $7.00 </div>
-                          <div class="sm-table__td " data-column="product-price"> $7.00 </div>
-                          <div class="sm-table__td " data-column="product-qty"> 2 </div>
-                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-times color-red sm-table__icon-active"></i> </div>
-                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5001</div>
+                          <div class="table-wrapper__value">Hamburger</div>
                         </div>
-                        <div class="sm-table__tr">
-                          <div class="sm-table__td " data-column="first-checkbox"> <label class="checkbox ">
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
 	<input type="checkbox"  >
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
 	
 </label> </div>
-                          <div class="sm-table__td " data-column="product-title">
-                            <div class="is-muted">id: 5001</div>
-                            <div>Hamburger</div>
-                          </div>
-                          <div class="sm-table__td " data-column="product-cost"> $12.00 </div>
-                          <div class="sm-table__td " data-column="product-price"> $12.00 </div>
-                          <div class="sm-table__td " data-column="product-qty"> 1 </div>
-                          <div class="sm-table__td text-center" data-column="active"> <i class="fa fa-check color-green sm-table__icon-active"></i> </div>
-                          <div class="sm-table__td " data-column="action-btns"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5088</div>
+                          <div class="table-wrapper__value">Burger NEW</div>
                         </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5013</div>
+                          <div class="table-wrapper__value">Cheeseburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4992</div>
+                          <div class="table-wrapper__value">Sprite</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4994</div>
+                          <div class="table-wrapper__value">Pepsi</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5001</div>
+                          <div class="table-wrapper__value">Hamburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5088</div>
+                          <div class="table-wrapper__value">Burger NEW</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5013</div>
+                          <div class="table-wrapper__value">Cheeseburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4992</div>
+                          <div class="table-wrapper__value">Sprite</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4994</div>
+                          <div class="table-wrapper__value">Pepsi</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5001</div>
+                          <div class="table-wrapper__value">Hamburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5088</div>
+                          <div class="table-wrapper__value">Burger NEW</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5013</div>
+                          <div class="table-wrapper__value">Cheeseburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4992</div>
+                          <div class="table-wrapper__value">Sprite</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4994</div>
+                          <div class="table-wrapper__value">Pepsi</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5001</div>
+                          <div class="table-wrapper__value">Hamburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5088</div>
+                          <div class="table-wrapper__value">Burger NEW</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5013</div>
+                          <div class="table-wrapper__value">Cheeseburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4992</div>
+                          <div class="table-wrapper__value">Sprite</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 4994</div>
+                          <div class="table-wrapper__value">Pepsi</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                      </div>
+                      <div class="table-body__tr">
+                        <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                        <div class="table-body__td " data-column="product-title" data-title="Product">
+                          <div class="table-wrapper__meta">id: 5001</div>
+                          <div class="table-wrapper__value">Hamburger</div>
+                        </div>
+                        <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                        <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                        <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                        <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
                       </div>
                     </div>
                   </div>
                 </div>
+                <!-- end table -->
               </div>
             </div>
             <div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">

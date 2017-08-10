@@ -141,16 +141,21 @@
 		&[data-column*="order-total"]
 			width: 18%
 		//products
-		&[data-column*="action-btns"]
+		&[data-column*="action-btns"],
+		&[data-column*="active"]
 			padding: 0
-			width: 60px
+			width: 50px
 		&[data-column*="first-checkbox"]
 			width: 60px
 			+media('width', 'lg')
 				width: 54px
-		&[data-column*="active"]
-			padding: 0
-			width: 60px
+		&[data-column*="product-title"]
+			width: 23%
+			+media('width', 'lg')
+				width: 25%
+		&[data-column*="product-qty"]
+			+media('width', 'lg')
+				width: 9%
 	&__th
 		+rmed
 		line-height: 1.2
