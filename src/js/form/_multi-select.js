@@ -79,6 +79,7 @@ export default function() {
 			const $checkedInputs = $select.find(`${this.props.item} input:checked`);
 			const select = $select.get(0);
 
+
 			const value = $target.data('value');
 			const index = $item.index();
 			const valueArray = [];
@@ -118,7 +119,7 @@ export default function() {
 			const valueArray = [];
 
 			if (!select._value) select._value = {};
-
+			
 			if ($inputs.length === $checkedInputs.length) {
 				$inputs.each((i, input) => {
 					const $input = $(input);
@@ -152,9 +153,9 @@ export default function() {
 
 				const $input = $(input);
 				if (!$input.prop('checked')) return;
-
+				const parentIndex = $input.closest(this.props.item).index();
 				const value = $input.data('value');
-				selectValue[`key_${index}`] = value;
+				selectValue[`key_${parentIndex}`] = value;
 				selectValueArray.push(value);
 
 			});
@@ -178,7 +179,6 @@ export default function() {
 			if (inputs.length !== checkedInputs.length) select.find(`${this.props.selectAll} input`).prop('checked', false);
 			if (inputs.length === checkedInputs.length) select.find(`${this.props.selectAll} input`).prop('checked', true);
 			
-
 			value.text(text);
 
 			text.length && !select.hasClass(ACTIVE) && select.addClass(ACTIVE);

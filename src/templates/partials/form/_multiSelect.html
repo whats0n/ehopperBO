@@ -7,7 +7,7 @@
 			{% if props.placeholder %}
 				<div class="select__placeholder">{{props.placeholder}}</div>
 			{% endif %}
-			<div class="select__value js-multi-select-value">{{props.value}}</div>
+			<div class="select__value js-multi-select-value">{{props.value or props.options[props.selected - 1]}}</div>
 			<i class="fa fa-angle-down select__arrow"></i>
 		</div>
 		<div class="select__body" data-scrollbar="default">
@@ -16,7 +16,8 @@
 					<li class="select__item js-multi-select-all">
 						{{checkbox.call({
 							content: props.selectAll,
-							value: props.selectAll
+							value: props.selectAll,
+							attrs: props.selectedAll
 						})}}
 					</li>
 				{% endif %}
@@ -24,7 +25,8 @@
 					<li class="select__item js-multi-select-item">
 						{{checkbox.call({
 							content: option,
-							value: option
+							value: option,
+							attrs: props.selectedAll
 						})}}
 					</li>
 				{% endfor %}

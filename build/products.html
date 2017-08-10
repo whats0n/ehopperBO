@@ -109,10 +109,8 @@
         <div class="l-container">
           <div class="l-row js-resizable-width">
             <div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default" data-popup-wrapper="products-filters">
-              <div class="sm-filters" data-popup="products-filters">
-                <div class="container sm-filters__container" data-popup-container="products-filters"> <button class="sm-filters__close color-main" data-popup-close="products-filters">
-						<i class="fa fa-close"></i>
-					</button>
+              <div class="sm-filters js-product-filters" data-popup="products-filters">
+                <div class="container sm-filters__container" data-popup-container="products-filters">
                   <div class="row">
                     <div class="col col_lg-100">
                       <h2 class="title-xxl color-title-main text-center">Filter your products</h2>
@@ -120,10 +118,10 @@
                     <div class="col col_lg-50">
                       <!-- begin select -->
                       <div class="select-box ">
-                        <div class="select js-select select_full">
+                        <div class="select js-select select_full is-active">
                           <div class="select__field js-select-field">
                             <div class="select__placeholder">Department</div>
-                            <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                            <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
                           <div class="select__body" data-scrollbar="default">
                             <ul class="select__list">
                               <li class="select__item js-select-item">All</li>
@@ -140,10 +138,10 @@
                     <div class="col col_lg-50">
                       <!-- begin select -->
                       <div class="select-box ">
-                        <div class="select js-select select_full">
+                        <div class="select js-select select_full is-active">
                           <div class="select__field js-select-field">
                             <div class="select__placeholder">Category</div>
-                            <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                            <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
                           <div class="select__body" data-scrollbar="default">
                             <ul class="select__list">
                               <li class="select__item js-select-item">All</li>
@@ -160,14 +158,14 @@
                     <div class="col col_lg-100">
                       <!-- begin multi-select -->
                       <div class="select-box ">
-                        <div class="select js-multi-select select_full" data-all-checked="All">
+                        <div class="select js-multi-select select_full is-active" data-all-checked="All">
                           <div class="select__field js-multi-select-field">
                             <div class="select__placeholder">Inventory type</div>
                             <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
                           <div class="select__body" data-scrollbar="default">
                             <ul class="select__list">
                               <li class="select__item js-multi-select-all"> <label class="checkbox ">
-	<input type="checkbox" data-value="Select All" >
+	<input type="checkbox" data-value="Select All" checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
@@ -176,7 +174,7 @@
 	
 </label> </li>
                               <li class="select__item js-multi-select-item"> <label class="checkbox ">
-	<input type="checkbox" data-value="Inventory type 1" >
+	<input type="checkbox" data-value="Inventory type 1" checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
@@ -185,7 +183,7 @@
 	
 </label> </li>
                               <li class="select__item js-multi-select-item"> <label class="checkbox ">
-	<input type="checkbox" data-value="Inventory type 2" >
+	<input type="checkbox" data-value="Inventory type 2" checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
@@ -194,7 +192,7 @@
 	
 </label> </li>
                               <li class="select__item js-multi-select-item"> <label class="checkbox ">
-	<input type="checkbox" data-value="Inventory type 3" >
+	<input type="checkbox" data-value="Inventory type 3" checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
@@ -203,7 +201,7 @@
 	
 </label> </li>
                               <li class="select__item js-multi-select-item"> <label class="checkbox ">
-	<input type="checkbox" data-value="Inventory type 4" >
+	<input type="checkbox" data-value="Inventory type 4" checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
 	</span>
@@ -217,7 +215,8 @@
                       </div>
                       <!-- end multi-select -->
                     </div>
-                    <div class="col col_lg-100 text-center sm-filters__btns"> <button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple">Done</button> <button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button> </div>
+                    <div class="col col_lg-100 text-center sm-filters__btns"> <button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button> <button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>                      </div>
+                    <div class="col col_lg-100 text-center"> <a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a> </div>
                   </div>
                 </div>
               </div>
@@ -722,7 +721,7 @@
                       <div class="tabs__container " data-scrollbar="default" data-tab-container="products-ordering" data-tab-collection="products"> ORDERING </div>
                     </div>
                     <div class="tabs__footer">
-                      <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main">Done</button> <button class="btn btn_lg">Cancel</button> </div>
+                      <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple">Cancel</button> </div>
                     </div>
                   </div>
                 </div>
