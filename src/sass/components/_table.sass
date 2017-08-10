@@ -149,11 +149,14 @@
 			width: 60px
 			+media('width', 'lg')
 				width: 54px
-		&[data-column*="product-title"]
-			width: 23%
-			+media('width', 'lg')
-				width: 25%
+		// &[data-column*="product-title"]
+			// width: 23%
+			// +media('width', 'lg')
+				// width: 25%
+		&[data-column*="product-cost"],
+		&[data-column*="product-price"],
 		&[data-column*="product-qty"]
+			width: 13%
 			+media('width', 'lg')
 				width: 9%
 	&__th

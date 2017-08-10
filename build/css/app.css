@@ -5935,10 +5935,14 @@ button:disabled, button.is-disabled,
   width: 60px;
 }
 
-.table-header__th[data-column*="product-title"], .table-header__td[data-column*="product-title"],
-.table-body__th[data-column*="product-title"],
-.table-body__td[data-column*="product-title"] {
-  width: 23%;
+.table-header__th[data-column*="product-cost"], .table-header__th[data-column*="product-price"], .table-header__th[data-column*="product-qty"], .table-header__td[data-column*="product-cost"], .table-header__td[data-column*="product-price"], .table-header__td[data-column*="product-qty"],
+.table-body__th[data-column*="product-cost"],
+.table-body__th[data-column*="product-price"],
+.table-body__th[data-column*="product-qty"],
+.table-body__td[data-column*="product-cost"],
+.table-body__td[data-column*="product-price"],
+.table-body__td[data-column*="product-qty"] {
+  width: 13%;
 }
 
 .table-header__th,
@@ -7162,13 +7166,12 @@ hr {
   .table-body__td[data-column*="first-checkbox"]{
     width: 54px;
   }
-  .table-header__th[data-column*="product-title"], .table-header__td[data-column*="product-title"],
-  .table-body__th[data-column*="product-title"],
-  .table-body__td[data-column*="product-title"]{
-    width: 25%;
-  }
-  .table-header__th[data-column*="product-qty"], .table-header__td[data-column*="product-qty"],
+  .table-header__th[data-column*="product-cost"], .table-header__th[data-column*="product-price"], .table-header__th[data-column*="product-qty"], .table-header__td[data-column*="product-cost"], .table-header__td[data-column*="product-price"], .table-header__td[data-column*="product-qty"],
+  .table-body__th[data-column*="product-cost"],
+  .table-body__th[data-column*="product-price"],
   .table-body__th[data-column*="product-qty"],
+  .table-body__td[data-column*="product-cost"],
+  .table-body__td[data-column*="product-price"],
   .table-body__td[data-column*="product-qty"]{
     width: 9%;
   }
