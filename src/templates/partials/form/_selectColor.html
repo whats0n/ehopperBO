@@ -59,8 +59,8 @@
 			<div class="select__color-value js-select-color-value">{{props.value}}</div>
 			<i class="fa fa-angle-down select__arrow"></i>
 		</div>
-		<div class="select__body" data-scrollbar="default">
-			<ul class="select__color-list">
+		<div class="select__body">
+			<ul class="select__color-list" data-scrollbar="default">
 				{% for option in props.options or colors %}
 					<li class="select__color-item">
 						<i class="select__color-icon js-select-color-item" style="background-color: {{option}};" data-value="{{option}}"></i>

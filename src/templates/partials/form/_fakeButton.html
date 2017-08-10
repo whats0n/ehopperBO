@@ -1,0 +1,6 @@
+{% macro call(props) %}
+<label class="fake-button">
+	<input type="radio" name="{{props.name}}" {{props.attrs | safe}}>
+	<span class="fake-button__face">{{props.content | safe}}</span>
+</label>
+{% endmacro %}

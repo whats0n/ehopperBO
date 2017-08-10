@@ -9,12 +9,17 @@
 			<div class="select__value js-select-value">{{props.value or props.options[props.selected - 1]}}</div>
 			<i class="fa fa-angle-down select__arrow"></i>
 		</div>
-		<div class="select__body" data-scrollbar="default">
-			<ul class="select__list">
+		<div class="select__body">
+			<ul class="select__list" data-scrollbar="default">
 				{% for option in props.options %}
 					<li class="select__item js-select-item">{{option}}</li>
 				{% endfor %}
 			</ul>
+			{% if props.selectFooter %}
+				<div class="select__footer">
+					{{props.selectFooter | safe}}
+				</div>
+			{% endif %}
 		</div>
 	</div>
 	{% if props.errorMessage %}

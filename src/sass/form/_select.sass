@@ -25,6 +25,10 @@
 				max-width: 100%
 			&__item
 				+text-overflow
+	&_full-height
+		.select
+			&__list
+				max-height: none
 	&_top
 		.select
 			&__body
@@ -75,18 +79,19 @@
 		z-index: 100
 		top: 100%
 		left: 0
-		overflow: auto
-		padding: 10px 0
 		margin-top: 10px
 		border: 1px solid $lightGray
 		min-width: 100%
-		max-height: 322px	
 		opacity: 0
 		visibility: hidden
 		background: $white
 		white-space: nowrap
 		transform: translate3d(0,-10px,0)
 		transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out
+	&__list
+		overflow: auto
+		padding: 10px 0
+		max-height: 192px	
 	&__item
 		padding: 5px 15px
 		+nosel
@@ -105,9 +110,15 @@
 				left: 15px
 			&__content
 				font-size: 18px
+	&__footer
+		border-top: 1px solid $lightGray
+	&__add
+		padding: 10px 20px
 	&__color
 		&-list
-			padding: 0 12px
+			overflow: auto
+			padding: 10px 12px
+			max-height: 322px
 			font-size: 0
 			white-space: normal
 		&-item

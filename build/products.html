@@ -122,8 +122,8 @@
                           <div class="select__field js-select-field">
                             <div class="select__placeholder">Department</div>
                             <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                          <div class="select__body" data-scrollbar="default">
-                            <ul class="select__list">
+                          <div class="select__body">
+                            <ul class="select__list" data-scrollbar="default">
                               <li class="select__item js-select-item">All</li>
                               <li class="select__item js-select-item">Department 1</li>
                               <li class="select__item js-select-item">Department 2</li>
@@ -142,8 +142,8 @@
                           <div class="select__field js-select-field">
                             <div class="select__placeholder">Category</div>
                             <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                          <div class="select__body" data-scrollbar="default">
-                            <ul class="select__list">
+                          <div class="select__body">
+                            <ul class="select__list" data-scrollbar="default">
                               <li class="select__item js-select-item">All</li>
                               <li class="select__item js-select-item">Category 1</li>
                               <li class="select__item js-select-item">Category 2</li>
@@ -162,8 +162,8 @@
                           <div class="select__field js-multi-select-field">
                             <div class="select__placeholder">Inventory type</div>
                             <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                          <div class="select__body" data-scrollbar="default">
-                            <ul class="select__list">
+                          <div class="select__body">
+                            <ul class="select__list" data-scrollbar="default">
                               <li class="select__item js-multi-select-all"> <label class="checkbox ">
 	<input type="checkbox" data-value="Select All" checked>
 	<span class="checkbox__icon">
@@ -741,28 +741,26 @@
                               </div>
                             </div>
                             <div class="col col_field col_lg-100">
-                              <!-- begin select -->
-                              <div class="select-box is-error">
-                                <div class="select js-select select_full">
-                                  <div class="select__field js-select-field">
-                                    <div class="select__placeholder">Inventory type</div>
-                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body" data-scrollbar="default">
-                                    <ul class="select__list">
-                                      <li class="select__item js-select-item">Inventory</li>
-                                      <li class="select__item js-select-item">Non-inventory</li>
-                                      <li class="select__item js-select-item">Serialized</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                                <div class="error-message select-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                              <div class="fake-buttons"> <span class="label label_block">Inventory type*</span>
+                                <div class="fake-buttons__row"> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Inventory</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Non-inventory</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Serialized</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">With Recipe</span>
+</label> </div>
                               </div>
-                              <!-- end select -->
                             </div>
                             <div class="col col_field col_lg-100">
                               <div class="input-box is-error js-field"> <label class="input-box__field">
 		
-			<span class="input-box__placeholder">Product Name</span>
+			<span class="input-box__placeholder">Product Name*</span>
 		
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> <button class="input-box__clear">
@@ -788,8 +786,8 @@
                                   <div class="select__field js-select-color-field">
                                     <div class="select__placeholder">Product Display Color</div>
                                     <div class="select__color-value js-select-color-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body" data-scrollbar="default">
-                                    <ul class="select__color-list">
+                                  <div class="select__body">
+                                    <ul class="select__color-list" data-scrollbar="default">
                                       <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></i> </li>
                                       <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></i> </li>
                                       <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></i> </li>
@@ -845,36 +843,94 @@
                               <!-- end select -->
                             </div>
                             <div class="col col_field col_lg-100">
-                              <div class="textarea-box is-error js-field"> <label class="textarea-box__field">
-		
-			<span class="textarea-box__placeholder">Product Description</span>
-		
-		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
-	</label>
-                                <div class="error-message textarea-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.</div>
-                              </div>
-                            </div>
-                            <div class="col col_field col_lg-50">
                               <!-- begin select -->
                               <div class="select-box ">
                                 <div class="select js-select select_full">
                                   <div class="select__field js-select-field">
-                                    <div class="select__placeholder">Department</div>
+                                    <div class="select__placeholder">UOM</div>
                                     <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body" data-scrollbar="default">
-                                    <ul class="select__list">
-                                      <li class="select__item js-select-item">All</li>
-                                      <li class="select__item js-select-item">Department 1</li>
-                                      <li class="select__item js-select-item">Department 2</li>
-                                      <li class="select__item js-select-item">Department 3</li>
-                                      <li class="select__item js-select-item">Department 4</li>
+                                  <div class="select__body">
+                                    <ul class="select__list" data-scrollbar="default">
+                                      <li class="select__item js-select-item">Item (item)</li>
+                                      <li class="select__item js-select-item">Inch (in)</li>
+                                      <li class="select__item js-select-item">Foot (ft)</li>
+                                      <li class="select__item js-select-item">Yard (yd)</li>
+                                      <li class="select__item js-select-item">Mile (mi)</li>
+                                      <li class="select__item js-select-item">Ounce (fl oz)</li>
+                                      <li class="select__item js-select-item">Pint (pt)</li>
+                                      <li class="select__item js-select-item">Cup (cp)</li>
+                                      <li class="select__item js-select-item">Gallon (gal)</li>
+                                      <li class="select__item js-select-item">Liter (l)</li>
+                                      <li class="select__item js-select-item">Ounce (oz)</li>
+                                      <li class="select__item js-select-item">Pound (lb)</li>
+                                      <li class="select__item js-select-item">Gram (g)</li>
+                                      <li class="select__item js-select-item">Kilogram (kg)</li>
+                                      <li class="select__item js-select-item">Hour (hrs)</li>
+                                      <li class="select__item js-select-item">Minute (min)</li>
                                     </ul>
                                   </div>
                                 </div>
                               </div>
                               <!-- end select -->
                             </div>
+                            <div class="col col_field col_lg-100">
+                              <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Product Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                            </div>
                             <div class="col col_field col_lg-50">
+                              <!-- begin select -->
+                              <div class="select-box ">
+                                <div class="select js-select select_full">
+                                  <div class="select__field js-select-field">
+                                    <div class="select__placeholder">Department*</div>
+                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                  <div class="select__body">
+                                    <ul class="select__list" data-scrollbar="default">
+                                      <li class="select__item js-select-item">All</li>
+                                      <li class="select__item js-select-item">Department 1</li>
+                                      <li class="select__item js-select-item">Department 2</li>
+                                      <li class="select__item js-select-item">Department 3</li>
+                                      <li class="select__item js-select-item">Department 4</li>
+                                      <li class="select__item js-select-item">Department 2</li>
+                                      <li class="select__item js-select-item">Department 3</li>
+                                      <li class="select__item js-select-item">Department 4</li>
+                                      <li class="select__item js-select-item">Department 2</li>
+                                      <li class="select__item js-select-item">Department 3</li>
+                                      <li class="select__item js-select-item">Department 4</li>
+                                    </ul>
+                                    <div class="select__footer"> <a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- end select -->
+                            </div>
+                            <div class="col col_field col_lg-50">
+                              <!-- begin select -->
+                              <div class="select-box is-error">
+                                <div class="select js-select select_full">
+                                  <div class="select__field js-select-field">
+                                    <div class="select__placeholder">Category*</div>
+                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                  <div class="select__body">
+                                    <ul class="select__list" data-scrollbar="default">
+                                      <li class="select__item js-select-item">All</li>
+                                      <li class="select__item js-select-item">Category 1</li>
+                                      <li class="select__item js-select-item">Category 2</li>
+                                      <li class="select__item js-select-item">Category 3</li>
+                                      <li class="select__item js-select-item">Category 4</li>
+                                    </ul>
+                                    <div class="select__footer"> <a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Category</a> </div>
+                                  </div>
+                                </div>
+                                <div class="error-message select-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                              </div>
+                              <!-- end select -->
+                            </div>
+                            <div class="col col_field col_lg-100">
                               <div class="input-box  js-field"> <label class="input-box__field">
 		
 			<span class="input-box__placeholder">UPC</span>
@@ -907,52 +963,6 @@
 		</button> </div>
                               </div>
                               <!-- end file-box -->
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <!-- begin file-box -->
-                              <div class="file-box "> <label class="file-box__field">
-		<input type="file" class="file-box__input">
-		<span class="file-box__img" ></span>
-		<span class="file-box__title">Browse images</span>
-	</label>
-                                <div class="file-box__btns"> <button class="file-box__btn">
-			<i class="fa fa-trash-o"></i>
-		</button> <button class="file-box__btn">
-			<i class="fa fa-pencil"></i>
-		</button> </div>
-                              </div>
-                              <!-- end file-box -->
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <!-- begin select -->
-                              <div class="select-box ">
-                                <div class="select js-select select_full select_top">
-                                  <div class="select__field js-select-field">
-                                    <div class="select__placeholder">Unit</div>
-                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body" data-scrollbar="default">
-                                    <ul class="select__list">
-                                      <li class="select__item js-select-item">Item (item)</li>
-                                      <li class="select__item js-select-item">Inch (in)</li>
-                                      <li class="select__item js-select-item">Foot (ft)</li>
-                                      <li class="select__item js-select-item">Yard (yd)</li>
-                                      <li class="select__item js-select-item">Mile (mi)</li>
-                                      <li class="select__item js-select-item">Ounce (fl oz)</li>
-                                      <li class="select__item js-select-item">Pint (pt)</li>
-                                      <li class="select__item js-select-item">Cup (cp)</li>
-                                      <li class="select__item js-select-item">Gallon (gal)</li>
-                                      <li class="select__item js-select-item">Liter (l)</li>
-                                      <li class="select__item js-select-item">Ounce (oz)</li>
-                                      <li class="select__item js-select-item">Pound (lb)</li>
-                                      <li class="select__item js-select-item">Gram (g)</li>
-                                      <li class="select__item js-select-item">Kilogram (kg)</li>
-                                      <li class="select__item js-select-item">Hour (hrs)</li>
-                                      <li class="select__item js-select-item">Minute (min)</li>
-                                    </ul>
-                                  </div>
-                                </div>
-                              </div>
-                              <!-- end select -->
                             </div>
                           </div>
                         </div>
