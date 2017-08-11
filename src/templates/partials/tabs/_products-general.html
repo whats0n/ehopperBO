@@ -3,12 +3,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col col_field col_lg-100">
-			<div class="langs">
-				<div class="langs__inner">
-					<a href="#" class="langs__item is-active">English</a>
-					<a href="#" class="langs__item">Русский</a>
-				</div>
-			</div>
+			{% include 'partials/components/_langs.html' %}
 		</div>
 		<div class="col col_field col_lg-100">
 			<div class="fake-buttons">
@@ -84,7 +79,7 @@
 			{{form.select.call({
 				classList: 'select_full',
 				placeholder: 'Department*',
-				selectFooter: '<a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Department</a>',
+				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
 				options: [
 					'All',
 					'Department 1',
@@ -106,7 +101,7 @@
 				placeholder: 'Category*',
 				errorClass: 'is-error',
 				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
-				selectFooter: '<a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Category</a>',
+				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a>',
 				options: [
 					'All',
 					'Category 1',

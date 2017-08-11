@@ -1,0 +1,63 @@
+{% import "partials/form/_build.html" as form %}
+<!-- begin inner -->
+<div class="inner">
+	<div class="container">
+		<div class="row">
+			<div class="col col_lg-100">
+				{% include 'partials/components/_langs.html' %}
+			</div>
+			<div class="col col_lg-100">
+				{{form.inputBox.call({
+					placeholder: 'Category Name'
+				})}}
+			</div>
+			<div class="col col_lg-50">
+				{{form.inputBox.call({
+					placeholder: 'Category Short Name'
+				})}}
+			</div>
+			<div class="col col_lg-50">
+				{{form.selectColor.call({
+					placeholder: 'Category Display Color'
+				})}}
+			</div>
+			<div class="col col_lg-100">
+				{{form.textareaBox.call({
+					placeholder: 'Category Description'
+				})}}
+			</div>
+			<div class="col col_lg-100">
+				{{form.select.call({
+					classList: 'select_full select_top',
+					placeholder: 'Department*',
+					selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
+					options: [
+						'All',
+						'Department 1',
+						'Department 2',
+						'Department 3',
+						'Department 4',
+						'Department 2',
+						'Department 3',
+						'Department 4',
+						'Department 2',
+						'Department 3',
+						'Department 4'
+					]
+				})}}
+			</div>
+			<div class="col col_lg-100">
+				{{form.checkbox.call({
+					content: 'Is Active'
+				})}}
+			</div>
+			<div class="col col_lg-100">
+				<div class="btns-group">
+					<button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button>
+					<button class="btn btn_lg" data-animation="ripple" data-slide-close="create-category">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end inner -->

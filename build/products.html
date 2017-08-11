@@ -108,7 +108,7 @@
       <div class="main main_inner">
         <div class="l-container">
           <div class="l-row js-resizable-width">
-            <div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default" data-popup-wrapper="products-filters">
+            <div class="l-col l-col_sidebar js-resizable-width-left" data-popup-wrapper="products-filters">
               <div class="sm-filters js-product-filters" data-popup="products-filters">
                 <div class="container sm-filters__container" data-popup-container="products-filters">
                   <div class="row">
@@ -220,7 +220,7 @@
                   </div>
                 </div>
               </div>
-              <div class="products-sidebar">
+              <div class="products-sidebar" data-scrollbar="default">
                 <div class="container products-sidebar__header">
                   <div class="row">
                     <div class="col col_lg-25"> <button class="btn btn_block color-btn-main" data-animation="ripple">New</button> </div>
@@ -717,32 +717,35 @@
                 <!-- end table -->
               </div>
             </div>
-            <div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">
+            <div class="l-col l-col_main js-resizable-width-right">
               <div class="l-col__inner">
                 <div class="splitter splitter_left js-resizable-width-splitter"><i class="splitter__lines"></i></div>
-                <!-- begin tabs -->
-                <div class="tabs tabs_fullscreen tabs_footer">
-                  <div class="tabs__inner">
-                    <div class="tabs__panel">
-                      <ul class="tabs__list">
-                        <li class="tabs__item"> <button class="tabs__btn is-active" data-tab-open="products-general" data-tab-collection="products">General</button> </li>
-                        <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-modifiers" data-tab-collection="products">Modifiers</button> </li>
-                        <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-vendors" data-tab-collection="products">Vendors</button> </li>
-                        <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-ordering" data-tab-collection="products">Ordering</button> </li>
-                      </ul>
-                    </div>
-                    <div class="tabs__body">
-                      <div class="tabs__container is-open" data-scrollbar="default" data-tab-container="products-general" data-tab-collection="products">
-                        <div class="container">
-                          <div class="row">
-                            <div class="col col_field col_lg-100">
-                              <div class="langs">
-                                <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Русский</a> </div>
+                <div class="products-main">
+                  <!-- begin tabs -->
+                  <div class="tabs tabs_fullscreen tabs_footer">
+                    <div class="tabs__inner">
+                      <div class="tabs__panel">
+                        <ul class="tabs__list">
+                          <li class="tabs__item"> <button class="tabs__btn is-active" data-tab-open="products-general" data-tab-collection="products">General</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-modifiers" data-tab-collection="products">Modifiers</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-vendors" data-tab-collection="products">Vendors</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-ordering" data-tab-collection="products">Ordering</button> </li>
+                        </ul>
+                      </div>
+                      <div class="tabs__body">
+                        <div class="tabs__container is-open" data-scrollbar="default" data-tab-container="products-general" data-tab-collection="products">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col col_field col_lg-100">
+                                <!-- begin langs -->
+                                <div class="langs">
+                                  <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                                </div>
+                                <!-- end langs -->
                               </div>
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <div class="fake-buttons"> <span class="label label_block">Inventory type*</span>
-                                <div class="fake-buttons__row"> <label class="fake-button">
+                              <div class="col col_field col_lg-100">
+                                <div class="fake-buttons"> <span class="label label_block">Inventory type*</span>
+                                  <div class="fake-buttons__row"> <label class="fake-button">
 	<input type="radio" name="product-inventory-type" >
 	<span class="fake-button__face">Inventory</span>
 </label> <label class="fake-button">
@@ -755,10 +758,10 @@
 	<input type="radio" name="product-inventory-type" >
 	<span class="fake-button__face">With Recipe</span>
 </label> </div>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <div class="input-box is-error js-field"> <label class="input-box__field">
+                              <div class="col col_field col_lg-100">
+                                <div class="input-box is-error js-field"> <label class="input-box__field">
 		
 			<span class="input-box__placeholder">Product Name*</span>
 		
@@ -766,11 +769,11 @@
 	</label> <button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button>
-                                <div class="error-message input-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.</div>
+                                  <div class="error-message input-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.</div>
+                                </div>
                               </div>
-                            </div>
-                            <div class="col col_field col_lg-50">
-                              <div class="input-box  js-field"> <label class="input-box__field">
+                              <div class="col col_field col_lg-50">
+                                <div class="input-box  js-field"> <label class="input-box__field">
 		
 			<span class="input-box__placeholder">Product Short Name</span>
 		
@@ -778,160 +781,160 @@
 	</label> <button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button> </div>
-                            </div>
-                            <div class="col col_field col_lg-50">
-                              <!-- begin select -->
-                              <div class="select-box ">
-                                <div class="select js-select-color ">
-                                  <div class="select__field js-select-color-field">
-                                    <div class="select__placeholder">Product Display Color</div>
-                                    <div class="select__color-value js-select-color-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body">
-                                    <ul class="select__color-list" data-scrollbar="default">
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 123, 65);" data-value="rgb(185, 123, 65)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(130, 129, 52);" data-value="rgb(130, 129, 52)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(56, 115, 85);" data-value="rgb(56, 115, 85)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(167, 59, 60);" data-value="rgb(167, 59, 60)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(188, 69, 89);" data-value="rgb(188, 69, 89)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 100, 79);" data-value="rgb(218, 100, 79)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 150, 77);" data-value="rgb(218, 150, 77)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(155, 161, 56);" data-value="rgb(155, 161, 56)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(76, 171, 112);" data-value="rgb(76, 171, 112)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(213, 83, 86);" data-value="rgb(213, 83, 86)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 83, 108);" data-value="rgb(223, 83, 108)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(241, 120, 94);" data-value="rgb(241, 120, 94)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(245, 177, 95);" data-value="rgb(245, 177, 95)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(191, 186, 66);" data-value="rgb(191, 186, 66)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(129, 191, 125);" data-value="rgb(129, 191, 125)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(240, 93, 109);" data-value="rgb(240, 93, 109)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(254, 150, 99);" data-value="rgb(254, 150, 99)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 139, 139);" data-value="rgb(223, 139, 139)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(246, 204, 36);" data-value="rgb(246, 204, 36)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(201, 209, 94);" data-value="rgb(201, 209, 94)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(156, 203, 126);" data-value="rgb(156, 203, 126)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(73, 73, 73);" data-value="rgb(73, 73, 73)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(174, 105, 226);" data-value="rgb(174, 105, 226)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(108, 118, 225);" data-value="rgb(108, 118, 225)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(105, 143, 205);" data-value="rgb(105, 143, 205)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 173, 190);" data-value="rgb(55, 173, 190)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(127, 181, 178);" data-value="rgb(127, 181, 178)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(183, 183, 183);" data-value="rgb(183, 183, 183)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 108, 183);" data-value="rgb(64, 108, 183)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(81, 90, 151);" data-value="rgb(81, 90, 151)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(86, 117, 175);" data-value="rgb(86, 117, 175)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(98, 146, 180);" data-value="rgb(98, 146, 180)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 189, 173);" data-value="rgb(64, 189, 173)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(224, 224, 224);" data-value="rgb(224, 224, 224)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(83, 126, 150);" data-value="rgb(83, 126, 150)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 48, 121);" data-value="rgb(55, 48, 121)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 72, 126);" data-value="rgb(46, 72, 126)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 142, 131);" data-value="rgb(46, 142, 131)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(96, 114, 163);" data-value="rgb(96, 114, 163)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(255, 255, 255);" data-value="rgb(255, 255, 255)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(67, 79, 117);" data-value="rgb(67, 79, 117)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(75, 81, 109);" data-value="rgb(75, 81, 109)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 87, 141);" data-value="rgb(55, 87, 141)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(38, 89, 114);" data-value="rgb(38, 89, 114)"></i> </li>
-                                      <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(117, 151, 143);" data-value="rgb(117, 151, 143)"></i> </li>
-                                    </ul>
+                              </div>
+                              <div class="col col_field col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select-color ">
+                                    <div class="select__field js-select-color-field">
+                                      <div class="select__placeholder">Product Display Color</div>
+                                      <div class="select__color-value js-select-color-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body">
+                                      <ul class="select__color-list" data-scrollbar="default">
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 123, 65);" data-value="rgb(185, 123, 65)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(130, 129, 52);" data-value="rgb(130, 129, 52)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(56, 115, 85);" data-value="rgb(56, 115, 85)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(167, 59, 60);" data-value="rgb(167, 59, 60)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(188, 69, 89);" data-value="rgb(188, 69, 89)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 100, 79);" data-value="rgb(218, 100, 79)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 150, 77);" data-value="rgb(218, 150, 77)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(155, 161, 56);" data-value="rgb(155, 161, 56)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(76, 171, 112);" data-value="rgb(76, 171, 112)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(213, 83, 86);" data-value="rgb(213, 83, 86)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 83, 108);" data-value="rgb(223, 83, 108)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(241, 120, 94);" data-value="rgb(241, 120, 94)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(245, 177, 95);" data-value="rgb(245, 177, 95)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(191, 186, 66);" data-value="rgb(191, 186, 66)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(129, 191, 125);" data-value="rgb(129, 191, 125)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(240, 93, 109);" data-value="rgb(240, 93, 109)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(254, 150, 99);" data-value="rgb(254, 150, 99)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 139, 139);" data-value="rgb(223, 139, 139)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(246, 204, 36);" data-value="rgb(246, 204, 36)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(201, 209, 94);" data-value="rgb(201, 209, 94)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(156, 203, 126);" data-value="rgb(156, 203, 126)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(73, 73, 73);" data-value="rgb(73, 73, 73)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(174, 105, 226);" data-value="rgb(174, 105, 226)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(108, 118, 225);" data-value="rgb(108, 118, 225)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(105, 143, 205);" data-value="rgb(105, 143, 205)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 173, 190);" data-value="rgb(55, 173, 190)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(127, 181, 178);" data-value="rgb(127, 181, 178)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(183, 183, 183);" data-value="rgb(183, 183, 183)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 108, 183);" data-value="rgb(64, 108, 183)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(81, 90, 151);" data-value="rgb(81, 90, 151)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(86, 117, 175);" data-value="rgb(86, 117, 175)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(98, 146, 180);" data-value="rgb(98, 146, 180)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 189, 173);" data-value="rgb(64, 189, 173)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(224, 224, 224);" data-value="rgb(224, 224, 224)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(83, 126, 150);" data-value="rgb(83, 126, 150)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 48, 121);" data-value="rgb(55, 48, 121)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 72, 126);" data-value="rgb(46, 72, 126)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 142, 131);" data-value="rgb(46, 142, 131)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(96, 114, 163);" data-value="rgb(96, 114, 163)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(255, 255, 255);" data-value="rgb(255, 255, 255)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(67, 79, 117);" data-value="rgb(67, 79, 117)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(75, 81, 109);" data-value="rgb(75, 81, 109)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 87, 141);" data-value="rgb(55, 87, 141)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(38, 89, 114);" data-value="rgb(38, 89, 114)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(117, 151, 143);" data-value="rgb(117, 151, 143)"></i> </li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
+                                <!-- end select -->
                               </div>
-                              <!-- end select -->
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <!-- begin select -->
-                              <div class="select-box ">
-                                <div class="select js-select select_full">
-                                  <div class="select__field js-select-field">
-                                    <div class="select__placeholder">UOM</div>
-                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body">
-                                    <ul class="select__list" data-scrollbar="default">
-                                      <li class="select__item js-select-item">Item (item)</li>
-                                      <li class="select__item js-select-item">Inch (in)</li>
-                                      <li class="select__item js-select-item">Foot (ft)</li>
-                                      <li class="select__item js-select-item">Yard (yd)</li>
-                                      <li class="select__item js-select-item">Mile (mi)</li>
-                                      <li class="select__item js-select-item">Ounce (fl oz)</li>
-                                      <li class="select__item js-select-item">Pint (pt)</li>
-                                      <li class="select__item js-select-item">Cup (cp)</li>
-                                      <li class="select__item js-select-item">Gallon (gal)</li>
-                                      <li class="select__item js-select-item">Liter (l)</li>
-                                      <li class="select__item js-select-item">Ounce (oz)</li>
-                                      <li class="select__item js-select-item">Pound (lb)</li>
-                                      <li class="select__item js-select-item">Gram (g)</li>
-                                      <li class="select__item js-select-item">Kilogram (kg)</li>
-                                      <li class="select__item js-select-item">Hour (hrs)</li>
-                                      <li class="select__item js-select-item">Minute (min)</li>
-                                    </ul>
+                              <div class="col col_field col_lg-100">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">UOM</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">Item (item)</li>
+                                        <li class="select__item js-select-item">Inch (in)</li>
+                                        <li class="select__item js-select-item">Foot (ft)</li>
+                                        <li class="select__item js-select-item">Yard (yd)</li>
+                                        <li class="select__item js-select-item">Mile (mi)</li>
+                                        <li class="select__item js-select-item">Ounce (fl oz)</li>
+                                        <li class="select__item js-select-item">Pint (pt)</li>
+                                        <li class="select__item js-select-item">Cup (cp)</li>
+                                        <li class="select__item js-select-item">Gallon (gal)</li>
+                                        <li class="select__item js-select-item">Liter (l)</li>
+                                        <li class="select__item js-select-item">Ounce (oz)</li>
+                                        <li class="select__item js-select-item">Pound (lb)</li>
+                                        <li class="select__item js-select-item">Gram (g)</li>
+                                        <li class="select__item js-select-item">Kilogram (kg)</li>
+                                        <li class="select__item js-select-item">Hour (hrs)</li>
+                                        <li class="select__item js-select-item">Minute (min)</li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
+                                <!-- end select -->
                               </div>
-                              <!-- end select -->
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <div class="textarea-box  js-field"> <label class="textarea-box__field">
+                              <div class="col col_field col_lg-100">
+                                <div class="textarea-box  js-field"> <label class="textarea-box__field">
 		
 			<span class="textarea-box__placeholder">Product Description</span>
 		
 		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
 	</label> </div>
-                            </div>
-                            <div class="col col_field col_lg-50">
-                              <!-- begin select -->
-                              <div class="select-box ">
-                                <div class="select js-select select_full">
-                                  <div class="select__field js-select-field">
-                                    <div class="select__placeholder">Department*</div>
-                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body">
-                                    <ul class="select__list" data-scrollbar="default">
-                                      <li class="select__item js-select-item">All</li>
-                                      <li class="select__item js-select-item">Department 1</li>
-                                      <li class="select__item js-select-item">Department 2</li>
-                                      <li class="select__item js-select-item">Department 3</li>
-                                      <li class="select__item js-select-item">Department 4</li>
-                                      <li class="select__item js-select-item">Department 2</li>
-                                      <li class="select__item js-select-item">Department 3</li>
-                                      <li class="select__item js-select-item">Department 4</li>
-                                      <li class="select__item js-select-item">Department 2</li>
-                                      <li class="select__item js-select-item">Department 3</li>
-                                      <li class="select__item js-select-item">Department 4</li>
-                                    </ul>
-                                    <div class="select__footer"> <a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                              </div>
+                              <div class="col col_field col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Department*</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">All</li>
+                                        <li class="select__item js-select-item">Department 1</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                      </ul>
+                                      <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                                    </div>
                                   </div>
                                 </div>
+                                <!-- end select -->
                               </div>
-                              <!-- end select -->
-                            </div>
-                            <div class="col col_field col_lg-50">
-                              <!-- begin select -->
-                              <div class="select-box is-error">
-                                <div class="select js-select select_full">
-                                  <div class="select__field js-select-field">
-                                    <div class="select__placeholder">Category*</div>
-                                    <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                  <div class="select__body">
-                                    <ul class="select__list" data-scrollbar="default">
-                                      <li class="select__item js-select-item">All</li>
-                                      <li class="select__item js-select-item">Category 1</li>
-                                      <li class="select__item js-select-item">Category 2</li>
-                                      <li class="select__item js-select-item">Category 3</li>
-                                      <li class="select__item js-select-item">Category 4</li>
-                                    </ul>
-                                    <div class="select__footer"> <a href="#" class="link-add link-add_block select__add"><i class="fa fa-plus"></i>Create new Category</a> </div>
+                              <div class="col col_field col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box is-error">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Category*</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">All</li>
+                                        <li class="select__item js-select-item">Category 1</li>
+                                        <li class="select__item js-select-item">Category 2</li>
+                                        <li class="select__item js-select-item">Category 3</li>
+                                        <li class="select__item js-select-item">Category 4</li>
+                                      </ul>
+                                      <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a> </div>
+                                    </div>
                                   </div>
+                                  <div class="error-message select-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
                                 </div>
-                                <div class="error-message select-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                <!-- end select -->
                               </div>
-                              <!-- end select -->
-                            </div>
-                            <div class="col col_field col_lg-100">
-                              <div class="input-box  js-field"> <label class="input-box__field">
+                              <div class="col col_field col_lg-100">
+                                <div class="input-box  js-field"> <label class="input-box__field">
 		
 			<span class="input-box__placeholder">UPC</span>
 		
@@ -939,8 +942,8 @@
 	</label> <button class="input-box__clear">
 		<i class="fa fa-close"></i>
 	</button> </div>
-                            </div>
-                            <div class="col col_field col_lg-100"> <label class="checkbox ">
+                              </div>
+                              <div class="col col_field col_lg-100"> <label class="checkbox ">
 	<input type="checkbox"  checked>
 	<span class="checkbox__icon">
 		<i class="fa fa-check"></i>
@@ -949,34 +952,229 @@
 		<span class="checkbox__content">Is Active</span>
 	
 </label> </div>
-                            <div class="col col_field col_lg-100">
-                              <!-- begin file-box -->
-                              <div class="file-box is-active"> <label class="file-box__field">
+                              <div class="col col_field col_lg-100">
+                                <!-- begin file-box -->
+                                <div class="file-box is-active"> <label class="file-box__field">
 		<input type="file" class="file-box__input">
 		<span class="file-box__img" style="background-image: url(https://placecage.com/152/102);"></span>
 		<span class="file-box__title">Browse images</span>
 	</label>
-                                <div class="file-box__btns"> <button class="file-box__btn">
+                                  <div class="file-box__btns"> <button class="file-box__btn">
 			<i class="fa fa-trash-o"></i>
 		</button> <button class="file-box__btn">
 			<i class="fa fa-pencil"></i>
 		</button> </div>
+                                </div>
+                                <!-- end file-box -->
                               </div>
-                              <!-- end file-box -->
                             </div>
                           </div>
                         </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-modifiers" data-tab-collection="products"> MODIFIERS </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-vendors" data-tab-collection="products"> VENDORS </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-ordering" data-tab-collection="products"> ORDERING </div>
                       </div>
-                      <div class="tabs__container " data-scrollbar="default" data-tab-container="products-modifiers" data-tab-collection="products"> MODIFIERS </div>
-                      <div class="tabs__container " data-scrollbar="default" data-tab-container="products-vendors" data-tab-collection="products"> VENDORS </div>
-                      <div class="tabs__container " data-scrollbar="default" data-tab-container="products-ordering" data-tab-collection="products"> ORDERING </div>
-                    </div>
-                    <div class="tabs__footer">
-                      <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple">Cancel</button> </div>
+                      <div class="tabs__footer">
+                        <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple">Cancel</button> </div>
+                      </div>
                     </div>
                   </div>
+                  <!-- end tabs -->
+                  <div class="slide" data-slide="create-department" data-scrollbar="default">
+                    <!-- begin inner -->
+                    <div class="inner">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col col_lg-100">
+                            <!-- begin langs -->
+                            <div class="langs">
+                              <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                            </div>
+                            <!-- end langs -->
+                          </div>
+                          <div class="col col_lg-100">
+                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Department Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                          </div>
+                          <div class="col col_lg-100">
+                            <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Department Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                          </div>
+                          <div class="col col_lg-100"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                          <div class="col col_lg-100">
+                            <div class="btns-group"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-department">Cancel</button> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end inner -->
+                  </div>
+                  <div class="slide" data-slide="create-category" data-scrollbar="default">
+                    <!-- begin inner -->
+                    <div class="inner">
+                      <div class="container">
+                        <div class="row">
+                          <div class="col col_lg-100">
+                            <!-- begin langs -->
+                            <div class="langs">
+                              <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                            </div>
+                            <!-- end langs -->
+                          </div>
+                          <div class="col col_lg-100">
+                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Category Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                          </div>
+                          <div class="col col_lg-50">
+                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Category Short Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                          </div>
+                          <div class="col col_lg-50">
+                            <!-- begin select -->
+                            <div class="select-box ">
+                              <div class="select js-select-color ">
+                                <div class="select__field js-select-color-field">
+                                  <div class="select__placeholder">Category Display Color</div>
+                                  <div class="select__color-value js-select-color-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                <div class="select__body">
+                                  <ul class="select__color-list" data-scrollbar="default">
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 123, 65);" data-value="rgb(185, 123, 65)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(130, 129, 52);" data-value="rgb(130, 129, 52)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(56, 115, 85);" data-value="rgb(56, 115, 85)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(167, 59, 60);" data-value="rgb(167, 59, 60)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(188, 69, 89);" data-value="rgb(188, 69, 89)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 100, 79);" data-value="rgb(218, 100, 79)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 150, 77);" data-value="rgb(218, 150, 77)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(155, 161, 56);" data-value="rgb(155, 161, 56)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(76, 171, 112);" data-value="rgb(76, 171, 112)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(213, 83, 86);" data-value="rgb(213, 83, 86)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 83, 108);" data-value="rgb(223, 83, 108)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(241, 120, 94);" data-value="rgb(241, 120, 94)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(245, 177, 95);" data-value="rgb(245, 177, 95)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(191, 186, 66);" data-value="rgb(191, 186, 66)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(129, 191, 125);" data-value="rgb(129, 191, 125)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(240, 93, 109);" data-value="rgb(240, 93, 109)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(254, 150, 99);" data-value="rgb(254, 150, 99)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 139, 139);" data-value="rgb(223, 139, 139)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(246, 204, 36);" data-value="rgb(246, 204, 36)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(201, 209, 94);" data-value="rgb(201, 209, 94)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(156, 203, 126);" data-value="rgb(156, 203, 126)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(73, 73, 73);" data-value="rgb(73, 73, 73)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(174, 105, 226);" data-value="rgb(174, 105, 226)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(108, 118, 225);" data-value="rgb(108, 118, 225)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(105, 143, 205);" data-value="rgb(105, 143, 205)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 173, 190);" data-value="rgb(55, 173, 190)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(127, 181, 178);" data-value="rgb(127, 181, 178)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(183, 183, 183);" data-value="rgb(183, 183, 183)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 108, 183);" data-value="rgb(64, 108, 183)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(81, 90, 151);" data-value="rgb(81, 90, 151)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(86, 117, 175);" data-value="rgb(86, 117, 175)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(98, 146, 180);" data-value="rgb(98, 146, 180)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 189, 173);" data-value="rgb(64, 189, 173)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(224, 224, 224);" data-value="rgb(224, 224, 224)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(83, 126, 150);" data-value="rgb(83, 126, 150)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 48, 121);" data-value="rgb(55, 48, 121)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 72, 126);" data-value="rgb(46, 72, 126)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 142, 131);" data-value="rgb(46, 142, 131)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(96, 114, 163);" data-value="rgb(96, 114, 163)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(255, 255, 255);" data-value="rgb(255, 255, 255)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(67, 79, 117);" data-value="rgb(67, 79, 117)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(75, 81, 109);" data-value="rgb(75, 81, 109)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 87, 141);" data-value="rgb(55, 87, 141)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(38, 89, 114);" data-value="rgb(38, 89, 114)"></i> </li>
+                                    <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(117, 151, 143);" data-value="rgb(117, 151, 143)"></i> </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="col col_lg-100">
+                            <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Category Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                          </div>
+                          <div class="col col_lg-100">
+                            <!-- begin select -->
+                            <div class="select-box ">
+                              <div class="select js-select select_full select_top">
+                                <div class="select__field js-select-field">
+                                  <div class="select__placeholder">Department*</div>
+                                  <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                <div class="select__body">
+                                  <ul class="select__list" data-scrollbar="default">
+                                    <li class="select__item js-select-item">All</li>
+                                    <li class="select__item js-select-item">Department 1</li>
+                                    <li class="select__item js-select-item">Department 2</li>
+                                    <li class="select__item js-select-item">Department 3</li>
+                                    <li class="select__item js-select-item">Department 4</li>
+                                    <li class="select__item js-select-item">Department 2</li>
+                                    <li class="select__item js-select-item">Department 3</li>
+                                    <li class="select__item js-select-item">Department 4</li>
+                                    <li class="select__item js-select-item">Department 2</li>
+                                    <li class="select__item js-select-item">Department 3</li>
+                                    <li class="select__item js-select-item">Department 4</li>
+                                  </ul>
+                                  <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end select -->
+                          </div>
+                          <div class="col col_lg-100"> <label class="checkbox ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                          <div class="col col_lg-100">
+                            <div class="btns-group"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-category">Cancel</button> </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- end inner -->
+                  </div>
                 </div>
-                <!-- end tabs -->
               </div>
             </div>
           </div>

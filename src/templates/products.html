@@ -13,7 +13,7 @@ menu: { active: 1 }
 
 <div class="l-container">
 	<div class="l-row js-resizable-width">
-		<div class="l-col l-col_sidebar js-resizable-width-left" data-scrollbar="default" data-popup-wrapper="products-filters">
+		<div class="l-col l-col_sidebar js-resizable-width-left" data-popup-wrapper="products-filters">
 			<div class="sm-filters js-product-filters" data-popup="products-filters">
 				<div class="container sm-filters__container" data-popup-container="products-filters">
 					<div class="row">
@@ -72,7 +72,7 @@ menu: { active: 1 }
 					</div>
 				</div>
 			</div>
-			<div class="products-sidebar">
+			<div class="products-sidebar" data-scrollbar="default">
 				<div class="container products-sidebar__header">
 					<div class="row">
 						<div class="col col_lg-25">
@@ -267,37 +267,45 @@ menu: { active: 1 }
 				</div> #}
 			</div>
 		</div>
-		<div class="l-col l-col_main js-resizable-width-right" data-scrollbar="default">
+		<div class="l-col l-col_main js-resizable-width-right">
 			<div class="l-col__inner">
 				<div class="splitter splitter_left js-resizable-width-splitter"><i class="splitter__lines"></i></div>
-				{{tabs.call({
-					classList: 'tabs_fullscreen',
-					collection: 'products',
-					active: 1,
-					footer: '_products-footer',
-					items: [
-						{
-							name: 'products-general',
-							btn: 'General',
-							file: '_products-general'
-						},
-						{
-							name: 'products-modifiers',
-							btn: 'Modifiers',
-							file: '_products-modifiers'
-						},
-						{
-							name: 'products-vendors',
-							btn: 'Vendors',
-							file: '_products-vendors'
-						},
-						{
-							name: 'products-ordering',
-							btn: 'Ordering',
-							file: '_products-ordering'
-						}
-					]
-				})}}
+				<div class="products-main">
+					{{tabs.call({
+						classList: 'tabs_fullscreen',
+						collection: 'products',
+						active: 1,
+						footer: '_products-footer',
+						items: [
+							{
+								name: 'products-general',
+								btn: 'General',
+								file: '_products-general'
+							},
+							{
+								name: 'products-modifiers',
+								btn: 'Modifiers',
+								file: '_products-modifiers'
+							},
+							{
+								name: 'products-vendors',
+								btn: 'Vendors',
+								file: '_products-vendors'
+							},
+							{
+								name: 'products-ordering',
+								btn: 'Ordering',
+								file: '_products-ordering'
+							}
+						]
+					})}}
+					<div class="slide" data-slide="create-department" data-scrollbar="default">
+						{% include 'partials/sections/_create-department.html' %}
+					</div>
+					<div class="slide" data-slide="create-category" data-scrollbar="default">
+						{% include 'partials/sections/_create-category.html' %}
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

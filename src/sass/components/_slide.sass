@@ -1,0 +1,13 @@
+.slide
+	position: absolute
+	z-index: 100
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	background: $alabaster
+	transform: translate3d(100%,0,0)
+	transition: transform 0.4s ease-in-out
+	&.is-open
+		transform: translate3d(0,0,0)
