@@ -6223,11 +6223,20 @@ button:disabled, button.is-disabled,
   border: 1px solid #e0e0e0;
   height: 100px;
   background: #fff;
-  white-space: nowrap;
+  text-align: center;
+  font-size: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.stat:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
 }
 
 .stat__icon {
@@ -6289,20 +6298,23 @@ button:disabled, button.is-disabled,
 }
 
 .stat__content {
-  padding: 25px 0 0 20px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 10px 0 20px;
+  width: 100%;
+  text-align: left;
 }
 
 .stat__title {
-  margin-bottom: 5px;
+  margin-bottom: 7px;
   font-size: 14px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .stat__text {
   font-family: 'Roboto Regular', Arial, sans-serif;
   font-size: 22px;
+  line-height: 1;
+  word-wrap: break-word;
 }
 
 .support {
@@ -6373,6 +6385,7 @@ button:disabled, button.is-disabled,
 }
 
 .graph__body {
+  height: 315px;
   *zoom: 1;
 }
 
@@ -6384,22 +6397,49 @@ button:disabled, button.is-disabled,
 
 .graph__frame {
   position: relative;
-  padding: 20px;
-  margin: 0 auto;
-  width: 150px;
-  height: 150px;
+  float: left;
+  width: 50%;
+  height: 100%;
 }
 
 .graph__frame canvas {
-  max-width: 100%;
-  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 200px;
+  max-height: 200px;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.graph__subtitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 5px;
+  width: 140px;
+  text-align: center;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.graph__subtitle strong,
+.graph__subtitle span {
+  display: block;
+  line-height: 1;
+}
+
+.graph__subtitle strong {
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.graph__subtitle span {
+  font-size: 16px;
 }
 
 .graph__info {
   position: relative;
   overflow: hidden;
-  border-top: 1px solid #eee;
-  height: 165px;
+  height: 100%;
 }
 
 .graph__table {
@@ -6469,6 +6509,32 @@ button:disabled, button.is-disabled,
   display: block;
   width: 20px;
   height: 20px;
+}
+
+.graph-list {
+  overflow: auto;
+  height: 100%;
+  padding: 5px 0;
+}
+
+.graph-list__item {
+  position: relative;
+  padding: 3px 20px 3px 40px;
+  font-family: 'Roboto Regular', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.graph-list__color {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+}
+
+.graph-list__title {
+  font-family: 'Roboto Medium', Arial, sans-serif;
 }
 
 .infoblock {

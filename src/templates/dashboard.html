@@ -112,6 +112,10 @@ menu: { active: 0 }
 				<div class="graph__body">
 					<div class="graph__frame">
 						<canvas id="category-chart"></canvas>
+						<div class="graph__subtitle">
+							<strong>Gross Category&nbsp;Sales</strong>
+							<span>$1,716.33</span>
+						</div>
 					</div>
 					<div class="graph__info">
 						{% set category = {
@@ -176,7 +180,18 @@ menu: { active: 0 }
 								}
 							]
 						} %}
-						<div class="graph__table">
+
+						<ul class="graph-list" data-scrollbar="default">
+							{% for item in category.items %}
+								<li class="graph-list__item">
+									<i class="graph-list__color" style="background-color: {{item.color}}"></i>
+									<div class="graph-list__title">{{item.title}}</div>
+									<div class="graph-list__info">{{item.percent}}% - {{item.price}}</div>
+								</li>
+							{% endfor %}
+						</ul>
+
+						{# <div class="graph__table">
 							<div class="graph__table-head">
 								<div class="graph__tr">
 									{% for item in category.headings %}
@@ -203,7 +218,7 @@ menu: { active: 0 }
 									{% endfor %}
 								</div>
 							</div>
-						</div>
+						</div> #}
 					</div>
 				</div>
 			</div>
@@ -216,6 +231,10 @@ menu: { active: 0 }
 				<div class="graph__body">
 					<div class="graph__frame">
 						<canvas id="product-chart"></canvas>
+						<div class="graph__subtitle">
+							<strong>Gross Product&nbsp;Sales</strong>
+							<span>$1,716.33</span>
+						</div>
 					</div>
 					<div class="graph__info">
 						{% set product = {
@@ -301,7 +320,18 @@ menu: { active: 0 }
 								}
 							]
 						} %}
-						<div class="graph__table">
+
+						<ul class="graph-list" data-scrollbar="default">
+							{% for item in product.items %}
+								<li class="graph-list__item">
+									<i class="graph-list__color" style="background-color: {{item.color}}"></i>
+									<div class="graph-list__title">{{item.title}}</div>
+									<div class="graph-list__info">{{item.percent}}% - {{item.price}}</div>
+								</li>
+							{% endfor %}
+						</ul>
+
+						{# <div class="graph__table">
 							<div class="graph__table-head">
 								<div class="graph__tr">
 									{% for item in product.headings %}
@@ -328,7 +358,7 @@ menu: { active: 0 }
 									{% endfor %}
 								</div>
 							</div>
-						</div>
+						</div> #}
 					</div>
 				</div>
 			</div>

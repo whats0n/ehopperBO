@@ -22,15 +22,16 @@ export default function() {
 							'rgb(254, 150, 99)',
 							'rgb(76, 171, 112)'
 						],
+						label: '%',
 						data: [20, 20, 30, 10, 5, 5, 5, 5]
 					}
 				]
 			},
 			options: {
 				cutoutPercentage: 70,
-				legend: {
-					display: false
-				}
+				legend: { display: false },
+				tooltips: { enabled: false },
+				hover: {mode: null}
 			}
 		});
 	}
@@ -73,9 +74,9 @@ export default function() {
 			},
 			options: {
 				cutoutPercentage: 70,
-				legend: {
-					display: false
-				}
+				legend: { display: false },
+				tooltips: { enabled: false },
+				hover: {mode: null}
 			}
 		});
 	}
