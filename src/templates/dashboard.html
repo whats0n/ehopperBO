@@ -111,9 +111,11 @@ menu: { active: 0 }
 				</div>
 				<div class="graph__body">
 					<div class="graph__frame">
-						<canvas id="category-chart"></canvas>
+						<div class="graph__canvas-container">
+							<canvas id="category-chart"></canvas>
+						</div>
 						<div class="graph__subtitle">
-							<strong>Gross Category&nbsp;Sales</strong>
+							<strong>Gross Sales</strong>
 							<span>$1,716.33</span>
 						</div>
 					</div>
@@ -186,7 +188,7 @@ menu: { active: 0 }
 								<li class="graph-list__item">
 									<i class="graph-list__color" style="background-color: {{item.color}}"></i>
 									<div class="graph-list__title">{{item.title}}</div>
-									<div class="graph-list__info">{{item.percent}}% - {{item.price}}</div>
+									<div class="graph-list__info">{{item.percent}}% - ${{item.price}}</div>
 								</li>
 							{% endfor %}
 						</ul>
@@ -230,9 +232,11 @@ menu: { active: 0 }
 				</div>
 				<div class="graph__body">
 					<div class="graph__frame">
-						<canvas id="product-chart"></canvas>
+						<div class="graph__canvas-container">
+							<canvas id="product-chart"></canvas>
+						</div>
 						<div class="graph__subtitle">
-							<strong>Gross Product&nbsp;Sales</strong>
+							<strong>Gross Sales</strong>
 							<span>$1,716.33</span>
 						</div>
 					</div>
@@ -326,7 +330,7 @@ menu: { active: 0 }
 								<li class="graph-list__item">
 									<i class="graph-list__color" style="background-color: {{item.color}}"></i>
 									<div class="graph-list__title">{{item.title}}</div>
-									<div class="graph-list__info">{{item.percent}}% - {{item.price}}</div>
+									<div class="graph-list__info">{{item.percent}}% - ${{item.price}}</div>
 								</li>
 							{% endfor %}
 						</ul>
