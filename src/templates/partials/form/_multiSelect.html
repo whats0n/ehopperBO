@@ -10,7 +10,7 @@
 			<div class="select__value js-multi-select-value">{{props.value or props.options[props.selected - 1]}}</div>
 			<i class="fa fa-angle-down select__arrow"></i>
 		</div>
-		<div class="select__body">
+		<div class="select__body js-multi-select-dropdown">
 			<ul class="select__list" data-scrollbar="default">
 				{% if props.selectAll %}
 					<li class="select__item js-multi-select-all">

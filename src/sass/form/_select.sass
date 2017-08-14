@@ -7,9 +7,10 @@
 	&.is-focus
 		.select
 			&__body
-				opacity: 1
-				visibility: visible
-				+gpu
+				// opacity: 1
+				// visibility: visible
+				// +gpu
+				display: block
 			&__arrow
 				transform: translate3d(0,-50%,0) rotate(-180deg)
 	&.is-active
@@ -79,15 +80,16 @@
 		z-index: 100
 		top: 100%
 		left: 0
+		display: none
 		margin-top: 10px
 		border: 1px solid $lightGray
 		min-width: 100%
-		opacity: 0
-		visibility: hidden
+		// opacity: 0
+		// visibility: hidden
 		background: $white
 		white-space: nowrap
-		transform: translate3d(0,-10px,0)
-		transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out
+		// transform: translate3d(0,-10px,0)
+		// transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out
 	&__list
 		overflow: auto
 		padding: 10px 0

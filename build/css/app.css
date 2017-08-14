@@ -4617,9 +4617,7 @@ button:disabled, button.is-disabled,
 }
 
 .select.is-focus .select__body {
-  opacity: 1;
-  visibility: visible;
-  transform: translate3d(0, 0, 0);
+  display: block;
 }
 
 .select.is-focus .select__arrow {
@@ -4718,15 +4716,12 @@ button:disabled, button.is-disabled,
   z-index: 100;
   top: 100%;
   left: 0;
+  display: none;
   margin-top: 10px;
   border: 1px solid #eee;
   min-width: 100%;
-  opacity: 0;
-  visibility: hidden;
   background: #fff;
   white-space: nowrap;
-  transform: translate3d(0, -10px, 0);
-  transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out, transform 0.15s ease-in-out;
 }
 
 .select__list {
@@ -5317,7 +5312,7 @@ button:disabled, button.is-disabled,
 }
 
 .background-control__color.is-active {
-  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(57, 73, 171, 0.3);
+  box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.3), 0 0 0 3px rgba(57, 73, 171, 0.5);
 }
 
 .background-control__figure {
@@ -6945,7 +6940,9 @@ button:disabled, button.is-disabled,
 }
 
 .sm-filters__container {
+  overflow: auto;
   max-height: 100%;
+  min-height: 440px;
   background: #f8f8f8;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.4);
   transform: translate3d(0, -100%, 0);

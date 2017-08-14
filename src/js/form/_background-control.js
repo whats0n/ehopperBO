@@ -10,7 +10,7 @@ export default function() {
 		constructor(props) {
 			this.props = props;
 
-			this.openDropdown = this.openDropdown.bind(this);
+			this.toggleDropdown = this.toggleDropdown.bind(this);
 			this.closeOnBodyClick = this.closeOnBodyClick.bind(this);
 			this.selectColor = this.selectColor.bind(this);
 			this.selectImage = this.selectImage.bind(this);
@@ -26,14 +26,14 @@ export default function() {
 
 			const { container, value, field, dropdown, color, file, figure, submit } = this.props;
 
-			smartClick(field, this.openDropdown);
+			smartClick(field, this.toggleDropdown);
 			smartClick(color, this.selectColor);
 			smartClick(submit, this.submitBackground);
 			smartClick('body', this.closeOnBodyClick);
 			$DOCUMENT.on('change', file, this.selectImage);
 		}
 
-		openDropdown(e) {
+		toggleDropdown(e) {
 			const $target = $(e.currentTarget);
 			const {current, all} = this.getContainer($target);
 
@@ -47,32 +47,35 @@ export default function() {
 				//3. find current dropdown and his offset top and bottom
 				//4. compare: if dropdown is not in visible zone - move it into this zone
 				const $scrollableParent = $target.scrollParent();
+				const scrollable = $scrollableParent.get(0).tagName;
+				all.removeClass(OPEN);
+				current.addClass(OPEN);
 
+				if (!scrollable) return;
+				
+				//scrollable parent 
+				//for y
 				const parentOffsetTop = $scrollableParent.offset().top;
 				const parentHeight = $scrollableParent.outerHeight();
 				const parentOffsetBottom = parentOffsetTop + parentHeight;
-
+				//for x
 				const parentOffsetLeft = $scrollableParent.offset().left;
 				const parentWidth = $scrollableParent.outerWidth();
 				const parentOffsetRight = parentOffsetLeft + parentWidth;
-
-				all.removeClass(OPEN);
-				current.addClass(OPEN);
 				
+				//dropdown
 				const $dropdown = current.find(this.props.dropdown);
-
+				//for y
 				const dropdownOffsetTop = $dropdown.offset().top;
 				const dropdownHeight = $dropdown.outerHeight();
 				const dropdownOffsetBottom = dropdownOffsetTop + dropdownHeight;
-
+				//for x
 				const dropdownOffsetLeft = $dropdown.offset().left;
 				const dropdownWidth = $dropdown.outerWidth();
 				const dropdownOffsetRight = dropdownOffsetLeft + dropdownWidth;
 
 				if (parentOffsetBottom <= dropdownOffsetBottom) {
 					$dropdown.css('top', parentOffsetBottom - dropdownOffsetBottom);
-				// } else if (parentOffsetBottom > dropdownOffsetBottom && parentHeight >= dropdownHeight) {
-				// 	$dropdown.css('top', 0);
 				} else if (parentOffsetBottom > dropdownOffsetBottom) {
 					$dropdown.css('top', parentOffsetTop - dropdownOffsetTop);
 				}

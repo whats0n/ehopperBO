@@ -41,11 +41,38 @@ export default function() {
 			const $target = $(e.currentTarget);
 			const {current, all} = this.getSelect($target);
 
+			this.resetDropdownsPosition(current);
+
 			if (current.hasClass(FOCUS)) {
 				all.removeClass(FOCUS);
 			} else {
+				//1. find scrollable parent and his offset top and bottom
+				//2. hide all other containers and show current
+				//3. find current dropdown and his offset top and bottom
+				//4. compare: if dropdown is not in visible zone - move it into this zone
+				const $scrollableParent = $target.scrollParent();
+				const scrollable = $scrollableParent.get(0).tagName;
+
 				all.removeClass(FOCUS);
 				current.addClass(FOCUS);
+				
+				if (!scrollable) return;
+
+				const parentOffsetTop = $scrollableParent.offset().top;
+				const parentHeight = $scrollableParent.outerHeight();
+				const parentOffsetBottom = parentOffsetTop + parentHeight;
+
+				const $dropdown = current.find(this.props.dropdown);
+
+				const dropdownOffsetTop = $dropdown.offset().top;
+				const dropdownHeight = $dropdown.outerHeight();
+				const dropdownOffsetBottom = dropdownOffsetTop + dropdownHeight;
+				
+				console.log(parentOffsetBottom, dropdownOffsetBottom);
+
+				if (parentOffsetBottom <= dropdownOffsetBottom) {
+					current.addClass('select_top');
+				}
 			}
 
 		}
@@ -56,6 +83,7 @@ export default function() {
 
 			if (current.length || !all.hasClass(FOCUS)) return;
 			all.removeClass(FOCUS);
+			this.resetDropdownsPosition(all);
 
 		}
 		selectItem(e) {
@@ -172,6 +200,11 @@ export default function() {
 
 			text.length && !select.hasClass(ACTIVE) && select.addClass(ACTIVE);
 			!text.length && select.removeClass(ACTIVE);
+			this.resetDropdownsPosition(select);
+		}
+
+		resetDropdownsPosition(containers) {
+			containers.removeClass('select_top');
 		}
 	}
 
@@ -182,7 +215,8 @@ export default function() {
 			field: '.js-multi-select-field',
 			item: '.js-multi-select-item',
 			value: '.js-multi-select-value',
-			selectAll: '.js-multi-select-all'
+			selectAll: '.js-multi-select-all',
+			dropdown: '.js-multi-select-dropdown'
 		});
 	});
 
