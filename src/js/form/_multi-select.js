@@ -23,21 +23,10 @@ export default function() {
 			if (called) return;
 			called = !called;
 
-			const that = this;
-
-			// smartClick(this.props.field, function(e) {
-			// 	that.toggleOnFieldClick.call(this, e, that.props);
-			// });
-
 			smartClick(this.props.field, this.toggleOnFieldClick);
 			smartClick('body', this.closeOnBodyClick);
 			$DOCUMENT.on('change', `${this.props.item} input`, this.selectItem);
 			$DOCUMENT.on('change', `${this.props.selectAll} input`, this.selectAll);
-
-			// smartClick('body', function(e) {
-			// 	that.closeOnBodyClick.call(this, e, that.props);
-			// });
-
 		}
 		getSelect($el) {
 			return {

@@ -183,6 +183,21 @@ html {
   background: #3949AB;
 }
 
+.color-btn-lighter {
+  color: #fff;
+  background: #5C6BC0;
+}
+
+.color-btn-lighter:active {
+  color: #fff;
+  background: #5C6BC0;
+}
+
+.no-touch .color-btn-lighter:active {
+  color: #fff;
+  background: #5C6BC0;
+}
+
 .color-header {
   color: #fff;
   background: #3949AB;

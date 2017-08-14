@@ -1,1 +1,30 @@
-VENDORS
+{% import "partials/form/_build.html" as form %}
+<div class="container">
+	<div class="row">
+		VENDORS
+		<div class="col col_field col_lg-100">
+			{{form.select.call({
+				classList: 'select_full',
+				placeholder: 'UOM',
+				options: [
+					'Item (item)',
+					'Inch (in)',
+					'Foot (ft)',
+					'Yard (yd)',
+					'Mile (mi)',
+					'Ounce (fl oz)',
+					'Pint (pt)',
+					'Cup (cp)',
+					'Gallon (gal)',
+					'Liter (l)',
+					'Ounce (oz)',
+					'Pound (lb)',
+					'Gram (g)',
+					'Kilogram (kg)',
+					'Hour (hrs)',
+					'Minute (min)'
+				]
+			})}}
+		</div>
+	</div>
+</div>

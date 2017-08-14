@@ -1,0 +1,98 @@
+{% macro call(props) %}
+{% set colors = [
+	'rgb(109, 46, 40)',
+	'rgb(144, 54, 67)',
+	'rgb(185, 104, 70)',
+	'rgb(185, 123, 65)',
+	'rgb(130, 129, 52)',
+	'rgb(56, 115, 85)',
+	'rgb(167, 59, 60)',
+	'rgb(188, 69, 89)',
+	'rgb(218, 100, 79)',
+	'rgb(218, 150, 77)',
+	'rgb(155, 161, 56)',
+	'rgb(76, 171, 112)',
+	'rgb(213, 83, 86)',
+	'rgb(223, 83, 108)',
+	'rgb(241, 120, 94)',
+	'rgb(245, 177, 95)',
+	'rgb(191, 186, 66)',
+	'rgb(129, 191, 125)',
+	'rgb(240, 93, 109)',
+	'rgb(254, 150, 99)',
+	'rgb(223, 139, 139)',
+	'rgb(246, 204, 36)',
+	'rgb(201, 209, 94)',
+	'rgb(156, 203, 126)',
+	'rgb(73, 73, 73)',
+	'rgb(174, 105, 226)',
+	'rgb(108, 118, 225)',
+	'rgb(105, 143, 205)',
+	'rgb(55, 173, 190)',
+	'rgb(127, 181, 178)',
+	'rgb(183, 183, 183)',
+	'rgb(64, 108, 183)',
+	'rgb(81, 90, 151)',
+	'rgb(86, 117, 175)',
+	'rgb(98, 146, 180)',
+	'rgb(64, 189, 173)',
+	'rgb(224, 224, 224)',
+	'rgb(83, 126, 150)',
+	'rgb(55, 48, 121)',
+	'rgb(46, 72, 126)',
+	'rgb(46, 142, 131)',
+	'rgb(96, 114, 163)',
+	'rgb(255, 255, 255)',
+	'rgb(67, 79, 117)',
+	'rgb(75, 81, 109)',
+	'rgb(55, 87, 141)',
+	'rgb(38, 89, 114)',
+	'rgb(117, 151, 143)'
+] %}
+<!-- begin background-control -->
+<div class="background-control js-background-control">
+	<div class="background-control__field js-background-control-field">
+		<div class="background-control__placeholder">{{props.placeholder}}</div>
+		<div class="background-control__value js-background-control-value" {{props.value | safe}}></div>
+	</div>
+	<div class="background-control__dropdown js-background-control-dropdown">
+		<div class="background-control__colors" data-scrollbar="default">
+			<ul class="background-control__list">
+				{% for item in props.colors or colors %}
+					<li class="background-control__item">
+						<span class="background-control__color js-background-control-color" style="background-color: {{item}};" data-value="{{item}}"></span>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="background-control__figure js-background-control-figure">
+			<div class="background-control__figure-in">
+				<label class="background-control__picture">
+					<input type="file" class="background-control__file js-background-control-file" accept="image/*">
+					<span class="background-control__img js-background-control-img"></span>
+					<span class="background-control__label">Add Image</span>
+				</label>
+				<div class="background-control__btns">
+					<button class="background-control__btn">
+						<i class="fa fa-trash-o"></i>
+					</button>
+					<button class="background-control__btn">
+						<i class="fa fa-pencil"></i>
+					</button>
+				</div>
+			</div>
+			<div class="background-control__footer">
+				<div class="background-control__row">
+					<div class="background-control__col">
+						<button class="btn btn_block color-btn-main js-background-control-submit" data-type="image">Use Image</button>
+					</div>
+					<div class="background-control__col">
+						<button class="btn btn_block color-btn-main js-background-control-submit" data-type="color">Use Color</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end background-control -->
+{% endmacro %}

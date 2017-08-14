@@ -28,7 +28,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col col_field col_lg-100">
+		<div class="col col_field col_lg-50">
 			{{form.inputBox.call({
 				placeholder: 'Product Name*',
 				classList: 'is-error',
@@ -39,40 +39,6 @@
 		<div class="col col_field col_lg-50">
 			{{form.inputBox.call({
 				placeholder: 'Product Short Name'
-			})}}
-		</div>
-		<div class="col col_field col_lg-50">
-			{{form.selectColor.call({
-				placeholder: 'Product Display Color'
-			})}}
-		</div>
-		<div class="col col_field col_lg-100">
-			{{form.select.call({
-				classList: 'select_full',
-				placeholder: 'UOM',
-				options: [
-					'Item (item)',
-					'Inch (in)',
-					'Foot (ft)',
-					'Yard (yd)',
-					'Mile (mi)',
-					'Ounce (fl oz)',
-					'Pint (pt)',
-					'Cup (cp)',
-					'Gallon (gal)',
-					'Liter (l)',
-					'Ounce (oz)',
-					'Pound (lb)',
-					'Gram (g)',
-					'Kilogram (kg)',
-					'Hour (hrs)',
-					'Minute (min)'
-				]
-			})}}
-		</div>
-		<div class="col col_field col_lg-100">
-			{{form.textareaBox.call({
-				placeholder: 'Product Description'
 			})}}
 		</div>
 		<div class="col col_field col_lg-50">
@@ -111,20 +77,35 @@
 				]
 			})}}
 		</div>
+		{# <div class="col col_field col_lg-100">
+			{{form.selectColor.call({
+				placeholder: 'Product Display Color'
+			})}}
+		</div> #}
+		<div class="col col_field col_lg-100">
+			{{form.textareaBox.call({
+				placeholder: 'Product Description'
+			})}}
+		</div>
 		<div class="col col_field col_lg-100">
 			{{form.inputBox.call({
 				placeholder: 'UPC'
 			})}}
 		</div>
 		<div class="col col_field col_lg-100">
-			{{form.checkbox.call({
-				attrs: 'checked',
-				content: 'Is Active'
+			{{form.fileBox.call({
+				img: 'https://placecage.com/152/102'
 			})}}
 		</div>
 		<div class="col col_field col_lg-100">
-			{{form.fileBox.call({
-				img: 'https://placecage.com/152/102'
+			{{form.backgroundControl.call({
+				placeholder: 'Product Display'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.checkbox.call({
+				attrs: 'checked',
+				content: 'Is Active'
 			})}}
 		</div>
 	</div>
