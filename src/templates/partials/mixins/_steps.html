@@ -1,0 +1,15 @@
+{% macro call(props) %}
+<!-- begin steps -->
+<div class="steps">
+	<div class="steps__body" data-scrollbar="default">
+		{% include 'partials/sections/' + props.file + '.html' %}
+	</div>
+	<div class="steps__footer">
+		<div class="section btns-group btns-group_center">
+			<button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button>
+			<button class="btn btn_lg" data-animation="ripple" data-slide-close="{{props.back}}">Cancel</button>
+		</div>
+	</div>
+</div>
+<!-- end steps -->
+{% endmacro %}

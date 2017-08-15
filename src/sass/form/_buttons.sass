@@ -1,3 +1,11 @@
+button,
+.btn
+	-webkit-tap-highlight-color: transparent
+	&:disabled,
+	&.is-disabled
+		opacity: 0.5
+		pointer-events: none
+
 .btn
 	display: inline-block
 	vertical-align: top
@@ -101,7 +109,6 @@
 .btn-action
 	display: inline-block
 	vertical-align: top
-	// width: 60px
 	width: 100%
 	height: 45px
 	color: $blue
@@ -111,10 +118,21 @@
 	i
 		font-size: inherit !important
 
-button,
-.btn
-	-webkit-tap-highlight-color: transparent
-	&:disabled,
-	&.is-disabled
-		opacity: 0.5
-		pointer-events: none
+.btn-back
+	height: 50px
+	color: inherit
+	background: none
+	+rreg
+	font-size: 0
+	+active
+		color: inherit
+	&__arrow,
+	&__content
+		display: inline-block
+		vertical-align: top
+		line-height: 50px
+	&__arrow
+		padding-right: 10px
+		font-size: 32px
+	&__content
+		font-size: 20px

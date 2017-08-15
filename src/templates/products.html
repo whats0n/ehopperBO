@@ -1,8 +1,8 @@
 ---
 title: Products
-mainClassList: 'main_inner'
 header: { 
 	title: 'Products',
+	titleClassList: 'main-header__title_left',
 	help: true,
 	menu: true
 }
@@ -12,266 +12,272 @@ menu: { active: 1 }
 
 {% block content %}
 
-<div class="l-container">
-	<div class="l-row js-resizable-width">
-		<div class="l-col l-col_sidebar js-resizable-width-left" data-popup-wrapper="products-filters">
-			<div class="sm-filters js-product-filters" data-popup="products-filters">
-				<div class="container sm-filters__container" data-popup-container="products-filters" data-scrollbar="default">
-					<div class="row">
-						<div class="col col_lg-100">
-							<h2 class="title-xxl color-title-main text-center">Filter your products</h2>
-						</div>
-						<div class="col col_lg-50">
-							{{form.select.call({
-								classList: 'select_full is-active',
-								selected: 1,
-								placeholder: 'Department',
-								options: [
-									'All',
-									'Department 1',
-									'Department 2',
-									'Department 3',
-									'Department 4'
-								]
-							})}}
-						</div>
-						<div class="col col_lg-50">
-							{{form.select.call({
-								classList: 'select_full is-active',
-								selected: 1,
-								placeholder: 'Category',
-								options: [
-									'All',
-									'Category 1',
-									'Category 2',
-									'Category 3',
-									'Category 4'
-								]
-							})}}
-						</div>
-						<div class="col col_lg-100">
-							{{form.multiSelect.call({
-								classList: 'select_full is-active',
-								selectedAll: 'checked',
-								placeholder: 'Inventory type',
-								selectAll: 'Select All',
-								options: [
-									'Inventory type 1',
-									'Inventory type 2',
-									'Inventory type 3',
-									'Inventory type 4'
-								]
-							})}}
-						</div>
-						<div class="col col_lg-100 text-center sm-filters__btns">
-							<button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button>
-							<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>
-						</div>
-						<div class="col col_lg-100 text-center">
-							<a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="products-sidebar" data-scrollbar="default">
-				<div class="container products-sidebar__header">
-					<div class="row">
-						<div class="col col_lg-25">
-							<button class="btn btn_block color-btn-lighter" data-animation="ripple">New</button>
-						</div>
-						<div class="col col_lg-25">
-							<button class="btn btn_block color-btn-lighter" data-animation="ripple">Export</button>
-						</div>
-						<div class="col col_lg-25">
-							<button class="btn btn_block color-btn-lighter" data-animation="ripple">Import</button>
-						</div>
-						<div class="col col_lg-25">
-							<button class="btn btn_block btn_red" data-animation="ripple">Delete</button>
-						</div>
-						<div class="col col_lg-100">
-							<div class="filter-group">
-								<button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
-									<i class="fa fa-filter"></i>
-								</button>
-								{{form.search.call({
-									placeholder: 'Search',
-									classList: 'filter-group__field',
-									inputClassList: 'simple-input_sm'
+<div class="l-container js-resizable-width products" data-popup-wrapper="products-filters">
+	<div class="l-row">
+		<div class="l-col l-col_sidebar js-resizable-width-left">
+			<div class="l-col__inner">
+				<div class="sm-filters js-product-filters" data-popup="products-filters">
+					<div class="container sm-filters__container" data-popup-container="products-filters" data-scrollbar="default">
+						<div class="row">
+							<div class="col col_lg-100">
+								<h2 class="title-xxl color-title-main text-center">Filter your products</h2>
+							</div>
+							<div class="col col_lg-50">
+								{{form.select.call({
+									classList: 'select_full is-active',
+									selected: 1,
+									placeholder: 'Department',
+									options: [
+										'All',
+										'Department 1',
+										'Department 2',
+										'Department 3',
+										'Department 4'
+									]
 								})}}
 							</div>
+							<div class="col col_lg-50">
+								{{form.select.call({
+									classList: 'select_full is-active',
+									selected: 1,
+									placeholder: 'Category',
+									options: [
+										'All',
+										'Category 1',
+										'Category 2',
+										'Category 3',
+										'Category 4'
+									]
+								})}}
+							</div>
+							<div class="col col_lg-100">
+								{{form.multiSelect.call({
+									classList: 'select_full is-active',
+									selectedAll: 'checked',
+									placeholder: 'Inventory type',
+									selectAll: 'Select All',
+									options: [
+										'Inventory type 1',
+										'Inventory type 2',
+										'Inventory type 3',
+										'Inventory type 4'
+									]
+								})}}
+							</div>
+							<div class="col col_lg-100 text-center sm-filters__btns">
+								<button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button>
+								<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>
+							</div>
+							<div class="col col_lg-100 text-center">
+								<a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a>
+							</div>
 						</div>
-						{# <div class="col col_lg-100 meta-info">
-							<p>Filters:</p>
-							<p>Department: All; Category: All; Inventory Type: All;</p>
-						</div> #}
 					</div>
 				</div>
-				{{table.call({
-					name: 'products',
-					classList: 'table-wrapper_header-lg',
-					bodyClassList: 'table-body_zebra',
-					bodyTDClassList: 'text-overflow',
-					range: 5,
-					columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
-					header: [ 
-						{ checkbox: true }, 
-						{ content: 'Product' }, 
-						{ content: 'Cost' }, 
-						{ content: 'Price' }, 
-						{ content: 'Qty' }, 
-						{ content: 'Active', classList: 'text-center' }, 
-						{ content: 'Edit', classList: 'text-center' } 
-					],
-					body: [
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="table-wrapper__meta">id: 5088</div><div class="table-wrapper__value">Burger NEW</div>' },
-							{ content: '$20' },
-							{ content: '$20.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="table-wrapper__meta">id: 5013</div><div class="table-wrapper__value">Cheeseburger</div>' },
-							{ content: '$6.50' },
-							{ content: '$6.50' },
-							{ content: '2' },
-							{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="table-wrapper__meta">id: 4992</div><div class="table-wrapper__value">Sprite</div>' },
-							{ content: '$8.00' },
-							{ content: '$8.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="table-wrapper__meta">id: 4994</div><div class="table-wrapper__value">Pepsi</div>' },
-							{ content: '$7.00' },
-							{ content: '$7.00' },
-							{ content: '2' },
-							{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="table-wrapper__meta">id: 5001</div><div class="table-wrapper__value">Hamburger</div>' },
-							{ content: '$12.00' },
-							{ content: '$12.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						]
-					]
-				})}}
-				
-				{# {% set table = {
-					columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
-					header: [ 
-						{ checkbox: true }, 
-						{ content: 'Product' }, 
-						{ content: 'Cost' }, 
-						{ content: 'Price' }, 
-						{ content: 'Quantity' }, 
-						{ content: 'Active', classList: 'text-center' }, 
-						{ content: 'Edit', classList: 'text-center' } 
-					],
-					body: [
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="is-muted">id: 5088</div><div>Burger NEW</div>' },
-							{ content: '$20' },
-							{ content: '$20.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="is-muted">id: 5013</div><div>Cheeseburger</div>' },
-							{ content: '$6.50' },
-							{ content: '$6.50' },
-							{ content: '2' },
-							{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="is-muted">id: 4992</div><div>Sprite</div>' },
-							{ content: '$8.00' },
-							{ content: '$8.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="is-muted">id: 4994</div><div>Pepsi</div>' },
-							{ content: '$7.00' },
-							{ content: '$7.00' },
-							{ content: '2' },
-							{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						],
-						[ 
-							{ checkbox: true },
-							{ content: '<div class="is-muted">id: 5001</div><div>Hamburger</div>' },
-							{ content: '$12.00' },
-							{ content: '$12.00' },
-							{ content: '1' },
-							{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-							{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-						]
-					]
-				} %}
-				<div class="container">
-					<div class="row">
-						<div class="col col_lg-100">
-							<div class="sm-table">
-								<div class="sm-table__header">
-									<div class="sm-table__tr">
-										{% for th in table.header %}
-											<div class="sm-table__th {{th.classList}}" data-column="{{table.columns[loop.index0]}}">
-												{% if th.checkbox %}
-													{{form.checkbox.call(th.options)}}
-												{% else %}
-													{{th.content | safe}}
-												{% endif %}
-											</div>
-										{% endfor %}
-									</div>
+				<div class="products-sidebar" data-scrollbar="default">
+					<div class="container products-sidebar__header">
+						<div class="row">
+							<div class="col col_lg-25">
+								<button class="btn btn_block color-btn-lighter" data-animation="ripple">New</button>
+							</div>
+							<div class="col col_lg-25">
+								<button class="btn btn_block color-btn-lighter" data-animation="ripple">Export</button>
+							</div>
+							<div class="col col_lg-25">
+								<button class="btn btn_block color-btn-lighter" data-animation="ripple">Import</button>
+							</div>
+							<div class="col col_lg-25">
+								<button class="btn btn_block btn_red" data-animation="ripple">Delete</button>
+							</div>
+							<div class="col col_lg-100">
+								<div class="filter-group">
+									<button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+										<i class="fa fa-filter"></i>
+									</button>
+									{{form.search.call({
+										placeholder: 'Search',
+										classList: 'filter-group__field',
+										inputClassList: 'simple-input_sm'
+									})}}
 								</div>
-								<div class="sm-table__body">
-									{% for tr in table.body %}
+							</div>
+							{# <div class="col col_lg-100 meta-info">
+								<p>Filters:</p>
+								<p>Department: All; Category: All; Inventory Type: All;</p>
+							</div> #}
+						</div>
+					</div>
+					{{table.call({
+						name: 'products',
+						classList: 'table-wrapper_header-lg',
+						bodyClassList: 'table-body_zebra',
+						bodyTDClassList: 'text-overflow',
+						range: 5,
+						columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
+						header: [ 
+							{ checkbox: true }, 
+							{ content: 'Product' }, 
+							{ content: 'Cost' }, 
+							{ content: 'Price' }, 
+							{ content: 'Qty' }, 
+							{ content: 'Active', classList: 'text-center' }, 
+							{ content: 'Edit', classList: 'text-center' } 
+						],
+						body: [
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5088</div><div class="table-wrapper__value">Burger NEW</div>' },
+								{ content: '$20' },
+								{ content: '$20.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5013</div><div class="table-wrapper__value">Cheeseburger</div>' },
+								{ content: '$6.50' },
+								{ content: '$6.50' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 4992</div><div class="table-wrapper__value">Sprite</div>' },
+								{ content: '$8.00' },
+								{ content: '$8.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 4994</div><div class="table-wrapper__value">Pepsi</div>' },
+								{ content: '$7.00' },
+								{ content: '$7.00' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5001</div><div class="table-wrapper__value">Hamburger</div>' },
+								{ content: '$12.00' },
+								{ content: '$12.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							]
+						]
+					})}}
+					
+					{# {% set table = {
+						columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
+						header: [ 
+							{ checkbox: true }, 
+							{ content: 'Product' }, 
+							{ content: 'Cost' }, 
+							{ content: 'Price' }, 
+							{ content: 'Quantity' }, 
+							{ content: 'Active', classList: 'text-center' }, 
+							{ content: 'Edit', classList: 'text-center' } 
+						],
+						body: [
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="is-muted">id: 5088</div><div>Burger NEW</div>' },
+								{ content: '$20' },
+								{ content: '$20.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="is-muted">id: 5013</div><div>Cheeseburger</div>' },
+								{ content: '$6.50' },
+								{ content: '$6.50' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="is-muted">id: 4992</div><div>Sprite</div>' },
+								{ content: '$8.00' },
+								{ content: '$8.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="is-muted">id: 4994</div><div>Pepsi</div>' },
+								{ content: '$7.00' },
+								{ content: '$7.00' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="is-muted">id: 5001</div><div>Hamburger</div>' },
+								{ content: '$12.00' },
+								{ content: '$12.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							]
+						]
+					} %}
+					<div class="container">
+						<div class="row">
+							<div class="col col_lg-100">
+								<div class="sm-table">
+									<div class="sm-table__header">
 										<div class="sm-table__tr">
-											{% for td in tr %}
-												<div class="sm-table__td {{td.classList}}" data-column="{{table.columns[loop.index0]}}">
-													{% if td.checkbox %}
-														{{form.checkbox.call(td.options)}}
+											{% for th in table.header %}
+												<div class="sm-table__th {{th.classList}}" data-column="{{table.columns[loop.index0]}}">
+													{% if th.checkbox %}
+														{{form.checkbox.call(th.options)}}
 													{% else %}
-														{{td.content | safe}}
+														{{th.content | safe}}
 													{% endif %}
 												</div>
 											{% endfor %}
 										</div>
-									{% endfor %}
+									</div>
+									<div class="sm-table__body">
+										{% for tr in table.body %}
+											<div class="sm-table__tr">
+												{% for td in tr %}
+													<div class="sm-table__td {{td.classList}}" data-column="{{table.columns[loop.index0]}}">
+														{% if td.checkbox %}
+															{{form.checkbox.call(td.options)}}
+														{% else %}
+															{{td.content | safe}}
+														{% endif %}
+													</div>
+												{% endfor %}
+											</div>
+										{% endfor %}
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</div> #}
+					</div> #}
+				</div>
+				<div class="products-overlay"></div>
 			</div>
 		</div>
 		<div class="l-col l-col_main js-resizable-width-right">
 			<div class="l-col__inner">
-				<div class="splitter splitter_left js-resizable-width-splitter"><i class="splitter__lines"></i></div>
+				<div class="splitter splitter_left l-col__splitter js-resizable-width-splitter"><i class="splitter__lines"></i></div>
 				<div class="products-main">
+					<div class="products-main__header color-header">
+						<h2 class="title-xl products-main__title">Product Edit</h2>
+					</div>
 					{{tabs.call({
 						classList: 'tabs_fullscreen',
 						collection: 'products',
@@ -300,13 +306,39 @@ menu: { active: 1 }
 							}
 						]
 					})}}
-					<div class="slide" data-slide="create-category" data-scrollbar="default">
-						{% include 'partials/sections/_create-category.html' %}
-					</div>
-					<div class="slide" data-slide="create-department" data-scrollbar="default">
-						{% include 'partials/sections/_create-department.html' %}
-					</div>
+
+					{% set slides = [
+						{
+							file: '_create-category',
+							name: 'create-category',
+							title: 'Create New Category',
+							backText: 'Products Edit'
+						},
+						{
+							file: '_create-department',
+							name: 'create-department',
+							title: 'Create New Category',
+							backText: 'Products Edit'
+						}
+					] %}
+					
+					{% for slide in slides %}
+						<div class="slide" data-slide="{{slide.name}}">
+							<div class="slide__header color-header">
+								<button class="btn-back slide__back" data-slide-close="{{slide.name}}">
+									<i class="fa fa-angle-left btn-back__arrow"></i>
+									<span class="btn-back__content">{{slide.backText}}</span>
+								</button>
+								<h2 class="title-xl slide__title">{{slide.title}}</h2>
+							</div>
+							{{steps.call({
+								file: slide.file,
+								back: slide.name
+							})}}
+						</div>
+					{% endfor %}
 				</div>
+				<div class="products-overlay"></div>
 			</div>
 		</div>
 	</div>

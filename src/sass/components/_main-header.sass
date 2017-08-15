@@ -59,42 +59,6 @@
 			margin-top: 10px
 			max-width: 200px
 			max-height: 48px
-	&__nav-btn
-		position: absolute
-		top: 0
-		left: 0
-		width: 60px
-		height: 100%
-		background: #cae9f4
-		transition: background 0.175s ease
-		+active
-			background: darken(#cae9f4, 10%)
-			i 
-				background: $white
-				&:before,
-				&:after
-					border-color: $white
-		i 
-			position: absolute
-			top: 50%
-			left: 50%
-			margin: -1px 0 0 -13px
-			width: 24px
-			height: 3px
-			background: $blue
-			transition: background 0.175s ease
-			&:before,
-			&:after
-				content: ''
-				position: absolute
-				left: 0
-				right: 0
-				border-top: 3px solid $blue
-				transition: border-color 0.175s ease
-			&:before
-				top: -7px
-			&:after
-				bottom: -7px
 	&__back
 		position: absolute
 		z-index: 10
@@ -126,24 +90,6 @@
 		span
 			font-size: 16px
 			line-height: 20px
-	&__help
-		position: absolute
-		top: 5px
-		right: 5px
-		border-radius: 50%
-		width: 40px
-		height: 40px
-		color: inherit
-		background: none
-		+vertical
-		transition: background 0.175s ease
-		+active
-			color: inherit
-			background: rgba($black, 0.1)
-		i
-			display: inline-block
-			vertical-align: middle
-			font-size: 24px
 	&__title
 		padding-top: 13px
 		padding-bottom: 13px
@@ -151,4 +97,68 @@
 		font-size: 20px
 		line-height: 1.2
 		text-align: center
+		&_left
+			padding-left: 100px
+			text-align: left
 		
+.nav-btn
+	position: absolute
+	z-index: 102
+	top: 0
+	left: 0
+	// width: 60px
+	width: 80px
+	height: 50px
+	background: #cae9f4
+	transition: background 0.175s ease
+	+active
+		background: darken(#cae9f4, 10%)
+		i 
+			background: $white
+			&:before,
+			&:after
+				border-color: $white
+	i 
+		position: absolute
+		top: 50%
+		left: 50%
+		margin: -1px 0 0 -13px
+		width: 28px
+		height: 4px
+		// width: 24px
+		// height: 3px
+		background: $blue
+		transition: background 0.175s ease
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			left: 0
+			right: 0
+			// border-top: 3px solid $blue
+			border-top: 4px solid $blue
+			transition: border-color 0.175s ease
+		&:before
+			top: -8px
+		&:after
+			bottom: -8px
+
+.help-btn
+	position: absolute
+	z-index: 102
+	top: 5px
+	right: 5px
+	border-radius: 50%
+	width: 40px
+	height: 40px
+	color: $white
+	background: none
+	+vertical
+	transition: background 0.175s ease
+	+active
+		color: $white
+		background: rgba($black, 0.1)
+	i
+		display: inline-block
+		vertical-align: middle
+		font-size: 24px

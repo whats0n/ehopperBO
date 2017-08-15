@@ -41,6 +41,9 @@ body,
 .l-row,
 .l-col
 	height: 100%
+.l-container
+	position: relative
+	z-index: 101
 .l-row
 	position: relative
 	+clr
@@ -48,19 +51,24 @@ body,
 	position: absolute
 	top: 0
 	bottom: 0
-	overflow: auto
-	background: $alabaster
 	&_sidebar
+		z-index: 5
 		left: 0
 		width: 41%
 		max-width: 50%
 		min-width: 400px
+		.l-col__inner
+			padding-top: 50px
 	&_main
 		z-index: 10
 		right: 0
 		width: 59%
 		max-width: 100%
 		min-width: 50%
+		.l-col__inner
+			padding-left: 15px
 	&__inner
-		padding-left: 15px
+		position: relative
 		height: 100%
+	.l-col__splitter
+		top: 50px

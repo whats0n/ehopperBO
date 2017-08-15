@@ -1,7 +1,15 @@
+.products
+	&.is-open
+		z-index: 105
+		.products-overlay
+			opacity: 1
+			visibility: visible
+
 .products-sidebar
 	position: relative
 	padding-top: 140px
 	height: 100%
+	background: $alabaster
 	&__header
 		position: absolute
 		top: 0
@@ -11,4 +19,31 @@
 .products-main
 	position: relative
 	overflow: hidden
+	padding-top: 50px
 	height: 100%
+	background: $alabaster
+	&__header
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 50px
+	&__title
+		padding-top: 13px
+		padding-bottom: 13px
+		margin: 0
+		font-size: 20px
+		line-height: 1.2
+		text-align: center
+
+.products-overlay
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 100
+	opacity: 0
+	visibility: hidden
+	background: rgba(#434c55, 0.8)
+	transition: opacity 0.175s ease-in-out, visibility 0.175s ease-in-out
