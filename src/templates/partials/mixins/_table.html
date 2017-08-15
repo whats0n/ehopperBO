@@ -30,6 +30,10 @@
 								{% if td.checkbox %}
 									{{form.checkbox.call(td.options)}}
 								{% endif %}
+
+								{% if td.input %}
+									<input type="{{td.input.type or 'text'}}" class="simple-input {{td.input.classList}}" {{td.input.attrs | safe}}>
+								{% endif %}
 							</div>
 						{% endfor %}
 					</div>

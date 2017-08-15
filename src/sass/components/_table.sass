@@ -9,7 +9,11 @@
 			&__header 
 				height: 51px
 	&_auto-height
+		padding-top: 0
 		height: auto
+		.table-wrapper
+			&__header
+				position: relative
 	&_adaptive
 		+media('width', 'md')
 			padding-top: 0
@@ -79,17 +83,19 @@
 		top: 0
 		left: 0
 		right: 0
+		border-bottom: 1px solid $silverGray
 		height: 37px
-		&:before
-			content: ''
-			position: absolute
-			top: 0
-			left: 100%
-			bottom: 0
-			border-bottom: 1px solid #aaa
-			width: 30px
-			background: #eee
-			margin-left: -10px
+		background: $lightGray
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 100%
+		// 	bottom: 0
+		// 	border-bottom: 1px solid #aaa
+		// 	width: 30px
+		// 	background: #eee
+		// 	margin-left: -10px
 	&__body
 		overflow: auto
 		border-bottom: 1px solid $lightGray
@@ -159,6 +165,12 @@
 			width: 13%
 			+media('width', 'lg')
 				width: 9%
+		//products ordering
+		&[data-column*="ordering-name"]
+			width: 18%
+		&[data-column*="ordering-default"]
+			&:last-child
+				padding-right: 20px
 	&__th
 		+rmed
 		line-height: 1.2
@@ -166,7 +178,6 @@
 		word-wrap: break-word
 
 .table-header
-	border-bottom: 1px solid $silverGray
 	height: 37px
 	background: $lightGray
 

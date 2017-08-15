@@ -68,8 +68,6 @@ export default function() {
 				const dropdownHeight = $dropdown.outerHeight();
 				const dropdownOffsetBottom = dropdownOffsetTop + dropdownHeight;
 				
-				console.log(parentOffsetBottom, dropdownOffsetBottom);
-
 				if (parentOffsetBottom <= dropdownOffsetBottom) {
 					current.addClass('select_top');
 				}

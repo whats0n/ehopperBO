@@ -1,1 +1,99 @@
-ORDERING
+{% import "partials/form/_build.html" as form %}
+{% import "partials/mixins/_table.html" as table %}
+
+<div class="ordering">
+	<div class="ordering__header">
+		<div class="container">
+			<div class="row">
+				<div class="col col_lg-50 col_md-50">
+					{{form.multiSelect.call({
+						classList: 'select_full is-active',
+						placeholder: 'Select Store(s)',
+						selectedAll: 'checked',
+						selectAll: 'Select All',
+						options: [
+							'Store 1',
+							'Store 2',
+							'Store 3',
+							'Store 5',
+							'Store 6',
+							'Store 7',
+							'Store 8',
+							'Store 9',
+							'Store 10',
+							'Store 11'
+						]
+					})}}
+				</div>
+				<div class="col col_lg-50 col_md-50">
+					{{form.inputBox.call({
+						classList: 'is-active',
+						placeholder: 'Recommended Quantity',
+						inputAttrs: 'value="0"'
+					})}}
+				</div>
+				<div class="col col_lg-50 col_md-50">
+					{{form.inputBox.call({
+						classList: 'is-active',
+						placeholder: 'Minimum Quantity',
+						inputAttrs: 'value="0"'
+					})}}
+				</div>
+				<div class="col col_lg-50 col_md-50">
+					{{form.inputBox.call({
+						classList: 'is-active',
+						placeholder: 'Total Quantity',
+						inputAttrs: 'value="0" disabled'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="ordering__body">
+		{{table.call({
+			name: 'products',
+			classList: 'table-wrapper_auto-height',
+			bodyTDClassList: 'text-overflow',
+			range: 5,
+			columns: [ 'ordering-name', 'ordering-default', 'ordering-default', 'ordering-default' ],
+			header: [ 
+				{ content: 'Store' }, 
+				{ content: 'Recommended Quantity' }, 
+				{ content: 'Minimum Quantity' }, 
+				{ content: 'Quantity' }
+			],
+			body: [
+				[ 
+					{ content: 'New CSP Store' },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center', attrs: 'disabled' } }
+				],
+				[ 
+					{ content: 'New Store' },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center', attrs: 'disabled' } }
+				],
+				[ 
+					{ content: 'Vlad store' },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center', attrs: 'disabled' } }
+				],
+				[ 
+					{ content: 'West Street Cafe' },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center', attrs: 'disabled' } }
+				],
+				[ 
+					{ content: 'WestGuestCafe' },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center' } },
+					{ input: { placeholder: 'Input Quantity', classList: 'simple-input_sm text-center', attrs: 'disabled' } }
+				]
+			]
+		})}}
+	</div>
+</div>
