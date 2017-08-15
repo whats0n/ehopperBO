@@ -1,0 +1,61 @@
+.vendors
+	padding-top: 100px
+	height: 100%
+	&__header
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+	&__body
+		height: 100%
+
+.vendors-items
+	position: relative
+	padding-top: 60px
+	border-top: 1px solid $lightGray
+	height: 100%
+	&__header
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		padding: 0 20px
+		.vendors-items__col
+			+rmed
+			font-size: 16px
+			line-height: 40px
+	&__body
+		overflow: auto
+		padding: 10px 20px
+		border-top: 1px solid $lightGray
+		height: 100%
+	&__row
+		position: relative
+		padding-right: 60px
+		margin: 0 -10px
+		font-size: 0
+		.vendors-items__col
+			&[data-column*="radio"]
+				text-align: center
+	&__col
+		display: inline-block
+		vertical-align: middle
+		padding: 10px
+		&[data-column*="name"],
+		&[data-column*="sku"],
+		&[data-column*="cost"]
+			width: 27%
+		&[data-column*="radio"]
+			width: 19%
+	&__delete
+		position: absolute
+		top: 10px
+		right: 0
+		width: 60px
+		height: 60px
+		color: $red
+		background: none
+		font-size: 28px
+		line-height: 60px
+		text-align: center
+		

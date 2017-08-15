@@ -4432,6 +4432,99 @@ button:disabled, button.is-disabled,
   font-size: 18px;
 }
 
+.radio {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  min-width: 30px;
+  min-height: 30px;
+  font-size: 0;
+  line-height: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio:active .radio__icon, .radio:active input:checked + .radio__icon {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.no-touch .radio:active .radio__icon, .no-touch .radio:active input:checked + .radio__icon {
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.radio input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio input:checked + .radio__icon {
+  border-color: #2e99db;
+  box-shadow: none;
+}
+
+.radio input:checked + .radio__icon:before {
+  opacity: 1;
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.radio input:disabled + .radio__icon,
+.radio input:disabled ~ .radio__content {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.radio input:disabled + .radio__icon {
+  background: #eee;
+  box-shadow: inset 0 0 0 1px #eee !important;
+}
+
+.radio__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #eee;
+  background: #fff;
+  transition: background 0.05s ease, box-shadow 0.05s ease, border-color 0.05s ease;
+}
+
+.radio__icon:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  opacity: 0;
+  background: #2e99db;
+  -ms-transform: scale(0);
+  transform: scale(0);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.radio__content {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 36px;
+  font-size: 14px;
+  line-height: normal;
+}
+
+.radio_lg .radio__content {
+  font-size: 18px;
+}
+
 .error-message {
   padding: 5px 0 4px;
   opacity: 0;
@@ -4463,6 +4556,11 @@ button:disabled, button.is-disabled,
 
 .simple-input:focus {
   border-color: #2e99db;
+}
+
+.simple-input:disabled {
+  background: #eee;
+  cursor: not-allowed;
 }
 
 .simple-input_sm {
@@ -7298,6 +7396,18 @@ button:disabled, button.is-disabled,
   bottom: 0;
 }
 
+.sm-group {
+  position: relative;
+  padding-right: 180px;
+}
+
+.sm-group__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px;
+}
+
 .modal-terms {
   position: fixed;
   z-index: 4000;
@@ -7781,6 +7891,88 @@ button:disabled, button.is-disabled,
   visibility: hidden;
   background: rgba(67, 76, 85, 0.8);
   transition: opacity 0.175s ease-in-out, visibility 0.175s ease-in-out;
+}
+
+.vendors {
+  padding-top: 100px;
+  height: 100%;
+}
+
+.vendors__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.vendors__body {
+  height: 100%;
+}
+
+.vendors-items {
+  position: relative;
+  padding-top: 60px;
+  border-top: 1px solid #eee;
+  height: 100%;
+}
+
+.vendors-items__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+}
+
+.vendors-items__header .vendors-items__col {
+  font-family: 'Roboto Medium', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+.vendors-items__body {
+  overflow: auto;
+  padding: 10px 20px;
+  border-top: 1px solid #eee;
+  height: 100%;
+}
+
+.vendors-items__row {
+  position: relative;
+  padding-right: 60px;
+  margin: 0 -10px;
+  font-size: 0;
+}
+
+.vendors-items__row .vendors-items__col[data-column*="radio"] {
+  text-align: center;
+}
+
+.vendors-items__col {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.vendors-items__col[data-column*="name"], .vendors-items__col[data-column*="sku"], .vendors-items__col[data-column*="cost"] {
+  width: 27%;
+}
+
+.vendors-items__col[data-column*="radio"] {
+  width: 19%;
+}
+
+.vendors-items__delete {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  color: #ec4a41;
+  background: none;
+  font-size: 28px;
+  line-height: 60px;
+  text-align: center;
 }
 
 .js-sortable-handle {

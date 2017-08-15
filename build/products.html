@@ -965,38 +965,185 @@
                         </div>
                         <div class="tabs__container " data-scrollbar="default" data-tab-container="products-modifiers" data-tab-collection="products"> MODIFIERS </div>
                         <div class="tabs__container " data-scrollbar="default" data-tab-container="products-vendors" data-tab-collection="products">
-                          <div class="container">
-                            <div class="row"> VENDORS
-                              <div class="col col_field col_lg-100">
-                                <!-- begin select -->
-                                <div class="select-box ">
-                                  <div class="select js-select select_full">
-                                    <div class="select__field js-select-field">
-                                      <div class="select__placeholder">UOM</div>
-                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
-                                    <div class="select__body js-select-dropdown">
-                                      <ul class="select__list" data-scrollbar="default">
-                                        <li class="select__item js-select-item">Item (item)</li>
-                                        <li class="select__item js-select-item">Inch (in)</li>
-                                        <li class="select__item js-select-item">Foot (ft)</li>
-                                        <li class="select__item js-select-item">Yard (yd)</li>
-                                        <li class="select__item js-select-item">Mile (mi)</li>
-                                        <li class="select__item js-select-item">Ounce (fl oz)</li>
-                                        <li class="select__item js-select-item">Pint (pt)</li>
-                                        <li class="select__item js-select-item">Cup (cp)</li>
-                                        <li class="select__item js-select-item">Gallon (gal)</li>
-                                        <li class="select__item js-select-item">Liter (l)</li>
-                                        <li class="select__item js-select-item">Ounce (oz)</li>
-                                        <li class="select__item js-select-item">Pound (lb)</li>
-                                        <li class="select__item js-select-item">Gram (g)</li>
-                                        <li class="select__item js-select-item">Kilogram (kg)</li>
-                                        <li class="select__item js-select-item">Hour (hrs)</li>
-                                        <li class="select__item js-select-item">Minute (min)</li>
-                                      </ul>
-                                    </div>
+                          <div class="vendors">
+                            <div class="vendors__header">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col col_lg-100">
+                                    <div class="sm-group">
+                                      <!-- begin multi-select -->
+                                      <div class="select-box ">
+                                        <div class="select js-multi-select select_full is-active" data-all-checked="All">
+                                          <div class="select__field js-multi-select-field">
+                                            <div class="select__placeholder">Search Vendors</div>
+                                            <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                          <div class="select__body js-multi-select-dropdown">
+                                            <ul class="select__list" data-scrollbar="default">
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Vendor 1" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Vendor 1</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Vendor 2" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Vendor 2</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Vendor 3" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Vendor 3</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox ">
+	<input type="checkbox" data-value="Vendor 4" >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Vendor 4</span>
+	
+</label> </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- end multi-select --><button class="btn btn_lg color-btn-main sm-group__btn">New Vendor</button> </div>
                                   </div>
                                 </div>
-                                <!-- end select -->
+                              </div>
+                            </div>
+                            <div class="vendors__body">
+                              <div class="vendors-items">
+                                <div class="vendors-items__header">
+                                  <div class="vendors-items__row">
+                                    <div class="vendors-items__col" data-column="name">Vendor</div>
+                                    <div class="vendors-items__col" data-column="sku">SKU</div>
+                                    <div class="vendors-items__col" data-column="cost">Cost</div>
+                                    <div class="vendors-items__col" data-column="radio">Primary</div>
+                                  </div>
+                                </div>
+                                <div class="vendors-items__body" data-scrollbar="default">
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="QAVENDOR" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" checked>
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="98" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="Vendor for Taras Testing" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="14651" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="sandora" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="SuperBurger" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="asd" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="dawdawawd" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="asddsa" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>

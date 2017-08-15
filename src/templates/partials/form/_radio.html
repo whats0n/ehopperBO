@@ -1,0 +1,9 @@
+{% macro call(props) %}
+<label class="radio {{props.classList}}">
+	<input type="radio" {% if props.value %}data-value="{{props.value}}"{% endif %} name="{{props.name}}" {{props.attrs | safe}}>
+	<span class="radio__icon"></span>
+	{% if props.content %}
+		<span class="radio__content">{{props.content}}</span>
+	{% endif %}
+</label>
+{% endmacro %}

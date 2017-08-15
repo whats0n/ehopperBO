@@ -1,30 +1,79 @@
 {% import "partials/form/_build.html" as form %}
-<div class="container">
-	<div class="row">
-		VENDORS
-		<div class="col col_field col_lg-100">
-			{{form.select.call({
-				classList: 'select_full',
-				placeholder: 'UOM',
-				options: [
-					'Item (item)',
-					'Inch (in)',
-					'Foot (ft)',
-					'Yard (yd)',
-					'Mile (mi)',
-					'Ounce (fl oz)',
-					'Pint (pt)',
-					'Cup (cp)',
-					'Gallon (gal)',
-					'Liter (l)',
-					'Ounce (oz)',
-					'Pound (lb)',
-					'Gram (g)',
-					'Kilogram (kg)',
-					'Hour (hrs)',
-					'Minute (min)'
-				]
-			})}}
+<div class="vendors">
+	<div class="vendors__header">
+		<div class="container">
+			<div class="row">
+				<div class="col col_lg-100">
+					<div class="sm-group">
+						{{form.multiSelect.call({
+							classList: 'select_full is-active',
+							placeholder: 'Search Vendors',
+							options: [
+								'Vendor 1',
+								'Vendor 2',
+								'Vendor 3',
+								'Vendor 4'
+							]
+						})}}
+						<button class="btn btn_lg color-btn-main sm-group__btn">New Vendor</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="vendors__body">
+		{% set vendors = {
+			name: 'product-vendor',
+			columns: [ 'name', 'sku', 'cost', 'radio' ],
+			header: [ 'Vendor', 'SKU', 'Cost', 'Primary' ],
+			body: [
+				{ vendor: 'QAVENDOR' },
+				{ vendor: '98' },
+				{ vendor: 'Vendor for Taras Testing' },
+				{ vendor: '14651' },
+				{ vendor: 'sandora' },
+				{ vendor: 'SuperBurger' },
+				{ vendor: 'asd' },
+				{ vendor: 'dawdawawd' },
+				{ vendor: 'asddsa' }
+			]
+		} %}
+		<div class="vendors-items">
+			<div class="vendors-items__header">
+				<div class="vendors-items__row">
+					{% for item in vendors.header %}
+						<div class="vendors-items__col" data-column="{{vendors.columns[loop.index0]}}">{{item | safe}}</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="vendors-items__body" data-scrollbar="default">
+				{% for row in vendors.body %}
+					<div class="vendors-items__row">
+						<button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+						<div class="vendors-items__col" data-column="{{vendors.columns[0]}}">
+							<input type="text" class="simple-input" value="{{row.vendor}}" disabled>
+						</div>
+						<div class="vendors-items__col" data-column="{{vendors.columns[1]}}">
+							<input type="text" class="simple-input">
+						</div>
+						<div class="vendors-items__col" data-column="{{vendors.columns[2]}}">
+							<input type="text" class="simple-input" value="0.00">
+						</div>
+						<div class="vendors-items__col" data-column="{{vendors.columns[3]}}">
+							{% if loop.index0 == 0 %}
+								{{form.radio.call({
+									name: vendors.name,
+									attrs: 'checked'
+								})}}
+							{% else %}
+								{{form.radio.call({ name: vendors.name })}}
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</div>
 </div>
