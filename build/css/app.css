@@ -4016,6 +4016,14 @@ body,
   width: 100%;
 }
 
+.pull-lg-left {
+  float: left;
+}
+
+.pull-lg-right {
+  float: right;
+}
+
 [data-animation*="ripple"] {
   position: relative;
   overflow: hidden;
@@ -6946,7 +6954,7 @@ button:disabled, button.is-disabled,
 }
 
 .definition-list__description {
-  padding: 5px 0 10px 40px;
+  padding: 5px 0 10px 10px;
   font-family: 'Roboto Light', Arial, sans-serif;
 }
 
@@ -7459,6 +7467,34 @@ button:disabled, button.is-disabled,
   height: 100%;
 }
 
+.modal_help.is-open .modal__container {
+  transform: translate3d(0, 0, 0);
+}
+
+.modal_help .modal__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  width: 300px;
+  transform: translate3d(100%, 0, 0);
+}
+
+.modal_help .modal-content_help {
+  padding-top: 50px;
+  border-radius: unset;
+  height: 100%;
+}
+
+.modal_help .modal-content__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-radius: unset;
+}
+
 .modal__overlay {
   position: fixed;
   z-index: 1;
@@ -7503,8 +7539,9 @@ button:disabled, button.is-disabled,
 
 .modal-content__header {
   position: relative;
-  padding: 10px 20px;
+  padding: 11px 20px;
   border-radius: 5px 5px 0 0;
+  min-height: 50px;
   color: #fff;
   background: #3949AB;
 }
@@ -7558,6 +7595,50 @@ button:disabled, button.is-disabled,
 
 .no-touch .modal-content__close:active {
   color: inherit;
+}
+
+.modal-content__help-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.help-close {
+  display: block;
+  padding: 0 20px;
+  width: 100%;
+  height: 50px;
+  color: #fff;
+  background: none;
+  font-size: 0;
+  text-align: left;
+}
+
+.help-close:active {
+  color: #fff;
+}
+
+.no-touch .help-close:active {
+  color: #fff;
+}
+
+.help-close__icon, .help-close__arrow {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 50px;
+}
+
+.help-close__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.help-close__arrow {
+  font-size: 20px;
 }
 
 .dashboard__filters {
@@ -7760,6 +7841,312 @@ hr {
 }
 
 @media only screen and (max-width: 1200px){
+  .col_md-1{
+    width: 1%;
+  }
+  .col_md-2{
+    width: 2%;
+  }
+  .col_md-3{
+    width: 3%;
+  }
+  .col_md-4{
+    width: 4%;
+  }
+  .col_md-5{
+    width: 5%;
+  }
+  .col_md-6{
+    width: 6%;
+  }
+  .col_md-7{
+    width: 7%;
+  }
+  .col_md-8{
+    width: 8%;
+  }
+  .col_md-9{
+    width: 9%;
+  }
+  .col_md-10{
+    width: 10%;
+  }
+  .col_md-11{
+    width: 11%;
+  }
+  .col_md-12{
+    width: 12%;
+  }
+  .col_md-13{
+    width: 13%;
+  }
+  .col_md-14{
+    width: 14%;
+  }
+  .col_md-15{
+    width: 15%;
+  }
+  .col_md-16{
+    width: 16%;
+  }
+  .col_md-17{
+    width: 17%;
+  }
+  .col_md-18{
+    width: 18%;
+  }
+  .col_md-19{
+    width: 19%;
+  }
+  .col_md-20{
+    width: 20%;
+  }
+  .col_md-21{
+    width: 21%;
+  }
+  .col_md-22{
+    width: 22%;
+  }
+  .col_md-23{
+    width: 23%;
+  }
+  .col_md-24{
+    width: 24%;
+  }
+  .col_md-25{
+    width: 25%;
+  }
+  .col_md-26{
+    width: 26%;
+  }
+  .col_md-27{
+    width: 27%;
+  }
+  .col_md-28{
+    width: 28%;
+  }
+  .col_md-29{
+    width: 29%;
+  }
+  .col_md-30{
+    width: 30%;
+  }
+  .col_md-31{
+    width: 31%;
+  }
+  .col_md-32{
+    width: 32%;
+  }
+  .col_md-33{
+    width: 33%;
+  }
+  .col_md-34{
+    width: 34%;
+  }
+  .col_md-35{
+    width: 35%;
+  }
+  .col_md-36{
+    width: 36%;
+  }
+  .col_md-37{
+    width: 37%;
+  }
+  .col_md-38{
+    width: 38%;
+  }
+  .col_md-39{
+    width: 39%;
+  }
+  .col_md-40{
+    width: 40%;
+  }
+  .col_md-41{
+    width: 41%;
+  }
+  .col_md-42{
+    width: 42%;
+  }
+  .col_md-43{
+    width: 43%;
+  }
+  .col_md-44{
+    width: 44%;
+  }
+  .col_md-45{
+    width: 45%;
+  }
+  .col_md-46{
+    width: 46%;
+  }
+  .col_md-47{
+    width: 47%;
+  }
+  .col_md-48{
+    width: 48%;
+  }
+  .col_md-49{
+    width: 49%;
+  }
+  .col_md-50{
+    width: 50%;
+  }
+  .col_md-51{
+    width: 51%;
+  }
+  .col_md-52{
+    width: 52%;
+  }
+  .col_md-53{
+    width: 53%;
+  }
+  .col_md-54{
+    width: 54%;
+  }
+  .col_md-55{
+    width: 55%;
+  }
+  .col_md-56{
+    width: 56%;
+  }
+  .col_md-57{
+    width: 57%;
+  }
+  .col_md-58{
+    width: 58%;
+  }
+  .col_md-59{
+    width: 59%;
+  }
+  .col_md-60{
+    width: 60%;
+  }
+  .col_md-61{
+    width: 61%;
+  }
+  .col_md-62{
+    width: 62%;
+  }
+  .col_md-63{
+    width: 63%;
+  }
+  .col_md-64{
+    width: 64%;
+  }
+  .col_md-65{
+    width: 65%;
+  }
+  .col_md-66{
+    width: 66%;
+  }
+  .col_md-67{
+    width: 67%;
+  }
+  .col_md-68{
+    width: 68%;
+  }
+  .col_md-69{
+    width: 69%;
+  }
+  .col_md-70{
+    width: 70%;
+  }
+  .col_md-71{
+    width: 71%;
+  }
+  .col_md-72{
+    width: 72%;
+  }
+  .col_md-73{
+    width: 73%;
+  }
+  .col_md-74{
+    width: 74%;
+  }
+  .col_md-75{
+    width: 75%;
+  }
+  .col_md-76{
+    width: 76%;
+  }
+  .col_md-77{
+    width: 77%;
+  }
+  .col_md-78{
+    width: 78%;
+  }
+  .col_md-79{
+    width: 79%;
+  }
+  .col_md-80{
+    width: 80%;
+  }
+  .col_md-81{
+    width: 81%;
+  }
+  .col_md-82{
+    width: 82%;
+  }
+  .col_md-83{
+    width: 83%;
+  }
+  .col_md-84{
+    width: 84%;
+  }
+  .col_md-85{
+    width: 85%;
+  }
+  .col_md-86{
+    width: 86%;
+  }
+  .col_md-87{
+    width: 87%;
+  }
+  .col_md-88{
+    width: 88%;
+  }
+  .col_md-89{
+    width: 89%;
+  }
+  .col_md-90{
+    width: 90%;
+  }
+  .col_md-91{
+    width: 91%;
+  }
+  .col_md-92{
+    width: 92%;
+  }
+  .col_md-93{
+    width: 93%;
+  }
+  .col_md-94{
+    width: 94%;
+  }
+  .col_md-95{
+    width: 95%;
+  }
+  .col_md-96{
+    width: 96%;
+  }
+  .col_md-97{
+    width: 97%;
+  }
+  .col_md-98{
+    width: 98%;
+  }
+  .col_md-99{
+    width: 99%;
+  }
+  .col_md-100{
+    width: 100%;
+  }
+  .pull-lg-left{
+    float: none;
+  }
+  .pull-lg-right{
+    float: none;
+  }
   .filters__row, .filters__btns{
     vertical-align: top;
   }
@@ -7802,6 +8189,10 @@ hr {
   }
   .sm-table__th[data-column*="active"], .sm-table__td[data-column*="active"]{
     width: 50px;
+  }
+  .tabs__btn{
+    padding: 0 15px;
+    font-size: 16px;
   }
   .orders{
     height: calc(100% - 176px);

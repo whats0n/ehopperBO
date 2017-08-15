@@ -27,7 +27,29 @@
 		.modal__container
 			padding: 20px
 			height: 100%
-
+	&_help
+		&.is-open
+			.modal__container
+				+gpu
+		.modal__container
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			padding: 0
+			width: 300px
+			transform: translate3d(100%,0,0)
+		.modal-content
+			&_help
+				padding-top: 50px
+				border-radius: unset
+				height: 100%
+			&__header
+				position: absolute
+				top: 0
+				left: 0
+				right: 0
+				border-radius: unset
 
 	//components
 	&__overlay

@@ -21,3 +21,18 @@
 		@for $i from 1 through 100
 			&-#{$i}
 				width: $i + %
+	&_md
+		@for $i from 1 through 100
+			&-#{$i}
+				+media('width', 'lg')
+					width: $i + %
+
+//helpers
+.pull-lg-left
+	float: left
+	+media('width', 'lg')
+		float: none
+.pull-lg-right
+	float: right
+	+media('width', 'lg')
+		float: none

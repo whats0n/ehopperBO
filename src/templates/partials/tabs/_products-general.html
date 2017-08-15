@@ -2,32 +2,48 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col col_field col_lg-100">
-			{% include 'partials/components/_langs.html' %}
+		<div class="col col_lg-66 col_md-100">
+			<div class="row">
+				<div class="col col_field col_lg-100">
+					{% include 'partials/components/_langs.html' %}
+				</div>
+				<div class="col col_field col_lg-100">
+					<div class="fake-buttons">
+						<span class="label label_block">Inventory type*</span>
+						<div class="fake-buttons__row">
+							{{form.fakeButton.call({
+								name: 'product-inventory-type',
+								content: 'Inventory'
+							})}}
+							{{form.fakeButton.call({
+								name: 'product-inventory-type',
+								content: 'Non-inventory'
+							})}}
+							{{form.fakeButton.call({
+								name: 'product-inventory-type',
+								content: 'Serialized'
+							})}}
+							{{form.fakeButton.call({
+								name: 'product-inventory-type',
+								content: 'With Ingredients'
+							})}}
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
-		<div class="col col_field col_lg-100">
-			<div class="fake-buttons">
-				<span class="label label_block">Inventory type*</span>
-				<div class="fake-buttons__row">
-					{{form.fakeButton.call({
-						name: 'product-inventory-type',
-						content: 'Inventory'
-					})}}
-					{{form.fakeButton.call({
-						name: 'product-inventory-type',
-						content: 'Non-inventory'
-					})}}
-					{{form.fakeButton.call({
-						name: 'product-inventory-type',
-						content: 'Serialized'
-					})}}
-					{{form.fakeButton.call({
-						name: 'product-inventory-type',
-						content: 'With Ingredients'
+		<div class="col col_lg-34 col_md-100">
+			<div class="row">
+				<div class="col col_field col_lg-100">
+					{{form.backgroundControl.call({
+						placeholder: 'Product Display',
+						classList: 'pull-lg-right'
 					})}}
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="row">
 		<div class="col col_field col_lg-50">
 			{{form.inputBox.call({
 				placeholder: 'Product Name*',
@@ -90,11 +106,6 @@
 		<div class="col col_field col_lg-100">
 			{{form.inputBox.call({
 				placeholder: 'UPC'
-			})}}
-		</div>
-		<div class="col col_field col_lg-100">
-			{{form.backgroundControl.call({
-				placeholder: 'Product Display'
 			})}}
 		</div>
 		<div class="col col_field col_lg-100">

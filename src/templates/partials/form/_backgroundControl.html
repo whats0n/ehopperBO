@@ -50,7 +50,7 @@
 	'rgb(117, 151, 143)'
 ] %}
 <!-- begin background-control -->
-<div class="background-control js-background-control">
+<div class="background-control js-background-control {{props.classList}}">
 	<div class="background-control__field js-background-control-field">
 		<div class="background-control__placeholder">{{props.placeholder}}</div>
 		<div class="background-control__value js-background-control-value" {{props.value | safe}}></div>
