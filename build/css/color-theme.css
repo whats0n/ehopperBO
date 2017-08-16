@@ -156,6 +156,7 @@ html {
   box-sizing: inherit;
 }
 
+/* color for text/links */
 .color-main {
   color: #3949AB;
 }
@@ -168,6 +169,7 @@ html {
   color: #3949AB;
 }
 
+/* color for buttons */
 .color-btn-main {
   color: #fff;
   background: #3949AB;
@@ -198,25 +200,44 @@ html {
   background: #5C6BC0;
 }
 
+/* color for headers */
 .color-header {
   color: #fff;
   background: #3949AB;
 }
 
+/* color for modal headers */
 .color-modal-header {
   color: #fff;
   background: #3949AB;
 }
 
+/* color for titles */
 .color-title-main {
   color: #3949AB;
 }
 
+/* color for circles on the pin screen */
 .color-circle-main {
   border-color: #3949AB;
 }
 
 .color-circle-main.is-active {
+  background: #3949AB;
+}
+
+/* color for input radio */
+.color-radio-main input:checked + .radio__icon {
+  border-color: #3949AB;
+}
+
+.color-radio-main .radio__icon:before {
+  background: #3949AB;
+}
+
+/* color for input checkbox */
+.color-checkbox-main input:checked + .checkbox__icon {
+  color: #fff;
   background: #3949AB;
 }
 

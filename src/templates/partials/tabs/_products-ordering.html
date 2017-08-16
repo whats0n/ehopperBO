@@ -27,6 +27,13 @@
 				</div>
 				<div class="col col_lg-50 col_md-50">
 					{{form.inputBox.call({
+						classList: 'is-active is-disabled',
+						placeholder: 'Total Quantity',
+						inputAttrs: 'value="0" disabled'
+					})}}
+				</div>
+				<div class="col col_lg-50 col_md-50">
+					{{form.inputBox.call({
 						classList: 'is-active',
 						placeholder: 'Recommended Quantity',
 						inputAttrs: 'value="0"'
@@ -37,13 +44,6 @@
 						classList: 'is-active',
 						placeholder: 'Minimum Quantity',
 						inputAttrs: 'value="0"'
-					})}}
-				</div>
-				<div class="col col_lg-50 col_md-50">
-					{{form.inputBox.call({
-						classList: 'is-active',
-						placeholder: 'Total Quantity',
-						inputAttrs: 'value="0" disabled'
 					})}}
 				</div>
 			</div>
@@ -65,33 +65,33 @@
 			body: [
 				[ 
 					{ content: 'New CSP Store' },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity" disabled', classList: 'simple-input_sm text-center' } }
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { attrs: 'disabled', classList: 'simple-input_sm text-center' } }
 				],
 				[ 
 					{ content: 'New Store' },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity" disabled', classList: 'simple-input_sm text-center' } }
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { attrs: 'disabled', classList: 'simple-input_sm text-center' } }
 				],
 				[ 
 					{ content: 'Vlad store' },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity" disabled', classList: 'simple-input_sm text-center' } }
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { attrs: 'disabled', classList: 'simple-input_sm text-center' } }
 				],
 				[ 
 					{ content: 'West Street Cafe' },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity" disabled', classList: 'simple-input_sm text-center' } }
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { attrs: 'disabled', classList: 'simple-input_sm text-center' } }
 				],
 				[ 
 					{ content: 'WestGuestCafe' },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity"', classList: 'simple-input_sm text-center' } },
-					{ input: { attrs: 'placeholder="Input Quantity" disabled', classList: 'simple-input_sm text-center' } }
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { classList: 'simple-input_sm text-center' } },
+					{ input: { attrs: 'disabled', classList: 'simple-input_sm text-center' } }
 				]
 			]
 		})}}

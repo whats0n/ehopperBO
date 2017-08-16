@@ -6,11 +6,12 @@
 	&.is-active
 		.input-box__placeholder
 			transform: translate3d(0,10px,0) scale(0.73)
-	+hover
-		.input-box__clear
-			opacity: 1
-			visibility: visible
-	input:focus + .input-box__clear
+	&:not(.is-disabled)
+		+hover
+			.input-box__clear
+				opacity: 1
+				visibility: visible
+	input:not(:disabled):focus + .input-box__clear
 		opacity: 1
 		visibility: visible
 	&__clear

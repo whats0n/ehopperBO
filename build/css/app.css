@@ -4579,12 +4579,12 @@ button:disabled, button.is-disabled,
   transform: translate3d(0, 10px, 0) scale(0.73);
 }
 
-.no-touch .input-box:hover .input-box__clear {
+.no-touch .input-box:not(.is-disabled):hover .input-box__clear {
   opacity: 1;
   visibility: visible;
 }
 
-.input-box input:focus + .input-box__clear {
+.input-box input:not(:disabled):focus + .input-box__clear {
   opacity: 1;
   visibility: visible;
 }
@@ -6495,7 +6495,6 @@ button:disabled, button.is-disabled,
 
 .table-header {
   height: 37px;
-  background: #eee;
 }
 
 .table-body_clickable .table-body__tr {
@@ -7415,6 +7414,16 @@ button:disabled, button.is-disabled,
   top: 0;
   right: 0;
   width: 160px;
+}
+
+.block-section {
+  padding: 20px;
+}
+
+.block-section__title {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eee;
 }
 
 .modal-terms {

@@ -1,1 +1,38 @@
-MODIFIERS
+{% import "partials/form/_build.html" as form %}
+
+<div class="modifiers">
+	<div class="modifiers__header">
+		<div class="block-section">
+			<h3 class="title-lg color-title-main block-section__title">Select all or one store</h3>
+			<div class="block-section__content">
+				{{form.select.call({
+					classList: 'select_full is-active',
+					selected: 1,
+					placeholder: 'Select Store',
+					options: [
+						'All',
+						'Category 1',
+						'Category 2',
+						'Category 3',
+						'Category 4'
+					]
+				})}}
+			</div>
+		</div>
+		<div class="block-section">
+			<h3 class="title-lg color-title-main block-section__title">Add modifiers</h3>
+			<div class="block-section__content">
+				<button class="btn btn_lg color-btn-main" data-animation="ripple">Copy Existing</button>
+			</div>
+		</div>
+		<div class="block-section">
+			<h3 class="title-lg color-title-main block-section__title">Current Modifiers</h3>
+			<div class="block-section__content">
+				{% include 'partials/components/_langs.html' %}
+			</div>
+		</div>
+	</div>
+	<div class="modifiers__body">
+		
+	</div>
+</div>

@@ -1,38 +1,54 @@
 @import helpers/all
-
+/* color for text/links */
 .color-main
 	color: $mainColor
 	+active
 		color: $mainColor
-//btns
+/* color for buttons */
 .color-btn-main
 	color: $white
 	background: $mainColor
 	+active
 		color: $white
 		background: $mainColorActive
+
 .color-btn-lighter
 	color: $white
 	background: $mainColorLighter
 	+active
 		color: $white
 		background: $mainColorLighter
-//header
+
+/* color for headers */
 .color-header
 	color: $white
 	background: $mainColor
 	
-//modal
+/* color for modal headers */
 .color-modal-header
 	color: $white
 	background: $mainColor
 
-//title
+/* color for titles */
 .color-title-main
 	color: $mainColor
 
-//pin screen
+/* color for circles on the pin screen */
 .color-circle-main
 	border-color: $mainColor
 	&.is-active
+		background: $mainColor
+
+/* color for input radio */
+.color-radio-main
+	input:checked + .radio__icon
+		border-color: $mainColor
+	.radio__icon
+		&:before
+			background: $mainColor
+
+/* color for input checkbox */
+.color-checkbox-main
+	input:checked + .checkbox__icon
+		color: $white
 		background: $mainColor

@@ -1,33 +1,100 @@
 {% import "partials/form/_build.html" as form %}
 <div class="container">
+<div class="row">
+		<div class="col col_field col_lg-100">
+			{% include 'partials/components/_langs.html' %}
+		</div>
+		<div class="col col_field col_lg-100">
+			<div class="fake-buttons">
+				<span class="label label_block">Inventory type*</span>
+				<div class="fake-buttons__row">
+					{{form.fakeButton.call({
+						name: 'product-inventory-type',
+						content: 'Inventory'
+					})}}
+					{{form.fakeButton.call({
+						name: 'product-inventory-type',
+						content: 'Non-inventory'
+					})}}
+					{{form.fakeButton.call({
+						name: 'product-inventory-type',
+						content: 'Serialized'
+					})}}
+					{{form.fakeButton.call({
+						name: 'product-inventory-type',
+						content: 'With Ingredients'
+					})}}
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col col_lg-66 col_md-100">
 			<div class="row">
 				<div class="col col_field col_lg-100">
-					{% include 'partials/components/_langs.html' %}
+					{{form.inputBox.call({
+						placeholder: 'Product Name*',
+						classList: 'is-error',
+						attrs: 'required',
+						errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.'
+					})}}
 				</div>
 				<div class="col col_field col_lg-100">
-					<div class="fake-buttons">
-						<span class="label label_block">Inventory type*</span>
-						<div class="fake-buttons__row">
-							{{form.fakeButton.call({
-								name: 'product-inventory-type',
-								content: 'Inventory'
-							})}}
-							{{form.fakeButton.call({
-								name: 'product-inventory-type',
-								content: 'Non-inventory'
-							})}}
-							{{form.fakeButton.call({
-								name: 'product-inventory-type',
-								content: 'Serialized'
-							})}}
-							{{form.fakeButton.call({
-								name: 'product-inventory-type',
-								content: 'With Ingredients'
-							})}}
-						</div>
-					</div>
+					{{form.inputBox.call({
+						placeholder: 'Product Short Name'
+					})}}
+				</div>
+				<div class="col col_field col_lg-100">
+					{{form.select.call({
+						classList: 'select_full',
+						placeholder: 'Department*',
+						selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
+						options: [
+							'All',
+							'Department 1',
+							'Department 2',
+							'Department 3',
+							'Department 4',
+							'Department 2',
+							'Department 3',
+							'Department 4',
+							'Department 2',
+							'Department 3',
+							'Department 4'
+						]
+					})}}
+				</div>
+				<div class="col col_field col_lg-100">
+					{{form.select.call({
+						classList: 'select_full',
+						placeholder: 'Category*',
+						errorClass: 'is-error',
+						errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+						selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a>',
+						options: [
+							'All',
+							'Category 1',
+							'Category 2',
+							'Category 3',
+							'Category 4'
+						]
+					})}}
+				</div>
+				<div class="col col_field col_lg-100">
+					{{form.inputBox.call({
+						placeholder: 'UPC'
+					})}}
+				</div>
+				<div class="col col_field col_lg-100">
+					{{form.textareaBox.call({
+						placeholder: 'Product Description'
+					})}}
+				</div>
+				<div class="col col_field col_lg-100">
+					{{form.checkbox.call({
+						attrs: 'checked',
+						content: 'Is Active'
+					})}}
 				</div>
 			</div>
 		</div>
@@ -35,83 +102,10 @@
 			<div class="row">
 				<div class="col col_field col_lg-100">
 					{{form.backgroundControl.call({
-						placeholder: 'Product Display',
-						classList: 'pull-lg-right'
+						placeholder: 'Product Display'
 					})}}
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col col_field col_lg-50">
-			{{form.inputBox.call({
-				placeholder: 'Product Name*',
-				classList: 'is-error',
-				attrs: 'required',
-				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.'
-			})}}
-		</div>
-		<div class="col col_field col_lg-50">
-			{{form.inputBox.call({
-				placeholder: 'Product Short Name'
-			})}}
-		</div>
-		<div class="col col_field col_lg-50">
-			{{form.select.call({
-				classList: 'select_full',
-				placeholder: 'Department*',
-				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
-				options: [
-					'All',
-					'Department 1',
-					'Department 2',
-					'Department 3',
-					'Department 4',
-					'Department 2',
-					'Department 3',
-					'Department 4',
-					'Department 2',
-					'Department 3',
-					'Department 4'
-				]
-			})}}
-		</div>
-		<div class="col col_field col_lg-50">
-			{{form.select.call({
-				classList: 'select_full',
-				placeholder: 'Category*',
-				errorClass: 'is-error',
-				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
-				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a>',
-				options: [
-					'All',
-					'Category 1',
-					'Category 2',
-					'Category 3',
-					'Category 4'
-				]
-			})}}
-		</div>
-		{# <div class="col col_field col_lg-100">
-			{{form.selectColor.call({
-				placeholder: 'Product Display Color'
-			})}}
-		</div> #}
-		<div class="col col_field col_lg-100">
-			{{form.textareaBox.call({
-				placeholder: 'Product Description'
-			})}}
-		</div>
-		<div class="col col_field col_lg-100">
-			{{form.inputBox.call({
-				placeholder: 'UPC'
-			})}}
-		</div>
-		<div class="col col_field col_lg-100">
-			{{form.checkbox.call({
-				attrs: 'checked',
-				content: 'Is Active'
-			})}}
 		</div>
 	</div>
 </div>
