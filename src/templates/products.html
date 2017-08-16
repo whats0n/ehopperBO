@@ -325,7 +325,7 @@ menu: { active: 1 }
 					{% for slide in slides %}
 						<div class="slide" data-slide="{{slide.name}}">
 							<div class="slide__header color-header">
-								<button class="btn-back slide__back" data-slide-close="{{slide.name}}">
+								<button class="btn-back slide__back js-slide-back" data-slide-close="{{slide.name}}">
 									<i class="fa fa-angle-left btn-back__arrow"></i>
 									<span class="btn-back__content">{{slide.backText}}</span>
 								</button>

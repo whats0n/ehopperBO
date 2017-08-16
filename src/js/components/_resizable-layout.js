@@ -15,13 +15,15 @@ export default function() {
 			const $splitter = $this.find('.js-resizable-width-splitter');
 			const $navBtn = $('.js-nav-btn');
 			const $headerTitle = $('.js-header-title');
-			const headerTitleThreshold = 100;
+			const $slideBackBtn = $('.js-slide-back');
 
-			let opacity = null;
+
+			const headerTitleThreshold = 100;
+			let headerTitleOpacity = null;
 			let headerTitleFlag = false;
 
-			const hideHeaderTitle = () => { $headerTitle.addClass(HIDDEN) };
-			const showHeaderTitle = () => { $headerTitle.removeClass(HIDDEN) };
+			let slideBackBtnMargin = null;
+			let slideBackBtnFlag = false;
 
 			$rightColumn.resizable({
 				resizeHeight: false,
@@ -30,43 +32,57 @@ export default function() {
 				onDrag(event, $column, newWidth, newHeight, options) {
 					const rowWidth = $this.innerWidth();
 					const leftColumnWidth = `${rowWidth - newWidth}px`;
-					const navBtnWidth = $navBtn.outerWidth();
 
 					if ($headerTitle.length) {
 						const headerTitleWidth = $headerTitle.outerWidth();
-
-						// if (rowWidth - newWidth < headerTitleWidth) hideHeaderTitle();
-						// else showHeaderTitle();
 						const path = (headerTitleWidth - (rowWidth - newWidth));
 
 						if (rowWidth - newWidth < headerTitleWidth ) {
 							if (path <= headerTitleThreshold) {
 								headerTitleFlag = true;
-								opacity = (1 - (path / 100)).toFixed(2);
-								$headerTitle.css('opacity', opacity);
-							} else if (path > headerTitleThreshold && opacity != 0) {
+								headerTitleOpacity = (1 - (path / 100)).toFixed(2);
+								$headerTitle.css('opacity', headerTitleOpacity);
+							} else if (path > headerTitleThreshold && headerTitleOpacity != 0) {
 								headerTitleFlag = false;
-								opacity = 0;
-								$headerTitle.css('opacity', opacity);
+								headerTitleOpacity = 0;
+								$headerTitle.css('opacity', headerTitleOpacity);
 							}
-
 						} 
 
 						if (rowWidth - newWidth >= headerTitleWidth) {
-							if (!headerTitleFlag && opacity != 1) {
+							if (!headerTitleFlag && headerTitleOpacity != 1) {
 								headerTitleFlag = true;
 							}
-							opacity = 1;
+							headerTitleOpacity = 1;
 						}
 
 						if (headerTitleFlag) {
-							$headerTitle.css('opacity', opacity);
+							$headerTitle.css('opacity', headerTitleOpacity);
 							headerTitleFlag = false;
-							console.log('resize');
 						}
 					}
+
+					if ($navBtn.length && $slideBackBtn.length) {
+						const navBtnWidth = $navBtn.outerWidth();
+						
+						if (rowWidth - newWidth <= navBtnWidth) {
+							const path = navBtnWidth - (rowWidth - newWidth);
+							slideBackBtnMargin = path < navBtnWidth ? path : navBtnWidth;
+							slideBackBtnFlag = true;
+						} else {
+							if (!slideBackBtnFlag && slideBackBtnMargin != 0) {
+								slideBackBtnFlag = true;
+							}
+							slideBackBtnMargin = 0;
+						}
+
+						if (slideBackBtnFlag) {
+							$slideBackBtn.css('margin-left', slideBackBtnMargin);
+							slideBackBtnFlag = false;
+						};
+					};
 					
-					$rightColumn.css('max-width', `calc(100% - ${navBtnWidth}px)`);
+					// $rightColumn.css('max-width', `calc(100% - ${navBtnWidth}px)`);
 					$leftColumn.width(leftColumnWidth);
 				},
 				onDragEnd(event, $column, options) {
@@ -75,7 +91,7 @@ export default function() {
 					const leftColumnWidth = `${$leftColumn.outerWidth() / rowWidth * 100}%`;
 					const navBtnWidth = $navBtn.outerWidth();
 
-					$rightColumn.css('max-width', `calc(100% - ${navBtnWidth}px)`);
+					// $rightColumn.css('max-width', `calc(100% - ${navBtnWidth}px)`);
 					$rightColumn.width(rightColumnWidth);
 					$leftColumn.width(leftColumnWidth);
 				}
