@@ -3616,6 +3616,11 @@ body,
   padding-bottom: 15px;
 }
 
+.col_wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .col_lg-1 {
   width: 1%;
 }
@@ -5400,12 +5405,12 @@ button:disabled, button.is-disabled,
 .background-control__field {
   position: relative;
   overflow: hidden;
-  padding: 15px;
+  padding: 9px;
   cursor: pointer;
 }
 
 .background-control__placeholder {
-  padding: 0 0 8px;
+  padding-bottom: 7px;
   color: rgba(51, 51, 51, 0.7);
   font-family: 'Roboto Regular', Arial, sans-serif;
   font-size: 14px;

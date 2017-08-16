@@ -29,7 +29,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col_lg-66 col_md-100">
+		<div class="col col_lg-66 col_md-100 col_wrap">
 			<div class="row">
 				<div class="col col_field col_lg-100">
 					{{form.inputBox.call({
@@ -44,61 +44,9 @@
 						placeholder: 'Product Short Name'
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
-					{{form.select.call({
-						classList: 'select_full',
-						placeholder: 'Department*',
-						selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
-						options: [
-							'All',
-							'Department 1',
-							'Department 2',
-							'Department 3',
-							'Department 4',
-							'Department 2',
-							'Department 3',
-							'Department 4',
-							'Department 2',
-							'Department 3',
-							'Department 4'
-						]
-					})}}
-				</div>
-				<div class="col col_field col_lg-100">
-					{{form.select.call({
-						classList: 'select_full',
-						placeholder: 'Category*',
-						errorClass: 'is-error',
-						errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
-						selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a>',
-						options: [
-							'All',
-							'Category 1',
-							'Category 2',
-							'Category 3',
-							'Category 4'
-						]
-					})}}
-				</div>
-				<div class="col col_field col_lg-100">
-					{{form.inputBox.call({
-						placeholder: 'UPC'
-					})}}
-				</div>
-				<div class="col col_field col_lg-100">
-					{{form.textareaBox.call({
-						placeholder: 'Product Description'
-					})}}
-				</div>
-				<div class="col col_field col_lg-100">
-					{{form.checkbox.call({
-						attrs: 'checked',
-						content: 'Is Active'
-					})}}
-				</div>
 			</div>
 		</div>
-		<div class="col col_lg-34 col_md-100">
+		<div class="col col_lg-34 col_md-100 col_wrap">
 			<div class="row">
 				<div class="col col_field col_lg-100">
 					{{form.backgroundControl.call({
@@ -106,6 +54,58 @@
 					})}}
 				</div>
 			</div>
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.select.call({
+				classList: 'select_full',
+				placeholder: 'Department*',
+				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a>',
+				options: [
+					'All',
+					'Department 1',
+					'Department 2',
+					'Department 3',
+					'Department 4',
+					'Department 2',
+					'Department 3',
+					'Department 4',
+					'Department 2',
+					'Department 3',
+					'Department 4'
+				]
+			})}}
+		</div>
+		<div class="col col_field col_lg-50">
+			{{form.select.call({
+				classList: 'select_full',
+				placeholder: 'Category*',
+				errorClass: 'is-error',
+				errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing.',
+				selectFooter: '<a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a>',
+				options: [
+					'All',
+					'Category 1',
+					'Category 2',
+					'Category 3',
+					'Category 4'
+				]
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.inputBox.call({
+				placeholder: 'UPC'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.textareaBox.call({
+				placeholder: 'Product Description'
+			})}}
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.checkbox.call({
+				attrs: 'checked',
+				content: 'Is Active'
+			})}}
 		</div>
 	</div>
 </div>
