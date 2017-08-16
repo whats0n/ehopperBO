@@ -5782,6 +5782,7 @@ button:disabled, button.is-disabled,
 
 .main-header__title_left {
   padding-left: 100px;
+  max-width: 400px;
   text-align: left;
 }
 
