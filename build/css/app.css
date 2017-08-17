@@ -8138,6 +8138,13 @@ hr {
   background: rgba(0, 0, 0, 0.1);
 }
 
+@media only screen and (max-width: 1366px){
+  .fake-button__face{
+    padding: 0 13px;
+    font-size: 14px;
+  }
+}
+
 @media only screen and (max-width: 1200px){
   .col_md-1{
     width: 1%;
@@ -8444,6 +8451,12 @@ hr {
   }
   .pull-lg-right{
     float: none;
+  }
+  .fake-buttons_connected .fake-buttons__row{
+    margin: 0;
+  }
+  .fake-buttons_connected .fake-button{
+    margin: 0 -1px 0 0;
   }
   .filters__row, .filters__btns{
     vertical-align: top;
