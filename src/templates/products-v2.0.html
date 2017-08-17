@@ -166,102 +166,6 @@ menu: { active: 1 }
 							]
 						]
 					})}}
-					
-					{# {% set table = {
-						columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
-						header: [ 
-							{ checkbox: true }, 
-							{ content: 'Product' }, 
-							{ content: 'Cost' }, 
-							{ content: 'Price' }, 
-							{ content: 'Quantity' }, 
-							{ content: 'Active', classList: 'text-center' }, 
-							{ content: 'Edit', classList: 'text-center' } 
-						],
-						body: [
-							[ 
-								{ checkbox: true },
-								{ content: '<div class="is-muted">id: 5088</div><div>Burger NEW</div>' },
-								{ content: '$20' },
-								{ content: '$20.00' },
-								{ content: '1' },
-								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-							],
-							[ 
-								{ checkbox: true },
-								{ content: '<div class="is-muted">id: 5013</div><div>Cheeseburger</div>' },
-								{ content: '$6.50' },
-								{ content: '$6.50' },
-								{ content: '2' },
-								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-							],
-							[ 
-								{ checkbox: true },
-								{ content: '<div class="is-muted">id: 4992</div><div>Sprite</div>' },
-								{ content: '$8.00' },
-								{ content: '$8.00' },
-								{ content: '1' },
-								{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
-								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-							],
-							[ 
-								{ checkbox: true },
-								{ content: '<div class="is-muted">id: 4994</div><div>Pepsi</div>' },
-								{ content: '$7.00' },
-								{ content: '$7.00' },
-								{ content: '2' },
-								{ content: '<i class="fa fa-times color-red sm-table__icon-active"></i>', classList: 'text-center' },
-								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-							],
-							[ 
-								{ checkbox: true },
-								{ content: '<div class="is-muted">id: 5001</div><div>Hamburger</div>' },
-								{ content: '$12.00' },
-								{ content: '$12.00' },
-								{ content: '1' },
-								{ content: '<i class="fa fa-check color-green sm-table__icon-active"></i>', classList: 'text-center' },
-								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
-							]
-						]
-					} %}
-					<div class="container">
-						<div class="row">
-							<div class="col col_lg-100">
-								<div class="sm-table">
-									<div class="sm-table__header">
-										<div class="sm-table__tr">
-											{% for th in table.header %}
-												<div class="sm-table__th {{th.classList}}" data-column="{{table.columns[loop.index0]}}">
-													{% if th.checkbox %}
-														{{form.checkbox.call(th.options)}}
-													{% else %}
-														{{th.content | safe}}
-													{% endif %}
-												</div>
-											{% endfor %}
-										</div>
-									</div>
-									<div class="sm-table__body">
-										{% for tr in table.body %}
-											<div class="sm-table__tr">
-												{% for td in tr %}
-													<div class="sm-table__td {{td.classList}}" data-column="{{table.columns[loop.index0]}}">
-														{% if td.checkbox %}
-															{{form.checkbox.call(td.options)}}
-														{% else %}
-															{{td.content | safe}}
-														{% endif %}
-													</div>
-												{% endfor %}
-											</div>
-										{% endfor %}
-									</div>
-								</div>
-							</div>
-						</div>
-					</div> #}
 				</div>
 				<div class="products-overlay"></div>
 			</div>
@@ -274,7 +178,7 @@ menu: { active: 1 }
 						<h2 class="title-xl products-main__title">Product Edit</h2>
 					</div>
 					{{tabs.call({
-						classList: 'tabs_fullscreen',
+						classList: 'tabs_fullscreen tabs_simple',
 						collection: 'products',
 						active: 1,
 						footer: '_products-footer',
