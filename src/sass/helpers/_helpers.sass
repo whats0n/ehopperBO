@@ -74,6 +74,14 @@
       +r(1366)
         @content
 
+=min-media($direction, $point)
+  @if $direction == 'width'
+    @if $point == 'lg'
+      +rmin(1201)
+        @content
+    @if $point == 'xl'
+      +rmin(1367)
+        @content
 //states
 =touch
   .is-touch &

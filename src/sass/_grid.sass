@@ -20,6 +20,11 @@
 	&_wrap
 		padding-top: 0
 		padding-bottom: 0
+	&_xl
+		@for $i from 1 through 100
+			&-#{$i}
+				+min-media('width', 'xl')
+					width: $i + %
 	&_lg
 		@for $i from 1 through 100
 			&-#{$i}

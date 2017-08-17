@@ -2,8 +2,11 @@
 	position: relative
 	display: inline-block
 	vertical-align: top
+	width: 100%
+	max-width: 300px
 	border: 1px solid $lightGray
 	background: $white
+	text-align: left
 	+nosel
 	transition: border-color 0.17s ease-in-out
 	&.is-open
@@ -25,9 +28,13 @@
 		font-size: 14px
 		line-height: 16px
 	&__value
+		padding-bottom: 78.577%
 		border-radius: 4px
-		width: 152px
-		height: 102px
+		// width: 152px
+		width: 100%
+		max-width: 280px
+		height: 0
+		// height: 102px
 		background-color: rgba($black, 0.1)
 		background-position: center 
 		background-repeat: no-repeat

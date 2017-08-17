@@ -90,11 +90,15 @@ a
 .text-left
 	text-align: left !important
 
-.text-center
-	text-align: center !important
-
 .text-right
 	text-align: right !important
+
+.text-center
+	text-align: center !important
+	
+.text-center-lg
+	+min-media('width', 'lg')
+		text-align: center
 
 .text-overflow
 	+text-overflow
