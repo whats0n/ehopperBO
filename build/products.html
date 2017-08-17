@@ -1,0 +1,1802 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>Products</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="css/app.css">
+    <link rel="stylesheet" media="all" href="css/color-theme.css"> </head>
+
+  <body>
+    <!-- BEGIN content -->
+    <div class="out">
+      <!-- begin header -->
+      <header class="main-header color-header ">
+        <h2 class="title-xl main-header__title main-header__title_left js-header-title">Products</h2>
+      </header> <button class="nav-btn js-nav-btn" title="Menu" data-menu-open="menu">
+		<i></i>
+	</button> <button class="help-btn">
+		<i class="fa fa-question-circle-o"></i>
+	</button>
+      <!-- end header -->
+      <!-- begin menu -->
+      <nav class="menu" data-menu-container="menu">
+        <header class="menu__header" data-menu-close="menu" data-animation="ripple"> <i class="fa fa-arrow-left menu__icon"></i>
+          <h2 class="title-xl menu__title">FastFood Enterprise</h2>
+        </header>
+        <div class="menu__container" data-scrollbar="default">
+          <ul class="nav">
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon fa fa-tachometer"></i>Dashboard</a> </li>
+            <li class="nav__item"> <a href="#" class="nav__link is-active">
+			    		<i class="nav__icon icon icon-orders"></i>Orders</a> </li>
+            <li class="nav__item" data-nav-submenu="inventory"> <a href="#" class="nav__link " data-nav-submenu-open="inventory">
+			    		<i class="nav__icon fa fa-archive"></i>Inventory<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Department</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Category</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Modifiers</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Products</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Menu Builder</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Transfer</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">PO Receiving</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Inventory Adjustment</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="customers"> <a href="#" class="nav__link " data-nav-submenu-open="customers">
+			    		<i class="nav__icon fa fa-users"></i>Customers<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Import Customers</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="vendors"> <a href="#" class="nav__link " data-nav-submenu-open="vendors">
+			    		<i class="nav__icon fa fa-truck"></i>Vendors<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Vendor List</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="employees"> <a href="#" class="nav__link " data-nav-submenu-open="employees">
+			    		<i class="nav__icon fa fa-address-card-o"></i>Employees<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Employee List</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Time Clock</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="reporting"> <a href="#" class="nav__link " data-nav-submenu-open="reporting">
+			    		<i class="nav__icon fa fa-pie-chart"></i>Reporting<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Tips Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Z Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Product Mix Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Transactions Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Inventory Aging</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Serial Item Tracking Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Transfers Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">PO Receiving Report</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Adjustment Report</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="apps"> <a href="#" class="nav__link " data-nav-submenu-open="apps">
+			    		<i class="nav__icon icon icon-cloud-plus"></i>Apps<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">App Directory</a></li>
+              </ul>
+            </li>
+            <li class="nav__item" data-nav-submenu="settings"> <a href="#" class="nav__link " data-nav-submenu-open="settings">
+			    		<i class="nav__icon fa fa-cog"></i>Settings<i class="nav__arrow fa fa-angle-down"></i></a>
+              <ul class="nav__submenu">
+                <li class="nav__item"><a href="#" class="nav__link">Company Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Store Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Register Settings</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Manager</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">Tax Agencies</a></li>
+                <li class="nav__item"><a href="#" class="nav__link">eHopper Support Access</a></li>
+              </ul>
+            </li>
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon fa fa-commenting-o"></i>Community <i class="fa fa-external-link nav__external"></i></a> </li>
+            <li class="nav__item"> <a href="#" class="nav__link ">
+			    		<i class="nav__icon icon icon-exit"></i>Logout</a> </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- end menu -->
+      <!-- begin overlay --><button type="button" class="overlay " data-overlay="overlay" data-menu-overlay="menu"></button>
+      <!-- end overlay -->
+      <div class="main ">
+        <div class="l-container js-resizable-width products" data-popup-wrapper="products-filters">
+          <div class="l-row">
+            <div class="l-col l-col_sidebar js-resizable-width-left">
+              <div class="l-col__inner">
+                <div class="sm-filters js-product-filters" data-popup="products-filters">
+                  <div class="container sm-filters__container" data-popup-container="products-filters" data-scrollbar="default">
+                    <div class="row">
+                      <div class="col col_lg-100">
+                        <h2 class="title-xxl color-title-main text-center">Filter your products</h2>
+                      </div>
+                      <div class="col col_lg-50">
+                        <!-- begin select -->
+                        <div class="select-box ">
+                          <div class="select js-select select_full is-active">
+                            <div class="select__field js-select-field">
+                              <div class="select__placeholder">Department</div>
+                              <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                            <div class="select__body js-select-dropdown">
+                              <ul class="select__list" data-scrollbar="default">
+                                <li class="select__item js-select-item">All</li>
+                                <li class="select__item js-select-item">Department 1</li>
+                                <li class="select__item js-select-item">Department 2</li>
+                                <li class="select__item js-select-item">Department 3</li>
+                                <li class="select__item js-select-item">Department 4</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end select -->
+                      </div>
+                      <div class="col col_lg-50">
+                        <!-- begin select -->
+                        <div class="select-box ">
+                          <div class="select js-select select_full is-active">
+                            <div class="select__field js-select-field">
+                              <div class="select__placeholder">Category</div>
+                              <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                            <div class="select__body js-select-dropdown">
+                              <ul class="select__list" data-scrollbar="default">
+                                <li class="select__item js-select-item">All</li>
+                                <li class="select__item js-select-item">Category 1</li>
+                                <li class="select__item js-select-item">Category 2</li>
+                                <li class="select__item js-select-item">Category 3</li>
+                                <li class="select__item js-select-item">Category 4</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end select -->
+                      </div>
+                      <div class="col col_lg-100">
+                        <!-- begin multi-select -->
+                        <div class="select-box ">
+                          <div class="select js-multi-select select_full is-active" data-all-checked="All">
+                            <div class="select__field js-multi-select-field">
+                              <div class="select__placeholder">Inventory type</div>
+                              <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                            <div class="select__body js-multi-select-dropdown">
+                              <ul class="select__list" data-scrollbar="default">
+                                <li class="select__item js-multi-select-all"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Select All" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Select All</span>
+	
+</label> </li>
+                                <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Inventory type 1" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Inventory type 1</span>
+	
+</label> </li>
+                                <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Inventory type 2" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Inventory type 2</span>
+	
+</label> </li>
+                                <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Inventory type 3" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Inventory type 3</span>
+	
+</label> </li>
+                                <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Inventory type 4" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Inventory type 4</span>
+	
+</label> </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end multi-select -->
+                      </div>
+                      <div class="col col_lg-100 text-center sm-filters__btns"> <button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button> <button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>                        </div>
+                      <div class="col col_lg-100 text-center"> <a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a> </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="products-sidebar" data-scrollbar="default">
+                  <div class="container products-sidebar__header">
+                    <div class="row">
+                      <div class="col col_lg-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">New</button> </div>
+                      <div class="col col_lg-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">Export</button> </div>
+                      <div class="col col_lg-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">Import</button> </div>
+                      <div class="col col_lg-25"> <button class="btn btn_block btn_red" data-animation="ripple">Delete</button> </div>
+                      <div class="col col_lg-100">
+                        <div class="filter-group"> <button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+										<i class="fa fa-filter"></i>
+									</button>
+                          <!-- begin search -->
+                          <div class="search filter-group__field"> <i class="fa fa-search"></i> <input type="text" class="simple-input simple-input_sm search__input" placeholder="Search"> </div>
+                          <!-- end search -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- begin table -->
+                  <div class="table-wrapper table-wrapper_header-lg" data-table="products">
+                    <div class="table-wrapper__header" data-table-fake="products">
+                      <div class="table-header ">
+                        <ul class="table-header__tr">
+                          <li class="table-header__th " data-column="first-checkbox"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </li>
+                          <li class="table-header__th " data-column="product-title">Product</li>
+                          <li class="table-header__th " data-column="product-cost">Cost</li>
+                          <li class="table-header__th " data-column="product-price">Price</li>
+                          <li class="table-header__th " data-column="product-qty">Qty</li>
+                          <li class="table-header__th text-center" data-column="active">Active</li>
+                          <li class="table-header__th text-center" data-column="action-btns">Edit</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="products">
+                      <div class="table-body table-body_zebra table-wrapper__table" data-table-main="products">
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5088</div>
+                            <div class="table-wrapper__value">Burger NEW</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5013</div>
+                            <div class="table-wrapper__value">Cheeseburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4992</div>
+                            <div class="table-wrapper__value">Sprite</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4994</div>
+                            <div class="table-wrapper__value">Pepsi</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5001</div>
+                            <div class="table-wrapper__value">Hamburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5088</div>
+                            <div class="table-wrapper__value">Burger NEW</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5013</div>
+                            <div class="table-wrapper__value">Cheeseburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4992</div>
+                            <div class="table-wrapper__value">Sprite</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4994</div>
+                            <div class="table-wrapper__value">Pepsi</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5001</div>
+                            <div class="table-wrapper__value">Hamburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5088</div>
+                            <div class="table-wrapper__value">Burger NEW</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5013</div>
+                            <div class="table-wrapper__value">Cheeseburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4992</div>
+                            <div class="table-wrapper__value">Sprite</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4994</div>
+                            <div class="table-wrapper__value">Pepsi</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5001</div>
+                            <div class="table-wrapper__value">Hamburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5088</div>
+                            <div class="table-wrapper__value">Burger NEW</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5013</div>
+                            <div class="table-wrapper__value">Cheeseburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4992</div>
+                            <div class="table-wrapper__value">Sprite</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4994</div>
+                            <div class="table-wrapper__value">Pepsi</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5001</div>
+                            <div class="table-wrapper__value">Hamburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5088</div>
+                            <div class="table-wrapper__value">Burger NEW</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $20 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $20.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5013</div>
+                            <div class="table-wrapper__value">Cheeseburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $6.50 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4992</div>
+                            <div class="table-wrapper__value">Sprite</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $8.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 4994</div>
+                            <div class="table-wrapper__value">Pepsi</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $7.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 2 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-times color-red is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                        <div class="table-body__tr">
+                          <div class="table-body__td " data-column="first-checkbox" data-title=""> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+</label> </div>
+                          <div class="table-body__td " data-column="product-title" data-title="Product">
+                            <div class="table-wrapper__meta">id: 5001</div>
+                            <div class="table-wrapper__value">Hamburger</div>
+                          </div>
+                          <div class="table-body__td " data-column="product-cost" data-title="Cost"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-price" data-title="Price"> $12.00 </div>
+                          <div class="table-body__td " data-column="product-qty" data-title="Qty"> 1 </div>
+                          <div class="table-body__td text-center" data-column="active" data-title="Active"> <i class="fa fa-check color-green is-muted"></i> </div>
+                          <div class="table-body__td " data-column="action-btns" data-title="Edit"> <a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a> </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end table -->
+                </div>
+                <div class="products-overlay"></div>
+              </div>
+            </div>
+            <div class="l-col l-col_main js-resizable-width-right">
+              <div class="l-col__inner">
+                <div class="splitter splitter_left l-col__splitter js-resizable-width-splitter"><i class="splitter__lines"></i></div>
+                <div class="products-main">
+                  <div class="products-main__header color-header">
+                    <h2 class="title-xl products-main__title">Product Edit</h2>
+                  </div>
+                  <!-- begin tabs -->
+                  <div class="tabs tabs_fullscreen tabs_footer">
+                    <div class="tabs__inner">
+                      <div class="tabs__panel">
+                        <ul class="tabs__list">
+                          <li class="tabs__item"> <button class="tabs__btn is-active" data-tab-open="products-general" data-tab-collection="products">General</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-modifiers" data-tab-collection="products">Modifiers</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-vendors" data-tab-collection="products">Vendors</button> </li>
+                          <li class="tabs__item"> <button class="tabs__btn " data-tab-open="products-ordering" data-tab-collection="products">Ordering</button> </li>
+                        </ul>
+                      </div>
+                      <div class="tabs__body">
+                        <div class="tabs__container is-open" data-scrollbar="default" data-tab-container="products-general" data-tab-collection="products">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col col_field col_lg-100">
+                                <!-- begin langs -->
+                                <div class="langs">
+                                  <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                                </div>
+                                <!-- end langs -->
+                              </div>
+                              <div class="col col_field col_lg-100">
+                                <div class="fake-buttons fake-buttons_connected"> <span class="label label_block">Inventory type*</span>
+                                  <div class="fake-buttons__row"> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Inventory</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Non-inventory</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">Serialized</span>
+</label> <label class="fake-button">
+	<input type="radio" name="product-inventory-type" >
+	<span class="fake-button__face">With Ingredients</span>
+</label> </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col col_lg-66 col_md-100 col_wrap">
+                                <div class="row">
+                                  <div class="col col_field col_lg-100">
+                                    <div class="input-box is-error js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Product Name*</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button>
+                                      <div class="error-message input-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.</div>
+                                    </div>
+                                  </div>
+                                  <div class="col col_field col_lg-100">
+                                    <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Product Short Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col_lg-34 col_md-100 col_wrap">
+                                <div class="row">
+                                  <div class="col col_field col_lg-100">
+                                    <!-- begin background-control -->
+                                    <div class="background-control js-background-control ">
+                                      <div class="background-control__field js-background-control-field">
+                                        <div class="background-control__placeholder">Product Display</div>
+                                        <div class="background-control__value js-background-control-value"></div>
+                                      </div>
+                                      <div class="background-control__dropdown js-background-control-dropdown">
+                                        <div class="background-control__colors" data-scrollbar="default">
+                                          <ul class="background-control__list">
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(185, 123, 65);" data-value="rgb(185, 123, 65)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(130, 129, 52);" data-value="rgb(130, 129, 52)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(56, 115, 85);" data-value="rgb(56, 115, 85)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(167, 59, 60);" data-value="rgb(167, 59, 60)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(188, 69, 89);" data-value="rgb(188, 69, 89)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(218, 100, 79);" data-value="rgb(218, 100, 79)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(218, 150, 77);" data-value="rgb(218, 150, 77)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(155, 161, 56);" data-value="rgb(155, 161, 56)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(76, 171, 112);" data-value="rgb(76, 171, 112)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(213, 83, 86);" data-value="rgb(213, 83, 86)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(223, 83, 108);" data-value="rgb(223, 83, 108)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(241, 120, 94);" data-value="rgb(241, 120, 94)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(245, 177, 95);" data-value="rgb(245, 177, 95)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(191, 186, 66);" data-value="rgb(191, 186, 66)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(129, 191, 125);" data-value="rgb(129, 191, 125)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(240, 93, 109);" data-value="rgb(240, 93, 109)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(254, 150, 99);" data-value="rgb(254, 150, 99)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(223, 139, 139);" data-value="rgb(223, 139, 139)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(246, 204, 36);" data-value="rgb(246, 204, 36)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(201, 209, 94);" data-value="rgb(201, 209, 94)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(156, 203, 126);" data-value="rgb(156, 203, 126)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(73, 73, 73);" data-value="rgb(73, 73, 73)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(174, 105, 226);" data-value="rgb(174, 105, 226)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(108, 118, 225);" data-value="rgb(108, 118, 225)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(105, 143, 205);" data-value="rgb(105, 143, 205)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(55, 173, 190);" data-value="rgb(55, 173, 190)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(127, 181, 178);" data-value="rgb(127, 181, 178)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(183, 183, 183);" data-value="rgb(183, 183, 183)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(64, 108, 183);" data-value="rgb(64, 108, 183)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(81, 90, 151);" data-value="rgb(81, 90, 151)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(86, 117, 175);" data-value="rgb(86, 117, 175)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(98, 146, 180);" data-value="rgb(98, 146, 180)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(64, 189, 173);" data-value="rgb(64, 189, 173)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(224, 224, 224);" data-value="rgb(224, 224, 224)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(83, 126, 150);" data-value="rgb(83, 126, 150)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(55, 48, 121);" data-value="rgb(55, 48, 121)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(46, 72, 126);" data-value="rgb(46, 72, 126)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(46, 142, 131);" data-value="rgb(46, 142, 131)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(96, 114, 163);" data-value="rgb(96, 114, 163)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(255, 255, 255);" data-value="rgb(255, 255, 255)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(67, 79, 117);" data-value="rgb(67, 79, 117)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(75, 81, 109);" data-value="rgb(75, 81, 109)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(55, 87, 141);" data-value="rgb(55, 87, 141)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(38, 89, 114);" data-value="rgb(38, 89, 114)"></span> </li>
+                                            <li class="background-control__item"> <span class="background-control__color js-background-control-color" style="background-color: rgb(117, 151, 143);" data-value="rgb(117, 151, 143)"></span> </li>
+                                          </ul>
+                                        </div>
+                                        <div class="background-control__figure js-background-control-figure">
+                                          <div class="background-control__figure-in"> <label class="background-control__picture">
+					<input type="file" class="background-control__file js-background-control-file" accept="image/*">
+					<span class="background-control__img js-background-control-img"></span>
+					<span class="background-control__label">Add Image</span>
+				</label>
+                                            <div class="background-control__btns"> <button class="background-control__btn">
+						<i class="fa fa-trash-o"></i>
+					</button> <button class="background-control__btn">
+						<i class="fa fa-pencil"></i>
+					</button> </div>
+                                          </div>
+                                          <div class="background-control__footer">
+                                            <div class="background-control__row">
+                                              <div class="background-control__col"> <button class="btn btn_block color-btn-main js-background-control-submit" data-type="image">Use Image</button> </div>
+                                              <div class="background-control__col"> <button class="btn btn_block color-btn-main js-background-control-submit" data-type="color">Use Color</button> </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- end background-control -->
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col col_field col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Department*</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body js-select-dropdown">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">All</li>
+                                        <li class="select__item js-select-item">Department 1</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                      </ul>
+                                      <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end select -->
+                              </div>
+                              <div class="col col_field col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box is-error">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Category*</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body js-select-dropdown">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">All</li>
+                                        <li class="select__item js-select-item">Category 1</li>
+                                        <li class="select__item js-select-item">Category 2</li>
+                                        <li class="select__item js-select-item">Category 3</li>
+                                        <li class="select__item js-select-item">Category 4</li>
+                                      </ul>
+                                      <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-category"><i class="fa fa-plus"></i>Create new Category</a> </div>
+                                    </div>
+                                  </div>
+                                  <div class="error-message select-box__error-message">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                                </div>
+                                <!-- end select -->
+                              </div>
+                              <div class="col col_field col_lg-100">
+                                <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">UPC</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                              </div>
+                              <div class="col col_field col_lg-100">
+                                <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Product Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                              </div>
+                              <div class="col col_field col_lg-100"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-modifiers" data-tab-collection="products">
+                          <div class="modifiers">
+                            <div class="modifiers__header">
+                              <div class="block-section">
+                                <h3 class="title-lg color-title-main block-section__title">Select all or one store</h3>
+                                <div class="block-section__content">
+                                  <!-- begin select -->
+                                  <div class="select-box ">
+                                    <div class="select js-select select_full is-active">
+                                      <div class="select__field js-select-field">
+                                        <div class="select__placeholder">Select Store</div>
+                                        <div class="select__value js-select-value">All</div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                      <div class="select__body js-select-dropdown">
+                                        <ul class="select__list" data-scrollbar="default">
+                                          <li class="select__item js-select-item">All</li>
+                                          <li class="select__item js-select-item">Category 1</li>
+                                          <li class="select__item js-select-item">Category 2</li>
+                                          <li class="select__item js-select-item">Category 3</li>
+                                          <li class="select__item js-select-item">Category 4</li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- end select -->
+                                </div>
+                              </div>
+                              <div class="block-section">
+                                <h3 class="title-lg color-title-main block-section__title">Add modifiers</h3>
+                                <div class="block-section__content"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Copy Existing</button> </div>
+                              </div>
+                              <div class="block-section">
+                                <h3 class="title-lg color-title-main block-section__title">Current Modifiers</h3>
+                                <div class="block-section__content">
+                                  <!-- begin langs -->
+                                  <div class="langs">
+                                    <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                                  </div>
+                                  <!-- end langs -->
+                                </div>
+                              </div>
+                            </div>
+                            <div class="modifiers__body"> </div>
+                          </div>
+                        </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-vendors" data-tab-collection="products">
+                          <div class="vendors">
+                            <div class="vendors__header">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col col_lg-100">
+                                    <div class="sm-group">
+                                      <!-- begin multi-select -->
+                                      <div class="select-box ">
+                                        <div class="select js-multi-select select_full is-active" data-all-checked="All">
+                                          <div class="select__field js-multi-select-field">
+                                            <div class="select__placeholder">Search Vendors</div>
+                                            <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                          <div class="select__body js-multi-select-dropdown">
+                                            <ul class="select__list" data-scrollbar="default">
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="QAVENDOR" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">QAVENDOR</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="98" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">98</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Vendor for Taras Testing" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Vendor for Taras Testing</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="14651" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">14651</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="sandora" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">sandora</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="SuperBurger" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">SuperBurger</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="asd" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">asd</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="dawdawawd" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">dawdawawd</span>
+	
+</label> </li>
+                                              <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="asddsa" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">asddsa</span>
+	
+</label> </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <!-- end multi-select --><button class="btn btn_lg color-btn-main sm-group__btn" data-animation="ripple">New Vendor</button> </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="vendors__body">
+                              <div class="vendors-items">
+                                <div class="vendors-items__header">
+                                  <div class="vendors-items__row">
+                                    <div class="vendors-items__col" data-column="name">Vendor</div>
+                                    <div class="vendors-items__col" data-column="sku">SKU</div>
+                                    <div class="vendors-items__col" data-column="cost">Cost</div>
+                                    <div class="vendors-items__col" data-column="radio">Primary</div>
+                                  </div>
+                                </div>
+                                <div class="vendors-items__body" data-scrollbar="default">
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="QAVENDOR" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" checked>
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="98" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="Vendor for Taras Testing" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="14651" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="sandora" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="SuperBurger" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="asd" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="dawdawawd" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                  <div class="vendors-items__row"> <button class="vendors-items__delete">
+							<i class="fa fa-close"></i>
+						</button>
+                                    <div class="vendors-items__col" data-column="name"> <input type="text" class="simple-input" value="asddsa" disabled> </div>
+                                    <div class="vendors-items__col" data-column="sku"> <input type="text" class="simple-input"> </div>
+                                    <div class="vendors-items__col" data-column="cost"> <input type="text" class="simple-input" value="0.00"> </div>
+                                    <div class="vendors-items__col" data-column="radio"> <label class="radio color-radio-main ">
+	<input type="radio"  name="product-vendor" >
+	<span class="radio__icon"></span>
+	
+</label> </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tabs__container " data-scrollbar="default" data-tab-container="products-ordering" data-tab-collection="products">
+                          <div class="ordering">
+                            <div class="ordering__header">
+                              <div class="container">
+                                <div class="row">
+                                  <div class="col col_lg-50 col_md-50">
+                                    <!-- begin multi-select -->
+                                    <div class="select-box ">
+                                      <div class="select js-multi-select select_full is-active" data-all-checked="All">
+                                        <div class="select__field js-multi-select-field">
+                                          <div class="select__placeholder">Select Store(s)</div>
+                                          <div class="select__value js-multi-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                        <div class="select__body js-multi-select-dropdown">
+                                          <ul class="select__list" data-scrollbar="default">
+                                            <li class="select__item js-multi-select-all"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Select All" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Select All</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 1" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 1</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 2" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 2</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 3" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 3</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 5" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 5</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 6" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 6</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 7" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 7</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 8" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 8</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 9" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 9</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 10" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 10</span>
+	
+</label> </li>
+                                            <li class="select__item js-multi-select-item"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox" data-value="Store 11" checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Store 11</span>
+	
+</label> </li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- end multi-select -->
+                                  </div>
+                                  <div class="col col_lg-50 col_md-50">
+                                    <div class="input-box is-active is-disabled js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Total Quantity</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" value="0" disabled>
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                                  </div>
+                                  <div class="col col_lg-50 col_md-50">
+                                    <div class="input-box is-active js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Recommended Quantity</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" value="0">
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                                  </div>
+                                  <div class="col col_lg-50 col_md-50">
+                                    <div class="input-box is-active js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Minimum Quantity</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" value="0">
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="ordering__body">
+                              <!-- begin table -->
+                              <div class="table-wrapper table-wrapper_auto-height" data-table="products">
+                                <div class="table-wrapper__header" data-table-fake="products">
+                                  <div class="table-header ">
+                                    <ul class="table-header__tr">
+                                      <li class="table-header__th " data-column="ordering-name">Store</li>
+                                      <li class="table-header__th " data-column="ordering-default">Recommended Quantity</li>
+                                      <li class="table-header__th " data-column="ordering-default">Minimum Quantity</li>
+                                      <li class="table-header__th " data-column="ordering-default">Quantity</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div class="table-wrapper__body" data-scrollbar="default" data-table-scrollable="products">
+                                  <div class="table-body  table-wrapper__table" data-table-main="products">
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New CSP Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> Vlad store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> West Street Cafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> WestGuestCafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New CSP Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> Vlad store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> West Street Cafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> WestGuestCafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New CSP Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> Vlad store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> West Street Cafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> WestGuestCafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New CSP Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> Vlad store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> West Street Cafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> WestGuestCafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New CSP Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> New Store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> Vlad store </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> West Street Cafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                    <div class="table-body__tr">
+                                      <div class="table-body__td " data-column="ordering-name" data-title="Store"> WestGuestCafe </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Recommended Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Minimum Quantity"> <input type="text" class="simple-input simple-input_sm text-center"> </div>
+                                      <div class="table-body__td " data-column="ordering-default" data-title="Quantity"> <input type="text" class="simple-input simple-input_sm text-center" disabled> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- end table -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tabs__footer">
+                        <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple">Cancel</button> </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- end tabs -->
+                  <div class="slide" data-slide="create-category">
+                    <div class="slide__header color-header"> <button class="btn-back slide__back js-slide-back" data-slide-close="create-category">
+									<i class="fa fa-angle-left btn-back__arrow"></i>
+									<span class="btn-back__content">Products Edit</span>
+								</button>
+                      <h2 class="title-xl slide__title">Create New Category</h2>
+                    </div>
+                    <!-- begin steps -->
+                    <div class="steps">
+                      <div class="steps__body" data-scrollbar="default">
+                        <!-- begin inner -->
+                        <div class="inner">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col col_lg-100">
+                                <!-- begin langs -->
+                                <div class="langs">
+                                  <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                                </div>
+                                <!-- end langs -->
+                              </div>
+                              <div class="col col_lg-100">
+                                <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Category Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                              </div>
+                              <div class="col col_lg-50">
+                                <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Category Short Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                              </div>
+                              <div class="col col_lg-50">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select-color ">
+                                    <div class="select__field js-select-color-field">
+                                      <div class="select__placeholder">Category Display Color</div>
+                                      <div class="select__color-value js-select-color-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body">
+                                      <ul class="select__color-list" data-scrollbar="default">
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(109, 46, 40);" data-value="rgb(109, 46, 40)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(144, 54, 67);" data-value="rgb(144, 54, 67)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 104, 70);" data-value="rgb(185, 104, 70)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(185, 123, 65);" data-value="rgb(185, 123, 65)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(130, 129, 52);" data-value="rgb(130, 129, 52)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(56, 115, 85);" data-value="rgb(56, 115, 85)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(167, 59, 60);" data-value="rgb(167, 59, 60)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(188, 69, 89);" data-value="rgb(188, 69, 89)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 100, 79);" data-value="rgb(218, 100, 79)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(218, 150, 77);" data-value="rgb(218, 150, 77)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(155, 161, 56);" data-value="rgb(155, 161, 56)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(76, 171, 112);" data-value="rgb(76, 171, 112)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(213, 83, 86);" data-value="rgb(213, 83, 86)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 83, 108);" data-value="rgb(223, 83, 108)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(241, 120, 94);" data-value="rgb(241, 120, 94)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(245, 177, 95);" data-value="rgb(245, 177, 95)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(191, 186, 66);" data-value="rgb(191, 186, 66)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(129, 191, 125);" data-value="rgb(129, 191, 125)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(240, 93, 109);" data-value="rgb(240, 93, 109)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(254, 150, 99);" data-value="rgb(254, 150, 99)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(223, 139, 139);" data-value="rgb(223, 139, 139)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(246, 204, 36);" data-value="rgb(246, 204, 36)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(201, 209, 94);" data-value="rgb(201, 209, 94)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(156, 203, 126);" data-value="rgb(156, 203, 126)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(73, 73, 73);" data-value="rgb(73, 73, 73)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(174, 105, 226);" data-value="rgb(174, 105, 226)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(108, 118, 225);" data-value="rgb(108, 118, 225)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(105, 143, 205);" data-value="rgb(105, 143, 205)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 173, 190);" data-value="rgb(55, 173, 190)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(127, 181, 178);" data-value="rgb(127, 181, 178)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(183, 183, 183);" data-value="rgb(183, 183, 183)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 108, 183);" data-value="rgb(64, 108, 183)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(81, 90, 151);" data-value="rgb(81, 90, 151)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(86, 117, 175);" data-value="rgb(86, 117, 175)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(98, 146, 180);" data-value="rgb(98, 146, 180)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(64, 189, 173);" data-value="rgb(64, 189, 173)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(224, 224, 224);" data-value="rgb(224, 224, 224)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(83, 126, 150);" data-value="rgb(83, 126, 150)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 48, 121);" data-value="rgb(55, 48, 121)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 72, 126);" data-value="rgb(46, 72, 126)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(46, 142, 131);" data-value="rgb(46, 142, 131)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(96, 114, 163);" data-value="rgb(96, 114, 163)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(255, 255, 255);" data-value="rgb(255, 255, 255)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(67, 79, 117);" data-value="rgb(67, 79, 117)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(75, 81, 109);" data-value="rgb(75, 81, 109)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(55, 87, 141);" data-value="rgb(55, 87, 141)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(38, 89, 114);" data-value="rgb(38, 89, 114)"></i> </li>
+                                        <li class="select__color-item"> <i class="select__color-icon js-select-color-item" style="background-color: rgb(117, 151, 143);" data-value="rgb(117, 151, 143)"></i> </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end select -->
+                              </div>
+                              <div class="col col_lg-100">
+                                <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Category Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                              </div>
+                              <div class="col col_lg-100">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select select_full">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Department*</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body js-select-dropdown">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">All</li>
+                                        <li class="select__item js-select-item">Department 1</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                        <li class="select__item js-select-item">Department 2</li>
+                                        <li class="select__item js-select-item">Department 3</li>
+                                        <li class="select__item js-select-item">Department 4</li>
+                                      </ul>
+                                      <div class="select__footer"> <a href="#" class="link-add link-add_block select__add" data-slide-open="create-department"><i class="fa fa-plus"></i>Create new Department</a> </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end select -->
+                              </div>
+                              <div class="col col_lg-100"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end inner -->
+                      </div>
+                      <div class="steps__footer">
+                        <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-category">Cancel</button> </div>
+                      </div>
+                    </div>
+                    <!-- end steps -->
+                  </div>
+                  <div class="slide" data-slide="create-department">
+                    <div class="slide__header color-header"> <button class="btn-back slide__back js-slide-back" data-slide-close="create-department">
+									<i class="fa fa-angle-left btn-back__arrow"></i>
+									<span class="btn-back__content">Products Edit</span>
+								</button>
+                      <h2 class="title-xl slide__title">Create New Category</h2>
+                    </div>
+                    <!-- begin steps -->
+                    <div class="steps">
+                      <div class="steps__body" data-scrollbar="default">
+                        <!-- begin inner -->
+                        <div class="inner">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col col_lg-100">
+                                <!-- begin langs -->
+                                <div class="langs">
+                                  <div class="langs__inner"> <a href="#" class="langs__item is-active">English</a> <a href="#" class="langs__item">Español</a> <a href="#" class="langs__item">Русский</a> </div>
+                                </div>
+                                <!-- end langs -->
+                              </div>
+                              <div class="col col_lg-100">
+                                <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Department Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> <button class="input-box__clear">
+		<i class="fa fa-close"></i>
+	</button> </div>
+                              </div>
+                              <div class="col col_lg-100">
+                                <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Department Description</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                              </div>
+                              <div class="col col_lg-100"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end inner -->
+                      </div>
+                      <div class="steps__footer">
+                        <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-department">Cancel</button> </div>
+                      </div>
+                    </div>
+                    <!-- end steps -->
+                  </div>
+                </div>
+                <div class="products-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END content -->
+    <!-- BEGIN scripts -->
+    <script type="text/javascript" src="js/app.js"></script>
+    <!-- END scripts -->
+  </body>
+
+</html>
