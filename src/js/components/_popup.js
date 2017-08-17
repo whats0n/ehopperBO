@@ -8,7 +8,7 @@ export default function() {
 		const $target = $(e.currentTarget);
 		const name = $target.data('popup-open');
 		const $popup = $(`[data-popup="${name}"]`);
-		const $wrapper = $(`[data-popup-wrapper="${name}"]`);
+		const $wrapper = $(`[data-popup-wrapper*="${name}"]`);
 
 		$wrapper.addClass(OPEN);
 		$popup.addClass(OPEN);
@@ -20,7 +20,7 @@ export default function() {
 		const $target = $(e.currentTarget);
 		const name = $target.data('popup-close');
 		const $popup = $(`[data-popup="${name}"]`);
-		const $wrapper = $(`[data-popup-wrapper="${name}"]`);
+		const $wrapper = $(`[data-popup-wrapper*="${name}"]`);
 
 		$wrapper.removeClass(OPEN);
 		$popup.removeClass(OPEN);
