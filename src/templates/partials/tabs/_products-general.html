@@ -1,6 +1,6 @@
 {% import "partials/form/_build.html" as form %}
 <div class="container">
-<div class="row">
+	<div class="row">
 		<div class="col col_field col_lg-100">
 			{% include 'partials/components/_langs.html' %}
 		</div>
@@ -86,21 +86,23 @@
 						placeholder: 'UPC'
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
-					{{form.textareaBox.call({
-						placeholder: 'Product Description'
-					})}}
-				</div>
 			</div>
 		</div>
 		<div class="col col_lg-50 col_md-100 col_wrap">
 			<div class="row">
-				<div class="col col_field col_lg-100 text-center-lg">
-					{{form.backgroundControl.call({
-						placeholder: 'Product Display'
-					})}}
+				<div class="col col_field col_lg-100">
+					<div class="products-display">
+						{{form.backgroundControl.call({
+							placeholder: 'Product Display'
+						})}}	
+					</div>
 				</div>
 			</div>
+		</div>
+		<div class="col col_field col_lg-100">
+			{{form.textareaBox.call({
+				placeholder: 'Product Description'
+			})}}
 		</div>
 	</div>
 	<div class="row">

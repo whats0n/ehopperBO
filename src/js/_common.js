@@ -2,8 +2,15 @@ import {$DOCUMENT, $BODY, isTouch, touchClass, noTouchClass} from './_constants'
 
 export default (function() {
 	$DOCUMENT.ready(function() {
-		isTouch() && $BODY.addClass(touchClass);
-		!isTouch() && $BODY.addClass(noTouchClass);
-		isTouch() && $BODY.css('min-height', $BODY.outerHeight());
+		const touch = isTouch();
+		touch && $BODY.addClass(touchClass);
+		!touch && $BODY.addClass(noTouchClass);
+		if (touch) {
+			$BODY.css('min-height', $BODY.outerHeight());
+			$(window).on('resize', () => {
+				$BODY.css('min-height', 1);
+				$BODY.css('min-height', $BODY.outerHeight());
+			});
+		} 
 	});
 })();

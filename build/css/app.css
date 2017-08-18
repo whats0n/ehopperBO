@@ -4311,6 +4311,14 @@ button:disabled, button.is-disabled,
   margin: 10px;
 }
 
+.is-touch .fake-buttons_connected .fake-buttons__row {
+  margin: 0;
+}
+
+.is-touch .fake-buttons_connected .fake-button {
+  margin: 0 -1px 0 0;
+}
+
 .fake-button {
   position: relative;
   display: inline-block;
@@ -4354,6 +4362,11 @@ button:disabled, button.is-disabled,
   text-decoration: none;
   white-space: nowrap;
   transition: background 0.175s ease, color 0.175s ease, border-color 0.175s ease;
+}
+
+.is-touch .fake-button__face {
+  padding: 0 13px;
+  font-size: 14px;
 }
 
 .checkbox {
@@ -7251,6 +7264,29 @@ button:disabled, button.is-disabled,
   border-bottom: none;
 }
 
+.is-touch .tabs_simple {
+  padding: 0;
+}
+
+.is-touch .tabs_simple .tabs__inner {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.is-touch .tabs_simple .tabs__btn {
+  border-top: none;
+  line-height: 50px;
+}
+
+.is-touch .tabs_simple .tabs__footer .section {
+  padding: 0;
+}
+
+.is-touch .tabs_simple .tabs__footer .btn {
+  margin: 0;
+  width: 50%;
+}
+
 .tabs__inner {
   position: relative;
   padding-top: 60px;
@@ -7284,6 +7320,11 @@ button:disabled, button.is-disabled,
   font-size: 18px;
   line-height: 59px;
   text-align: center;
+}
+
+.is-touch .tabs__btn {
+  padding: 0 15px;
+  font-size: 16px;
 }
 
 .tabs__btn.is-active {
@@ -8021,6 +8062,11 @@ button:disabled, button.is-disabled,
   text-align: center;
 }
 
+.products-display {
+  padding-top: 70px;
+  text-align: center;
+}
+
 .vendors {
   padding-top: 100px;
   height: 100%;
@@ -8504,13 +8550,6 @@ hr {
   }
 }
 
-@media only screen and (max-width: 1366px){
-  .fake-button__face{
-    padding: 0 13px;
-    font-size: 14px;
-  }
-}
-
 @media only screen and (max-width: 1200px){
   .col_md-1{
     width: 1%;
@@ -8818,12 +8857,6 @@ hr {
   .pull-lg-right{
     float: none;
   }
-  .fake-buttons_connected .fake-buttons__row{
-    margin: 0;
-  }
-  .fake-buttons_connected .fake-button{
-    margin: 0 -1px 0 0;
-  }
   .filters__row, .filters__btns{
     vertical-align: top;
   }
@@ -8876,6 +8909,10 @@ hr {
   }
   .orders{
     height: calc(100% - 176px);
+  }
+  .products-display{
+    padding-top: 0;
+    text-align: left;
   }
 }
 
