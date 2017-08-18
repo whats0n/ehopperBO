@@ -7441,6 +7441,10 @@ button:disabled, button.is-disabled,
   height: 100%;
 }
 
+.is-touch .steps {
+  padding-top: 51px;
+}
+
 .steps__body {
   overflow: auto;
   height: 100%;
