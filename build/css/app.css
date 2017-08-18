@@ -5418,6 +5418,10 @@ button:disabled, button.is-disabled,
   transition: border-color 0.17s ease-in-out;
 }
 
+.is-touch .background-control {
+  max-width: 200px;
+}
+
 .background-control.is-open {
   border-color: #2e99db;
 }
@@ -8860,6 +8864,9 @@ hr {
   }
   .pull-lg-right{
     float: none;
+  }
+  .background-control{
+    max-width: 200px;
   }
   .filters__row, .filters__btns{
     vertical-align: top;

@@ -9,6 +9,10 @@
 	text-align: left
 	+nosel
 	transition: border-color 0.17s ease-in-out
+	+media('width', 'lg')
+		max-width: 200px
+	+touch
+		max-width: 200px
 	&.is-open
 		border-color: $blue
 		.background-control
