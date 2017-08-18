@@ -1,11 +1,13 @@
 import resizable from '../lib/jquery-resizable';
-import { HIDDEN } from '../_constants';
+import { HIDDEN, ACTIVE, ANIMATION, isTouch } from '../_constants';
 
 
 export default function() {
 	const container = $('.js-resizable-width');
 
 	if (container.length) {
+
+		const touchFlag = isTouch();
 
 		container.each(function() {
 
@@ -25,7 +27,7 @@ export default function() {
 			let slideBackBtnMargin = null;
 			let slideBackBtnFlag = false;
 
-			$rightColumn.resizable({
+			!touchFlag && $rightColumn.resizable({
 				resizeHeight: false,
 				handleSelector: '> .js-resizable-width-splitter',
 				resizeWidthFrom: 'left',
@@ -94,6 +96,26 @@ export default function() {
 					// $rightColumn.css('max-width', `calc(100% - ${navBtnWidth}px)`);
 					$rightColumn.width(rightColumnWidth);
 					$leftColumn.width(leftColumnWidth);
+				}
+			});
+
+			touchFlag && $splitter.on('click', e => {
+				if ($splitter.hasClass(ACTIVE)) {
+					$splitter.removeClass(ACTIVE);
+					$headerTitle
+						.removeClass(HIDDEN);
+					$slideBackBtn.removeAttr('style');
+					$rightColumn
+						.removeAttr('style');
+				} else {
+					$splitter.addClass(ACTIVE);
+					$headerTitle
+						.addClass(ANIMATION)
+						.addClass(HIDDEN);
+					$slideBackBtn.css('margin-left', $navBtn.outerWidth());
+					$rightColumn
+						.addClass(ANIMATION)
+						.css('width', '100%');
 				}
 			});
 			

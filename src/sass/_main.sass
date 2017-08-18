@@ -16,21 +16,37 @@
 		width: 15px
 		background: $lightGray
 		cursor: e-resize
+		+touch
+			width: 40px
 		.splitter
 			&__lines
 				border-left: 1px solid rgba($black, 0.4)
 				border-right: 1px solid rgba($black, 0.4)
 				width: 4px
 				height: 10px
+			&__arrow
+				color: rgba($black, 0.4)
+				font-size: 36px
 	&_right
 		right: 0
 	&_left
 		left: 0
-	&__lines
+	&__lines,
+	&__arrow
 		position: absolute
 		top: 50%
 		left: 50%
 		transform: translate3d(-50%,-50%,0)
+	&__lines
+		+touch
+			display: none
+	&__arrow
+		display: none
+		transition: transform 0.3s ease-in-out
+		+touch
+			display: block
+		.splitter.is-active &
+			transform: rotate(180deg) translate3d(50%,50%,0)
 
 
 hr
