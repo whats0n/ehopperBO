@@ -7324,8 +7324,13 @@ button:disabled, button.is-disabled,
   background: #fcfcfc;
 }
 
-.langs__inner {
+.langs {
+  overflow: auto;
   margin: -2px;
+}
+
+.langs__inner {
+  white-space: nowrap;
 }
 
 .langs__item {
@@ -9130,10 +9135,10 @@ hr {
     height: calc(100% - 176px);
   }
   .products-sidebar_simple{
-    padding-top: 40px;
+    padding-top: 41px;
   }
   .products-sidebar__search{
-    padding: 0;
+    padding: 1px 0 0;
   }
 }
 

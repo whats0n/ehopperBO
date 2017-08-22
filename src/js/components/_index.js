@@ -11,6 +11,7 @@ import sortable from './_sortable';
 import resizableLayout from './_resizable-layout';
 import popup from './_popup';
 import slide from './_slide';
+import lang from './_lang';
 
 export default (function() {
 	
@@ -27,5 +28,6 @@ export default (function() {
 	resizableLayout();
 	popup();
 	slide();
+	lang();
 
 })();
