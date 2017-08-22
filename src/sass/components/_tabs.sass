@@ -16,36 +16,23 @@
 			&__body
 				border-bottom: none
 	&_simple
-		+media('width', 'md')
-			padding: 0
-		+touch
+		+md
 			padding: 0
 		.tabs
 			&__inner
-				+media('width', 'md')
-					padding-top: 50px
-					padding-bottom: 60px
-				+touch
+				+md
 					padding-top: 50px
 					padding-bottom: 60px
 			&__btn
-				+media('width', 'md')
-					border-top: none
-					line-height: 50px
-				+touch
+				+md
 					border-top: none
 					line-height: 50px
 			&__footer
 				.section
-					+media('width', 'md')
-						padding: 0
-					+touch
+					+md
 						padding: 0
 				.btn
-					+media('width', 'md')
-						margin: 0
-						width: 50%
-					+touch
+					+md
 						margin: 0
 						width: 50%
 	&__inner
@@ -75,11 +62,8 @@
 		font-size: 18px
 		line-height: 59px
 		text-align: center
-		+media('width', 'lg')
+		+md
 			padding: 0 15px
-			font-size: 16px
-		+touch
-			padding: 0 15px 
 			font-size: 16px
 		&.is-active
 			border-color: $lightGray

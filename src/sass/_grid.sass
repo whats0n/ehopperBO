@@ -23,24 +23,26 @@
 	&_xl
 		@for $i from 1 through 100
 			&-#{$i}
-				+min-media('width', 'xl')
-					width: $i + %
+				width: $i + %
 	&_lg
 		@for $i from 1 through 100
 			&-#{$i}
-				width: $i + %
+				+xl
+					width: $i + %
 	&_md
 		@for $i from 1 through 100
 			&-#{$i}
-				+media('width', 'lg')
+				+lg
+					width: $i + %
+	&_sm
+		@for $i from 1 through 100
+			&-#{$i}
+				+md
+					width: $i + %
+	&_xs
+		@for $i from 1 through 100
+			&-#{$i}
+				+sm
 					width: $i + %
 
 //helpers
-.pull-lg-left
-	float: left
-	+media('width', 'lg')
-		float: none
-.pull-lg-right
-	float: right
-	+media('width', 'lg')
-		float: none

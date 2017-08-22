@@ -5,6 +5,7 @@ export default (function() {
 		const touch = isTouch();
 		touch && $BODY.addClass(touchClass);
 		!touch && $BODY.addClass(noTouchClass);
+		
 		if (touch) {
 			const windowHeight = window.outerHeight;
 			const screenHeight = window.screen.height;

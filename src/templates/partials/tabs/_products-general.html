@@ -1,10 +1,10 @@
 {% import "partials/form/_build.html" as form %}
 <div class="container">
 	<div class="row">
-		<div class="col col_field col_lg-100">
+		<div class="col col_field col_xl-100">
 			{% include 'partials/components/_langs.html' %}
 		</div>
-		<div class="col col_field col_lg-100">
+		<div class="col col_field col_xl-100">
 			<div class="fake-buttons fake-buttons_connected">
 				<span class="label label_block">Inventory type*</span>
 				<div class="fake-buttons__row">
@@ -30,9 +30,9 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col_lg-50 col_md-100 col_wrap">
+		<div class="col col_xl-50 col_md-100 col_wrap">
 			<div class="row">
-				<div class="col col_field col_lg-100">
+				<div class="col col_field col_xl-100">
 					{{form.inputBox.call({
 						placeholder: 'Product Name*',
 						classList: 'is-error',
@@ -40,12 +40,12 @@
 						errorMessage: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, voluptatum.'
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
+				<div class="col col_field col_xl-100">
 					{{form.inputBox.call({
 						placeholder: 'Product Short Name'
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
+				<div class="col col_field col_xl-100">
 					{{form.select.call({
 						classList: 'select_full',
 						placeholder: 'Department*',
@@ -65,7 +65,7 @@
 						]
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
+				<div class="col col_field col_xl-100">
 					{{form.select.call({
 						classList: 'select_full',
 						placeholder: 'Category*',
@@ -81,32 +81,28 @@
 						]
 					})}}
 				</div>
-				<div class="col col_field col_lg-100">
+				<div class="col col_field col_xl-100">
 					{{form.inputBox.call({
 						placeholder: 'UPC'
 					})}}
 				</div>
 			</div>
 		</div>
-		<div class="col col_lg-50 col_md-100 col_wrap">
-			<div class="row">
-				<div class="col col_field col_lg-100">
-					<div class="products-display">
-						{{form.backgroundControl.call({
-							placeholder: 'Product Display'
-						})}}	
-					</div>
-				</div>
+		<div class="col col_xl-50 col_md-100 col_wrap">
+			<div class="products-display">
+				{{form.backgroundControl.call({
+					placeholder: 'Product Display'
+				})}}	
 			</div>
 		</div>
-		<div class="col col_field col_lg-100">
+		<div class="col col_field col_xl-100">
 			{{form.textareaBox.call({
 				placeholder: 'Product Description'
 			})}}
 		</div>
 	</div>
 	<div class="row">
-		<div class="col col_field col_lg-100">
+		<div class="col col_field col_xl-100">
 			{{form.checkbox.call({
 				attrs: 'checked',
 				content: 'Is Active'

@@ -19,10 +19,10 @@ menu: { active: 1 }
 				<div class="sm-filters js-product-filters" data-popup="products-filters">
 					<div class="container sm-filters__container" data-popup-container="products-filters" data-scrollbar="default">
 						<div class="row">
-							<div class="col col_lg-100">
+							<div class="col col_xl-100">
 								<h2 class="title-xxl color-title-main text-center">Filter your products</h2>
 							</div>
-							<div class="col col_lg-50">
+							<div class="col col_xl-50">
 								{{form.select.call({
 									classList: 'select_full is-active',
 									selected: 1,
@@ -36,7 +36,7 @@ menu: { active: 1 }
 									]
 								})}}
 							</div>
-							<div class="col col_lg-50">
+							<div class="col col_xl-50">
 								{{form.select.call({
 									classList: 'select_full is-active',
 									selected: 1,
@@ -50,7 +50,7 @@ menu: { active: 1 }
 									]
 								})}}
 							</div>
-							<div class="col col_lg-100">
+							<div class="col col_xl-100">
 								{{form.multiSelect.call({
 									classList: 'select_full is-active',
 									placeholder: 'Inventory type',
@@ -64,41 +64,45 @@ menu: { active: 1 }
 									]
 								})}}
 							</div>
-							<div class="col col_lg-100 text-center sm-filters__btns">
+							<div class="col col_xl-100 text-center sm-filters__btns">
 								<button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button>
 								<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>
 							</div>
-							<div class="col col_lg-100 text-center">
+							<div class="col col_xl-100 text-center">
 								<a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="products-actions" data-popup="products-actions">
+				{#<div class="products-actions" data-popup="products-actions">
 					<button class="products-actions__item" data-animation="ripple">New <i class="fa fa-plus"></i></button>
 					<button class="products-actions__item" data-animation="ripple">Export <i class="fa fa-download"></i></button>
 					<button class="products-actions__item" data-animation="ripple">Import <i class="fa fa-upload"></i></button>
 					<button class="products-actions__item products-actions__item_delete" data-animation="ripple">Delete <i class="fa fa-trash-o"></i></button>
-				</div>
+				</div>#}
 				<div class="products-sidebar__header">
-					<button class="products-actions-btn" data-popup-open="products-actions">
+					{#<button class="products-actions-btn" data-popup-open="products-actions">
 						<i class="fa fa-angle-down"></i>
-					</button>
+					</button>#}
+					<div class="products-actions" data-popup="products-actions">
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-plus"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-download"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-upload"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-trash-o"></i></button>
+					</div>
 				</div>
 				<div class="products-sidebar products-sidebar_simple" data-scrollbar="default">
-					<div class="container products-sidebar__header">
-						<div class="row">
-							<div class="col col_lg-100">
-								<div class="filter-group">
-									<button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
-										<i class="fa fa-filter"></i>
-									</button>
-									{{form.search.call({
-										placeholder: 'Search',
-										classList: 'filter-group__field',
-										inputClassList: 'simple-input_sm'
-									})}}
-								</div>
+					<div class="products-sidebar__header">
+						<div class="products-sidebar__search">
+							<div class="filter-group">
+								<button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+									<i class="fa fa-filter"></i>
+								</button>
+								{{form.search.call({
+									placeholder: 'Search',
+									classList: 'filter-group__field',
+									inputClassList: 'simple-input_sm'
+								})}}
 							</div>
 						</div>
 					</div>

@@ -15,14 +15,14 @@
 			&__header
 				position: relative
 	&_adaptive
-		+media('width', 'md')
+		+sm
 			padding-top: 0
 		.table-wrapper
 			&__header
-				+media('width', 'md')
+				+sm
 					display: none
 			&__body
-				+media('width', 'md')
+				+sm
 					border-top: 1px solid $lightGray
 					border-bottom: 1px solid $lightGray
 		.table-header,
@@ -30,26 +30,26 @@
 			&__th,
 			&__td
 				&[data-column*="action"]
-					+media('width', 'md')
+					+sm
 						display: none
 		.table-header
-			+media('width', 'md')
+			+sm
 				display: none
 		.table-body
-			+media('width', 'md')
+			+sm
 				display: block
 				+clr
 			&__tr,
 			&__td
-				+media('width', 'md')
+				+sm
 					display: block
 			&__td
-				+media('width', 'md')
+				+sm
 					position: relative
 					padding: 4px 0 4px 50%
 					border: none
 				&:before
-					+media('width', 'md')
+					+sm
 						content: attr(data-title)
 						position: absolute
 						top: 0
@@ -57,25 +57,25 @@
 						padding: 4px 20px
 						width: 50%
 			&__tr
-				+media('width', 'md')
+				+sm
 					float: left
 					padding: 8px 0
 					width: 50%
-				+media('width', 'sm')
+				+xs
 					float: none
 					width: 100%
 				&:nth-child(even)
-					+media('width', 'md')
+					+sm
 						border-left: 1px solid $lightGray
 						background: none
-					+media('width', 'sm')
+					+xs
 						border-left: none
 						background: $white
 			&__tr:not(:first-child) 
-				+media('width', 'md')
+				+sm
 					border-top: 1px solid $lightGray
 				.table-body__td
-					+media('width', 'md')
+					+sm
 						border: none
 	&__header
 		position: absolute
@@ -112,7 +112,7 @@
 	table-layout: fixed
 	width: 100%
 	font-size: 14px
-	+media('width', 'lg')
+	+sm
 		font-size: 12px
 	&__tr
 		display: table-row
@@ -124,7 +124,7 @@
 		display: table-cell
 		vertical-align: middle
 		padding: 10px
-		+media('width', 'lg')
+		+sm
 			padding: 10px 4px
 		&:first-child
 			padding-left: 20px
@@ -153,7 +153,7 @@
 			width: 50px
 		&[data-column*="first-checkbox"]
 			width: 60px
-			+media('width', 'lg')
+			+sm
 				width: 54px
 		// &[data-column*="product-title"]
 			// width: 23%
@@ -163,7 +163,7 @@
 		&[data-column*="product-price"],
 		&[data-column*="product-qty"]
 			width: 13%
-			+media('width', 'lg')
+			+sm
 				width: 9%
 		//products ordering
 		&[data-column*="ordering-name"]

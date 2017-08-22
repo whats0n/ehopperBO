@@ -55,33 +55,57 @@
 //     @content
 
 //adaptive points
-=media($direction, $point)
-  @if $direction == 'height'
-    @if $point == 'sm'
-      +rh(650)
-        @content
-  @if $direction == 'width'
-    @if $point == 'sm'
-      +r(767)
-        @content
-    @if $point == 'md'
-      +r(1080)
-        @content
-    @if $point == 'lg'
-      +r(1200)
-        @content
-    @if $point == 'xl'
-      +r(1366)
-        @content
+=xl
+  +r(1600)
+    @content
 
-=min-media($direction, $point)
-  @if $direction == 'width'
-    @if $point == 'lg'
-      +rmin(1201)
-        @content
-    @if $point == 'xl'
-      +rmin(1367)
-        @content
+=lg
+  +r(1366)
+    @content
+
+=md
+  +r(1280)
+    @content
+
+=sm
+  +r(1080)
+    @content
+
+=xs
+  +r(767)
+    @content
+
+=hsm
+  +rh(650)
+    @content
+
+// =media($direction, $point)
+//   @if $direction == 'height'
+//     @if $point == 'sm'
+//       +rh(650)
+//         @content
+//   @if $direction == 'width'
+//     @if $point == 'sm'
+//       +r(767)
+//         @content
+//     @if $point == 'md'
+//       +r(1080)
+//         @content
+//     @if $point == 'lg'
+//       +r(1200)
+//         @content
+//     @if $point == 'xl'
+//       +r(1366)
+//         @content
+
+// =min-media($direction, $point)
+//   @if $direction == 'width'
+//     @if $point == 'lg'
+//       +rmin(1201)
+//         @content
+//     @if $point == 'xl'
+//       +rmin(1367)
+//         @content
 //states
 =touch
   .is-touch &

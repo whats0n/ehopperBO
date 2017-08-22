@@ -9,7 +9,7 @@
 		display: table-cell
 		vertical-align: bottom
 		font-size: 0
-		+media('width', 'lg')
+		+md
 			vertical-align: top
 	&__row
 		width: 90%
@@ -23,7 +23,7 @@
 	&__col
 		&_md
 			width: 50%
-			+media('width', 'lg')
+			+md
 				width: 100%
 		&_sm
 			width: 40%
@@ -31,7 +31,7 @@
 			width: 60%
 		&_sm,
 		&_lg
-			+media('width', 'lg')
+			+md
 				width: 100%
 	&__field
 		padding: 8px
@@ -39,7 +39,6 @@
 		&_md
 			width: 50%
 		&_sm
-			// +media('width', 'lg')
 			width: 33.33%
 	&__label
 		padding-bottom: 8px
