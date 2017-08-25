@@ -139,11 +139,23 @@
 										</div>
 									{% endfor %}
 								</div>
+								<div class="m-item__add">
+									<a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a>
+								</div>
+							</div>
+							<div class="m-item__checkbox">
+								{{form.checkbox.call({
+									attrs: 'checked',
+									content: 'is Active'
+								})}}
 							</div>
 						</div>
 					</div>
 				</div>
 			{% endfor %}
+			<div class="modifiers__add">
+				<a href="#" class="link-add"><i class="fa fa-plus"></i> Add modifier group</a>
+			</div>
 		</div>
 	</div>
 </div>

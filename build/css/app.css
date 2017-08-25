@@ -7630,6 +7630,14 @@ button:disabled, button.is-disabled,
   text-align: left;
 }
 
+.m-item__add {
+  padding: 15px 60px 0;
+}
+
+.m-item__checkbox {
+  padding: 5px 40px;
+}
+
 .m-box {
   padding: 10px 0;
 }
@@ -8317,6 +8325,10 @@ button:disabled, button.is-disabled,
   font-size: 28px;
   line-height: 60px;
   text-align: center;
+}
+
+.modifiers__add {
+  padding: 20px;
 }
 
 .js-sortable-handle {
