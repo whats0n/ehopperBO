@@ -6,6 +6,8 @@
 				background: rgba($mainColor, 0.03)
 	&__container
 		padding: 20px 10px
+		+lg
+			padding-bottom: 5px
 	&__header
 		position: relative
 		+clr
@@ -16,32 +18,37 @@
 		padding: 0 10px
 	&__field
 		position: relative
-		padding-left: 60px
+		padding-left: 50px
 		width: 300px
 		+lg
-			padding-right: 80px
+			padding-right: 60px
 			width: 100%
 	&__toggle
 		width: 200px
+		+lg
+			width: 100%
+			text-align: center
 	&__close
 		width: 80px
 		+lg
 			position: absolute
 			top: 0
-			right: 0
+			right: -8px
+			padding: 0
+			width: 60px
 	&__icon
 		position: absolute
 		top: 0
 		left: 10px
 		bottom: 0
-		width: 50px
 		color: darken($lightGray, 10%)
 		font-size: 24px
 		line-height: 60px
-		text-align: center
 		cursor: move
 	&__btn-toggle
 		width: 100%
+		+lg
+			width: auto
 	&__body
 		display: none
 		&.is-open
@@ -53,6 +60,7 @@
 	&__items
 		clear: both
 		padding: 20px 0
+		margin: 0 -20px
 	&__label
 		padding-left: 70px
 		padding-bottom: 8px

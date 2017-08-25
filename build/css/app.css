@@ -4301,7 +4301,7 @@ button:disabled, button.is-disabled,
   background: none;
   font-size: 28px;
   line-height: 60px;
-  color: #ec4a41;
+  color: #ee5c54;
 }
 
 .btn-toggle {
@@ -4358,6 +4358,10 @@ button:disabled, button.is-disabled,
   margin: 10px;
 }
 
+.fake-buttons_connected .fake-buttons__col {
+  padding: 10px 0;
+}
+
 .fake-buttons__col {
   float: left;
   padding: 10px;
@@ -4385,7 +4389,7 @@ button:disabled, button.is-disabled,
 }
 
 .fake-button_wide {
-  width: 100%;
+  display: block;
 }
 
 .fake-button_wide .fake-button__face {
@@ -4691,12 +4695,10 @@ button:disabled, button.is-disabled,
 
 .input-box__clear:active {
   color: #333;
-  background: #dadada;
 }
 
 .no-touch .input-box__clear:active {
   color: #333;
-  background: #dadada;
 }
 
 .input-box__clear i {
@@ -7572,7 +7574,7 @@ button:disabled, button.is-disabled,
 
 .m-item__field {
   position: relative;
-  padding-left: 60px;
+  padding-left: 50px;
   width: 300px;
 }
 
@@ -7589,11 +7591,9 @@ button:disabled, button.is-disabled,
   top: 0;
   left: 10px;
   bottom: 0;
-  width: 50px;
   color: #d5d5d5;
   font-size: 24px;
   line-height: 60px;
-  text-align: center;
   cursor: move;
 }
 
@@ -7620,6 +7620,7 @@ button:disabled, button.is-disabled,
 .m-item__items {
   clear: both;
   padding: 20px 0;
+  margin: 0 -20px;
 }
 
 .m-item__label {
@@ -7639,8 +7640,8 @@ button:disabled, button.is-disabled,
 
 .m-box__row {
   position: relative;
-  padding-left: 60px;
-  padding-right: 80px;
+  padding-left: 50px;
+  padding-right: 60px;
   font-size: 0;
 }
 
@@ -7653,33 +7654,51 @@ button:disabled, button.is-disabled,
 .m-box__close {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 2px;
 }
 
 .m-box__name {
-  width: 40%;
+  width: 45%;
 }
 
 .m-box__price {
-  width: 40%;
+  width: 35%;
 }
 
 .m-box__radio {
+  display: none;
   padding-top: 15px;
   padding-bottom: 15px;
   width: 20%;
 }
 
+.m-box__radio.is-open {
+  display: inline-block;
+}
+
+.m-box__radio-btn {
+  text-align: center;
+}
+
+.m-box__radio-btn .radio__icon {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.m-box__radio-btn .radio__content {
+  display: block;
+  padding: 6px 0 0;
+}
+
 .m-box__icon {
   position: absolute;
   top: 0;
-  left: 10px;
+  left: 20px;
   bottom: 0;
-  width: 50px;
   color: #d5d5d5;
   font-size: 24px;
   line-height: 60px;
-  text-align: center;
   cursor: move;
 }
 
@@ -9003,14 +9022,26 @@ hr {
   .fake-button__description{
     font-size: 12px;
   }
+  .m-item__container{
+    padding-bottom: 5px;
+  }
   .m-item__field{
-    padding-right: 80px;
+    padding-right: 60px;
     width: 100%;
+  }
+  .m-item__toggle{
+    width: 100%;
+    text-align: center;
   }
   .m-item__close{
     position: absolute;
     top: 0;
-    right: 0;
+    right: -8px;
+    padding: 0;
+    width: 60px;
+  }
+  .m-item__btn-toggle{
+    width: auto;
   }
   .products-display{
     padding-top: 0;
@@ -9368,10 +9399,8 @@ hr {
     padding-top: 51px;
   }
   .m-box__radio{
-    width: 100%;
-  }
-  .m-box__name, .m-box__price{
-    width: 50%;
+    padding: 0;
+    text-align: center;
   }
   .orders{
     height: calc(100% - 176px);

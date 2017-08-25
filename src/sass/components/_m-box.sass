@@ -4,8 +4,8 @@
 		background: lighten($mainColor, 51%)
 	&__row
 		position: relative
-		padding-left: 60px
-		padding-right: 80px
+		padding-left: 50px
+		padding-right: 60px
 		font-size: 0
 	&__col
 		display: inline-block
@@ -14,29 +14,42 @@
 	&__close
 		position: absolute
 		top: 0
-		right: 0
+		right: 2px
 	&__name
-		width: 40%
+		width: 45%
 	&__price
-		width: 40%
+		width: 35%
 	&__radio
+		display: none
 		padding-top: 15px
 		padding-bottom: 15px
 		width: 20%
 		+md
-			width: 100%
-	&__name,
-	&__price 
-		+md
-			width: 50%
+			padding: 0
+			// width: 100%
+			text-align: center
+		&.is-open
+			display: inline-block
+		&-btn 
+			text-align: center
+			.radio
+				&__icon
+					position: relative
+					display: inline-block
+					vertical-align: top
+				&__content
+					display: block
+					padding: 6px 0 0
+	// &__name,
+	// &__price 
+	// 	+md
+	// 		// width: 50%
 	&__icon
 		position: absolute
 		top: 0
-		left: 10px
+		left: 20px
 		bottom: 0
-		width: 50px
 		color: darken($lightGray, 10%)
 		font-size: 24px
 		line-height: 60px
-		text-align: center
 		cursor: move

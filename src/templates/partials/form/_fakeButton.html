@@ -1,6 +1,6 @@
 {% macro call(props) %}
 <label class="fake-button {{props.classList}}">
-	<input type="radio" name="{{props.name}}" {{props.attrs | safe}}>
+	<input type="radio" name="{{props.name}}" {{props.attrs | safe}} {% if props.inputClassList %}class="{{props.inputClassList}}"{% endif %}>
 	<span class="fake-button__face">{{props.content | safe}}</span>
 	{% if props.description %}
 		<span class="fake-button__description">{{props.description | safe}}</span>

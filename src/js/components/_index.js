@@ -13,6 +13,7 @@ import popup from './_popup';
 import slide from './_slide';
 import lang from './_lang';
 import toggle from './_toggle';
+import selectType from './_select-type';
 
 export default (function() {
 	
@@ -31,5 +32,6 @@ export default (function() {
 	slide();
 	lang();
 	toggle();
+	selectType();
 
 })();

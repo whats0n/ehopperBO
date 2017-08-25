@@ -60,25 +60,28 @@
 								</button>
 							</div>
 						</div>
-						<div class="m-item__body js-toggle-container" data-toggle="modifier-group">
-							<div class="fake-buttons m-item__fake-buttons">
+						<div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
+							<div class="fake-buttons fake-buttons_connected m-item__fake-buttons">
 								<span class="label label_block">Select modifier type</span>
 								<div class="fake-buttons__row">
 									<div class="fake-buttons__col">
 										{{form.fakeButton.call({
 											classList: 'fake-button_wide',
 											name: 'modifier-type-' + parentIndex,
-											attrs: 'checked',
 											content: 'One selection',
-											description: 'eg: small, medium, large'
+											description: 'eg: small, medium, large',
+											inputClassList: 'js-select-type-input',
+											attrs: 'data-select-type="radio"'
 										})}}
 									</div>
 									<div class="fake-buttons__col">
 										{{form.fakeButton.call({
 											classList: 'fake-button_wide',
 											name: 'modifier-type-' + parentIndex,
+											attrs: 'checked',
 											content: 'Multiple selections',
-											description: 'eg: cheese, sausage'
+											description: 'eg: cheese, sausage',
+											inputClassList: 'js-select-type-input'
 										})}}
 									</div>
 									<div class="fake-buttons__col">
@@ -86,7 +89,8 @@
 											classList: 'fake-button_wide',
 											name: 'modifier-type-' + parentIndex,
 											content: 'Exceptions',
-											description: 'eg: No salt, No sugar'
+											description: 'eg: No salt, No sugar',
+											inputClassList: 'js-select-type-input'
 										})}}
 									</div>
 								</div>
@@ -110,15 +114,17 @@
 														noClear: true
 													})}}
 												</div>
-												<div class="m-box__radio m-box__col">
+												<div class="m-box__radio m-box__col js-select-type-container">
 													{% if loop.index == 1 %}
 														{{form.radio.call({
+															classList: 'm-box__radio-btn',
 															name: 'modifier-group-default-' + parentIndex,
 															content: 'Default',
 															attrs: 'checked'
 														})}}
 													{% else %}
 														{{form.radio.call({
+															classList: 'm-box__radio-btn',
 															name: 'modifier-group-default-' + parentIndex,
 															content: 'Default'
 														})}}

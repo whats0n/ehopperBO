@@ -755,19 +755,19 @@
                               <div class="col col_field col_xl-100">
                                 <div class="fake-buttons fake-buttons_connected"> <span class="label label_block">Inventory type*</span>
                                   <div class="fake-buttons__row"> <label class="fake-button ">
-	<input type="radio" name="product-inventory-type" checked>
+	<input type="radio" name="product-inventory-type" checked >
 	<span class="fake-button__face">Inventory</span>
 	
 </label> <label class="fake-button ">
-	<input type="radio" name="product-inventory-type" >
+	<input type="radio" name="product-inventory-type"  >
 	<span class="fake-button__face">Non-inventory</span>
 	
 </label> <label class="fake-button ">
-	<input type="radio" name="product-inventory-type" >
+	<input type="radio" name="product-inventory-type"  >
 	<span class="fake-button__face">Serialized</span>
 	
 </label> <label class="fake-button ">
-	<input type="radio" name="product-inventory-type" >
+	<input type="radio" name="product-inventory-type"  >
 	<span class="fake-button__face">With Ingredients</span>
 	
 </label> </div>
@@ -1034,25 +1034,25 @@
 									<i class="fa fa-close"></i>
 								</button> </div>
                                     </div>
-                                    <div class="m-item__body js-toggle-container" data-toggle="modifier-group">
-                                      <div class="fake-buttons m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
+                                    <div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
+                                      <div class="fake-buttons fake-buttons_connected m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
                                         <div class="fake-buttons__row">
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1" checked>
+	<input type="radio" name="modifier-type-1" data-select-type="radio" class="js-select-type-input">
 	<span class="fake-button__face">One selection</span>
 	
 		<span class="fake-button__description">eg: small, medium, large</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1" >
+	<input type="radio" name="modifier-type-1" checked class="js-select-type-input">
 	<span class="fake-button__face">Multiple selections</span>
 	
 		<span class="fake-button__description">eg: cheese, sausage</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1" >
+	<input type="radio" name="modifier-type-1"  class="js-select-type-input">
 	<span class="fake-button__face">Exceptions</span>
 	
 		<span class="fake-button__description">eg: No salt, No sugar</span>
@@ -1081,7 +1081,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-1" checked>
 	<span class="radio__icon"></span>
 	
@@ -1111,7 +1111,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-1" >
 	<span class="radio__icon"></span>
 	
@@ -1141,7 +1141,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-1" >
 	<span class="radio__icon"></span>
 	
@@ -1182,25 +1182,25 @@
 									<i class="fa fa-close"></i>
 								</button> </div>
                                     </div>
-                                    <div class="m-item__body js-toggle-container" data-toggle="modifier-group">
-                                      <div class="fake-buttons m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
+                                    <div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
+                                      <div class="fake-buttons fake-buttons_connected m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
                                         <div class="fake-buttons__row">
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2" checked>
+	<input type="radio" name="modifier-type-2" data-select-type="radio" class="js-select-type-input">
 	<span class="fake-button__face">One selection</span>
 	
 		<span class="fake-button__description">eg: small, medium, large</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2" >
+	<input type="radio" name="modifier-type-2" checked class="js-select-type-input">
 	<span class="fake-button__face">Multiple selections</span>
 	
 		<span class="fake-button__description">eg: cheese, sausage</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2" >
+	<input type="radio" name="modifier-type-2"  class="js-select-type-input">
 	<span class="fake-button__face">Exceptions</span>
 	
 		<span class="fake-button__description">eg: No salt, No sugar</span>
@@ -1229,7 +1229,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-2" checked>
 	<span class="radio__icon"></span>
 	
@@ -1259,7 +1259,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-2" >
 	<span class="radio__icon"></span>
 	
@@ -1289,7 +1289,7 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col"> <label class="radio color-radio-main ">
+                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
 	<input type="radio"  name="modifier-group-default-2" >
 	<span class="radio__icon"></span>
 	
