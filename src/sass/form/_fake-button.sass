@@ -2,16 +2,23 @@
 	&__row
 		margin: -10px
 		font-size: 0
+		+clr
 	.fake-button
 		margin: 10px
 	&_connected
 		.fake-buttons
 			&__row
-				+md
+				+lg
 					margin: 0
 		.fake-button
-			+md
+			+lg
 				margin: 0 -1px 0 0
+	&__col
+		float: left
+		padding: 10px
+		width: 33.3%
+		.fake-button
+			margin: 0
 
 .fake-button
 	position: relative
@@ -24,6 +31,11 @@
 		.fake-button
 			&__face
 				line-height: 60px
+	&_wide
+		width: 100%
+		.fake-button__face
+			display: block
+			padding: 0
 	input
 		position: absolute
 		top: 0
@@ -48,6 +60,13 @@
 		text-decoration: none
 		white-space: nowrap
 		transition: background 0.175s ease, color 0.175s ease, border-color 0.175s ease
-		+md
+		+lg
 			padding: 0 13px
 			font-size: 14px
+	&__description
+		display: block
+		padding-top: 5px
+		font-size: 14px
+		text-align: center
+		+lg
+			font-size: 12px

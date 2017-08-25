@@ -136,3 +136,42 @@ button,
 		font-size: 32px
 	&__content
 		font-size: 20px
+
+.btn-close
+	display: inline-block
+	vertical-align
+	width: 60px
+	height: 60px
+	background: none
+	font-size: 28px
+	line-height: 60px
+	color: $red
+
+.btn-toggle
+	display: inline-block
+	vertical-align: top
+	overflow: hidden
+	padding: 0 15px
+	height: 60px
+	background: none
+	+rreg
+	font-size: 0
+	&.is-active
+		.btn-toggle
+			&__track
+				transform: translate3d(0,-50%,0)
+			&__arrow
+				transform: rotate(-180deg)
+	&__track,
+	&__arrow
+		display: inline-block
+		vertical-align: top
+		transition: transform 0.175s ease-in-out
+	&__content
+		display: block
+		font-size: 18px
+		line-height: 60px
+	&__arrow
+		margin-left: 10px
+		font-size: 24px
+		line-height: 60px

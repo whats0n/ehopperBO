@@ -1,0 +1,42 @@
+.m-box
+	padding: 10px 0
+	+hover
+		background: lighten($mainColor, 51%)
+	&__row
+		position: relative
+		padding-left: 60px
+		padding-right: 80px
+		font-size: 0
+	&__col
+		display: inline-block
+		vertical-align: middle
+		padding: 0 10px
+	&__close
+		position: absolute
+		top: 0
+		right: 0
+	&__name
+		width: 40%
+	&__price
+		width: 40%
+	&__radio
+		padding-top: 15px
+		padding-bottom: 15px
+		width: 20%
+		+md
+			width: 100%
+	&__name,
+	&__price 
+		+md
+			width: 50%
+	&__icon
+		position: absolute
+		top: 0
+		left: 10px
+		bottom: 0
+		width: 50px
+		color: darken($lightGray, 10%)
+		font-size: 24px
+		line-height: 60px
+		text-align: center
+		cursor: move

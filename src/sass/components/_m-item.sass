@@ -1,0 +1,60 @@
+.m-item
+	background: #fcfcfc
+	+hover
+		.m-item
+			&__container
+				background: rgba($mainColor, 0.03)
+	&__container
+		padding: 20px 10px
+	&__header
+		position: relative
+		+clr
+	&__field,
+	&__toggle,
+	&__close
+		float: left
+		padding: 0 10px
+	&__field
+		position: relative
+		padding-left: 60px
+		width: 300px
+		+lg
+			padding-right: 80px
+			width: 100%
+	&__toggle
+		width: 200px
+	&__close
+		width: 80px
+		+lg
+			position: absolute
+			top: 0
+			right: 0
+	&__icon
+		position: absolute
+		top: 0
+		left: 10px
+		bottom: 0
+		width: 50px
+		color: darken($lightGray, 10%)
+		font-size: 24px
+		line-height: 60px
+		text-align: center
+		cursor: move
+	&__btn-toggle
+		width: 100%
+	&__body
+		display: none
+		&.is-open
+			display: block
+	&__body
+		padding: 10px
+	&__fake-buttons
+		max-width: 600px
+	&__items
+		clear: both
+		padding: 20px 0
+	&__label
+		padding-left: 70px
+		padding-bottom: 8px
+		font-size: 18px
+		text-align: left

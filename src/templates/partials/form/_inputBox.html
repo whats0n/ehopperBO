@@ -1,14 +1,16 @@
 {% macro call(props) %}
 <div class="input-box {{props.classList}} js-field">
+	{% if props.noClear != true %}
+		<button class="input-box__clear">
+			<i class="fa fa-close"></i>
+		</button>
+	{% endif %}
 	<label class="input-box__field">
 		{% if props.placeholder %}
 			<span class="input-box__placeholder">{{props.placeholder}}</span>
 		{% endif %}
 		<input type="{{props.type or 'text'}}" class="simple-input input-box__input {{props.inputClassList}} js-field-input" {{props.inputAttrs | safe}}>
 	</label>
-	<button class="input-box__clear">
-		<i class="fa fa-close"></i>
-	</button>
 	{% if props.errorMessage %}
 		<div class="error-message input-box__error-message">{{props.errorMessage}}</div>
 	{% endif %}

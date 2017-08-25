@@ -12,6 +12,7 @@ import resizableLayout from './_resizable-layout';
 import popup from './_popup';
 import slide from './_slide';
 import lang from './_lang';
+import toggle from './_toggle';
 
 export default (function() {
 	
@@ -29,5 +30,6 @@ export default (function() {
 	popup();
 	slide();
 	lang();
+	toggle();
 
 })();

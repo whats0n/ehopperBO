@@ -16,6 +16,7 @@
 		visibility: visible
 	&__clear
 		position: absolute
+		z-index: 1
 		top: 50%
 		right: 15px
 
@@ -35,13 +36,16 @@
 			background: $lightGrayActive
 		i
 			font-size: 18px
+		~ .input-box__field
+			.input-box__input
+				padding-right: 60px
 	&__field
 		position: relative
 		display: block
 		cursor: text
 	&__input
 		padding-top: 15px
-		padding-right: 60px
+		// padding-right: 60px
 	&__error-message
 		position: absolute
 		top: 100%
