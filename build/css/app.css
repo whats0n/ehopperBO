@@ -7481,13 +7481,9 @@ button:disabled, button.is-disabled,
 
 .steps {
   position: relative;
-  padding-top: 91px;
+  padding-top: 81px;
   padding-bottom: 100px;
   height: 100%;
-}
-
-.is-touch .steps {
-  padding-top: 51px;
 }
 
 .steps__body {
