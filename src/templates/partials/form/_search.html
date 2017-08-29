@@ -1,7 +1,10 @@
 {% macro call(props) %}
 <!-- begin search -->
 <div class="search {{props.classList}}">
-	<i class="fa fa-search"></i>
+	<i class="fa fa-search search__icon"></i>
+	<button class="search__clear">
+		<i class="fa fa-close"></i>
+	</button>
 	<input type="text" class="simple-input {{props.inputClassList}} search__input" placeholder="{{props.placeholder}}">
 </div>
 <!-- end search -->

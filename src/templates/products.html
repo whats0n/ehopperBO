@@ -74,16 +74,7 @@ menu: { active: 1 }
 						</div>
 					</div>
 				</div>
-				{#<div class="products-actions" data-popup="products-actions">
-					<button class="products-actions__item" data-animation="ripple">New <i class="fa fa-plus"></i></button>
-					<button class="products-actions__item" data-animation="ripple">Export <i class="fa fa-download"></i></button>
-					<button class="products-actions__item" data-animation="ripple">Import <i class="fa fa-upload"></i></button>
-					<button class="products-actions__item products-actions__item_delete" data-animation="ripple">Delete <i class="fa fa-trash-o"></i></button>
-				</div>#}
 				<div class="products-sidebar__header">
-					{#<button class="products-actions-btn" data-popup-open="products-actions">
-						<i class="fa fa-angle-down"></i>
-					</button>#}
 					<div class="products-actions" data-popup="products-actions">
 						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-plus"></i></button>
 						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-download"></i></button>
@@ -215,12 +206,14 @@ menu: { active: 1 }
 
 					{% set slides = [
 						{
+							steps: true,
 							file: '_create-category',
 							name: 'create-category',
 							title: 'Create New Category',
 							backText: 'Products Edit'
 						},
 						{
+							steps: true,
 							file: '_create-department',
 							name: 'create-department',
 							title: 'Create New Category',
@@ -230,7 +223,25 @@ menu: { active: 1 }
 							file: '_create-vendor',
 							name: 'create-vendor',
 							title: 'Create New Vendor',
-							backText: 'Products Edit'
+							backText: 'Products Edit',
+							tabs: {
+								classList: 'tabs_fullscreen tabs_simple',
+								collection: 'create-vendor',
+								active: 1,
+								footer: '_products-footer',
+								items: [
+									{
+										name: 'create-vendor-general',
+										btn: 'General',
+										file: '_create-vendor-general'
+									},
+									{
+										name: 'create-vendor-contact-info',
+										btn: 'Contact Info',
+										file: '_create-vendor-contact-info'
+									}
+								]
+							}
 						}
 					] %}
 					
@@ -243,10 +254,14 @@ menu: { active: 1 }
 								</button>
 								<h2 class="title-xl slide__title">{{slide.title}}</h2>
 							</div>
-							{{steps.call({
-								file: slide.file,
-								back: slide.name
-							})}}
+							{% if props.steps %}
+								{{steps.call({
+									file: slide.file,
+									back: slide.name
+								})}}
+							{% elif slide.tabs %}
+								{{tabs.call(slide.tabs)}}
+							{% endif %}
 						</div>
 					{% endfor %}
 				</div>

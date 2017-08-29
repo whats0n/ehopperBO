@@ -1,0 +1,56 @@
+{% import "partials/form/_build.html" as form %}
+<div class="container">
+	<div class="row">
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Address'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.select.call({
+				placeholder: 'Country',
+				options: [
+					'Country 1',
+					'Country 2',
+					'Country 3',
+					'Country 4'
+				]
+			})}}
+		</div>
+		<div class="col col_xl-50 col_field">
+			{{form.inputBox.call({
+				placeholder: 'City'
+			})}}
+		</div>
+		<div class="col col_xl-50 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Zip Code'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Phone Number'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Fax'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Email'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Web Site'
+			})}}
+		</div>
+		<div class="col col_xl-100 col_field">
+			{{form.inputBox.call({
+				placeholder: 'Contact Name'
+			})}}
+		</div>
+	</div>
+</div>

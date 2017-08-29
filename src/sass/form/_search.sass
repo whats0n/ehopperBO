@@ -1,11 +1,33 @@
 .search
 	position: relative
-	i
+	+hover
+		.search__clear
+			opacity: 1
+			visibility: visible
+	&__icon
 		position: absolute
 		top: 50%
 		left: 20px
 		color: #444
 		font-size: 24px
+		pointer-events: none
 		transform: translate3d(0,-50%,0)
-	&__input
-		padding-left: 60px
+		~ .search__input
+			padding-left: 60px
+	&__clear
+		position: absolute
+		top: 0
+		right: 0
+		bottom: 0
+		width: 50px
+		opacity: 0
+		visibility: hidden
+		color: #444
+		background: none
+		font-size: 20px
+		transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out
+		+active
+			color: $black
+			background: none
+		~ .search__input
+			padding-right: 50px

@@ -4301,7 +4301,7 @@ button:disabled, button.is-disabled,
   background: none;
   font-size: 28px;
   line-height: 60px;
-  color: #ee5c54;
+  color: #E57373;
 }
 
 .btn-toggle {
@@ -4356,10 +4356,6 @@ button:disabled, button.is-disabled,
 
 .fake-buttons .fake-button {
   margin: 10px;
-}
-
-.fake-buttons_connected .fake-buttons__col {
-  padding: 10px 0;
 }
 
 .fake-buttons__col {
@@ -5062,17 +5058,51 @@ button:disabled, button.is-disabled,
   position: relative;
 }
 
-.search i {
+.no-touch .search:hover .search__clear {
+  opacity: 1;
+  visibility: visible;
+}
+
+.search__icon {
   position: absolute;
   top: 50%;
   left: 20px;
   color: #444;
   font-size: 24px;
+  pointer-events: none;
   transform: translate3d(0, -50%, 0);
 }
 
-.search__input {
+.search__icon ~ .search__input {
   padding-left: 60px;
+}
+
+.search__clear {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50px;
+  opacity: 0;
+  visibility: hidden;
+  color: #444;
+  background: none;
+  font-size: 20px;
+  transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.search__clear:active {
+  color: #000;
+  background: none;
+}
+
+.no-touch .search__clear:active {
+  color: #000;
+  background: none;
+}
+
+.search__clear ~ .search__input {
+  padding-right: 50px;
 }
 
 .main-search {
@@ -7671,8 +7701,6 @@ button:disabled, button.is-disabled,
 
 .m-box__radio {
   display: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
   width: 20%;
 }
 
@@ -9019,6 +9047,9 @@ hr {
   }
   .fake-buttons_connected .fake-buttons__row{
     margin: 0;
+  }
+  .fake-buttons_connected .fake-buttons__col{
+    padding: 10px 0;
   }
   .fake-buttons_connected .fake-button{
     margin: 0 -1px 0 0;
