@@ -109,7 +109,7 @@
       <!-- begin overlay --><button type="button" class="overlay " data-overlay="overlay" data-menu-overlay="menu"></button>
       <!-- end overlay -->
       <div class="main ">
-        <div class="l-container js-resizable-width products" data-popup-wrapper="products-filters">
+        <div class="l-container js-resizable-width products" data-popup-wrapper="products-filters products-actions">
           <div class="l-row">
             <div class="l-col l-col_sidebar js-resizable-width-left">
               <div class="l-col__inner">
@@ -224,21 +224,19 @@
                     </div>
                   </div>
                 </div>
-                <div class="products-sidebar" data-scrollbar="default">
-                  <div class="container products-sidebar__header">
-                    <div class="row">
-                      <div class="col col_xl-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">New</button> </div>
-                      <div class="col col_xl-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">Export</button> </div>
-                      <div class="col col_xl-25"> <button class="btn btn_block color-btn-lighter" data-animation="ripple">Import</button> </div>
-                      <div class="col col_xl-25"> <button class="btn btn_block btn_red" data-animation="ripple">Delete</button> </div>
-                      <div class="col col_xl-100">
-                        <div class="filter-group"> <button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
-										<i class="fa fa-filter"></i>
-									</button>
-                          <!-- begin search -->
-                          <div class="search filter-group__field"> <i class="fa fa-search"></i> <input type="text" class="simple-input simple-input_sm search__input" placeholder="Search"> </div>
-                          <!-- end search -->
-                        </div>
+                <div class="products-sidebar__header">
+                  <div class="products-actions" data-popup="products-actions"> <button class="products-actions__item" data-animation="ripple"><i class="fa fa-plus"></i></button> <button class="products-actions__item" data-animation="ripple"><i class="fa fa-download"></i></button> <button class="products-actions__item"
+                      data-animation="ripple"><i class="fa fa-upload"></i></button> <button class="products-actions__item" data-animation="ripple"><i class="fa fa-trash-o"></i></button> </div>
+                </div>
+                <div class="products-sidebar products-sidebar_simple" data-scrollbar="default">
+                  <div class="products-sidebar__header">
+                    <div class="products-sidebar__search">
+                      <div class="filter-group"> <button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+									<i class="fa fa-filter"></i>
+								</button>
+                        <!-- begin search -->
+                        <div class="search filter-group__field"> <i class="fa fa-search"></i> <input type="text" class="simple-input simple-input_sm search__input" placeholder="Search"> </div>
+                        <!-- end search -->
                       </div>
                     </div>
                   </div>
@@ -725,13 +723,13 @@
             </div>
             <div class="l-col l-col_main js-resizable-width-right">
               <div class="l-col__inner">
-                <div class="splitter splitter_left l-col__splitter js-resizable-width-splitter"><i class="splitter__lines"></i></div>
+                <div class="splitter splitter_left l-col__splitter js-resizable-width-splitter"> <i class="splitter__lines"></i> <i class="fa fa-angle-left splitter__arrow"></i> </div>
                 <div class="products-main">
                   <div class="products-main__header color-header">
                     <h2 class="title-xl products-main__title">Product Edit</h2>
                   </div>
                   <!-- begin tabs -->
-                  <div class="tabs tabs_fullscreen tabs_footer">
+                  <div class="tabs tabs_fullscreen tabs_simple tabs_footer">
                     <div class="tabs__inner">
                       <div class="tabs__panel">
                         <ul class="tabs__list">
@@ -2105,6 +2103,87 @@
                       </div>
                       <div class="steps__footer">
                         <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-department">Cancel</button> </div>
+                      </div>
+                    </div>
+                    <!-- end steps -->
+                  </div>
+                  <div class="slide" data-slide="create-vendor">
+                    <div class="slide__header color-header"> <button class="btn-back slide__back js-slide-back" data-slide-close="create-vendor">
+									<i class="fa fa-angle-left btn-back__arrow"></i>
+									<span class="btn-back__content">Products Edit</span>
+								</button>
+                      <h2 class="title-xl slide__title">Create New Vendor</h2>
+                    </div>
+                    <!-- begin steps -->
+                    <div class="steps">
+                      <div class="steps__body" data-scrollbar="default">
+                        <!-- begin inner -->
+                        <div class="inner">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col col_lg-100 col_field">
+                                <div class="input-box  js-field"> <button class="input-box__clear">
+			<i class="fa fa-close"></i>
+		</button> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Vendor Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                              </div>
+                              <div class="col col_lg-100 col_field">
+                                <!-- begin select -->
+                                <div class="select-box ">
+                                  <div class="select js-select ">
+                                    <div class="select__field js-select-field">
+                                      <div class="select__placeholder">Vendor Type</div>
+                                      <div class="select__value js-select-value"></div> <i class="fa fa-angle-down select__arrow"></i> </div>
+                                    <div class="select__body js-select-dropdown">
+                                      <ul class="select__list" data-scrollbar="default">
+                                        <li class="select__item js-select-item">Manufacturer</li>
+                                        <li class="select__item js-select-item">Master Dealer</li>
+                                        <li class="select__item js-select-item">Shipper</li>
+                                        <li class="select__item js-select-item">Vendor</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- end select -->
+                              </div>
+                              <div class="col col_lg-100 col_field">
+                                <div class="input-box  js-field"> <button class="input-box__clear">
+			<i class="fa fa-close"></i>
+		</button> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Tax ID</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                              </div>
+                              <div class="col col_lg-100 col_field">
+                                <div class="textarea-box  js-field"> <label class="textarea-box__field">
+		
+			<span class="textarea-box__placeholder">Notes</span>
+		
+		<textarea type="text" class="simple-textarea textarea-box__textarea  js-field-input" ></textarea>
+	</label> </div>
+                              </div>
+                              <div class="col col_lg-100 col_field"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  >
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">Is Active</span>
+	
+</label> </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end inner -->
+                      </div>
+                      <div class="steps__footer">
+                        <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-vendor">Cancel</button> </div>
                       </div>
                     </div>
                     <!-- end steps -->
