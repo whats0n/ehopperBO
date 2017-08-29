@@ -1,6 +1,11 @@
 {% macro call(props) %}
 <!-- begin steps -->
 <div class="steps">
+	{% if props.header %}
+		<div class="steps__header">
+		{% include 'partials/sections/' + props.header + '.html' %}
+		</div>
+	{% endif %}
 	<div class="steps__body" data-scrollbar="default">
 		{% include 'partials/sections/' + props.file + '.html' %}
 	</div>

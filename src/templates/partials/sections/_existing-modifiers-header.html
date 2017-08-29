@@ -1,0 +1,17 @@
+{% import "partials/form/_build.html" as form %}
+<!-- begin inner -->
+<div class="inner">
+	<div class="container">
+		<div class="row">
+			<div class="col col_xl-100">
+				<div class="sm-group">
+					{{form.search.call({
+						placeholder: 'Search For Modifier Group'
+					})}}
+					<button class="btn btn_lg color-btn-main sm-group__btn" data-animation="ripple" data-slide-open="create-modifier-group">Create New</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end inner -->

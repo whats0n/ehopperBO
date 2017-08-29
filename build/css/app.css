@@ -7526,7 +7526,6 @@ button:disabled, button.is-disabled,
   top: 0;
   left: 0;
   right: 0;
-  padding: 20px;
 }
 
 .steps__title {
@@ -8353,6 +8352,37 @@ button:disabled, button.is-disabled,
 
 .modifiers__add {
   padding: 20px;
+}
+
+.existing-modifiers {
+  height: 100%;
+}
+
+.existing-modifiers__inner {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  height: 100%;
+}
+
+.existing-modifiers__header, .existing-modifiers__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.existing-modifiers__header {
+  top: 0;
+  padding: 20px;
+}
+
+.existing-modifiers__footer {
+  bottom: 0;
+}
+
+.existing-modifiers__body {
+  padding: 0 20px;
+  height: 100%;
 }
 
 .js-sortable-handle {

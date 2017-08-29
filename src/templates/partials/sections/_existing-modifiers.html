@@ -1,0 +1,70 @@
+{% import "partials/form/_build.html" as form %}
+{% import "partials/mixins/_table.html" as table %}
+<div class="existing-modifiers">
+	<!-- begin inner -->
+	<div class="inner existing-modifiers__inner">
+		<div class="existing-modifiers__header">
+			<div class="sm-group">
+				{{form.search.call({
+					placeholder: 'Search For Modifier Group'
+				})}}
+				<button class="btn btn_lg color-btn-main sm-group__btn" data-animation="ripple" data-slide-open="create-modifier-group">Create New</button>
+			</div>
+		</div>
+		<div class="existing-modifiers__body">
+			{{table.call({
+				name: 'products',
+				classList: 'table-wrapper_header-lg',
+				bodyClassList: 'table-body_zebra',
+				bodyTDClassList: 'text-overflow',
+				range: 5,
+				columns: [ 'first-checkbox', 'existing-modifier-group', 'existing-modifier-modifiers', 'action-btns' ],
+				header: [ 
+					{ checkbox: true }, 
+					{ content: 'Modifier Group' }, 
+					{ content: 'Modifiers' }, 
+					{ content: 'Edit', classList: 'text-center' } 
+				],
+				body: [
+					[ 
+						{ checkbox: true },
+						{ content: 'Taras Group 1' },
+						{ content: 'Option 1.1, Option 1.2, Option 1.3' },
+						{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: 'Taras Group 2' },
+						{ content: 'Option 2.1, Option 2.2, Option 2.3' },
+						{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: 'Taras Group 3' },
+						{ content: 'Option 3.1, Option 3.2, Option 3.3' },
+						{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: 'New_Modifier' },
+						{ content: 'New' },
+						{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+					],
+					[ 
+						{ checkbox: true },
+						{ content: 'SEPTEMBER MOD' },
+						{ content: 'Leaf, Leaf1' },
+						{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+					]
+				]
+			})}}
+		</div>
+		<div class="existing-modifiers__footer">
+			<div class="section btns-group btns-group_center">
+				<button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button>
+				<button class="btn btn_lg" data-animation="ripple" data-slide-close="existing-modifiers">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<!-- end inner -->
+</div>

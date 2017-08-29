@@ -242,6 +242,13 @@ menu: { active: 1 }
 									}
 								]
 							}
+						},
+						{
+							sections: '_existing-modifiers',
+							file: '_existing-modifiers',
+							name: 'existing-modifiers',
+							title: 'Copy Existing Modifier Groups',
+							backText: 'Products Edit'
 						}
 					] %}
 					
@@ -254,13 +261,17 @@ menu: { active: 1 }
 								</button>
 								<h2 class="title-xl slide__title">{{slide.title}}</h2>
 							</div>
-							{% if props.steps %}
+							{% if slide.steps %}
 								{{steps.call({
 									file: slide.file,
-									back: slide.name
+									back: slide.name,
+									classList: slide.stepsClassList,
+									header: slide.stepsHeader
 								})}}
 							{% elif slide.tabs %}
 								{{tabs.call(slide.tabs)}}
+							{% elif slide.sections %}
+							    {% include 'partials/sections/' + slide.sections + '.html' %}
 							{% endif %}
 						</div>
 					{% endfor %}
