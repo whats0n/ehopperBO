@@ -7441,7 +7441,6 @@ button:disabled, button.is-disabled,
 
 .langs {
   overflow: auto;
-  margin: -2px;
 }
 
 .langs__inner {
@@ -7452,7 +7451,6 @@ button:disabled, button.is-disabled,
   display: inline-block;
   vertical-align: top;
   padding: 15px 10px;
-  margin: 2px;
   min-width: 120px;
   color: #333;
   font-family: 'Roboto Regular', Arial, sans-serif;
@@ -7569,11 +7567,11 @@ button:disabled, button.is-disabled,
   border-bottom: 2px solid #eee;
 }
 
-.m-item {
+.m-item:not(.m-item_single) {
   background: #fcfcfc;
 }
 
-.no-touch .m-item:hover .m-item__container {
+.no-touch .m-item:not(.m-item_single):hover .m-item__container {
   background: rgba(57, 73, 171, 0.03);
 }
 
@@ -7599,8 +7597,23 @@ button:disabled, button.is-disabled,
 
 .m-item__field {
   position: relative;
-  padding-left: 50px;
   width: 300px;
+}
+
+.m-item__icon {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  color: #d5d5d5;
+  font-size: 24px;
+  line-height: 60px;
+  cursor: move;
+}
+
+.m-item__icon ~ .m-item__field {
+  padding-left: 50px;
 }
 
 .m-item__toggle {
@@ -7611,26 +7624,15 @@ button:disabled, button.is-disabled,
   width: 80px;
 }
 
-.m-item__icon {
-  position: absolute;
-  top: 0;
-  left: 10px;
-  bottom: 0;
-  color: #d5d5d5;
-  font-size: 24px;
-  line-height: 60px;
-  cursor: move;
-}
-
 .m-item__btn-toggle {
   width: 100%;
 }
 
-.m-item__body {
+.m-item__body.js-toggle-container {
   display: none;
 }
 
-.m-item__body.is-open {
+.m-item__body.js-toggle-container.is-open {
   display: block;
 }
 
@@ -7699,11 +7701,14 @@ button:disabled, button.is-disabled,
 }
 
 .m-box__radio {
-  display: none;
   width: 20%;
 }
 
-.m-box__radio.is-open {
+.m-box__radio[data-showon-radio-item] {
+  display: none;
+}
+
+.m-box__radio[data-showon-radio-item].is-open {
   display: inline-block;
 }
 
@@ -8383,6 +8388,33 @@ button:disabled, button.is-disabled,
 .existing-modifiers__body {
   padding: 0 20px;
   height: 100%;
+}
+
+.create-modifiers {
+  height: 100%;
+}
+
+.create-modifiers__inner, .create-modifiers__body {
+  height: 100%;
+}
+
+.create-modifiers__inner {
+  padding-bottom: 100px;
+}
+
+.create-modifiers__body {
+  padding: 0 20px;
+}
+
+.create-modifiers__footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.create-modifiers__lang {
+  padding: 20px 0;
 }
 
 .js-sortable-handle {

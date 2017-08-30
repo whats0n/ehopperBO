@@ -1,9 +1,10 @@
 .m-item
-	background: #fcfcfc
-	+hover
-		.m-item
-			&__container
-				background: rgba($mainColor, 0.03)
+	&:not(.m-item_single)
+		background: #fcfcfc
+		+hover
+			.m-item
+				&__container
+					background: rgba($mainColor, 0.03)
 	&__container
 		padding: 20px 10px
 		+lg
@@ -18,11 +19,22 @@
 		padding: 0 10px
 	&__field
 		position: relative
-		padding-left: 50px
 		width: 300px
 		+lg
 			padding-right: 60px
 			width: 100%
+	&__icon
+		position: absolute
+		z-index: 10
+		top: 0
+		left: 10px
+		bottom: 0
+		color: darken($lightGray, 10%)
+		font-size: 24px
+		line-height: 60px
+		cursor: move
+		~ .m-item__field
+			padding-left: 50px
 	&__toggle
 		width: 200px
 		+lg
@@ -36,23 +48,15 @@
 			right: -8px
 			padding: 0
 			width: 60px
-	&__icon
-		position: absolute
-		top: 0
-		left: 10px
-		bottom: 0
-		color: darken($lightGray, 10%)
-		font-size: 24px
-		line-height: 60px
-		cursor: move
 	&__btn-toggle
 		width: 100%
 		+lg
 			width: auto
 	&__body
-		display: none
-		&.is-open
-			display: block
+		&.js-toggle-container
+			display: none
+			&.is-open
+				display: block
 	&__body
 		padding: 10px
 	&__fake-buttons

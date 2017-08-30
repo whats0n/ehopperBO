@@ -1,0 +1,46 @@
+{% import "partials/form/_build.html" as form %}
+
+{% macro call(props) %}
+<!-- begin modifier -->
+<div class="m-box">
+	<div class="m-box__row">
+		<i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
+		<div class="m-box__name m-box__col">
+			{{form.inputBox.call({
+				placeholder: 'Modifier',
+				value: props.name,
+				noClear: true
+			})}}
+		</div>
+		<div class="m-box__price m-box__col">
+			{{form.inputBox.call({
+				placeholder: 'Price',
+				value: props.price,
+				noClear: true
+			})}}
+		</div>
+		<div class="m-box__radio m-box__col" {{props.radiosAttrs | safe}}>
+			{% if props.checked %}
+				{{form.radio.call({
+					classList: 'm-box__radio-btn',
+					name: props.typeName,
+					content: 'Default',
+					attrs: 'checked'
+				})}}
+			{% else %}
+				{{form.radio.call({
+					classList: 'm-box__radio-btn',
+					name: props.typeName,
+					content: 'Default'
+				})}}
+			{% endif %}
+		</div>
+		<div class="m-box__close">
+			<button class="btn-close">
+				<i class="fa fa-close"></i>
+			</button>
+		</div>
+	</div>
+</div>
+<!-- end modifier -->
+{% endmacro %}

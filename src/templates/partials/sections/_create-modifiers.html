@@ -1,0 +1,26 @@
+{% import "partials/mixins/_modifier-group.html" as modifierGroup %}
+
+<div class="create-modifiers">
+	<!-- begin inner -->
+	<div class="inner create-modifiers__inner">
+		<div class="create-modifiers__body">
+			<div class="create-modifiers__lang">
+				{% include 'partials/components/_langs.html' %}
+			</div>
+			<div class="create-modifiers__items">
+				{{modifierGroup.call({
+					classList: 'm-item_single',
+					modifierType: 'modifiers-type-create',
+					oneSelection: 'one-selection-create'
+				})}}
+			</div>
+		</div>
+		<div class="create-modifiers__footer">
+			<div class="section btns-group btns-group_center">
+				<button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button>
+				<button class="btn btn_lg" data-animation="ripple" data-slide-close="create-modifiers">Cancel</button>
+			</div>
+		</div>
+	</div>
+	<!-- end inner -->
+</div>

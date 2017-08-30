@@ -20,14 +20,15 @@
 	&__price
 		width: 35%
 	&__radio
-		display: none
 		width: 20%
 		+md
 			padding: 0
 			// width: 100%
 			text-align: center
-		&.is-open
-			display: inline-block
+		&[data-showon-radio-item]
+			display: none
+			&.is-open
+				display: inline-block
 		&-btn 
 			text-align: center
 			.radio

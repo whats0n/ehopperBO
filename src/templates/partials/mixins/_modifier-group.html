@@ -1,0 +1,109 @@
+{% import "partials/form/_build.html" as form %}
+{% import "partials/mixins/_modifier.html" as modifier %}
+
+{% macro call(props) %}
+<!-- begin modifier group -->
+{% if props.toggle %}
+	{% set toggleClassList = 'js-toggle' %}
+	{% set toggleBodyClassList = 'js-toggle-container' %}
+
+	{% set toggleAttrs = 'data-toggle="modifier-group"' %}
+	{% set toggleBodyAttrs = 'data-toggle="modifier-group"' %}
+{% else %}
+	{% set toggleClassList = '' %}
+	{% set toggleBodyClassList = '' %}
+
+	{% set toggleAttrs = '' %}
+	{% set toggleBodyAttrs = '' %}
+{% endif %}
+<div class="m-item {{toggleClassList}} {{props.classList}}" {{toggleAttrs | safe}}>
+	<div class="m-item__container">
+		<div class="m-item__header">
+			{% if props.sortable %}
+				<i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
+			{% endif %}
+			<div class="m-item__field">
+				{{form.inputBox.call({
+					placeholder: 'Modifier Group Name'
+				})}}
+			</div>
+			{% if props.toggle %}
+				<div class="m-item__toggle">
+					<button class="btn-toggle color-main text-left m-item__btn-toggle js-toggle-btn" data-toggle="modifier-group">
+						<span class="btn-toggle__track">
+							<span class="btn-toggle__content">Show Modifiers</span>
+							<span class="btn-toggle__content">Hide Modifiers</span>
+						</span>
+						<i class="fa fa-angle-down btn-toggle__arrow"></i>
+					</button>
+				</div>
+			{% endif %}
+			{% if props.close %}
+				<div class="m-item__close">
+					<button class="btn-close">
+						<i class="fa fa-close"></i>
+					</button>
+				</div>
+			{% endif %}
+		</div>
+		<div class="m-item__body {{toggleBodyClassList}}" {{toggleBodyAttrs | safe}}>
+			<div class="fake-buttons fake-buttons_connected m-item__fake-buttons">
+				<span class="label label_block">Select modifier type</span>
+				<div class="fake-buttons__row">
+					<div class="fake-buttons__col">
+						{{form.fakeButton.call({
+							classList: 'fake-button_wide',
+							name: 'select-' + props.modifierType,
+							attrs: 'data-showon-radio-name="' + props.oneSelection + '" data-showon-radio="' + props.modifierType + '"',
+							content: 'One selection',
+							description: 'eg: small, medium, large'
+						})}}
+					</div>
+					<div class="fake-buttons__col">
+						{{form.fakeButton.call({
+							classList: 'fake-button_wide',
+							name: 'select-' + props.modifierType,
+							attrs: 'checked data-showon-radio="' + props.modifierType + '"',
+							content: 'Multiple selections',
+							description: 'eg: cheese, sausage'
+						})}}
+					</div>
+					<div class="fake-buttons__col">
+						{{form.fakeButton.call({
+							classList: 'fake-button_wide',
+							name: 'select-' + props.modifierType,
+							attrs: 'data-showon-radio="' + props.modifierType + '"',
+							content: 'Exceptions',
+							description: 'eg: No salt, No sugar'
+						})}}
+					</div>
+				</div>
+			</div>
+			<div class="m-item__items">
+				<div class="m-item__label">Add modifiers:</div>
+				{# begin modifiers items #}
+					<div class="m-item__list js-sortable-y">
+						{% for item in range( 0, props.modifiersRange or 3 ) %}
+							{{modifier.call({
+								typeName: 'item-' + props.modifierType,
+								radiosAttrs: 'data-showon-radio-name="' + props.oneSelection + '" data-showon-radio-item="' + props.modifierType + '"',
+								checked: loop.index == 1
+							})}}
+						{% endfor %}
+					</div>
+				{# end modifiers items #}
+				<div class="m-item__add">
+					<a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a>
+				</div>
+			</div>
+			<div class="m-item__checkbox">
+				{{form.checkbox.call({
+					attrs: 'checked',
+					content: 'is Active'
+				})}}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- end modifier group -->
+{% endmacro %}

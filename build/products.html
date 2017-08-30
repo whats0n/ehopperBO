@@ -1010,10 +1010,11 @@
                             </div>
                             <div class="modifiers__body">
                               <div class="modifiers__items js-sortable-y">
-                                <div class="m-item js-toggle" data-toggle="modifier-group">
+                                <!-- begin modifier group -->
+                                <div class="m-item js-toggle " data-toggle="modifier-group">
                                   <div class="m-item__container">
-                                    <div class="m-item__header">
-                                      <div class="m-item__field"> <i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
+                                    <div class="m-item__header"> <i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
+                                      <div class="m-item__field">
                                         <div class="input-box  js-field"> <button class="input-box__clear">
 			<i class="fa fa-close"></i>
 		</button> <label class="input-box__field">
@@ -1024,35 +1025,32 @@
 	</label> </div>
                                       </div>
                                       <div class="m-item__toggle"> <button class="btn-toggle color-main text-left m-item__btn-toggle js-toggle-btn" data-toggle="modifier-group">
-									<span class="btn-toggle__track">
-										<span class="btn-toggle__content">Show Modifiers</span>
-										<span class="btn-toggle__content">Hide Modifiers</span>
-									</span>
-									<i class="fa fa-angle-down btn-toggle__arrow"></i>
-								</button> </div>
-                                      <div class="m-item__close"> <button class="btn-close">
-									<i class="fa fa-close"></i>
-								</button> </div>
+						<span class="btn-toggle__track">
+							<span class="btn-toggle__content">Show Modifiers</span>
+							<span class="btn-toggle__content">Hide Modifiers</span>
+						</span>
+						<i class="fa fa-angle-down btn-toggle__arrow"></i>
+					</button> </div>
                                     </div>
-                                    <div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
+                                    <div class="m-item__body js-toggle-container" data-toggle="modifier-group">
                                       <div class="fake-buttons fake-buttons_connected m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
                                         <div class="fake-buttons__row">
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1" data-select-type="radio" class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-1" data-showon-radio-name="one-selection-1" data-showon-radio="modifiers-type-1" >
 	<span class="fake-button__face">One selection</span>
 	
 		<span class="fake-button__description">eg: small, medium, large</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1" checked class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-1" checked data-showon-radio="modifiers-type-1" >
 	<span class="fake-button__face">Multiple selections</span>
 	
 		<span class="fake-button__description">eg: cheese, sausage</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-1"  class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-1" data-showon-radio="modifiers-type-1" >
 	<span class="fake-button__face">Exceptions</span>
 	
 		<span class="fake-button__description">eg: No salt, No sugar</span>
@@ -1063,6 +1061,7 @@
                                       <div class="m-item__items">
                                         <div class="m-item__label">Add modifiers:</div>
                                         <div class="m-item__list js-sortable-y">
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1081,18 +1080,20 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-1" checked>
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-1" data-showon-radio-item="modifiers-type-1"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-1" checked>
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1111,18 +1112,20 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-1" >
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-1" data-showon-radio-item="modifiers-type-1"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-1" >
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1141,18 +1144,19 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-1" >
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-1" data-showon-radio-item="modifiers-type-1"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-1" >
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
                                         </div>
                                         <div class="m-item__add"> <a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a> </div>
                                       </div>
@@ -1168,10 +1172,12 @@
                                     </div>
                                   </div>
                                 </div>
-                                <div class="m-item js-toggle" data-toggle="modifier-group">
+                                <!-- end modifier group -->
+                                <!-- begin modifier group -->
+                                <div class="m-item js-toggle " data-toggle="modifier-group">
                                   <div class="m-item__container">
-                                    <div class="m-item__header">
-                                      <div class="m-item__field"> <i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
+                                    <div class="m-item__header"> <i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
+                                      <div class="m-item__field">
                                         <div class="input-box  js-field"> <button class="input-box__clear">
 			<i class="fa fa-close"></i>
 		</button> <label class="input-box__field">
@@ -1182,35 +1188,32 @@
 	</label> </div>
                                       </div>
                                       <div class="m-item__toggle"> <button class="btn-toggle color-main text-left m-item__btn-toggle js-toggle-btn" data-toggle="modifier-group">
-									<span class="btn-toggle__track">
-										<span class="btn-toggle__content">Show Modifiers</span>
-										<span class="btn-toggle__content">Hide Modifiers</span>
-									</span>
-									<i class="fa fa-angle-down btn-toggle__arrow"></i>
-								</button> </div>
-                                      <div class="m-item__close"> <button class="btn-close">
-									<i class="fa fa-close"></i>
-								</button> </div>
+						<span class="btn-toggle__track">
+							<span class="btn-toggle__content">Show Modifiers</span>
+							<span class="btn-toggle__content">Hide Modifiers</span>
+						</span>
+						<i class="fa fa-angle-down btn-toggle__arrow"></i>
+					</button> </div>
                                     </div>
-                                    <div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
+                                    <div class="m-item__body js-toggle-container" data-toggle="modifier-group">
                                       <div class="fake-buttons fake-buttons_connected m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
                                         <div class="fake-buttons__row">
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2" data-select-type="radio" class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-2" data-showon-radio-name="one-selection-2" data-showon-radio="modifiers-type-2" >
 	<span class="fake-button__face">One selection</span>
 	
 		<span class="fake-button__description">eg: small, medium, large</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2" checked class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-2" checked data-showon-radio="modifiers-type-2" >
 	<span class="fake-button__face">Multiple selections</span>
 	
 		<span class="fake-button__description">eg: cheese, sausage</span>
 	
 </label> </div>
                                           <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
-	<input type="radio" name="modifier-type-2"  class="js-select-type-input">
+	<input type="radio" name="select-modifiers-type-2" data-showon-radio="modifiers-type-2" >
 	<span class="fake-button__face">Exceptions</span>
 	
 		<span class="fake-button__description">eg: No salt, No sugar</span>
@@ -1221,6 +1224,7 @@
                                       <div class="m-item__items">
                                         <div class="m-item__label">Add modifiers:</div>
                                         <div class="m-item__list js-sortable-y">
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1239,18 +1243,20 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-2" checked>
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-2" data-showon-radio-item="modifiers-type-2"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-2" checked>
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1269,18 +1275,20 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-2" >
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-2" data-showon-radio-item="modifiers-type-2"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-2" >
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
+                                          <!-- begin modifier -->
                                           <div class="m-box">
                                             <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
                                               <div class="m-box__name m-box__col">
@@ -1299,18 +1307,19 @@
 		<input type="text" class="simple-input input-box__input  js-field-input" >
 	</label> </div>
                                               </div>
-                                              <div class="m-box__radio m-box__col js-select-type-container"> <label class="radio color-radio-main m-box__radio-btn">
-	<input type="radio"  name="modifier-group-default-2" >
+                                              <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-2" data-showon-radio-item="modifiers-type-2"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-2" >
 	<span class="radio__icon"></span>
 	
 		<span class="radio__content">Default</span>
 	
 </label> </div>
                                               <div class="m-box__close"> <button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button> </div>
+				<i class="fa fa-close"></i>
+			</button> </div>
                                             </div>
                                           </div>
+                                          <!-- end modifier -->
                                         </div>
                                         <div class="m-item__add"> <a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a> </div>
                                       </div>
@@ -1326,6 +1335,7 @@
                                     </div>
                                   </div>
                                 </div>
+                                <!-- end modifier group -->
                                 <div class="modifiers__add"> <a href="#" class="link-add"><i class="fa fa-plus"></i> Add modifier group</a> </div>
                               </div>
                             </div>
@@ -2317,7 +2327,7 @@
                             <div class="search "> <i class="fa fa-search search__icon"></i> <button class="search__clear">
 		<i class="fa fa-close"></i>
 	</button> <input type="text" class="simple-input  search__input" placeholder="Search For Modifier Group"> </div>
-                            <!-- end search --><button class="btn btn_lg color-btn-main sm-group__btn" data-animation="ripple" data-slide-open="create-modifier-group">Create New</button> </div>
+                            <!-- end search --><button class="btn btn_lg color-btn-main sm-group__btn" data-animation="ripple" data-slide-open="create-modifiers">Create New</button> </div>
                         </div>
                         <div class="existing-modifiers__body">
                           <!-- begin table -->
@@ -2647,6 +2657,190 @@
                         </div>
                         <div class="existing-modifiers__footer">
                           <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="existing-modifiers">Cancel</button> </div>
+                        </div>
+                      </div>
+                      <!-- end inner -->
+                    </div>
+                  </div>
+                  <div class="slide" data-slide="create-modifiers">
+                    <div class="slide__header color-header"> <button class="btn-back slide__back js-slide-back" data-slide-close="create-modifiers">
+									<i class="fa fa-angle-left btn-back__arrow"></i>
+									<span class="btn-back__content">Products Edit</span>
+								</button>
+                      <h2 class="title-xl slide__title">Copy New Modifier Groups</h2>
+                    </div>
+                    <div class="create-modifiers">
+                      <!-- begin inner -->
+                      <div class="inner create-modifiers__inner">
+                        <div class="create-modifiers__body">
+                          <div class="create-modifiers__lang">
+                            <!-- begin langs -->
+                            <div class="langs js-lang" data-scrollbar="default">
+                              <div class="langs__inner js-lang-track"> <a href="#" class="langs__item js-lang-item is-active">English</a> <a href="#" class="langs__item js-lang-item">Español</a> <a href="#" class="langs__item js-lang-item">Русский</a> <a href="#" class="langs__item js-lang-item">English</a>                                <a href="#" class="langs__item js-lang-item">Español</a> <a href="#" class="langs__item js-lang-item">Русский</a> </div>
+                            </div>
+                            <!-- end langs -->
+                          </div>
+                          <div class="create-modifiers__items">
+                            <!-- begin modifier group -->
+                            <div class="m-item  m-item_single">
+                              <div class="m-item__container">
+                                <div class="m-item__header">
+                                  <div class="m-item__field">
+                                    <div class="input-box  js-field"> <button class="input-box__clear">
+			<i class="fa fa-close"></i>
+		</button> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Modifier Group Name</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                  </div>
+                                </div>
+                                <div class="m-item__body ">
+                                  <div class="fake-buttons fake-buttons_connected m-item__fake-buttons"> <span class="label label_block">Select modifier type</span>
+                                    <div class="fake-buttons__row">
+                                      <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
+	<input type="radio" name="select-modifiers-type-create" data-showon-radio-name="one-selection-create" data-showon-radio="modifiers-type-create" >
+	<span class="fake-button__face">One selection</span>
+	
+		<span class="fake-button__description">eg: small, medium, large</span>
+	
+</label> </div>
+                                      <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
+	<input type="radio" name="select-modifiers-type-create" checked data-showon-radio="modifiers-type-create" >
+	<span class="fake-button__face">Multiple selections</span>
+	
+		<span class="fake-button__description">eg: cheese, sausage</span>
+	
+</label> </div>
+                                      <div class="fake-buttons__col"> <label class="fake-button fake-button_wide">
+	<input type="radio" name="select-modifiers-type-create" data-showon-radio="modifiers-type-create" >
+	<span class="fake-button__face">Exceptions</span>
+	
+		<span class="fake-button__description">eg: No salt, No sugar</span>
+	
+</label> </div>
+                                    </div>
+                                  </div>
+                                  <div class="m-item__items">
+                                    <div class="m-item__label">Add modifiers:</div>
+                                    <div class="m-item__list js-sortable-y">
+                                      <!-- begin modifier -->
+                                      <div class="m-box">
+                                        <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
+                                          <div class="m-box__name m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Modifier</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__price m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Price</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-create" data-showon-radio-item="modifiers-type-create"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-create" checked>
+	<span class="radio__icon"></span>
+	
+		<span class="radio__content">Default</span>
+	
+</label> </div>
+                                          <div class="m-box__close"> <button class="btn-close">
+				<i class="fa fa-close"></i>
+			</button> </div>
+                                        </div>
+                                      </div>
+                                      <!-- end modifier -->
+                                      <!-- begin modifier -->
+                                      <div class="m-box">
+                                        <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
+                                          <div class="m-box__name m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Modifier</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__price m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Price</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-create" data-showon-radio-item="modifiers-type-create"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-create" >
+	<span class="radio__icon"></span>
+	
+		<span class="radio__content">Default</span>
+	
+</label> </div>
+                                          <div class="m-box__close"> <button class="btn-close">
+				<i class="fa fa-close"></i>
+			</button> </div>
+                                        </div>
+                                      </div>
+                                      <!-- end modifier -->
+                                      <!-- begin modifier -->
+                                      <div class="m-box">
+                                        <div class="m-box__row"> <i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
+                                          <div class="m-box__name m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Modifier</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__price m-box__col">
+                                            <div class="input-box  js-field"> <label class="input-box__field">
+		
+			<span class="input-box__placeholder">Price</span>
+		
+		<input type="text" class="simple-input input-box__input  js-field-input" >
+	</label> </div>
+                                          </div>
+                                          <div class="m-box__radio m-box__col" data-showon-radio-name="one-selection-create" data-showon-radio-item="modifiers-type-create"> <label class="radio color-radio-main m-box__radio-btn">
+	<input type="radio"  name="item-modifiers-type-create" >
+	<span class="radio__icon"></span>
+	
+		<span class="radio__content">Default</span>
+	
+</label> </div>
+                                          <div class="m-box__close"> <button class="btn-close">
+				<i class="fa fa-close"></i>
+			</button> </div>
+                                        </div>
+                                      </div>
+                                      <!-- end modifier -->
+                                    </div>
+                                    <div class="m-item__add"> <a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a> </div>
+                                  </div>
+                                  <div class="m-item__checkbox"> <label class="checkbox color-checkbox-main ">
+	<input type="checkbox"  checked>
+	<span class="checkbox__icon">
+		<i class="fa fa-check"></i>
+	</span>
+	
+		<span class="checkbox__content">is Active</span>
+	
+</label> </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!-- end modifier group -->
+                          </div>
+                        </div>
+                        <div class="create-modifiers__footer">
+                          <div class="section btns-group btns-group_center"> <button class="btn btn_lg color-btn-main" data-animation="ripple">Done</button> <button class="btn btn_lg" data-animation="ripple" data-slide-close="create-modifiers">Cancel</button> </div>
                         </div>
                       </div>
                       <!-- end inner -->

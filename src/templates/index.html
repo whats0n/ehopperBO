@@ -25,4 +25,14 @@ noHeader: true
 		{% endfor %}
 	</ul>
 
+	{% set guides = [
+		'guide-mixins'
+	] %}
+
+	<ul style="padding: 20px; list-style-type: none;">
+		{% for page in guides %}
+			<li><a href="{{page}}.html" target="_blank" style="display: inline-block; color: blue;">{% if loop.index < 10 %}0{% endif %}{{loop.index}} {{page}}</a></li>
+		{% endfor %}
+	</ul>
+
 {% endblock %}

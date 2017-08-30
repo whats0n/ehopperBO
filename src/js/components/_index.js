@@ -13,7 +13,7 @@ import popup from './_popup';
 import slide from './_slide';
 import lang from './_lang';
 import toggle from './_toggle';
-import selectType from './_select-type';
+import showOnRadio from './_showon-radio';
 
 export default (function() {
 	
@@ -32,6 +32,6 @@ export default (function() {
 	slide();
 	lang();
 	toggle();
-	selectType();
+	showOnRadio();
 
 })();

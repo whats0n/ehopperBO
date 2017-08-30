@@ -1,4 +1,5 @@
 {% import "partials/form/_build.html" as form %}
+{% import "partials/mixins/_modifier-group.html" as modifierGroup %}
 
 <div class="modifiers">
 	<div class="modifiers__header">
@@ -35,123 +36,12 @@
 	<div class="modifiers__body">
 		<div class="modifiers__items js-sortable-y">
 			{% for item in range(0,2) %}
-				{% set parentIndex = loop.index %}
-				<div class="m-item js-toggle" data-toggle="modifier-group">
-					<div class="m-item__container">
-						<div class="m-item__header">
-							<div class="m-item__field">
-								<i class="fa fa-arrows m-item__icon js-sortable-handle"></i>
-								{{form.inputBox.call({
-									placeholder: 'Modifier Group Name'
-								})}}
-							</div>
-							<div class="m-item__toggle">
-								<button class="btn-toggle color-main text-left m-item__btn-toggle js-toggle-btn" data-toggle="modifier-group">
-									<span class="btn-toggle__track">
-										<span class="btn-toggle__content">Show Modifiers</span>
-										<span class="btn-toggle__content">Hide Modifiers</span>
-									</span>
-									<i class="fa fa-angle-down btn-toggle__arrow"></i>
-								</button>
-							</div>
-							<div class="m-item__close">
-								<button class="btn-close">
-									<i class="fa fa-close"></i>
-								</button>
-							</div>
-						</div>
-						<div class="m-item__body js-toggle-container js-select-type" data-toggle="modifier-group">
-							<div class="fake-buttons fake-buttons_connected m-item__fake-buttons">
-								<span class="label label_block">Select modifier type</span>
-								<div class="fake-buttons__row">
-									<div class="fake-buttons__col">
-										{{form.fakeButton.call({
-											classList: 'fake-button_wide',
-											name: 'modifier-type-' + parentIndex,
-											content: 'One selection',
-											description: 'eg: small, medium, large',
-											inputClassList: 'js-select-type-input',
-											attrs: 'data-select-type="radio"'
-										})}}
-									</div>
-									<div class="fake-buttons__col">
-										{{form.fakeButton.call({
-											classList: 'fake-button_wide',
-											name: 'modifier-type-' + parentIndex,
-											attrs: 'checked',
-											content: 'Multiple selections',
-											description: 'eg: cheese, sausage',
-											inputClassList: 'js-select-type-input'
-										})}}
-									</div>
-									<div class="fake-buttons__col">
-										{{form.fakeButton.call({
-											classList: 'fake-button_wide',
-											name: 'modifier-type-' + parentIndex,
-											content: 'Exceptions',
-											description: 'eg: No salt, No sugar',
-											inputClassList: 'js-select-type-input'
-										})}}
-									</div>
-								</div>
-							</div>
-							<div class="m-item__items">
-								<div class="m-item__label">Add modifiers:</div>
-								<div class="m-item__list js-sortable-y">
-									{% for item in range(0,3) %}
-										<div class="m-box">
-											<div class="m-box__row">
-												<i class="fa fa-arrows m-box__icon js-sortable-handle"></i>
-												<div class="m-box__name m-box__col">
-													{{form.inputBox.call({
-														placeholder: 'Modifier',
-														noClear: true
-													})}}
-												</div>
-												<div class="m-box__price m-box__col">
-													{{form.inputBox.call({
-														placeholder: 'Price',
-														noClear: true
-													})}}
-												</div>
-												<div class="m-box__radio m-box__col js-select-type-container">
-													{% if loop.index == 1 %}
-														{{form.radio.call({
-															classList: 'm-box__radio-btn',
-															name: 'modifier-group-default-' + parentIndex,
-															content: 'Default',
-															attrs: 'checked'
-														})}}
-													{% else %}
-														{{form.radio.call({
-															classList: 'm-box__radio-btn',
-															name: 'modifier-group-default-' + parentIndex,
-															content: 'Default'
-														})}}
-													{% endif %}
-												</div>
-												<div class="m-box__close">
-													<button class="btn-close">
-														<i class="fa fa-close"></i>
-													</button>
-												</div>
-											</div>
-										</div>
-									{% endfor %}
-								</div>
-								<div class="m-item__add">
-									<a href="#" class="link-add"><i class="fa fa-plus"></i>Add a modifier</a>
-								</div>
-							</div>
-							<div class="m-item__checkbox">
-								{{form.checkbox.call({
-									attrs: 'checked',
-									content: 'is Active'
-								})}}
-							</div>
-						</div>
-					</div>
-				</div>
+				{{modifierGroup.call({
+					modifierType: 'modifiers-type-' + loop.index,
+					oneSelection: 'one-selection-' + loop.index,
+					toggle: true,
+					sortable: true
+				})}}
 			{% endfor %}
 			<div class="modifiers__add">
 				<a href="#" class="link-add"><i class="fa fa-plus"></i> Add modifier group</a>
