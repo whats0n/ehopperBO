@@ -8403,6 +8403,7 @@ button:disabled, button.is-disabled,
 }
 
 .create-modifiers__body {
+  overflow: auto;
   padding: 0 20px;
 }
 
@@ -8498,6 +8499,10 @@ hr {
   height: 2px;
   color: rgba(0, 0, 0, 0.1);
   background: rgba(0, 0, 0, 0.1);
+}
+
+.guide-description {
+  padding: 20px 0;
 }
 
 @media only screen and (max-width: 1600px){
@@ -9148,6 +9153,9 @@ hr {
     padding-top: 0;
     text-align: left;
   }
+  .create-modifiers__inner{
+    padding-bottom: 60px;
+  }
 }
 
 @media only screen and (max-width: 1280px){
@@ -9450,6 +9458,13 @@ hr {
   }
   .col_sm-100{
     width: 100%;
+  }
+  .btns-group_center{
+    padding: 0;
+  }
+  .btns-group_center .btn{
+    margin: 0;
+    width: 50%;
   }
   .filters__row, .filters__btns{
     vertical-align: top;

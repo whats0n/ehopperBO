@@ -19,7 +19,50 @@
         <h2 class="title-xl main-header__title ">Guide Mixins</h2>
       </header>
       <!-- end header -->
-      <div class="main "> </div>
+      <div class="main ">
+        <div class="container">
+          <div class="row">
+            <div class="col col_xl-50 col_lg-100">
+              <div class="guide-description">
+                <div class="title-xl">Filters:</div>
+                <p>{{filters.call({
+					cols: [ 
+						{ 
+							label: "Column label",
+							mixin: options,
+							search: options,
+							select: options
+						}
+					],
+					btns: [
+						{
+							date: options,
+							content: html code
+						}
+					]
+				})}}</p>
+                <pre>
+filters.call({
+	cols: [ 
+		{ 
+			label: "Column label",
+			mixin: options,
+			search: options,
+			select: options
+		}
+	],
+	btns: [
+		{
+			date: options,
+			content: html code
+		}
+	]
+})
+</pre> </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- END content -->
     <!-- BEGIN scripts -->

@@ -8,6 +8,32 @@ header: {
 
 {% block content %}
 
-
+<div class="container">
+	<div class="row">
+		<div class="col col_xl-50 col_lg-100">
+			<div class="guide-description">
+				{% set filtersCall = '{{filters.call({
+					cols: [ 
+						{ 
+							label: "Column label",
+							mixin: options,
+							search: options,
+							select: options
+						}
+					],
+					btns: [
+						{
+							date: options,
+							content: html code
+						}
+					]
+				})}}' %}
+				<div class="title-xl">Filters:</div>
+				<p>{{filtersCall | safe}}</p>
+				{% include 'guide/_filters.html' %}
+			</div>
+		</div>
+	</div>
+</div>
 
 {% endblock %}
