@@ -9,10 +9,6 @@
 				<div class="filters__col {{col.classList}}">
 					{% for field in col.fields %}
 						<div class="filters__field {{field.classList}}">
-							{% if field.label %}
-								<div class="filters__label">{{field.label}}</div>
-							{% endif %}
-							
 							{% if field.mixin %}
 								{{form[field.mixin].call(field.options)}}
 							{% endif %}

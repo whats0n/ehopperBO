@@ -3,36 +3,55 @@ title: Guide Mixins
 header: { 
 	title: 'Guide Mixins',
 }
+mainClassList: 'main_inner'
 ---
 {% extends "layouts/_layout.html" %}
 
 {% block content %}
 
+{% set mixinsList = [
+	{
+		title: 'Filters',
+		code: '_filters',
+		description: [
+			'fitlers - display table',
+			'fitlers__container - display table-row',
+			'filters__row & filters__btns - display table-cell',
+			'filters__row - width',
+			'props:',
+			'classList - классы-модификаторы компоненты filters',
+			'cols - колонки внутри filters__row'
+		]
+	},
+	{
+		title: '',
+		code: '',
+		description: [
+			'',
+			''
+		]
+	}
+] %}
+
+<!-- .tabs -->
+
 <div class="container">
 	<div class="row">
-		<div class="col col_xl-50 col_lg-100">
-			<div class="guide-description">
-				{% set filtersCall = '{{filters.call({
-					cols: [ 
-						{ 
-							label: "Column label",
-							mixin: options,
-							search: options,
-							select: options
-						}
-					],
-					btns: [
-						{
-							date: options,
-							content: html code
-						}
-					]
-				})}}' %}
-				<div class="title-xl">Filters:</div>
-				<p>{{filtersCall | safe}}</p>
-				{% include 'guide/_filters.html' %}
-			</div>
-		</div>
+		{% for mixin in mixinsList %}
+		    <div class="col col_xl-50 col_lg-100">
+		    	<div class="title-xl guide-title">{{mixin.title}}:</div>
+		    	{% if mixin.code %}
+		    		<div class="guide-code">
+			    		{% include 'guide/' + mixin.code + '.html' %}
+		    		</div>
+		    	{% endif %}
+		    	<div class="guide-description">
+		    		{% for item in mixin.description %}
+		    			<p>{{item | safe}}</p>
+		    		{% endfor %}
+		    	</div>
+		    </div>
+		{% endfor %}
 	</div>
 </div>
 

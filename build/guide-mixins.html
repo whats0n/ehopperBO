@@ -19,46 +19,48 @@
         <h2 class="title-xl main-header__title ">Guide Mixins</h2>
       </header>
       <!-- end header -->
-      <div class="main ">
+      <div class="main main_inner">
+        <!-- .tabs -->
         <div class="container">
           <div class="row">
             <div class="col col_xl-50 col_lg-100">
-              <div class="guide-description">
-                <div class="title-xl">Filters:</div>
-                <p>{{filters.call({
-					cols: [ 
-						{ 
-							label: "Column label",
-							mixin: options,
-							search: options,
-							select: options
-						}
-					],
-					btns: [
-						{
-							date: options,
-							content: html code
-						}
-					]
-				})}}</p>
+              <div class="title-xl guide-title">Filters:</div>
+              <div class="guide-code">
                 <pre>
 filters.call({
+	classList: string,
 	cols: [ 
 		{ 
-			label: "Column label",
-			mixin: options,
-			search: options,
-			select: options
+			classLsit: string
+			mixin: object-options,
+			search: object-options,
+			select: object-options
 		}
 	],
 	btns: [
 		{
-			date: options,
-			content: html code
+			date: object-options,
+			content: html-code
 		}
 	]
 })
 </pre> </div>
+              <div class="guide-description">
+                <p>fitlers - display table</p>
+                <p>fitlers__container - display table-row</p>
+                <p>filters__row & filters__btns - display table-cell</p>
+                <p>filters__row - width</p>
+                <p>props:</p>
+                <p>classList - классы-модификаторы компоненты filters</p>
+                <p>cols - колонки внутри filters__row</p>
+              </div>
+            </div>
+            <div class="col col_xl-50 col_lg-100">
+              <div class="title-xl guide-title">:</div>
+              <div class="guide-description">
+                <p></p>
+                <p></p>
+              </div>
             </div>
           </div>
         </div>

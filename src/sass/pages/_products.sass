@@ -43,6 +43,8 @@
 		font-size: 20px
 		line-height: 1.2
 		text-align: center
+	&__body
+		padding: 20px
 
 .products-overlay
 	position: absolute
@@ -56,63 +58,23 @@
 	background: rgba(#434c55, 0.8)
 	transition: opacity 0.175s ease-in-out, visibility 0.175s ease-in-out
 
-// .products-actions-btn
-// 	float: right
-// 	min-width: 50px
-// 	height: 50px
-// 	color: $white
-// 	background: none
-// 	font-size: 28px
-// 	line-height: 50px
-// 	transition: background 0.15s ease-in-out
-// 	+active
-// 		background: rgba($black, 0.1)
-
 .products-actions
-	// position: absolute
-	// z-index: 102
-	// top: 0
-	// right: 0
-	// width: 300px
-	// opacity: 0
-	// visibility: hidden
-	// background: #434c55
-	// box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2)
-	// transform: translate3d(0,-100%,0)
-	// transition: opacity 0.27s ease-in-out, visibility 0.27s ease-in-out, transform 0.27s ease-in-out
 	font-size: 0
 	text-align: right
-	// &.is-open
-	// 	opacity: 1
-	// 	visibility: visible
-	// 	+gpu
 	&__item
 		display: inline-block
 		vertical-align: top
-		// display: block
-		// padding: 5px 20px
-		// border-bottom: 1px solid #4C5560
-		// width: 100%
-		// color: #7D838B
 		width: 50px
 		color: $white
 		background: none
-		// font-size: 16px
-		// line-height: 40px
-		// text-align: right
 		transition: background 0.175s ease-in-out, color 0.175s ease-in-out
 		+hover
 			color: $white
 			background: rgba($black, 0.1)
-			// background: #4C5560
 		+active
 			color: $white
 			background: rgba($black, 0.1)
-			// background: #4C5560
 		.fa
-			// position: absolute
-			// top: 0
-			// left: 0
 			width: 50px
 			height: 50px
 			font-size: 24px
@@ -125,3 +87,62 @@
 	+lg
 		padding-top: 0
 		text-align: left
+
+.products-type
+	position: relative
+	padding: 30px 0
+	border: 1px solid $lightGray
+	color: #777
+	background: #fcfcfc
+	+rlight
+	font-size: 14px
+	text-align: center
+	+clr
+	&__box
+		float: left
+		padding: 20px
+		width: 50%
+	&__splitter
+		position: absolute
+		top: 50px
+		left: 50%
+		bottom: 50px
+		overflow: hidden
+		margin-left: -20px
+		width: 40px
+		text-transform: uppercase
+		+vertical
+		span
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			padding: 10px 0
+			width: 100%
+			font-size: 14px
+			line-height: 20px
+			&:before,
+			&:after
+				content: ''
+				position: absolute
+				left: 50%
+				border-left: 1px solid $lightGray
+				height: 200px
+			&:before
+				bottom: 100%
+			&:after
+				top: 100%
+	&__icon
+		margin: 0 auto 10px
+		width: 70px
+		height: 70px
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: cover
+	&__title
+		margin-bottom: 10px
+		+rbold
+		font-size: 18px
+	&__meta
+		margin-bottom: 10px
+	&__btn
+		width: 140px

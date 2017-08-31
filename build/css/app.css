@@ -6391,6 +6391,7 @@ button:disabled, button.is-disabled,
   display: table;
   table-layout: fixed;
   padding: 12px;
+  width: 100%;
 }
 
 .filters__container {
@@ -8218,6 +8219,10 @@ button:disabled, button.is-disabled,
   text-align: center;
 }
 
+.products-main__body {
+  padding: 20px;
+}
+
 .products-overlay {
   position: absolute;
   top: 0;
@@ -8271,6 +8276,100 @@ button:disabled, button.is-disabled,
 .products-display {
   padding-top: 70px;
   text-align: center;
+}
+
+.products-type {
+  position: relative;
+  padding: 30px 0;
+  border: 1px solid #eee;
+  color: #777;
+  background: #fcfcfc;
+  font-family: 'Roboto Light', Arial, sans-serif;
+  font-size: 14px;
+  text-align: center;
+  *zoom: 1;
+}
+
+.products-type:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+.products-type__box {
+  float: left;
+  padding: 20px;
+  width: 50%;
+}
+
+.products-type__splitter {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  bottom: 50px;
+  overflow: hidden;
+  margin-left: -20px;
+  width: 40px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0;
+}
+
+.products-type__splitter:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 100%;
+}
+
+.products-type__splitter span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.products-type__splitter span:before, .products-type__splitter span:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  border-left: 1px solid #eee;
+  height: 200px;
+}
+
+.products-type__splitter span:before {
+  bottom: 100%;
+}
+
+.products-type__splitter span:after {
+  top: 100%;
+}
+
+.products-type__icon {
+  margin: 0 auto 10px;
+  width: 70px;
+  height: 70px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.products-type__title {
+  margin-bottom: 10px;
+  font-family: 'Roboto Bold', Arial, sans-serif;
+  font-size: 18px;
+}
+
+.products-type__meta {
+  margin-bottom: 10px;
+}
+
+.products-type__btn {
+  width: 140px;
 }
 
 .vendors {
@@ -8503,6 +8602,15 @@ hr {
 
 .guide-description {
   padding: 20px 0;
+}
+
+.guide-title {
+  padding-bottom: 20px;
+}
+
+.guide-code {
+  padding: 20px;
+  background: #fff;
 }
 
 @media only screen and (max-width: 1600px){

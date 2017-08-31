@@ -1,0 +1,204 @@
+---
+title: Products
+header: { 
+	title: 'Products',
+	titleClassList: 'main-header__title_left js-header-title',
+	help: true,
+	menu: true
+}
+menu: { active: 1 }
+---
+{% extends "layouts/_layout.html" %}
+
+{% block content %}
+
+<div class="l-container js-resizable-width products" data-popup-wrapper="products-filters products-actions">
+	<div class="l-row">
+		<div class="l-col l-col_sidebar js-resizable-width-left">
+			<div class="l-col__inner">
+				<div class="sm-filters js-product-filters" data-popup="products-filters">
+					<div class="container sm-filters__container" data-popup-container="products-filters" data-scrollbar="default">
+						<div class="row">
+							<div class="col col_xl-100">
+								<h2 class="title-xxl color-title-main text-center">Filter your products</h2>
+							</div>
+							<div class="col col_xl-50">
+								{{form.select.call({
+									classList: 'select_full is-active',
+									selected: 1,
+									placeholder: 'Department',
+									options: [
+										'All',
+										'Department 1',
+										'Department 2',
+										'Department 3',
+										'Department 4'
+									]
+								})}}
+							</div>
+							<div class="col col_xl-50">
+								{{form.select.call({
+									classList: 'select_full is-active',
+									selected: 1,
+									placeholder: 'Category',
+									options: [
+										'All',
+										'Category 1',
+										'Category 2',
+										'Category 3',
+										'Category 4'
+									]
+								})}}
+							</div>
+							<div class="col col_xl-100">
+								{{form.multiSelect.call({
+									classList: 'select_full is-active',
+									placeholder: 'Inventory type',
+									selectedAll: 'checked',
+									selectAll: 'Select All',
+									options: [
+										'Inventory type 1',
+										'Inventory type 2',
+										'Inventory type 3',
+										'Inventory type 4'
+									]
+								})}}
+							</div>
+							<div class="col col_xl-100 text-center sm-filters__btns">
+								<button class="btn btn_lg color-btn-main sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Done</button>
+								<button class="btn btn_lg sm-filters__btn" data-animation="ripple" data-popup-close="products-filters">Cancel</button>
+							</div>
+							<div class="col col_xl-100 text-center">
+								<a href="#" class="js-product-filters-reset sm-filters__reset">Reset all filters</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="products-sidebar__header">
+					<div class="products-actions" data-popup="products-actions">
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-plus"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-download"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-upload"></i></button>
+						<button class="products-actions__item" data-animation="ripple"><i class="fa fa-trash-o"></i></button>
+					</div>
+				</div>
+				<div class="products-sidebar products-sidebar_simple" data-scrollbar="default">
+					<div class="products-sidebar__header">
+						<div class="products-sidebar__search">
+							<div class="filter-group">
+								<button class="btn color-btn-main filter-group__btn" data-popup-open="products-filters" data-animation="ripple">
+									<i class="fa fa-filter"></i>
+								</button>
+								{{form.search.call({
+									placeholder: 'Search',
+									classList: 'filter-group__field',
+									inputClassList: 'simple-input_sm'
+								})}}
+							</div>
+						</div>
+					</div>
+					{{table.call({
+						name: 'products',
+						classList: 'table-wrapper_header-lg',
+						bodyClassList: 'table-body_zebra',
+						bodyTDClassList: 'text-overflow',
+						range: 5,
+						columns: [ 'first-checkbox', 'product-title', 'product-cost', 'product-price', 'product-qty', 'active', 'action-btns' ],
+						header: [ 
+							{ checkbox: true }, 
+							{ content: 'Product' }, 
+							{ content: 'Cost' }, 
+							{ content: 'Price' }, 
+							{ content: 'Qty' }, 
+							{ content: 'Active', classList: 'text-center' }, 
+							{ content: 'Edit', classList: 'text-center' } 
+						],
+						body: [
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5088</div><div class="table-wrapper__value">Burger NEW</div>' },
+								{ content: '$20' },
+								{ content: '$20.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5013</div><div class="table-wrapper__value">Cheeseburger</div>' },
+								{ content: '$6.50' },
+								{ content: '$6.50' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 4992</div><div class="table-wrapper__value">Sprite</div>' },
+								{ content: '$8.00' },
+								{ content: '$8.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 4994</div><div class="table-wrapper__value">Pepsi</div>' },
+								{ content: '$7.00' },
+								{ content: '$7.00' },
+								{ content: '2' },
+								{ content: '<i class="fa fa-times color-red is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							],
+							[ 
+								{ checkbox: true },
+								{ content: '<div class="table-wrapper__meta">id: 5001</div><div class="table-wrapper__value">Hamburger</div>' },
+								{ content: '$12.00' },
+								{ content: '$12.00' },
+								{ content: '1' },
+								{ content: '<i class="fa fa-check color-green is-muted"></i>', classList: 'text-center' },
+								{ content: '<a href="#" class="btn-action color-main"><i class="fa fa-pencil-square-o"></i></a>' }
+							]
+						]
+					})}}
+				</div>
+				<div class="products-overlay"></div>
+			</div>
+		</div>
+		<div class="l-col l-col_main js-resizable-width-right">
+			<div class="l-col__inner">
+				<div class="splitter splitter_left l-col__splitter js-resizable-width-splitter">
+					<i class="splitter__lines"></i>
+					<i class="fa fa-angle-left splitter__arrow"></i>
+				</div>
+				<div class="products-main">
+					<div class="products-main__header color-header">
+						<h2 class="title-xl products-main__title">Product Edit</h2>
+					</div>
+					<div class="products-main__body">
+						<div class="products-type">
+							<div class="products-type__box">
+								<div class="products-type__icon" style="background-image: url(img/product-basic.png);"></div>
+								<div class="products-type__title">Inventory Item</div>
+								<div class="products-type__meta">Sell this item individually</div>
+								<button class="btn btn_lg color-btn-main products-type__btn" data-animation="ripple">Create</button>
+							</div>
+							<div class="products-type__splitter">
+								<span>or</span>
+							</div>
+							<div class="products-type__box">
+								<div class="products-type__icon" style="background-image: url(img/product-variants.png);"></div>
+								<div class="products-type__title">Matrix Item</div>
+								<div class="products-type__meta">Sell matrix item</div>
+								<button class="btn btn_lg color-btn-main products-type__btn" data-animation="ripple">Create</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="products-overlay"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
